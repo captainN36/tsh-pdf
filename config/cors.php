@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://xem.tracuuthansohoconline.com'],
+    'allowed_origins' => ['https://xem.tracuuthansohoconline.com', 'http://localhost:3001'],
 
     'allowed_origins_patterns' => [],
 

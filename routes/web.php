@@ -13,5 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\PDFController::class, 'renderPDF']);
+Route::get('/', [\App\Http\Controllers\PDFController::class, 'view']);
 Route::get('/html', [\App\Http\Controllers\PDFController::class, 'mappingKey']);

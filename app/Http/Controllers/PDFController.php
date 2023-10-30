@@ -31,7 +31,7 @@ class PDFController extends Controller
 
     public function getData($data){
         $token = $data['token'];
-        $url = 'https://api.tracuuthansohoconline.com/api/user/look-up/534c8365-f429-41de-b0e2-826712dc04de';
+        $url = $data['url'];
         $callAPI = Http::withHeaders([
             'Authorization' => "Bearer $token"
         ])->get($url);

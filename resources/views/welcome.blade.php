@@ -12,7 +12,7 @@
     <div id="outline">
     </div>
 </div>
-<div id="page-container">
+<div id="page-container" style="zoom: 63%;">
     @include('pages.first')
     @include('pages.chiso')
     @include('pages.vanso')

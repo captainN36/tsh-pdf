@@ -17,7 +17,8 @@ class PDFController extends Controller
     public function view(Request $request)
     {
         $data = $this->getData($request->all());
-        return view('welcome', ['data' => $data]);
+        $pdf = PDF::loadView('welcome', ['data' => $data]);
+        return $pdf->download('disney.pdf');
     }
 
     public function renderPDF(Request $request)

@@ -5,7 +5,6 @@
     <meta name="generator" content="pdf2htmlEX"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link rel="stylesheet" href="/pdf.css">
-
     <title>test</title>
 </head>
 <div id="sidebar">

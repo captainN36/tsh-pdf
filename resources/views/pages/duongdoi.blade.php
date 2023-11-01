@@ -12,7 +12,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="15">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">1</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div>
         @php
             $title = $data['data']['lifePathIndicator']['title'];
             $arr = explode('<span class="text-success">', $title);
@@ -57,7 +57,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="17">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">2</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ SỨ MỆNH</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">{{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
@@ -108,7 +108,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="20">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">3</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
@@ -144,7 +144,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="22">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">4</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LINH HỒN</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">{{ $data['data']['soulIndicator']['soulIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
@@ -165,7 +165,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="23">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">5</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">5</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TÍNH CÁCH</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">{{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
@@ -186,7 +186,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="24">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">6</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">6</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TỰ NHIÊN</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">{{ $data['data']['dobIndicator']['dobIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
@@ -207,7 +207,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="25">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">7</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">7</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ THÁI ĐỘ</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
@@ -245,7 +245,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="27">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">8</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">8</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐAM MÊ</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 400px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
@@ -284,7 +284,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="29">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">9</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">9</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY LÝ TRÍ</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
@@ -326,7 +326,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="31">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/duongdoi.png">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">11</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 80px;">11</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TRỰC GIÁC</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">

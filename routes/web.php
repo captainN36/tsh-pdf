@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\PDFController::class, 'view']);
+Route::get('/html', function () {
+    dd("test");
+});
 Route::get('/html', [\App\Http\Controllers\PDFController::class, 'mappingKey']);

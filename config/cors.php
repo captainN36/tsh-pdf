@@ -15,11 +15,11 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ["*"],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['https://xem.tracuuthansohoconline.com', 'http://localhost:3001'],
 
     'allowed_origins_patterns' => [],
 

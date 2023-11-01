@@ -14,12 +14,14 @@ use Illuminate\Support\Facades\Storage;
 
 class PDFController extends Controller
 {
-    public function view(Request $request){
+    public function view(Request $request)
+    {
         $data = $this->getData($request->all());
         return view('welcome', ['data' => $data]);
     }
 
-    public function renderPDF(Request $request){
+    public function renderPDF(Request $request)
+    {
         $data = $this->getData($request->all());
         $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
         if (!Storage::exists($name)) {
@@ -29,7 +31,8 @@ class PDFController extends Controller
         return $result->output();
     }
 
-    public function getData($data){
+    public function getData($data)
+    {
         $token = $data['token'];
         $url = $data['url'];
         $callAPI = Http::withHeaders([
@@ -38,15 +41,15 @@ class PDFController extends Controller
         $data = $callAPI->json();
         $title = $data['data']['data'];
         $count = 1;
-        foreach ($title as $key => $item){
-            if (isset($item['title'])){
-                if ($count <= 6){
+        foreach ($title as $key => $item) {
+            if (isset($item['title'])) {
+                if ($count <= 6) {
                     $data['data']['data'][$key]['page'] = 2;
                 }
-                if ($count > 6 && $count <= 13){
+                if ($count > 6 && $count <= 13) {
                     $data['data']['data'][$key]['page'] = 3;
                 }
-                if ($count > 13){
+                if ($count > 13) {
                     $data['data']['data'][$key]['page'] = 4;
                 }
             }

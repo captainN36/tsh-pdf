@@ -10,7 +10,7 @@
 <div id="pf8" class="pf w0 h0" data-page-no="8">
     <div class="pc pc8 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/2.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">1</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ VẬN SỐ</div>
 
         <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap">
@@ -44,7 +44,7 @@
             $number = array_values($filter)[0]['indicator'];
         @endphp
         <div class="t m0 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="bottom: 60%">
-            <img src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/images/chu-ky/{{ $number }}.png" alt="" style="width: 2000px;">
+            <img src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/chuky/{{ $number - 1 }}.png" alt="" style="width: 2000px;">
         </div>
 
         @php
@@ -76,7 +76,7 @@
 <div id="pfb" class="pf w0 h0" data-page-no="8">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/chi-so-nam.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">2</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các năm</div>
         <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2023</div>
         <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0">{{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nowYearIndicator'] }}</div>
@@ -154,7 +154,7 @@
 <div id="pfd" class="pf w0 h0" data-page-no="12">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/chi-so-nam.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">3</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các tháng</div>
         <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->format('m/Y') }}</div>
         <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0">{{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nowMonthIndicator'] }}</div>
@@ -202,7 +202,7 @@
 <div id="pfd" class="pf w0 h0" data-page-no="12">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/bannga.png">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">4</div>
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 
         <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1300px; white-space: normal; top: 70px; left: 400px">

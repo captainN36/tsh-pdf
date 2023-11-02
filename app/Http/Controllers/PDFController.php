@@ -19,6 +19,17 @@ class PDFController extends Controller
         return view('welcome', ['data' => $data]);
     }
 
+    public function pdf(Request $request){
+        $data = $this->getData($request->all());
+        $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
+        if (!Storage::exists($name)) {
+            $pathHtml = public_path() . '/pdf/'. $name;
+            $pathPDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+            $file = fopen($pathHtml, 'w+');
+            fwrite($file, view('welcome', ['data' => $data])->render());
+        }
+    }
+
     public function renderPDF(Request $request){
         $data = $this->getData($request->all());
         $name = $data['id'] . '-' . $data['dateSearch'] . '.html';

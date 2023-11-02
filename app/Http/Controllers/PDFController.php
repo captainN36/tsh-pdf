@@ -26,7 +26,7 @@ class PDFController extends Controller
             Storage::put($name, view('welcome', ['data' => $data])->render());
         }
         $pathPDF = storage_path() . '/app/' . $name;
-        $pathPublic = public_path() . '/' . $name . '.pdf';
+        $pathPublic = storage_path() . '/app/public/' . $name . '.pdf';
         $result = Process::run('wkhtmltopdf ' . $pathPDF . ' ' . $pathPublic);
         return response()->json(['path' => asset($name)]);
     }

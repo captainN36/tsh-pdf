@@ -34,7 +34,11 @@ class PDFController extends Controller
         if (!file_exists($pathHtml) && !file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             fwrite($file, view('welcome', ['data' => $data])->render());
-            $result = Process::run('wkhtmltopdf ' . $pathHtml . ' ' . $pathPDF);
+            try {
+                $result = Process::run('wkhtmltopdf ' . $pathHtml . ' ' . $pathPDF);
+            } catch (\Exception $exception){
+                return response()->json(['path' => asset('/pdf/'). $name]);
+            }
         }
         return response()->json(['path' => asset('/pdf/'). $name]);
     }

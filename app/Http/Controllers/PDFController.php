@@ -22,6 +22,7 @@ class PDFController extends Controller
     public function pdf(Request $request){
         $data = $this->getData($request->all());
         $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
+        $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
             mkdir(public_path() . '/html/', 0777, true);
         }
@@ -37,10 +38,10 @@ class PDFController extends Controller
             try {
                 $result = Process::run('wkhtmltopdf ' . $pathHtml . ' ' . $pathPDF);
             } catch (\Exception $exception){
-                return response()->json(['path' => asset('/pdf/'). $name]);
+                return response()->json(['path' => asset('/pdf/'). $namePDF]);
             }
         }
-        return response()->json(['path' => asset('/pdf/'). $name]);
+        return response()->json(['path' => asset('/pdf/'). $namePDF]);
     }
 
     public function renderPDF(Request $request){

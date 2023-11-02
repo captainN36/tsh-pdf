@@ -22,12 +22,21 @@ class PDFController extends Controller
     public function pdf(Request $request){
         $data = $this->getData($request->all());
         $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
-        if (!Storage::exists($name)) {
-            $pathHtml = public_path() . '/pdf/'. $name;
-            $pathPDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+        if (!file_exists(public_path() . '/html/')) {
+            mkdir(public_path() . '/html/', 0777, true);
+        }
+        if (!file_exists(public_path() . '/pdf/')) {
+            mkdir(public_path() . '/pdf/', 0777, true);
+        }
+        Process::run('chmod -R 777 ' . public_path());
+        $pathHtml = public_path() . '/html/'. $name;
+        $pathPDF = public_path() . '/pdf/'. $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+        if (!file_exists($pathHtml) && !file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             fwrite($file, view('welcome', ['data' => $data])->render());
+            $result = Process::run('wkhtmltopdf ' . $pathHtml . ' ' . $pathPDF);
         }
+        return response()->json(['path' => asset('/pdf/'). $name]);
     }
 
     public function renderPDF(Request $request){

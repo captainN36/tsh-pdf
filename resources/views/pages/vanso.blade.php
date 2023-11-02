@@ -222,12 +222,17 @@
         <div class="t m0 x5 h8 ycd ff1 fs4 fc2 sc0 ls0 ws0">1.6. Quan tâm - Yêu thương - Kiểm soát</div>
         <div class="t m0 x12 h10 yce ff1 fs9 fc0 sc0 ls0 ws0">2%</div>
         <div class="t m0 x5 h8 ycf ff1 fs4 fc2 sc0 ls0 ws0">1.7. Thông thái - Khám phá - Truyền đạt</div>
+        @isset($data['data']['percentIndicator'][5])
         <div class="t m0 x36 h10 yd0 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][5][1] }}%</div>
-        <div class="t m0 x5 h8 yd1 ff1 fs4 fc2 sc0 ls0 ws0">1.8. Công bằng - Tập trung - Lý tưởng</div>
-        <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][6][1] }}%</div>
-        <div class="t m0 x5 h8 yd3 ff1 fs4 fc2 sc0 ls0 ws0">1.9. Trách nhiệm - Rộng lượng - Hào phóng</div>
-        <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][7][1] }}%</div>
-
+        @endisset
+        @isset($data['data']['percentIndicator'][6])
+            <div class="t m0 x5 h8 yd1 ff1 fs4 fc2 sc0 ls0 ws0">1.8. Công bằng - Tập trung - Lý tưởng</div>
+            <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][6][1] }}%</div>
+        @endisset
+        @isset($data['data']['percentIndicator'][7])
+            <div class="t m0 x5 h8 yd3 ff1 fs4 fc2 sc0 ls0 ws0">1.9. Trách nhiệm - Rộng lượng - Hào phóng</div>
+            <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][7][1] }}%</div>
+        @endisset
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
         <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">14</div>

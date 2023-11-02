@@ -1,6 +1,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="7">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/a.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/a.png') }}">
         <div class="t m0 x11 hb y91 ff1 fs5 fc0 sc0 ls0 ws0">B</div>
         <div class="t m0 hc y92 ff1 fs6 fc2 sc0 ls0 ws0" style="left: 232px">CHU KỲ VẬN SỐ</div><div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -9,7 +10,7 @@
 </div>
 <div id="pf8" class="pf w0 h0" data-page-no="8">
     <div class="pc pc8 w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/2.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/2.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ VẬN SỐ</div>
 
@@ -75,7 +76,7 @@
 
 <div id="pfb" class="pf w0 h0" data-page-no="8">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/chi-so-nam.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các năm</div>
         <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2023</div>
@@ -102,7 +103,7 @@
 
 <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/page-trang-trai.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             {!! substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 2180, 2180) !!}
         </div>
@@ -119,7 +120,7 @@
 
 <div id="pfd" class="pf w0 h0" data-page-no="10">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/page-trang-phai.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             {!! substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 2455) !!}
         </div>
@@ -137,7 +138,7 @@
 
 <div id="pfd" class="pf w0 h0" data-page-no="11">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/page-trang-trai.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             {!! substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 2010) !!}
         </div>
@@ -153,7 +154,7 @@
 
 <div id="pfd" class="pf w0 h0" data-page-no="12">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/chi-so-nam.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các tháng</div>
         <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->format('m/Y') }}</div>
@@ -183,7 +184,7 @@
 
 <div id="pfd" class="pf w0 h0" data-page-no="13">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/page-trang-trai.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             {!! substr($data['data']['monthIndicator']['nextMonthIndicator']['content'], 800) !!}
         </div>
@@ -201,7 +202,7 @@
 
 <div id="pfd" class="pf w0 h0" data-page-no="12">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt="" src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/bannga.png">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$data['data']['lifePathIndicator']['lifePathIndicator'].'/bannga.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 

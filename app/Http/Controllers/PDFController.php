@@ -38,14 +38,13 @@ class PDFController extends Controller
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists($pathHtml) && !file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
-            fwrite($file, view('welcome', ['data' => $data])->render());
+            $htmlStr = view('welcome', ['data' => $data])->render();
+            fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {
-                unlink($pathHtml);
-                unlink($pathPDF);
                 throw $exception;
             }
         }

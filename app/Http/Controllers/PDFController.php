@@ -41,7 +41,7 @@ class PDFController extends Controller
             fwrite($file, view('welcome', ['data' => $data])->render());
             try {
                 $cssPath = public_path() . "/pdf.css";
-                $process = "wkhtmltopdf $cssPath $pathHtml $pathPDF";
+                $process = "wkhtmltopdf $pathHtml $pathPDF";
                 Log::info('process', ['process' => $process]);
                 Process::run($process);
             } catch (\Exception $exception) {

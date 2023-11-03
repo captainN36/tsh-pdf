@@ -6,8 +6,7 @@
     <meta name="generator" content="pdf2htmlEX" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <base href="https://pdf.tracuuthansohoconline.com/">
-    <link rel="stylesheet" type="text/css" href="{{ asset('pdf.css') }}">
-    <style></style>
+    <link rel="stylesheet" href="http://127.0.0.1:8000/pdf.css">
     <title>test</title>
 </head>
 <div id="sidebar">

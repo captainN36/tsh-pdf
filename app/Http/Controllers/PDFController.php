@@ -40,15 +40,13 @@ class PDFController extends Controller
             $file = fopen($pathHtml, 'w+');
             fwrite($file, view('welcome', ['data' => $data])->render());
             try {
-                $cssPath = public_path() . "/pdf.css";
-                $process = "wkhtmltopdf $pathHtml $pathPDF";
-                Log::info('process', ['process' => $process]);
-                Process::run($process);
+                $processName = "wkhtmltopdf $pathHtml $pathPDF";
+                Process::run($processName);
             } catch (\Exception $exception) {
                 throw $exception;
             }
         }
-        return response()->json(['path' => asset('/pdf/') . $namePDF]);
+        return response()->json(['path' => asset("/pdf/$namePDF")]);
     }
 
     public function renderPDF(Request $request)

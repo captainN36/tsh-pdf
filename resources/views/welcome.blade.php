@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="generator" content="pdf2htmlEX" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="{{ asset('/pdf.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('/pdf.css') }}"> --}}
     <title>test</title>
 </head>
 <div id="sidebar">
@@ -13,10 +13,10 @@
     </div>
 </div>
 <div id="page-container">
-    {{-- @include('pages.first') --}}
-    {{-- @include('pages.chiso') --}}
-    {{-- @include('pages.vanso') --}}
-    {{-- @include('pages.duongdoi') --}}
+    @include('pages.first')
+    @include('pages.chiso')
+    @include('pages.vanso')
+    @include('pages.duongdoi')
 
 
     <div id="pf7" class="pf w0 h0" data-page-no="54">

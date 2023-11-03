@@ -40,8 +40,9 @@ class PDFController extends Controller
             $file = fopen($pathHtml, 'w+');
             fwrite($file, view('welcome', ['data' => $data])->render());
             try {
-                $processName = "wkhtmltopdf $pathHtml $pathPDF";
-                Process::run($processName);
+                $process = "wkhtmltopdf $pathHtml $pathPDF";
+                Log::info('process', ['process' => $process]);
+                Process::run($process);
             } catch (\Exception $exception) {
                 throw $exception;
             }

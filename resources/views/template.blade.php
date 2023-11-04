@@ -86,7 +86,7 @@
 <body>
 <div class="main">
     <div class="bia">
-        @switch($data['data']['lifePathIndicator']['lifePathIndicator'])
+        @switch($path)
             @case(2)
                 <img src="{{ asset('/bia/2.jpg') }}" alt="">
                 @break

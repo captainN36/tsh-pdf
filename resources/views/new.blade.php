@@ -473,7 +473,7 @@
                         <div class="rounded-lg bg-white p-2">
                             <div class="grid w-full grid-cols-3 text-center">
                                 <div class=" m-auto max-w-[200px]">
-                                    <div class="relative"><img src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/images/lifecircle1.png" alt="life_circle1-image"
+                                    <div class="relative"><img src="/{{ $path }}/images/lifecircle1.png" alt="life_circle1-image"
                                                                class="w-full rounded-full align-middle">
                                         <div
                                             class="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center text-center text-[50px] font-bold text-[#ff3872]">
@@ -485,7 +485,7 @@
                                     <p class="text-[12px] sm:inline-block">Đầu đời - 29 tuổi</p>
                                     <p class="text-[12px] sm:inline-block">(2030)</p></div>
                                 <div class=" m-auto max-w-[200px]">
-                                    <div class="relative"><img src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/images/lifecircle2.png" alt="life_circle2-image"
+                                    <div class="relative"><img src="/{{ $path }}/images/lifecircle2.png" alt="life_circle2-image"
                                                                class="w-full rounded-full align-middle">
                                         <div
                                             class="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center text-center text-[50px] font-bold text-[#ff3872]">
@@ -496,7 +496,7 @@
                                     <p class="text-[12px] sm:inline-block">30 - 56 tuổi</p>
                                     <p class="text-[12px] sm:inline-block">(2031 - 2057)</p></div>
                                 <div class=" m-auto max-w-[200px]">
-                                    <div class="relative"><img src="/{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}/images/lifecircle3.png" alt="life_circle3-image"
+                                    <div class="relative"><img src="/{{ $path }}/images/lifecircle3.png" alt="life_circle3-image"
                                                                class="w-full rounded-full align-middle">
                                         <div
                                             class="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center text-center text-[50px] font-bold text-[#ff3872]">

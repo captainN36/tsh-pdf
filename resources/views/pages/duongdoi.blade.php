@@ -1,7 +1,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="14">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/c.png') }}">
+            src="{{ asset('/' . $path . '/c.png') }}">
         <div class="t m0 x11 hb y91 ff1 fs5 fc0 sc0 ls0 ws0">C</div>
         <div class="t m0 hc y92 ff1 fs6 fc2 sc0 ls0 ws0" style="left: 150px">PHÂN TÍCH ĐƯỜNG ĐỜI</div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -14,7 +14,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="15">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+            src="{{ asset('/' . $path . '/duongdoi.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div>
         @php
             $title = $data['data']['lifePathIndicator']['title'];
@@ -45,7 +45,7 @@
 <div id="pfd" class="pf w0 h0" data-page-no="16">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             {!! substr($data['data']['lifePathIndicator']['content'], 1086) !!}
         </div>
@@ -61,10 +61,10 @@
 <div id="pf7" class="pf w0 h0" data-page-no="17">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+            src="{{ asset('/' . $path . '/duongdoi.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ SỨ MỆNH</div>
-        <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+        <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 350px; top:150px;">
             {{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
             {!! $data['data']['missionIndicator']['description'] !!}
@@ -85,7 +85,7 @@
 <div id="pfd" class="pf w0 h0" data-page-no="18">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             <div> {!! substr($data['data']['missionIndicator']['content'], 1611, 4901) !!}
             </div>
@@ -101,7 +101,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="19">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-phai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! substr($data['data']['missionIndicator']['content'], 6512) !!}
             </div>
@@ -116,10 +116,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="20">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['maturityIndicator']['maturityIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['maturityIndicator']['description'] !!}
@@ -141,7 +141,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="21">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! substr($data['data']['maturityIndicator']['content'], 1430) !!}
             </div>
@@ -158,10 +158,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="22">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LINH HỒN</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['soulIndicator']['soulIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['soulIndicator']['description'] !!}
@@ -183,10 +183,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="23">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">5</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TÍNH CÁCH</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['personalIndicator']['description'] !!}
@@ -208,10 +208,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="24">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">6</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TỰ NHIÊN</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['dobIndicator']['dobIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['dobIndicator']['description'] !!}
@@ -233,10 +233,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="25">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">7</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ THÁI ĐỘ</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['attitudeIndicator']['description'] !!}
@@ -260,7 +260,7 @@
 <div id="pfd" class="pf w0 h0" data-page-no="26">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             <div>{!! substr($data['data']['attitudeIndicator']['content'], 2931) !!}
             </div>
@@ -277,7 +277,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="27">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">8</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐAM MÊ</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 400px">
@@ -289,7 +289,9 @@
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 780px">
                 @for ($index = 0; $index <= 1; $index++)
-                    {!! $data['data']['passionIndicator']['data'][$index] !!}
+                    @isset($data['data']['passionIndicator']['data'][$index])
+                        {!! $data['data']['passionIndicator']['data'][$index] !!}
+                    @endisset
                 @endfor
             </div>
 
@@ -304,7 +306,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="28">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 @for ($index = 2; $index <= 3; $index++)
                     @if (isset($data['data']['passionIndicator']['data'][$index]))
@@ -324,10 +326,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="29">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">9</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY LÝ TRÍ</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['thinkingIndicator']['description'] !!}
@@ -349,10 +351,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="30">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">10</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY CẢM XÚC</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
@@ -374,10 +376,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="31">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 80px;">11</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TRỰC GIÁC</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
@@ -399,10 +401,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="32">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">12</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY HÀNH ĐỘNG</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['actionThinkingIndicator']['description'] !!}
@@ -424,10 +426,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="33">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">13</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">SỐ BẢN CHẤT CỦA BẠN</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['natureIndicator']['natureIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['natureIndicator']['description'] !!}
@@ -449,7 +451,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="34">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! $data['data']['natureIndicator']['data'][1] !!}
             </div>
@@ -465,10 +467,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="35">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">14</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TIỀM THỨC</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['subconsciousPowerIndicator']['subconsciousPowerIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
@@ -490,7 +492,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="36">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/ck-duong-doi.png') }}">
+                src="{{ asset('/' . $path . '/ck-duong-doi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">15</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ ĐƯỜNG ĐỜI</div>
 
@@ -522,7 +524,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="37">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! $data['data']['lifeCircleIndicator']['content'] !!}
             </div>
@@ -538,7 +540,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="38">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/kim-tu-thap.png') }}">
+                src="{{ asset('/' . $path . '/kim-tu-thap.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">16</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">KIM TỰ THÁP SỐ HỌC</div>
 
@@ -548,21 +550,21 @@
             <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0">1</div>
             <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">2001</div>
             <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0">3</div>
-            <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">4</div>
-            <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">21-29 tuổi</div>
+            <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
+            <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][1] }} tuổi</div>
             <div class="t m0 x45 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2022 - 2030)</div>
-            <div class="t m0 x46 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">4</div>
-            <div class="t m0 x47 h16 y168 ff1 fse fc2 sc0 ls0 ws0">30-38 tuổi</div>
+            <div class="t m0 x46 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
+            <div class="t m0 x47 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][1] }} tuổi</div>
             <div class="t m0 x48 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2030 - 2039)</div>
-            <div class="t m0 x41 h14 y16a ff1 fsc fc2 sc0 ls0 ws0">8</div>
-            <div class="t m0 x49 h16 y16b ff1 fse fc2 sc0 ls0 ws0">39-47 t</div>
+            <div class="t m0 x41 h14 y16a ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>
+            <div class="t m0 x49 h16 y16b ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][1] }} t</div>
             <div class="t m0 x4a h5 y16c ff2 fs2 fc2 sc0 ls0 ws0">(2039 - 2048)</div>
-            <div class="t m0 x41 h14 y16d ff1 fsc fc2 sc0 ls0 ws0">6</div>
-            <div class="t m0 x4b h16 y16e ff1 fse fc2 sc0 ls0 ws0">48-56 tuổi</div>
+            <div class="t m0 x41 h14 y16d ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}</div>
+            <div class="t m0 x4b h16 y16e ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['age'][0] }} tuổi</div>
             <div class="t m0 x4c h17 y16f ff2 fse fc2 sc0 ls0 ws0">(2048 - 2057)</div>
-            <div class="t m0 x21 h14 y170 ff1 fsc fc2 sc0 ls0 ws0">2<span class="_ _1b"> </span>2</div>
-            <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">0</div>
-            <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">0</div>
+            <div class="t m0 x21 h14 y170 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
+            <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}</div>
+            <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
 
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 450px">
@@ -580,7 +582,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="39">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! substr($data['data']['challengeIndicator']['content'], 0, 6000) !!}
             </div>
@@ -595,7 +597,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="40">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-phai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! substr($data['data']['challengeIndicator']['content'], 6000, 5000) !!}
             </div>
@@ -611,7 +613,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="41">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! substr($data['data']['challengeIndicator']['content'], 11000, 5000) !!}
             </div>
@@ -627,7 +629,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="42">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-phai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! substr($data['data']['challengeIndicator']['content'], 16000, 6000) !!}
             </div>
@@ -643,7 +645,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="43">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
                 {!! substr($data['data']['challengeIndicator']['content'], 22000, 5000) !!}
             </div>
@@ -659,10 +661,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="44">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">17</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LẶP</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['repeatIndicator']['description'] !!}
@@ -686,7 +688,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="45">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">18</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ THIẾU</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 400px">
@@ -713,10 +715,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="46">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">19</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÂN BẰNG</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['balanceIndicator']['balanceIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['balanceIndicator']['description'] !!}
@@ -738,7 +740,7 @@
 <div id="pfd" class="pf w0 h0" data-page-no="47">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             <div>{!! substr($data['data']['balanceIndicator']['content'], 2000) !!}
             </div>
@@ -753,10 +755,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="48">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">20</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI ĐƯỜNG ĐỜI VÀ SỨ MỆNH</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['linkLifePathAndMission']['description'] !!}
@@ -778,10 +780,10 @@
     <div id="pf7" class="pf w0 h0" data-page-no="49">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">21</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI LINH HỒN VÀ TÍNH CÁCH</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 50%">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
                 {{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['linkSoulAndPersonalIndicator']['description'] !!}
@@ -803,7 +805,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="50">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/duongdoi.png') }}">
+                src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">22</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ NỢ NGHIỆP</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 400px">
@@ -830,7 +832,7 @@
     <div id="pf7" class="pf w0 h0" data-page-no="51">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/suc-manh.png') }}">
+                src="{{ asset('/' . $path . '/suc-manh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ SỨC MẠNH(rất quan trọng)</div>
             @php
@@ -966,7 +968,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="52">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-trai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             @php
                 $strengthTWO = [];
                 $jsonStrength =
@@ -1007,29 +1009,9 @@
     <div id="pf7" class="pf w0 h0" data-page-no="53">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/ngay-sinh.png') }}">
+                src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            @php
-                $name = new stdClass();
-                $summary = new stdClass();
-                foreach ($data['data']['drawNameAndSummaryChart']['drawNameChart'] as $value) {
-                    $strName = $value[1];
-                    $text = '';
-                    for ($index = 1; $index <= $strName; $index++) {
-                        $text .= $value[0];
-                    }
-                    $name->{$value[0]} = $text;
-                }
-                foreach ($data['data']['drawNameAndSummaryChart']['drawSummaryChart'] as $value) {
-                    $strName = $value[1];
-                    $text = '';
-                    for ($index = 1; $index <= $strName; $index++) {
-                        $text .= $value[0];
-                    }
-                    $summary->{$value[0]} = $text;
-                }
-            @endphp
             <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0">{{ $name->{3} ?? null }}<span class="_ _24">
                 </span>{{ $name->{6} ?? null }}<span class="_ _24"> </span>{{ $name->{9} ?? null }}<span
                     class="_ _22"> </span>{{ $summary->{3} ?? null }}<span class="_ _24">
@@ -1161,7 +1143,7 @@
     <div id="pfd" class="pf w0 h0" data-page-no="54">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/page-trang-phai.png') }}">
+                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
 
             @php
                 $arr = ['con số của sự độc lập, quyết đoán (biểu đồ của bạn còn có khả năng tạo được cặp số đẹp 11).', 'con số của sự nhẹ nhàng, hợp tác và cảm xúc (biểu đồ của bạn còn có khả năng tạo được cặp số đẹp 22).', 'con số của trí tuệ sáng tạo, vui vẻ và hoạt ngôn.', 'con số của sự cẩn thận và thực tế, kiên trì và chăm chỉ.', 'con số của tự do, khám phá và thay đổi linh hoạt.', 'con số của trí tuệ cảm xúc và quan tâm người khác.', 'con số của tri thức và khả năng tự học hỏi.', 'con số của khả năng nhạy bén tài chính và quyền lực.', 'con số của lý tưởng, sự cho đi và đức hy sinh.'];
@@ -1192,7 +1174,7 @@
         <div id="pf7" class="pf w0 h0" data-page-no="53">
             <div class="pc pc6 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/vochong.png') }}">
+                    src="{{ asset('/' . $path . '/vochong.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP VỢ CHỒNG</div>
                 <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; top: 200px">
@@ -1253,7 +1235,7 @@
         <div id="pf7" class="pf w0 h0" data-page-no="54">
             <div class="pc pc6 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/' . $data['data']['lifePathIndicator']['lifePathIndicator'] . '/vochong.png') }}">
+                    src="{{ asset('/' . $path . '/vochong.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP SỐ ĐIỆN THOẠI</div>
                 <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; top: 100px">

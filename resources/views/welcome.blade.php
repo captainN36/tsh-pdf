@@ -35,9 +35,9 @@
             $summary->{$value[0]} = $text;
         }
     @endphp
-{{--    @include('pages.first')--}}
-{{--    @include('pages.chiso')--}}
-{{--    @include('pages.vanso')--}}
+    @include('pages.first')
+    @include('pages.chiso')
+    @include('pages.vanso')
     @include('pages.duongdoi')
 
 

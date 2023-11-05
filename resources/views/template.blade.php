@@ -88,37 +88,37 @@
     <div class="bia">
         @switch($path)
             @case(2)
-                <img src="{{ asset('/bia/2.jpg') }}" alt="">
+                <img src="{{ asset('/bia/2.png') }}" alt="">
                 @break
             @case(3)
-                <img src="{{ asset('/bia/3.jpg') }}" alt="">
+                <img src="{{ asset('/bia/3.png') }}" alt="">
                 @break
             @case(4)
-                <img src="{{ asset('/bia/4.jpg') }}" alt="">
+                <img src="{{ asset('/bia/4.png') }}" alt="">
                 @break
             @case(5)
-                <img src="{{ asset('/bia/5.jpg') }}" alt="">
+                <img src="{{ asset('/bia/5.png') }}" alt="">
                 @break
             @case(6)
-                <img src="{{ asset('/bia/6.jpg') }}" alt="">
+                <img src="{{ asset('/bia/6.png') }}" alt="">
                 @break
             @case(7)
-                <img src="{{ asset('/bia/7.jpg') }}" alt="">
+                <img src="{{ asset('/bia/7.png') }}" alt="">
                 @break
             @case(8)
-                <img src="{{ asset('/bia/8.jpg') }}" alt="">
+                <img src="{{ asset('/bia/8.png') }}" alt="">
                 @break
             @case(9)
-                <img src="{{ asset('/bia/9.jpg') }}" alt="">
+                <img src="{{ asset('/bia/9.png') }}" alt="">
                 @break
             @case(10)
-                <img src="{{ asset('/bia/10.jpg') }}" alt="">
+                <img src="{{ asset('/bia/10.png') }}" alt="">
                 @break
             @case(11)
-                <img src="{{ asset('/bia/11.jpg') }}" alt="">
+                <img src="{{ asset('/bia/11.png') }}" alt="">
                 @break
             @case(22)
-                <img src="{{ asset('/bia/22.jpg') }}" alt="">
+                <img src="{{ asset('/bia/22.png') }}" alt="">
                 @break
         @endswitch
         <div class="overlay">

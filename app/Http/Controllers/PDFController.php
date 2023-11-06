@@ -69,7 +69,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        return response()->json(['path' => asset("/pdf/$namePDF")]);
+        return asset("/pdf/$namePDF");
     }
 
     public function renderPDF(Request $request)

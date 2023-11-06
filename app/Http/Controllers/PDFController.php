@@ -18,13 +18,34 @@ class PDFController extends Controller
 {
     public function view(Request $request)
     {
-        $data = $this->getData($request->all());
+        $param = [
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
+        ];
+        $data = $this->getData($param);
         return view('welcome', ['data' => $data]);
     }
 
-    public function pdf(Request $request)
+    public function download () {
+        $param = [
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
+        ];
+        $fileUrl = $this->pdf($param);
+
+        $fileContents = Http::get($fileUrl)->body();
+
+        $headers = [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'attachment; filename="1277-2023-11-05.pdf"',
+        ];
+
+        return response($fileContents, 200, $headers);
+    }
+
+    public function pdf($param)
     {
-        $data = $this->getData($request->all());
+        $data = $this->getData($param);
         $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
         $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists(public_path() . '/html/')) {

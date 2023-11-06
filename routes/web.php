@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/view', [\App\Http\Controllers\PDFController::class, 'view']);
 Route::get('/a', [\App\Http\Controllers\PDFController::class, 'pdf']);
 Route::get('/downLoad', [\App\Http\Controllers\PDFController::class, 'downLoad']);
-Route::get('/test', function () {
-    dd("test");
-});
+Route::get('/test', [\App\Http\Controllers\PDFController::class, 'test']);
+
 Route::get('/html', [\App\Http\Controllers\PDFController::class, 'mappingKey']);

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Barryvdh\DomPDF\Facade\Pdf;
+// use Barryvdh\DomPDF\Facade\Pdf;
 use ConvertApi\ConvertApi;
 use Illuminate\Http\Request;
 use Illuminate\Log\Logger;
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class PDFController extends Controller
 {
@@ -41,6 +42,17 @@ class PDFController extends Controller
         ];
 
         return response($fileContents, 200, $headers);
+    }
+
+    public function test()
+    {
+        $param = [
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
+        ];
+        $data = $this->getData($param);
+        $pdf = PDF::loadView('welcome', ['data' => $data]);
+        return $pdf->download('example.pdf');
     }
 
     public function pdf($param)

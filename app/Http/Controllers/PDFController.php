@@ -141,20 +141,11 @@ class PDFController extends Controller
         ])->get($url);
         $data = $callAPI->json();
         $title = $data['data']['data'];
-        $count = 1;
+                $count = 1;
         foreach ($title as $key => $item) {
             if (isset($item['title'])) {
-                if ($count <= 6) {
-                    $data['data']['data'][$key]['page'] = 2;
-                }
-                if ($count > 6 && $count <= 13) {
-                    $data['data']['data'][$key]['page'] = 3;
-                }
-                if ($count > 13) {
-                    $data['data']['data'][$key]['page'] = 4;
-                }
+                    $data['data']['data'][$key]['page'] =  $count++;
             }
-            $count++;
         }
         $data['data']['dateOfBirth'] = Carbon::create($data['data']['dateOfBirth'])->format('d/m/Y');
         return $data['data'];

@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/view', [\App\Http\Controllers\PDFController::class, 'view']);
+Route::get('/view-file', [\App\Http\Controllers\PDFController::class, 'view']);
 Route::get('/a', [\App\Http\Controllers\PDFController::class, 'pdf']);
-Route::get('/downLoad', [\App\Http\Controllers\PDFController::class, 'downLoad']);
+Route::get('/download-file', [\App\Http\Controllers\PDFController::class, 'downLoad']);
 Route::get('/test', [\App\Http\Controllers\PDFController::class, 'test']);
 Route::get('/gen', [\App\Http\Controllers\PDFController::class, 'generatePDF']);
 

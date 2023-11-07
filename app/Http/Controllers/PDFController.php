@@ -19,20 +19,12 @@ class PDFController extends Controller
 {
     public function view(Request $request)
     {
-        $param = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
-        ];
-        $data = $this->getData($param);
+        $data = $this->getData($request->all());
         return view('welcome', ['data' => $data]);
     }
 
-    public function download () {
-        $param = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
-        ];
-        $fileUrl = $this->pdf($param);
+    public function download (Request $request) {
+        $fileUrl = $this->pdf($request->all());
 
         $fileContents = Http::get($fileUrl)->body();
 

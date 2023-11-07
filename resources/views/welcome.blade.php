@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" type="text/css" href="{{ asset('pdf.css') }}">
     <title>test</title>
-    </head>
-<body>
+</head>
 <div id="sidebar">
     <div id="outline">
     </div>
@@ -36,8 +35,10 @@
             $summary->{$value[0]} = $text;
         }
     @endphp
-    @include('pages.first')
-
+    @include('pages.duongdoi')
+    @include('pages.duongdoi')
+    @include('pages.duongdoi')
+    @include('pages.duongdoi')
 
     <div id="pf7" class="pf w0 h0" data-page-no="54">
         <div class="pc pc6 w0 h0 opened">

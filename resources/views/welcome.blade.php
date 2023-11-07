@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" type="text/css" href="{{ asset('pdf.css') }}">
     <title>test</title>
-</head>
+    </head>
+<body>
 <div id="sidebar">
     <div id="outline">
     </div>
@@ -36,9 +37,6 @@
         }
     @endphp
     @include('pages.first')
-    @include('pages.chiso')
-    @include('pages.vanso')
-    @include('pages.duongdoi')
 
 
     <div id="pf7" class="pf w0 h0" data-page-no="54">

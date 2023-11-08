@@ -17,7 +17,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/2.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div>
-        <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ VẬN SỐ</div>
+        <div id="header1" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ VẬN SỐ</div>
 
         <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1500px; white-space: normal">
             {!! substr($data['data']['cycleFortune']['description'], 0) !!}
@@ -85,7 +85,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
-        <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các năm</div>
+        <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÁC NĂM</div>
         <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2023</div>
         <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1120px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nowYearIndicator'] }}</div>
@@ -100,7 +100,7 @@
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 0, 1500) !!}
+            {!! substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 0, 1833) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -110,13 +110,13 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-@if(substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 1500, 3500) !== null)
+@if(substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 1833, 4000) !== null)
 <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 1500, 3500) !!}
+            {!! substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 1833, 4000) !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -125,29 +125,15 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 @endif
-@if(substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 4500) !== null)
-<div id="pfc" class="pf w0 h0" data-page-no="9">
-    <div class="pc pce w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['nowYearIndicator']['content'], 4500) !!}
-        </div>
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">9</div>
-    </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
-@endisset
+
 
 
 <div id="pfd" class="pf w0 h0" data-page-no="10">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 0, 4000) !!}
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+            {!! substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 0, 4172) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -156,13 +142,13 @@
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
-@if(substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 4000) !== null)
+@if(substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 4172) !== null)
 <div id="pfd" class="pf w0 h0" data-page-no="10">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 4000) !!}
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+            {!! substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 4172) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -177,28 +163,28 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 0, 4000) !!}
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+            {!! substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 0, 4215) !!}
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">11</div>
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">11</div>
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
-@if(substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 4000) !== null)
+@if(substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 4215) !== null)
 <div id="pfd" class="pf w0 h0" data-page-no="11">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 4000) !!}
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+            {!! substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 4215) !!}
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">11</div>
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">11</div>
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
@@ -240,7 +226,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             {!! substr($data['data']['monthIndicator']['nextMonthIndicator']['content'], 0) !!}
         </div>
 
@@ -251,22 +237,22 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-<div id="pfd" class="pf w0 h0" data-page-no="11">
+<div id="pfd" class="pf w0 h0" data-page-no="14">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             {!! substr($data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'], 0) !!}
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">11</div>
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">14</div>
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-<div id="pfd" class="pf w0 h0" data-page-no="12">
+<div id="pfd" class="pf w0 h0" data-page-no="15">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/bannga.png') }}">
@@ -303,7 +289,7 @@
         @endisset
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">14</div>
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">15</div>
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>

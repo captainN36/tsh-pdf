@@ -19,7 +19,16 @@ class PDFController extends Controller
 {
     public function view(Request $request)
     {
-        $data = $this->getData($request->all());
+        $params = [
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
+        ];
+        $data = $this->getData($params);
+        // dd(substr($data['data']['personalIndicator']['content'], 0));
+        // dd($data['data']['passionIndicator']['data'][0]);
+        // dd($data['data']['dobIndicator']['content']);
+        // dd(substr($data['data']['missionIndicator']['content'], 2087,3095), substr($data['data']['missionIndicator']['content'], 3097, 4500));
+        // dd($data['data']['missionIndicator']['content'], strlen($data['data']['missionIndicator']['content'] . '' . '<br>'));
         return view('welcome', ['data' => $data]);
     }
 
@@ -55,7 +64,7 @@ class PDFController extends Controller
             $htmlStr = view('welcome', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
-                $processName = "wkhtmltopdf --base-url " . public_path() . " --javascript-delay 300000 --no-stop-slow-scripts $pathHtml $pathPDF";
+                $processName = "wkhtmltopdf --page-width A4 --page-height A4 --margin-top 10mm --margin-right 10mm --margin-bottom 10mm --margin-left 10mm --footer-center [page]/[topage] $pathHtml $pathPDF";
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {

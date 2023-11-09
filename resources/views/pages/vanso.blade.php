@@ -137,7 +137,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 0, 4172) !!}
+            {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -146,29 +146,14 @@
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
-@if(substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 4172) !== null)
-<div id="pfd" class="pf w0 h0" data-page-no="10">
-    <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['nextYearIndicator']['content'], 4172) !!}
-        </div>
 
-        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">10</div>
-    </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
-@endif
 
 <div id="pfd" class="pf w0 h0" data-page-no="11">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 0, 4215) !!}
+            {!! $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'] !!}
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -177,22 +162,7 @@
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
-@if(substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 4215) !== null)
-<div id="pfd" class="pf w0 h0" data-page-no="11">
-    <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! substr($data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], 4215) !!}
-        </div>
 
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">11</div>
-    </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
-@endif
 
 
 <div id="pfd" class="pf w0 h0" data-page-no="12">

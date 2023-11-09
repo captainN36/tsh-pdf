@@ -32,8 +32,12 @@ class PDFController extends Controller
         return view('welcome', ['data' => $data]);
     }
 
-    public function download (Request $request) {
-        $fileUrl = $this->pdf($request->all());
+    public function download () {
+        $params = [
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
+        ];
+        $fileUrl = $this->pdf($params);
 
         $fileContents = Http::get($fileUrl)->body();
 
@@ -48,8 +52,8 @@ class PDFController extends Controller
     public function pdf($param)
     {
         $data = $this->getData($param);
-        $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
-        $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+        $name = $data['id'] . '-' . $data['dateSearch'] . 'aaa' . '.html';
+        $namePDF = $data['id'] . '-' . $data['dateSearch'] . 'aaa' . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
             mkdir(public_path() . '/html/', 0777, true);
         }
@@ -59,12 +63,13 @@ class PDFController extends Controller
         Process::run('chmod -R 777 ' . public_path());
         $pathHtml = public_path() . '/html/' . $name;
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+        dd($pathHtml, $pathPDF);
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('welcome', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
-                $processName = "wkhtmltopdf --page-width A4 --page-height A4 --margin-top 10mm --margin-right 10mm --margin-bottom 10mm --margin-left 10mm --footer-center [page]/[topage] $pathHtml $pathPDF";
+                $processName = "wkhtmltopdf --base-url " . public_path() . " --javascript-delay 300000 --no-stop-slow-scripts $pathHtml $pathPDF";
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {

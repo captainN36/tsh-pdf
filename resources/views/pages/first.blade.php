@@ -35,7 +35,7 @@
                 <img src="{{ asset('/bia/22.png') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
         @endswitch
-        <div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['fullName'] }}</div>
+        <div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0" style="width: 2384px; text-align: center; left: 0">{{ $data['fullName'] }}</div>
         <div class="t m0 x2 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['dateOfBirth'] }}</div>
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
@@ -49,7 +49,7 @@
         <div class="t m0 x5 h4 y8 ff1 fs2 fc2 sc0 ls0 ws0">HIỂU VỀ BẢN BÁO CÁO CỦA BẠN<span class="_ _2"></span><span class="ff2">...................................................................................................................</span></div><div class="t m0 x6 h5 y9 ff2 fs2 fc2 sc0 ls0 ws0">4</div>
         <div class="t m0 x5 h4 ya ff1 fs2 fc2 sc0 ls0 ws0">A - TỔNG HỢP CÁC CHỈ SỐ QUAN TRỌNG<span class="_ _3"></span><span class="ff2">.......................................................................................................</span></div><div class="t m0 x6 h5 yb ff2 fs2 fc2 sc0 ls0 ws0">5</div>
         <div class="t m0 x5 h4 yc ff1 fs2 fc2 sc0 ls0 ws0">B - CHU KỲ VẬN SỐ<span class="_ _4"></span><span class="ff2">.............................................................................................................................................</span></div><div class="t m0 x6 h5 yd ff2 fs2 fc2 sc0 ls0 ws0">6</div>
-        <div class="t m0 x7 h6 ye ff3 fs2 fc2 sc0 ls0 ws0"><a href="#header1">1. CHU KỲ VẬN SỐ</a><span class="_ _1"></span><span class="ff2">............................................................................................................................................</span></div><div class="t m0 x6 h5 yf ff2 fs2 fc2 sc0 ls0 ws0">7</div>
+        <div class="t m0 x7 h6 ye ff3 fs2 fc2 sc0 ls0 ws0">1. CHU KỲ VẬN SỐ<span class="_ _1"></span><span class="ff2">............................................................................................................................................</span></div><div class="t m0 x6 h5 yf ff2 fs2 fc2 sc0 ls0 ws0">7</div>
         <div class="t m0 x7 h6 y10 ff3 fs2 fc2 sc0 ls0 ws0">2. CHỈ SỐ CÁC THÁNG<span class="_ _4"></span><span class="ff2">.....................................................................................................................................</span></div><div class="t m0 x6 h5 y11 ff2 fs2 fc2 sc0 ls0 ws0">8</div>
         <div class="t m0 x7 h6 y12 ff3 fs2 fc2 sc0 ls0 ws0">3. CHỈ SỐ CÁC NĂM<span class="_ _5"></span><span class="ff2">..........................................................................................................................................</span></div><div class="t m0 x6 h5 y13 ff2 fs2 fc2 sc0 ls0 ws0">10</div>
         <div class="t m0 x7 h6 y14 ff3 fs2 fc2 sc0 ls0 ws0">4. NHÓM TÍNH CÁCH THEO BẢN NGÃ<span class="_ _3"></span><span class="ff2">...........................................................................................................</span></div><div class="t m0 x8 h5 y15 ff2 fs2 fc2 sc0 ls0 ws0">12</div>

@@ -22,10 +22,14 @@
         <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1500px; white-space: normal">
             {!! substr($data['data']['cycleFortune']['description'], 0) !!}
         </div>
-        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 70px; bottom: 980px">
-            <p>
-                {!! $data['data']['cycleFortune']['content'] !!}
-            </p>
+        <style>
+        .t.m0.hf.yaf.ff2.fs9.fc2.sc0.ls0.ws0 p {
+           white-space: break-spaces;
+            font-size:45px;
+        }
+        </style>
+        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 70px; bottom: 925px; width: 1950px">
+            {!! $data['data']['cycleFortune']['content'] !!}
         </div>
         @php
             $array = $data['data']['cycleFortune']['cycleFortune'];

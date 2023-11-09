@@ -63,7 +63,6 @@ class PDFController extends Controller
         Process::run('chmod -R 777 ' . public_path());
         $pathHtml = public_path() . '/html/' . $name;
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
-        dd($pathHtml, $pathPDF);
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('welcome', ['data' => $data])->render();

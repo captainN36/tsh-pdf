@@ -24,9 +24,7 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
         ];
         $data = $this->getData($params);
-        // dd($data['data']['dobIndicator']['content'], $data['data']['attitudeIndicator']['content']);
-        // dd(strlen($data['data']['attitudeIndicator']['content']));
-        return view('welcome', ['data' => $data]);
+                return view('welcome', ['data' => $data]);
     }
 
     public function download () {

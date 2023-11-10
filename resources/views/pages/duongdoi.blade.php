@@ -24,7 +24,7 @@
             $numberLifePath = $final[0];
         @endphp
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐƯỜNG ĐỜI (SỐ CHỦ ĐẠO)</div>
-        <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0">{{ $numberLifePath }}</div>
+        <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center">{{ $numberLifePath }}</div>
         <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
             {!! $data['data']['lifePathIndicator']['description'] !!}
         </div>
@@ -64,7 +64,7 @@
             src="{{ asset('/' . $path . '/duongdoi.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ SỨ MỆNH</div>
-        <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 330px; top:150px;">
+        <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
             {!! $data['data']['missionIndicator']['description'] !!}
@@ -99,8 +99,7 @@
 @if(substr($data['data']['missionIndicator']['content'], 3095, 5150) !== null)
 <div id="pfd" class="pf w0 h0" data-page-no="18">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
             <div>
                 {!! substr($data['data']['missionIndicator']['content'], 5185) !!}
@@ -123,7 +122,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LINH HỒN</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['soulIndicator']['soulIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['soulIndicator']['description'] !!}
@@ -148,7 +147,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">5</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TÍNH CÁCH</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 311px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['personalIndicator']['description'] !!}
@@ -173,7 +172,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">6</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TỰ NHIÊN</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['dobIndicator']['dobIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['dobIndicator']['description'] !!}
@@ -192,13 +191,13 @@
         </div>
     </div>
 
-    <div id="pf7" class="pf w0 h0" data-page-no="25">
+    <div id="pf7" class="pf w0 h0" style="display: none" data-page-no="25">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">7</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ THÁI ĐỘ</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['attitudeIndicator']['description'] !!}
@@ -242,7 +241,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">8</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐAM MÊ</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 311px; top: 147px">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</div>
             <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['passionIndicator']['description'] !!}
@@ -299,7 +298,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">9</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY LÝ TRÍ</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 311px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['thinkingIndicator']['description'] !!}
@@ -324,7 +323,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">10</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY CẢM XÚC</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 311px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
@@ -349,7 +348,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 80px;">11</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TRỰC GIÁC</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 311px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
@@ -374,7 +373,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">12</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY HÀNH ĐỘNG</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['actionThinkingIndicator']['description'] !!}
@@ -399,7 +398,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">13</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">SỐ BẢN CHẤT CỦA BẠN</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['natureIndicator']['natureIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['natureIndicator']['description'] !!}
@@ -440,7 +439,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">14</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TIỀM THỨC</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['subconsciousPowerIndicator']['subconsciousPowerIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
@@ -634,7 +633,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">17</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LẶP</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 311px; top:150px; font-weight: 900">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['repeatIndicator']['description'] !!}
@@ -661,7 +660,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">18</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ THIẾU</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 311px; top: 150px">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['missIndicator']['description'] !!}
@@ -688,7 +687,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">19</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÂN BẰNG</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['balanceIndicator']['balanceIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['balanceIndicator']['description'] !!}
@@ -728,7 +727,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">20</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI ĐƯỜNG ĐỜI VÀ SỨ MỆNH</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['linkLifePathAndMission']['description'] !!}
@@ -753,7 +752,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">21</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI LINH HỒN VÀ TÍNH CÁCH</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 320px; top:150px;">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['linkSoulAndPersonalIndicator']['description'] !!}
@@ -778,7 +777,7 @@
                 src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">22</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ NỢ NGHIỆP</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 313px; top: 150px">
+            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
             <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['karmicIndicator']['description'] !!}
@@ -982,23 +981,30 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0">{{ $name->{3} ?? null }}<span class="_ _24">
-                </span>{{ $name->{6} ?? null }}<span class="_ _24"> </span>{{ $name->{9} ?? null }}<span
-                    class="_ _22"> </span>{{ $summary->{3} ?? null }}<span class="_ _24">
-                </span>{{ $summary->{6} ?? null }}
-                <span class="_ _24"> </span>{{ $summary->{9} ?? null }}
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: inline-flex">
+                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{3} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{6} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{9} ?? null }} </span>
+                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{3} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{6} ?? null }} </span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{9} ?? null }} </span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0">{{ $name->{2} ?? null }}<span class="_ _24">
-                </span>{{ $name->{5} ?? null }}<span class="_ _24"> </span>{{ $name->{8} ?? null }}<span
-                    class="_ _22"> </span>{{ $summary->{2} ?? null }}<span class="_ _24">
-                </span>{{ $summary->{5} ?? null }}
-                <span class="_ _24"> </span>{{ $summary->{8} ?? null }}
+
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 168px;">
+                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{2} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{5} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{8} ?? null }} </span>
+                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{2} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{5} ?? null }} </span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{8} ?? null }} </span>
             </div>
-            <div class="t m0 x51 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0">{{ $name->{1} ?? null }}<span class="_ _24">
-                </span>{{ $name->{4} ?? null }}<span class="_ _24"> </span>{{ $name->{7} ?? null }}<span
-                    class="_ _22"> </span>{{ $summary->{1} ?? null }}<span class="_ _24">
-                </span>{{ $summary->{4} ?? null }}
-                <span class="_ _24"> </span>{{ $summary->{7} ?? null }}
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 230px;">
+                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{1} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{4} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{7} ?? null }} </span>
+                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{1} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{4} ?? null }} </span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{7} ?? null }} </span>
             </div>
 
             @php

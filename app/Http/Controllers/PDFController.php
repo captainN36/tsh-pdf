@@ -63,7 +63,7 @@ class PDFController extends Controller
             $htmlStr = view('welcome', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
-                $processName = "wkhtmltopdf --base-url " . public_path() . " --javascript-delay 300000 --no-stop-slow-scripts $pathHtml $pathPDF";
+                $processName = "wkhtmltopdf $pathHtml $pathPDF";
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {

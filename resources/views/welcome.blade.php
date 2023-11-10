@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="generator" content="pdf2htmlEX" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('pdf.css') }}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('pdf.css') }}"> --}}
     <title>test</title>
 </head>
 <div id="sidebar">

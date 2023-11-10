@@ -70,7 +70,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        return asset("/pdf/$namePDF");
+        return redirect(asset("/pdf/$namePDF"));
     }
 
     public function renderPDF(Request $request)

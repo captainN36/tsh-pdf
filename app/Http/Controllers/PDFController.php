@@ -24,11 +24,6 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
         ];
         $data = $this->getData($params);
-        // dd(substr($data['data']['personalIndicator']['content'], 0));
-        // dd($data['data']['passionIndicator']['data'][0]);
-        // dd($data['data']['dobIndicator']['content']);
-        // dd(substr($data['data']['missionIndicator']['content'], 2087,3095), substr($data['data']['missionIndicator']['content'], 3097, 4500));
-        // dd($data['data']['missionIndicator']['content'], strlen($data['data']['missionIndicator']['content'] . '' . '<br>'));
         return view('welcome', ['data' => $data]);
     }
 

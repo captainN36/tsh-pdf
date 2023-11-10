@@ -47,8 +47,8 @@ class PDFController extends Controller
     public function pdf($param)
     {
         $data = $this->getData($param);
-        $name = $data['id'] . '-' . $data['dateSearch'] . 'aaa' . '.html';
-        $namePDF = $data['id'] . '-' . $data['dateSearch'] . 'aaa' . '.pdf';
+        $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
+        $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
             mkdir(public_path() . '/html/', 0777, true);
         }

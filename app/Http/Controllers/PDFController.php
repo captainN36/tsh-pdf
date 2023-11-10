@@ -34,14 +34,14 @@ class PDFController extends Controller
         // ];
         $fileUrl = $this->pdf($request->all());
 
-        $fileContents = Http::get($fileUrl)->body();
+        // $fileContents = Http::get($fileUrl)->body();
 
-        $headers = [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'attachment; filename="1277-2023-11-05.pdf"',
-        ];
+        // $headers = [
+        //     'Content-Type' => 'application/pdf',
+        //     'Content-Disposition' => 'attachment; filename="1277-2023-11-05.pdf"',
+        // ];
 
-        return response($fileContents, 200, $headers);
+        return redirect($fileUrl);
     }
 
     public function pdf($param)
@@ -70,7 +70,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        return redirect(asset("/pdf/$namePDF"));
+        return asset("/pdf/$namePDF");
     }
 
     public function renderPDF(Request $request)

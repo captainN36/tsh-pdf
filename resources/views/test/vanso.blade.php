@@ -1,0 +1,1 @@
+{!! $data['data']['yearIndicator']['nowYearIndicator']['content'] !!}

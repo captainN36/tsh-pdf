@@ -25,7 +25,7 @@ class PDFController extends Controller
                 'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
         ];
         $data = $this->getData($params);
-        return view('test.welcome', ['data' => $data]);
+        // return view('test.welcome', ['data' => $data]);
         // $htmlContent = view('test.vanso', ['data' => $data])->render();
         // $htmlFilePath = tempnam(sys_get_temp_dir(), 'html_to_pdf');
         // file_put_contents($htmlFilePath, $htmlContent);
@@ -52,22 +52,22 @@ class PDFController extends Controller
         //     // Log errors or handle them accordingly
         //     return response()->json(['error' => 'Conversion failed', 'output' => $output]);
         // }
-        // $pdfFilePath = public_path('testtest.pdf');
+        $pdfFilePath = public_path('testtest.pdf');
 
-        // // Get the total number of pages
-        // $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
-        // $totalPages = (int) shell_exec($command);
+        // Get the total number of pages
+        $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
+        $totalPages = (int) shell_exec($command);
 
-        // // Extract text from each page
-        // $pageTexts = [];
-        // for ($pageNumber = 1; $pageNumber <= $totalPages; $pageNumber++) {
-        //     $outputFile = tempnam(sys_get_temp_dir(), 'pdf_page');
-        //     $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
-        //     shell_exec($command);
-        //     $pageTexts[$pageNumber] = file_get_contents($outputFile);
-        //     unlink($outputFile);
-        // }
-        // dd($pageTexts);
+        // Extract text from each page
+        $pageTexts = [];
+        for ($pageNumber = 1; $pageNumber <= $totalPages; $pageNumber++) {
+            $outputFile = tempnam(sys_get_temp_dir(), 'pdf_page');
+            $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
+            shell_exec($command);
+            $pageTexts[$pageNumber] = file_get_contents($outputFile);
+            unlink($outputFile);
+        }
+        dd($pageTexts);
         // $data = $this->getData($request->all());
         //         return view('welcome', ['data' => $data]);
     }
@@ -151,18 +151,12 @@ class PDFController extends Controller
         Process::run('chmod -R 777 ' . public_path());
         $pathHtml = public_path() . '/html/' . $name;
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
-        $pathPDF2 = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '2.pdf';
-        $pathPDF3 = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '3.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('files.welcome', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";
-                Process::run($processName);
-                $processName = "wkhtmltopdf $pathHtml $pathPDF2";
-                Process::run($processName);
-                $processName = "wkhtmltopdf $pathHtml $pathPDF3";
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {

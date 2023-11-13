@@ -189,7 +189,7 @@ class PDFController extends Controller
         }
         Process::run('chmod -R 777 ' . public_path());
         $pathHtml = public_path() . '/html/' . $namehtml;
-        $pathPDF = public_path() . '/pdf/' . $namePDF . '.pdf';
+        $pathPDF = public_path() . '/pdf/' . $name . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('test.welcome', ['data' => $data])->render();

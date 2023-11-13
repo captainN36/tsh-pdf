@@ -179,7 +179,7 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
         ];
         $data = self::dataGet($params);
-        $name = $name . '.html';
+        $namehtml = $name . '.html';
         $namePDF = $name . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
             mkdir(public_path() . '/html/', 0777, true);
@@ -188,8 +188,8 @@ class PDFController extends Controller
             mkdir(public_path() . '/pdf/', 0777, true);
         }
         Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $name;
-        $pathPDF = public_path() . '/pdf/' . $name . '.pdf';
+        $pathHtml = public_path() . '/html/' . $namehtml;
+        $pathPDF = public_path() . '/pdf/' . $namePDF . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('test.welcome', ['data' => $data])->render();
@@ -202,7 +202,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        $pdfFilePath = $pathPDF;
+        $pdfFilePath = public_path('/pdf/' . $namePDF);
 
         // Get the total number of pages
         $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";

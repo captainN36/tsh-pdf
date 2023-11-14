@@ -15,5 +15,13 @@
 </style>
 
 <div class="content-container">
-    {!! $html !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
 </div>

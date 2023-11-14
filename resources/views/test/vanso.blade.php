@@ -16,14 +16,15 @@
 
 <div class="content-container" style="margin-left: 10em !important; margin-right: 10em !important; margin-bottom: 10em !important">
     <div>
-    {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" . $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+        {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
     </div>
 </div>

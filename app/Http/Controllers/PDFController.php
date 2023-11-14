@@ -21,10 +21,11 @@ class PDFController extends Controller
     public function view()
     {
         $params = [
-                'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
-                'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
         ];
         $data = $this->getData($params);
+        dd($data);
         // $pdfFilePath = public_path('testtest.pdf');
 
         // // Get the total number of pages
@@ -78,7 +79,7 @@ class PDFController extends Controller
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('test.welcome', ['data' => $data])->render();
+            $htmlStr = view('files.welcome', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";

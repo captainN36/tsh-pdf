@@ -155,8 +155,8 @@ class PDFController extends Controller
         $callAPI = Http::withHeaders([
             'Authorization' => "Bearer $token"
         ])->get($url);
-        dd($data);
         $data = $callAPI->json();
+        dd($data);
         $title = $data['data']['data'];
                 $count = 1;
         foreach ($title as $key => $item) {

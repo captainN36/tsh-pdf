@@ -195,13 +195,13 @@
         </div>
 
         <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {{$data['data']['monthIndicator']['description']}}
+            {!! $data['data']['monthIndicator']['description'] !!}
         </div>
         <?php
             $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText('nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content'])
         ?>
         <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; bottom: 800px; text-align: justify;">
-            {{$nowMonthIndicator[1]}}
+            {!! nl2br(e($nowMonthIndicator[$i])) !!}
 
         </div>
 
@@ -221,7 +221,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {{$nextMonthIndicator[$i]}}
+            {!! nl2br(e($nextMonthIndicator[$i])) !!}
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -240,8 +240,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {{$twoMonthsLaterIndicator[$i]}}
-
+            {!! nl2br(e($twoMonthsLaterIndicator[$i])) !!}
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

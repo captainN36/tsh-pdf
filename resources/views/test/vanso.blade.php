@@ -14,7 +14,7 @@
     }
 </style>
 
-<div class="content-container" style="margin: 5em; margin-bottom: 5em; margin-top: 4em">
+<div class="content-container" style="margin: 7em; margin-bottom: 7em; margin-top: 7em">
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}

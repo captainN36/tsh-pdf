@@ -19,11 +19,4 @@
     </style>
 <div style="margin: 3em">
 {!! $html !!}
-{!! $html !!}
-{!! $html !!}
-{!! $html !!}
-{!! $html !!}
-{!! $html !!}
-{!! $html !!}
-{!! $html !!}
 </div>

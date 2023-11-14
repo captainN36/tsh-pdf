@@ -25,24 +25,24 @@ class PDFController extends Controller
                 'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
         ];
         $data = $this->getData($params);
-        $pdfFilePath = public_path('testtest.pdf');
+        // $pdfFilePath = public_path('testtest.pdf');
 
-        // Get the total number of pages
-        $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
-        $totalPages = (int) shell_exec($command);
+        // // Get the total number of pages
+        // $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
+        // $totalPages = (int) shell_exec($command);
 
-        // Extract text from each page
-        $pageTexts = [];
-        for ($pageNumber = 1; $pageNumber <= $totalPages; $pageNumber++) {
-            $outputFile = tempnam(sys_get_temp_dir(), 'pdf_page');
-            $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
-            shell_exec($command);
-            $pageTexts[$pageNumber] = file_get_contents($outputFile);
-            unlink($outputFile);
-        }
-        dd($pageTexts);
+        // // Extract text from each page
+        // $pageTexts = [];
+        // for ($pageNumber = 1; $pageNumber <= $totalPages; $pageNumber++) {
+        //     $outputFile = tempnam(sys_get_temp_dir(), 'pdf_page');
+        //     $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
+        //     shell_exec($command);
+        //     $pageTexts[$pageNumber] = file_get_contents($outputFile);
+        //     unlink($outputFile);
+        // }
+        // dd($pageTexts);
         // $data = $this->getData($request->all());
-        //         return view('welcome', ['data' => $data]);
+                return view('files.welcome', ['data' => $data]);
     }
 
     public function download (Request $request) {

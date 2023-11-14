@@ -18,8 +18,9 @@
         }
     </style>
 <div style="margin: 3em">
-{!! $data['data']['yearIndicator']['nowYearIndicator']['content'] !!}
-{!! $data['data']['yearIndicator']['nowYearIndicator']['content'] !!}
-{!! $data['data']['yearIndicator']['nowYearIndicator']['content'] !!}
-{!! $data['data']['yearIndicator']['nowYearIndicator']['content'] !!}
+{!! $html !!}
+{!! $html !!}
+{!! $html !!}
+{!! $html !!}
+{!! $html !!}
 </div>

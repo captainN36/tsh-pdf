@@ -25,33 +25,6 @@ class PDFController extends Controller
                 'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
         ];
         $data = $this->getData($params);
-        // return view('test.welcome', ['data' => $data]);
-        // $htmlContent = view('test.vanso', ['data' => $data])->render();
-        // $htmlFilePath = tempnam(sys_get_temp_dir(), 'html_to_pdf');
-        // file_put_contents($htmlFilePath, $htmlContent);
-
-        // // Define the output PDF file path
-        // $pdfFilePath = storage_path('app/public/output.pdf');
-
-        // // Run wkhtmltopdf command to convert HTML to PDF
-        // $command = "wkhtmltopdf $htmlFilePath $pdfFilePath";
-
-        // // Execute the command and capture the output and return code
-        // exec($command, $output, $returnCode);
-
-        // // Remove the temporary HTML file
-        // unlink($htmlFilePath);
-
-        // // Log the output for debugging purposes
-        // Log::info("wkhtmltopdf output: " . implode(PHP_EOL, $output));
-
-        // // Check if the command was successful
-        // if ($returnCode === 0) {
-        //     return response()->json(['message' => 'Conversion successful', 'pdf_path' => $pdfFilePath]);
-        // } else {
-        //     // Log errors or handle them accordingly
-        //     return response()->json(['error' => 'Conversion failed', 'output' => $output]);
-        // }
         $pdfFilePath = public_path('testtest.pdf');
 
         // Get the total number of pages
@@ -89,54 +62,6 @@ class PDFController extends Controller
         return redirect($fileUrl);
     }
 
-    // public static function renderText ($html, $name) {
-    //     $params = [
-    //         'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
-    //         'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
-    //     ];
-    //     $data = self::dataGet($params);
-    //     $nameHtml = $name . '.html';
-    //     $namePDF = $name . '.pdf';
-    //     if (!file_exists(public_path() . '/html/')) {
-    //         mkdir(public_path() . '/html/', 0777, true);
-    //     }
-    //     if (!file_exists(public_path() . '/pdf/')) {
-    //         mkdir(public_path() . '/pdf/', 0777, true);
-    //     }
-    //     Process::run('chmod -R 777 ' . public_path());
-    //     $pathHtml = public_path() . '/html/' . $nameHtml;
-    //     $pathPDF = public_path() . '/pdf/' . $namePDF;
-    //     if (!file_exists($pathPDF)) {
-    //         $file = fopen($pathHtml, 'w+');
-    //         $htmlStr = view('test.welcome', ['data' => $data])->render();
-    //         fwrite($file, $htmlStr);
-    //         try {
-    //             $processName = "wkhtmltopdf $pathHtml $pathPDF";
-    //             Process::run($processName);
-    //             Log::info('process', ['process' => $processName]);
-    //         } catch (\Exception $exception) {
-    //             throw $exception;
-    //         }
-    //     }
-    //     $pdfFilePath = $pathPDF;
-
-    //     // Get the total number of pages
-    //     $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
-    //     $totalPages = (int) shell_exec($command);
-
-    //     // Extract text from each page
-    //     $pageTexts = [];
-    //     for ($pageNumber = 1; $pageNumber <= $totalPages; $pageNumber++) {
-    //         $outputFile = tempnam(sys_get_temp_dir(), 'pdf_page');
-    //         $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
-    //         shell_exec($command);
-    //         $pageTexts[$pageNumber] = file_get_contents($outputFile);
-    //         unlink($outputFile);
-    //     }
-    //     // dd($pageTexts);
-    //     return $pageTexts;
-    // }
-
     public function pdf($param)
     {
         $data = $this->getData($param);
@@ -166,13 +91,8 @@ class PDFController extends Controller
         return asset("/pdf/$namePDF");
     }
 
-    public static function renderText($name)
+    public static function renderText($name, $html)
     {
-        $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
-        ];
-        $data = self::dataGet($params);
         $namehtml = $name . '.html';
         $namePDF = $name . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
@@ -186,7 +106,7 @@ class PDFController extends Controller
         $pathPDF = public_path() . '/pdf/' . $name . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('test.welcome', ['data' => $data])->render();
+            $htmlStr = view('test.welcome', ['html' => $html])->render();
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";

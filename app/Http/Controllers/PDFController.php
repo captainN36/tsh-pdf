@@ -131,7 +131,7 @@ class PDFController extends Controller
             $pageTexts[$pageNumber] = file_get_contents($outputFile);
             unlink($outputFile);
         }
-       
+       dd($pageTexts);
         return $pageTexts;
     }
 

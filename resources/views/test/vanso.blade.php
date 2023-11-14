@@ -17,6 +17,6 @@
             text-justify: inter-word;
         }
     </style>
-<div style="margin: 3em">
+<div style="margin: 4em">
 {!! $html !!}
 </div>

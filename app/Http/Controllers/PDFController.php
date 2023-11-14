@@ -25,6 +25,7 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
         ];
         $data = $this->getData($params);
+        
         // $pdfFilePath = public_path('testtest.pdf');
 
         // // Get the total number of pages
@@ -131,6 +132,7 @@ class PDFController extends Controller
             $pageTexts[$pageNumber] = file_get_contents($outputFile);
             unlink($outputFile);
         }
+        dd($pageTexts);
         return $pageTexts;
     }
 

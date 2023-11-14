@@ -107,7 +107,7 @@
             $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'])
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! $nowYearIndicator[1] !!}
+            {{$nowYearIndicator[1]}}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -123,7 +123,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! $nowYearIndicator[$i] !!}
+            {{$nowYearIndicator[$i]}}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -143,7 +143,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! $nextYearIndicator[$i] !!}
+            {{$nextYearIndicator[$i]}}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -163,7 +163,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! $twoYearsLaterIndicator[$i] !!}
+            {{$twoYearsLaterIndicator[$i]}}
 
         </div>
 
@@ -196,13 +196,13 @@
         </div>
 
         <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! $data['data']['monthIndicator']['description'] !!}
+            {{$data['data']['monthIndicator']['description']}}
         </div>
         <?php
             $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText('nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content'])
         ?>
         <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; bottom: 800px; text-align: justify;">
-            {!! $nowMonthIndicator[1] !!}
+            {{$nowMonthIndicator[1]}}
 
         </div>
 
@@ -222,7 +222,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! $nextMonthIndicator[$i] !!}
+            {{$nextMonthIndicator[$i]}}
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -241,7 +241,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! $twoMonthsLaterIndicator[$i] !!}
+            {{$twoMonthsLaterIndicator[$i]}}
 
         </div>
 

@@ -1,18 +1,11 @@
 <style>
     @page {
-        size: A4;
-        margin: 1in;
-    }
+            size: A4;
+            margin: 1in;
+        }
 
     body {
-        margin: 0;
-    }
-
-    .content-container {
-        margin-top: 4em;
-        margin-bottom: 4em;
-        margin-left: 4em;
-        margin-right: 4em;
+        margin: 0.5in;
     }
 
     p {

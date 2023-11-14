@@ -16,9 +16,6 @@
 
 <div style="margin: 75px">
     <div>
-        {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
-        {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
-        {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
         {!! $html !!}
     </div>
 </div>

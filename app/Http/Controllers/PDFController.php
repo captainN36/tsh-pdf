@@ -142,8 +142,12 @@ class PDFController extends Controller
             $pageTexts[$pageNumber] = $html;
             unlink($outputFile);
         }
-        unlink($namehtml);
-        unlink($namePDF);
+        if (!file_exists($namehtml)) {
+            unlink($namehtml);
+        }
+        if (!file_exists($namePDF)) {
+            unlink($namePDF);
+        }
         return $pageTexts;
     }
 

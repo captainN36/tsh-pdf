@@ -14,7 +14,9 @@
     }
 </style>
 
-<div class="content-container" style="margin-left: 10em !important; margin-right: 10em !important; margin-bottom: 10em !important; margin-top: 10em !important">
+<div class="content-container" style="margin-left: 10em !important; margin-right: 10em !important; margin-bottom: 10em !important">
+    <div>
+    {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" . $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
@@ -23,5 +25,5 @@
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
     {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
-    {!! $data['data']['yearIndicator']['nextYearIndicator']['content'] !!}
+    </div>
 </div>

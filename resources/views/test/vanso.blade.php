@@ -14,7 +14,7 @@
     }
 </style>
 
-<div class="content-container">
+<div style="margin-bottom: 10em;">
     <div>
         {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
         {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}

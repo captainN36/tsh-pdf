@@ -14,7 +14,7 @@
     }
 </style>
 
-<div style="margin: 71px">
+<div style="margin: 75px">
     <div>
         {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
         {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}

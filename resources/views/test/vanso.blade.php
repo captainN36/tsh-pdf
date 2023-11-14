@@ -14,7 +14,7 @@
     }
 </style>
 
-<div style="margin: 75px">
+<div style="margin: 80px">
     <div>
         {!! $html !!}
     </div>

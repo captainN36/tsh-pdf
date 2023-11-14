@@ -1,3 +1,8 @@
+<?php 
+
+$contents = \App\Http\Controllers\PDFController::renderText('content', $data['data']['yearIndicator']['nowYearIndicator']['content']);
+
+?>
 <div id="pfb" class="pf w0 h0" data-page-no="8">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
@@ -18,7 +23,7 @@
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! \App\Http\Controllers\PDFController::renderText('content', $data['data']['yearIndicator']['nowYearIndicator']['content'])[1] !!}
+            {!! $contents[1] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -28,13 +33,13 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-@for($i = 2; $i <= count(\App\Http\Controllers\PDFController::renderText('chiso')); $i++)
+@for($i = 2; $i <= count($contents); $i++)
 <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            {!! \App\Http\Controllers\PDFController::renderText('content', $data['data']['yearIndicator']['nowYearIndicator']['content'])[$i] !!}
+            {!! $contents[$i] !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

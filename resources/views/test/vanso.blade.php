@@ -14,8 +14,10 @@
     }
 </style>
 
-<div class="content-container" style="margin-left: 10em !important; margin-right: 10em !important; margin-bottom: 10em !important">
+<div class="content-container">
     <div>
+        {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
+        {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
         {!! "<br><br><br><br><br><br><br><br><br><br><br><br><br>" !!}
         {!! $html !!}
     </div>

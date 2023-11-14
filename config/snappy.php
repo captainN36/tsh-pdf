@@ -37,7 +37,12 @@ return [
         'enabled' => true,
         'binary'  => env('WKHTML_PDF_BINARY', 'wkhtmltopdf'),
         'timeout' => false,
-        'options' => [],
+        'options' => [
+            'margin-top'    => 20,
+            'margin-right'  => 20,
+            'margin-bottom' => 20,
+            'margin-left'   => 20,
+        ],
         'env'     => [],
     ],
 

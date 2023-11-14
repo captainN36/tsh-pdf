@@ -156,6 +156,7 @@ class PDFController extends Controller
             'Authorization' => "Bearer $token"
         ])->get($url);
         $data = $callAPI->json();
+        dd($data);
         $title = $data['data']['data'];
                 $count = 1;
         foreach ($title as $key => $item) {

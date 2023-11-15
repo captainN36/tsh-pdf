@@ -131,9 +131,13 @@
             $first = preg_replace("/\n/", "<br>", $parts[0], 2);
             $first = str_replace("\n ", '', $first);
             $first = str_replace("\n\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            dd($first)
-            
+            for ($i = 1; $i < count($parts); $i++) {
+                          
+                $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                $array[$i] = $html;
+            }
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             {!! nl2br(e($array[0])) !!}

@@ -98,11 +98,11 @@
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}</div>
         <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2025</div>
 
-        <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
+        <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px; width: 2360px !important">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
         </div>
 
-        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
             <?php
@@ -170,17 +170,57 @@
 </div>
 @endfor
 <?php 
-    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText('nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'])
+    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText('nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
+    $inputString = '';
+    for ($i = 1; $i <= count($nextYearIndicator); $i++) {
+        $inputString .= $nextYearIndicator[$i];
+    }
+    $lines = explode("\n", $inputString);
+
+    $linesPerPartFirst = 20;
+    $linesPerPartRest = 35;
+
+    $parts = [];
+
+    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+        $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+
+        $part = array_slice($lines, $i, $linesPerPart);
+        
+        $part = array_filter($part);
+
+        if (!empty($part)) {
+            $parts[] = implode("\n", $part);
+        }
+    }
+    $array = [];
+    $first = preg_replace("/\n/", "\r", $parts[0], 2);
+    $first = str_replace("\n ", '', $first);
+    $first = str_replace("\n", " ", $first);
+    for ($i = 0; $i < count($parts); $i++) {
+        if ($i == 0) {
+            $html = preg_replace("/\n/", "\r", $parts[0], 2);
+            $html = str_replace("\n ", '', $parts[0]);
+            $html = str_replace("\n", " ", $parts[0]);
+        } else {
+            $html = str_replace("\n ", '', $parts[$i]);
+        $html = str_replace("\n\n", "\r", $parts[$i]);
+        $html = str_replace("\n", " ", $parts[$i]);
+        }
+        $array[$i] = $html;
+    }
 ?>
 
-@for($i = 1; $i <= count($nextYearIndicator); $i++)
+@for($i = 0; $i <= count($array); $i++)
 
 <div id="pfd" class="pf w0 h0" data-page-no="10">
     <div class="pc pc5 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                        {!! nl2br(e($nextYearIndicator[$i])) !!}
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: width: 2360px !important; white-space: normal; text-align: justify;">
+            @if (isset($array[$i]))
+                {!! nl2br(e($array[$i])) !!}
+            @endif
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -199,7 +239,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: width: 2360px !important; white-space: normal; text-align: justify;">
             {!! nl2br(e($twoYearsLaterIndicator[$i])) !!}
         </div>
 

@@ -30,15 +30,13 @@
         <?php
             $lifePathIndicator = \App\Http\Controllers\PDFController::renderText('lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
 
-            $inputString = '';
-            for ($i =1; $i <= count($lifePathIndicator); $i++) {
-                $inputString .= $lifePathIndicator[$i]
-            }
+            $inputString = $lifePathIndicator[1] . $lifePathIndicator[2];
+            
             $lines = explode("\n", $inputString);
 
             $linesPerPart = 30;
 
-            $parts = array();
+            $parts = [];
 
             for ($i = 0; $i < count($lines); $i += $linesPerPart) {
                 $part = array_slice($lines, $i, $linesPerPart);

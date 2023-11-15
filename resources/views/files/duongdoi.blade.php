@@ -38,11 +38,14 @@
             
             $lines = explode("\n", $inputString);
 
-            $linesPerPart = 55;
+            $linesPerPartFirst = 55;
+            $linesPerPartRest = 75;
 
             $parts = [];
 
             for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+
                 $part = array_slice($lines, $i, $linesPerPart);
                 
                 $part = array_filter($part);

@@ -101,6 +101,7 @@
         </div>
         <?php
             $missionIndicator = \App\Http\Controllers\PDFController::renderText('missionIndicator', $data['data']['missionIndicator']['content']);
+            dd($missionIndicator);
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; bottom: 620px">
             {!! nl2br(e($missionIndicator[1])) !!}

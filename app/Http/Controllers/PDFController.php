@@ -94,7 +94,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        return asset("/pdf/$namePDF");
+        return asset("/pdf-test/$namePDF");
     }
 
     public static function renderText($name, $html, $replace_br = true)

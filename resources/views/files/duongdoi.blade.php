@@ -124,9 +124,24 @@
                     $parts[] = implode("\n", $part);
                 }
             }
+            $array = [];
+            for ($i =0; $i < count($parts); $i++) {
+                          
+                if ($i != 0) {
+                    $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                } else {
+                    $html = preg_replace("/\n/", "\r", $parts[$i], 4);  
+                    $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                }
+                $array[$i] = $html;
+            }
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; bottom: 620px">
-            {!! nl2br(e($missionIndicator[1])) !!}
+            {!! nl2br(e($array[0])) !!}
         </div>
     </div>
 
@@ -136,14 +151,14 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-@if(count($missionIndicator) >= 2)
-@for ($i = 2; $i <= count($missionIndicator); $i++)
+@if(count($array) >= 2)
+@for ($i = 1; $i < count($array); $i++)
     <div id="pfc" class="pf w0 h0" data-page-no="9">
         <div class="pc pce w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-                {!! nl2br(e($missionIndicator[$i])) !!}
+                {!! nl2br(e($array[$i])) !!}
             </div>
             <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

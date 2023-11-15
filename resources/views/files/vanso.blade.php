@@ -111,7 +111,7 @@
                 $text = str_replace(" ", '<span class="_ _c"></span>', $nowYearIndicator[1]);
                 dd($text);
             ?>
-            {!! nl2br(e($text)) !!}
+            {!! $text !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

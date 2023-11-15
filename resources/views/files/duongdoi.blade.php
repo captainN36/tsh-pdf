@@ -103,32 +103,6 @@
     </div>
 @endfor
 
-    <div id="pf7" class="pf w0 h0" data-page-no="22">
-        <div class="pc pc6 w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
-            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LINH HỒN</div>
-            <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                {{ $data['data']['soulIndicator']['soulIndicator'] }}</div>
-            <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
-                {!! $data['data']['soulIndicator']['description'] !!}
-            </div>
-        <?php
-            $soulIndicator = \App\Http\Controllers\PDFController::renderText('soulIndicator', $data['data']['soulIndicator']['content'])
-        ?>
-            <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 620px">
-                {!! nl2br(e($soulIndicator[1])) !!}
-            </div>
-
-            <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer')
-            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">22</div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-            </div>
-        </div>
-    </div>
 
   
 

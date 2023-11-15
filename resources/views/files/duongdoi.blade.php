@@ -61,7 +61,7 @@
 @endfor
 @endif
 
-<div id="pf7" class="pf w0 h0" data-page-no="17">
+<div id="pf77" class="pf w0 h0" data-page-no="17">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/duongdoi.png') }}">
@@ -74,7 +74,6 @@
         </div>
         <?php
             $missionIndicator = \App\Http\Controllers\PDFController::renderText('missionIndicator', $data['data']['missionIndicator']['content']);
-            dd($missionIndicator);
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; bottom: 620px">
             {!! nl2br(e($missionIndicator[1])) !!}
@@ -85,7 +84,6 @@
     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
     <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">17</div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
 </div>
 
 @if(count($missionIndicator) >= 2)

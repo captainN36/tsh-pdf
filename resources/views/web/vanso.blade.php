@@ -104,7 +104,7 @@
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
         <?php
-            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['yearIndicator']['nowYearIndicator']['content']);
+            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content']);
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             {!! nl2br(e($nowYearIndicator[1])) !!}

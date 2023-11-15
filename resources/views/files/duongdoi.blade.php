@@ -459,6 +459,84 @@
 
 
 
+<div id="pf7" class="pf w0 h0" data-page-no="35">
+    <div class="pc pc6 w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/duongdoi.png') }}">
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">14</div>
+        <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TIỀM THỨC</div>
+        <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
+            {{ $data['data']['subconsciousPowerIndicator']['subconsciousPowerIndicator'] }}</div>
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+            {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
+        </div>
+        <?php
+            $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText('subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
+        ?>
+        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; bottom: 780px">
+            {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
+        </div>
+
+        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer')
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">35</div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+        </div>
+    </div>
+</div>
+
+
+
+<div id="pf7" class="pf w0 h0" data-page-no="36">
+    <div class="pc pc6 w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/ck-duong-doi.png') }}">
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">15</div>
+        <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ ĐƯỜNG ĐỜI</div>
+
+        <div class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0">3<span class="_ _1b"> </span><span
+                class="fc9">1<span class="_ _1b"> </span><span class="fca">3</span></span></div>
+        <div class="t m0 x3d h8 y125 ff1 fs4 fc8 sc0 ls0 ws0">Chu kỳ 1<span class="_ _1c"> </span><span
+                class="fc9">Chu kỳ 2<span class="_ _1d"> </span><span class="fca">Chu kỳ 3</span></span>
+        </div>
+        <div class="t m0 x35 h14 y126 ff1 fsc fc8 sc0 ls0 ws0">GIEO HẠT<span class="_ _1e"> </span><span
+                class="fc9">CHÍN<span class="_ _1f"> </span><span class="fca">THU HOẠCH</span></span>
+        </div>
+        <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - 29 tuổi (2030)<span class="_ _20">
+            </span>30 - 56 tuổi (2031 - 2057)<span class="_ _21"> </span>57 tuổi về sau (2058 trở đi)</div>
+
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 450px">
+            {!! $data['data']['lifeCircleIndicator']['description'] !!}
+        </div>
+
+        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer')
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">36</div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+        </div>
+    </div>
+
+</div>
+
+<div id="pfd" class="pf w0 h0" data-page-no="37">
+    <div class="pc pcb w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+            {!! $data['data']['lifeCircleIndicator']['content'] !!}
+        </div>
+
+        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">37</div>
+    </div>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+    </div>
+</div>
+
+
 
     <div id="pf7" class="pf w0 h0" data-page-no="38">
         <div class="pc pc6 w0 h0 opened">

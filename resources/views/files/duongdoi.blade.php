@@ -130,13 +130,11 @@
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
-                    $html = str_replace("\f", " ", $parts[$i]);
                 } else {
                     $html = preg_replace("/\n/", "\r", $parts[$i], 4);  
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
-                    $html = str_replace("\f", " ", $parts[$i]);
                 }
                 $array[$i] = $html;
             }

@@ -34,7 +34,6 @@
             <div style="margin-top: 180px">
                 <?php $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[1]); ?>
                 <?php $result = preg_replace('/\.\n\n/', '.', $result); ?>
-                {{dd($result)}}
                 {!! nl2br(e($result)) !!}
             </div>
         </div>

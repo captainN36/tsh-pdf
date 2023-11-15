@@ -39,6 +39,7 @@
     @include('pages.first')
     @include('pages.chiso')
     @include('files.vanso')
+    @include('files.duongdoi')
 
 
     <div id="pf7" class="pf w0 h0" data-page-no="54">

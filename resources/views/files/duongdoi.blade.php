@@ -315,10 +315,12 @@
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['thinkingIndicator']['description'] !!}
             </div>
-
+            <?php
+                $thinkingIndicator = \App\Http\Controllers\PDFController::renderText('thinkingIndicator', $data['data']['thinkingIndicator']['content'])
+            ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 780px">
-                {!! $data['data']['thinkingIndicator']['content'] !!}
+                {!! nl2br(e($thinkingIndicator[1])) !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -340,10 +342,12 @@
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
             </div>
-
+            <?php
+                $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText('emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
+            ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 780px">
-                {!! $data['data']['emotionalThinkingIndicator']['content'] !!}
+                {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -365,10 +369,12 @@
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
             </div>
-
+            <?php
+                $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText('intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
+            ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 780px">
-                {!! $data['data']['intuitiveThinkingIndicator']['content'] !!}
+                {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -391,9 +397,12 @@
                 {!! $data['data']['actionThinkingIndicator']['description'] !!}
             </div>
 
+            <?php
+                $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText('actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
+            ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 780px">
-                {!! $data['data']['actionThinkingIndicator']['content'] !!}
+                {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -456,10 +465,12 @@
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
             </div>
-
+            <?php
+                $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText('subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
+            ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 750px">
-                {!! $data['data']['subconsciousPowerIndicator']['content'] !!}
+                style="white-space: normal; width: 2000px; bottom: 780px">
+                {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -559,13 +570,16 @@
             </div>
         </div>
     </div>
-
+    <?php
+        $challengeIndicator = \App\Http\Controllers\PDFController::renderText('challengeIndicator', $data['data']['challengeIndicator']['content'])
+    ?>
+@for($i = 1; $i <= count($challengeIndicator); $i++)
     <div id="pfd" class="pf w0 h0" data-page-no="39">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-                {!! substr($data['data']['challengeIndicator']['content'], 0, 5122) !!}
+                {!! nl2br(e($challengeIndicator[$i])) !!}
             </div>
 
             <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -575,70 +589,7 @@
         <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
         </div>
     </div>
-    <div id="pfd" class="pf w0 h0" data-page-no="40">
-        <div class="pc pcb w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-                {!! substr($data['data']['challengeIndicator']['content'], 6000, 5000) !!}
-            </div>
-
-            <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">40</div>
-        </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-        </div>
-    </div>
-
-    <div id="pfd" class="pf w0 h0" data-page-no="41">
-        <div class="pc pcb w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-                {!! substr($data['data']['challengeIndicator']['content'], 11000, 5000) !!}
-            </div>
-
-            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">41</div>
-        </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-        </div>
-    </div>
-
-    <div id="pfd" class="pf w0 h0" data-page-no="42">
-        <div class="pc pcb w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-                {!! substr($data['data']['challengeIndicator']['content'], 16000, 6000) !!}
-            </div>
-
-            <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">42</div>
-        </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-        </div>
-    </div>
-
-    <div id="pfd" class="pf w0 h0" data-page-no="43">
-        <div class="pc pcb w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-                {!! substr($data['data']['challengeIndicator']['content'], 22000, 5000) !!}
-            </div>
-
-            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">43</div>
-        </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-        </div>
-    </div>
-
+@endfor
     <div id="pf7" class="pf w0 h0" data-page-no="44">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
@@ -704,10 +655,13 @@
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['balanceIndicator']['description'] !!}
             </div>
-
+            <?php
+                $balanceIndicator = \App\Http\Controllers\PDFController::renderText('balanceIndicator', $data['data']['balanceIndicator']['content'])
+            ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 700px">
-                {!! substr($data['data']['balanceIndicator']['content'], 0, 2000) !!}</div>
+                style="white-space: normal; width: 2000px; bottom: 780px">
+                {!! nl2br(e($balanceIndicator[1])) !!}
+            </div>
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -717,13 +671,14 @@
         </div>
     </div>
 </div>
-
+@for($i = 2; $i <= count($balanceIndicator); $i++)
 <div id="pfd" class="pf w0 h0" data-page-no="47">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            <div>{!! substr($data['data']['balanceIndicator']['content'], 2000) !!}
+            <div>
+                {!! nl2br(e($balanceIndicator[$i])) !!}
             </div>
 
             <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -733,6 +688,7 @@
         <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
         </div>
     </div>
+@endfor
     <div id="pf7" class="pf w0 h0" data-page-no="48">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""

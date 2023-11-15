@@ -73,15 +73,15 @@ class PDFController extends Controller
         $data = $this->getData($param);
         $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
         $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
-        if (!file_exists(public_path() . '/html/')) {
-            mkdir(public_path() . '/html/', 0777, true);
+        if (!file_exists(public_path() . '/html-test/')) {
+            mkdir(public_path() . '/html-test/', 0777, true);
         }
-        if (!file_exists(public_path() . '/pdf/')) {
-            mkdir(public_path() . '/pdf/', 0777, true);
+        if (!file_exists(public_path() . '/pdf-test/')) {
+            mkdir(public_path() . '/pdf-test/', 0777, true);
         }
         Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $name;
-        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+        $pathHtml = public_path() . '/html-test/' . $name;
+        $pathPDF = public_path() . '/pdf-test/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('files.welcome', ['data' => $data])->render();
@@ -101,15 +101,15 @@ class PDFController extends Controller
     {
         $namehtml = $name . '.html';
         $namePDF = $name . '.pdf';
-        if (!file_exists(public_path() . '/html/')) {
-            mkdir(public_path() . '/html/', 0777, true);
+        if (!file_exists(public_path() . '/html-test/')) {
+            mkdir(public_path() . '/html-test/', 0777, true);
         }
-        if (!file_exists(public_path() . '/pdf/')) {
-            mkdir(public_path() . '/pdf/', 0777, true);
+        if (!file_exists(public_path() . '/pdf-test/')) {
+            mkdir(public_path() . '/pdf-test/', 0777, true);
         }
         Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $namehtml;
-        $pathPDF = public_path() . '/pdf/' . $name . '.pdf';
+        $pathHtml = public_path() . '/html-test/' . $namehtml;
+        $pathPDF = public_path() . '/pdf-test/' . $name . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('test.welcome', ['html' => $html])->render();
@@ -122,7 +122,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        $pdfFilePath = public_path('/pdf/' . $namePDF);
+        $pdfFilePath = public_path('/pdf-test/' . $namePDF);
 
         // Get the total number of pages
         $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
@@ -141,12 +141,6 @@ class PDFController extends Controller
             $html = str_replace("\n", " ", $html);
             $pageTexts[$pageNumber] = $html;
             unlink($outputFile);
-        }
-        if (file_exists($namehtml)) {
-            unlink($namehtml);
-        }
-        if (file_exists($namePDF)) {
-            unlink($namePDF);
         }
         return $pageTexts;
     }

@@ -28,7 +28,8 @@
             {!! $data['data']['lifePathIndicator']['description'] !!}
         </div>
         <?php
-            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText('lifePathIndicator', $data['data']['lifePathIndicator']['content'])
+            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText('lifePathIndicator', $data['data']['lifePathIndicator']['content']);
+            dd($lifePathIndicator);
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
             <div style="margin-top: 180px">

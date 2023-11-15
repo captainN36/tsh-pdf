@@ -104,7 +104,7 @@
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
         <?php
-            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content']);
+            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($missionIndicator); $i++) {
                 $inputString .= $nowYearIndicator[$i];

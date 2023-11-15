@@ -177,14 +177,10 @@
     }
     $lines = explode("\n", $inputString);
 
-    $linesPerPartFirst = 20;
-    $linesPerPartRest = 35;
-
+    $linesPerPart = 70;
     $parts = [];
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-        $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
         $part = array_slice($lines, $i, $linesPerPart);
         
         $part = array_filter($part);

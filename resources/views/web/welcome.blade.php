@@ -36,10 +36,10 @@
             $summary->{$value[0]} = $text;
         }
     @endphp
-    @include('files.first')
-    @include('files.chiso')
-    @include('files.vanso')
-    @include('files.duongdoi')
+    @include('web.first')
+    @include('web.chiso')
+    @include('web.vanso')
+    @include('web.duongdoi')
 
 
     <div id="pf7" class="pf w0 h0" data-page-no="54">

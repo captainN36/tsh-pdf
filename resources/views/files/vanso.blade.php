@@ -303,8 +303,9 @@
             $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText('nowMonthIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['monthIndicator']['nowMonthIndicator']['content'])
         ?>
         <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; bottom: 730px; text-align: justify;">
-            {!! nl2br(e($nowMonthIndicator[1])) !!}
-
+            @if ($nowMonthIndicator)
+                {!! nl2br(e($nowMonthIndicator[1])) !!}
+            @endif
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -317,41 +318,45 @@
 <?php
     $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText('nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'])
 ?>
-@for($i = 1; $i <= count($nextMonthIndicator); $i++)
-<div id="pfd" class="pf w0 h0" data-page-no="13">
-    <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
-            {!! nl2br(e($nextMonthIndicator[$i])) !!}
-        </div>
+@if ($nextMonthIndicator)
+    @for($i = 1; $i <= count($nextMonthIndicator); $i++)
+    <div id="pfd" class="pf w0 h0" data-page-no="13">
+        <div class="pc pcb w0 h0 opened">
+            <img class="bi x0 y0 w1 h1" alt=""
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
+                {!! nl2br(e($nextMonthIndicator[$i])) !!}
+            </div>
 
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+        </div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
     </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
-@endfor
+    @endfor
+@endif
 <?php
     $twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'])
 ?>
-@for($i = 1; $i <= count($twoMonthsLaterIndicator); $i++)
-<div id="pfd" class="pf w0 h0" data-page-no="14">
-    <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
-            {!! nl2br(e($twoMonthsLaterIndicator[$i])) !!}
-        </div>
+@if ($twoMonthsLaterIndicator)
+    @for($i = 1; $i <= count($twoMonthsLaterIndicator); $i++)
+    <div id="pfd" class="pf w0 h0" data-page-no="14">
+        <div class="pc pcb w0 h0 opened">
+            <img class="bi x0 y0 w1 h1" alt=""
+                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
+                {!! nl2br(e($twoMonthsLaterIndicator[$i])) !!}
+            </div>
 
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">14</div>
+            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">14</div>
+        </div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
     </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
-@endfor
+    @endfor
+@endif
 
 <div id="pfd" class="pf w0 h0" data-page-no="15">
     <div class="pc pcb w0 h0 opened">

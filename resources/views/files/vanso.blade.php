@@ -177,7 +177,7 @@
     }
     $lines = explode("\n", $inputString);
 
-    $linesPerPart = 65;
+    $linesPerPart = 55;
     $parts = [];
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {

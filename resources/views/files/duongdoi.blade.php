@@ -327,7 +327,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 50;
             $linesPerPartRest = 100;
 
             $parts = [];
@@ -360,7 +360,7 @@
             }
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 620px">
+            style="white-space: normal; width: 2000px; bottom: 620px; text-align: justify;">
             {!! nl2br(e($array[0])) !!}
         </div>
 
@@ -378,7 +378,7 @@
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
         {!! nl2br(e($array[$i])) !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

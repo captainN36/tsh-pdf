@@ -203,7 +203,7 @@
     }
 ?>
 
-@for($i = 0; $i <= count($array); $i++)
+@for($i = 0; $i < count($array); $i++)
 <div id="pfd" class="pf w0 h0" data-page-no="13">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
@@ -221,22 +221,56 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 @endfor
-<?php 
-    $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'])
-?>
-@for($i = 1; $i <= count($twoYearsLaterIndicator); $i++)
 
-<div id="pfd" class="pf w0 h0" data-page-no="11">
+
+<?php 
+    $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
+    $inputString = '';
+    for ($i = 1; $i <= count($twoYearsLaterIndicator); $i++) {
+        $inputString .= $twoYearsLaterIndicator[$i];
+    }
+    $lines = explode("\n", $inputString);
+
+    $linesPerPart = 45;
+    $parts = [];
+
+    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+        $part = array_slice($lines, $i, $linesPerPart);
+        
+        $part = array_filter($part);
+
+        if (!empty($part)) {
+            $parts[] = implode("\n", $part);
+        }
+    }
+    $array = [];
+    $first = preg_replace("/\n/", "\r", $parts[0], 2);
+    $first = str_replace("\n ", '', $first);
+    $first = str_replace("\n", " ", $first);
+    $array[0] = $first;
+
+    for ($i = 1; $i < count($parts); $i++) {
+        $html = str_replace("\n ", '', $parts[$i]);
+        $html = str_replace("\n\n", "\r", $parts[$i]);
+        $html = str_replace("\n", " ", $parts[$i]);
+        $array[$i] = $html;
+    }
+?>
+
+@for($i = 0; $i < count($array); $i++)
+<div id="pfd" class="pf w0 h0" data-page-no="13">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: width: 2360px !important; white-space: normal; text-align: justify;">
-            {!! nl2br(e($twoYearsLaterIndicator[$i])) !!}
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
+            @if (isset($array[$i]))
+                {!! nl2br(e($array[$i])) !!}
+            @endif
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">11</div>
+        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>

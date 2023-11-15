@@ -44,6 +44,7 @@
 </div>
 
 @if(count($lifePathIndicator) >= 2)
+{{dd($lifePathIndicator)}}
 @for ($i = 2 ; $i <= count($lifePathIndicator) ; $i++)
     <div id="pfd" class="pf w0 h0" data-page-no="18">
     <div class="pc pcb w0 h0 opened">

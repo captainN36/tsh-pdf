@@ -85,7 +85,7 @@
 </div>
 
 <div id="pfb" class="pf w0 h0" data-page-no="8">
-    <div class="pc pcb w0 h0 opened">
+    <div class="pc pc5 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
@@ -100,7 +100,7 @@
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}</div>
 
-        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
         <?php
@@ -122,7 +122,7 @@
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
                         {!! nl2br(e($nowYearIndicator[$i])) !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -139,7 +139,7 @@
 @for($i = 1; $i <= count($nextYearIndicator); $i++)
 
 <div id="pfd" class="pf w0 h0" data-page-no="10">
-    <div class="pc pcb w0 h0 opened">
+    <div class="pc pc5 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">

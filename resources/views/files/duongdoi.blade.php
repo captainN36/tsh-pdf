@@ -240,7 +240,7 @@
 @endif
 
 
-<div id="pf79" class="pf w0 h0" style="display: none" data-page-no="25">
+<div id="pf7" class="pf w0 h0" style="display: none" data-page-no="25">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/duongdoi.png') }}">
@@ -269,21 +269,23 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
     </div>
 </div>
-
+</div>
 @if(count($attitudeIndicator) >= 2)
 @for ($i = 2; $i <= count($attitudeIndicator); $i++)
-<div id="pfc" class="pf w0 h0" data-page-no="9">
-<div class="pc pce w0 h0 opened">
+<div id="pfd" class="pf w0 h0" data-page-no="26">
+<div class="pc pcb w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-        {!! nl2br(e($attitudeIndicator[$i])) !!}
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+        <div>
+            {!! nl2br(e($attitudeIndicator[$i])) !!}
+        </div>
+        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">26</div>
     </div>
-    <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-    @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-    <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">18</div>
-</div>
-<div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+    </div>
 </div>
 @endfor
 @endif

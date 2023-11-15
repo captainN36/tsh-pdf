@@ -32,7 +32,7 @@
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
             <div style="margin-top: 180px">
-                <?php $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[1]); ?>
+                <?php $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[1]); dd($result); ?>
                 {!! nl2br(e($result)) !!}
             </div>
         </div>

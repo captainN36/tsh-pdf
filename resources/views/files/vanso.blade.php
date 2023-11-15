@@ -105,46 +105,6 @@
         </div>
         <?php
             $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['yearIndicator']['nowYearIndicator']['content']);
-            $widthThreshold = 733;
-            $linesPerPartFirst = 55;
-            $linesPerPartRest = 75;
-
-            // Chuỗi cần kiểm tra
-            $inputString = '';
-
-            // Thay thế các ký tự không mong muốn
-            for ($i = 1; $i <= count($nowYearIndicator); $i++) {
-                $inputString .= $nowYearIndicator[$i];
-            }
-
-            // Tách thành từng dòng
-            $lines = explode("\r", $inputString);
-
-            // Mảng để lưu trữ các phần
-            $parts = [];
-
-            // Biến đếm width
-            $widthCount = 0;
-
-            // Lặp qua từng dòng và đếm width
-            foreach ($lines as $line) {
-                // Đếm width của dòng
-                $widthCount += strlen($line);
-
-                // Xác định số dòng cho mỗi phần
-                $linesPerPart = ($widthCount <= $widthThreshold) ? $linesPerPartFirst : $linesPerPartRest;
-
-                // Nếu đã đạt đến số dòng, thêm vào mảng và reset các biến
-                if (count($parts) == 0 || count($parts[count($parts) - 1]) >= $linesPerPart) {
-                    $parts[] = [];
-                    $widthCount = 0;
-                }
-
-                // Thêm dòng vào phần hiện tại
-                $parts[count($parts) - 1][] = $line;
-            }
-
-            dd($parts);
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             {!! nl2br(e($nowYearIndicator[1])) !!}

@@ -115,7 +115,8 @@ class PDFController extends Controller
             $htmlStr = view('test.welcome', ['html' => $html])->render();
             fwrite($file, $htmlStr);
             try {
-                $processName = "wkhtmltopdf $pathHtml $pathPDF";
+                $stylingOptions = "--margin-bottom 95";
+                $processName = "wkhtmltopdf $stylingOptions $pathHtml $pathPDF";
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {

@@ -114,13 +114,11 @@
 
             // Thay thế các ký tự không mong muốn
             for ($i = 1; $i <= count($nowYearIndicator); $i++) {
-                $result = preg_replace('/\·\n\n/', '·', $nowYearIndicator[$i]);
-                $result = preg_replace('/\.\n\n/', '.', $result);
                 $inputString .= $result;
             }
 
             // Tách thành từng dòng
-            $lines = explode("\n", $inputString);
+            $lines = explode("\r", $inputString);
 
             // Mảng để lưu trữ các phần
             $parts = [];

@@ -128,7 +128,7 @@
                 }
             }
             $array = [];
-            $first = preg_replace("/\n/", "\r", $parts[0], 2);
+            $first = preg_replace("/\n/", "<br>", $parts[0], 2);
             $first = str_replace("\n ", '', $first);
             $first = str_replace("\n\n", "\r", $first);
             $first = str_replace("\n", " ", $first);

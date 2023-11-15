@@ -100,7 +100,7 @@
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}</div>
 
-        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; height: 20px !important; white-space: normal; text-align: justify;">
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
             <?php
@@ -111,7 +111,7 @@
                 }
                 $lines = explode("\n", $inputString);
 
-                $linesPerPartFirst = 27;
+                $linesPerPartFirst = 20;
                 $linesPerPartRest = 50;
 
                 $parts = [];

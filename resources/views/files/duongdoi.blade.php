@@ -130,16 +130,18 @@
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
+                    $html = str_replace("\f", " ", $parts[$i]);
                 } else {
                     $html = preg_replace("/\n/", "\r", $parts[$i], 4);  
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
+                    $html = str_replace("\f", " ", $parts[$i]);
                 }
                 $array[$i] = $html;
             }
         ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; bottom: 620px">
+        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2000px;bottom: 590px;">
             {!! nl2br(e($array[0])) !!}
         </div>
     </div>

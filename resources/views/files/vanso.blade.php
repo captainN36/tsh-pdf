@@ -97,10 +97,12 @@
         <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1060px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}</div>
         <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2025</div>
-        <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
-            {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}</div>
 
-        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; height: 10px !important; white-space: normal; text-align: justify;">
+        <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
+            {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
+        </div>
+
+        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
             <?php
@@ -154,7 +156,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
             @if (isset($array[$i]))
                 {!! nl2br(e($array[$i])) !!}
             @endif

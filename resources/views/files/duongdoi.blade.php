@@ -138,6 +138,7 @@
                 }
                 $array[$i] = $html;
             }
+            dd($array);
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2000px;bottom: 590px;">
             {!! nl2br(e($array[0])) !!}

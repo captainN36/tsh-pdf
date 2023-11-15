@@ -64,7 +64,7 @@
 </div>
 
 @if(count($parts) >= 2)
-@for ($i = 1 ; $i <= count($parts) ; $i++)
+@for ($i = 1 ; $i < count($parts) ; $i++)
     <div id="pfd" class="pf w0 h0" data-page-no="18">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""

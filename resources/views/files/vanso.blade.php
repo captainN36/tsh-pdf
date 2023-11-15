@@ -106,7 +106,7 @@
         <?php
             $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['yearIndicator']['nowYearIndicator']['content']);
         ?>
-        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2200px !important; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 100% !important; white-space: normal; text-align: justify;">
             {!! nl2br(e($nowYearIndicator[1])) !!}
         </div>
 
@@ -122,7 +122,7 @@
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 2200px !important; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 100% !important; white-space: normal; text-align: justify;">
                         {!! nl2br(e($nowYearIndicator[$i])) !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

@@ -105,7 +105,6 @@
             for ($i = 1; $i <= count($missionIndicator); $i++) {
                 $inputString .= $missionIndicator[$i];
             }
-            dd($inputString);
             $lines = explode("\n", $inputString);
 
             $linesPerPartFirst = 55;

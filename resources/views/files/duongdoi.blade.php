@@ -100,7 +100,7 @@
             {!! $data['data']['missionIndicator']['description'] !!}
         </div>
         <?php
-            $missionIndicator = \App\Http\Controllers\PDFController::renderText('missionIndicator', $data['data']['missionIndicator']['content'], false);
+            $missionIndicator = \App\Http\Controllers\PDFController::renderText('missionIndicator', $data['data']['missionIndicator']['content']);
             $inputString = '';
             for ($i = 1; $i <= count($missionIndicator); $i++) {
                 $inputString .= $missionIndicator[$i];

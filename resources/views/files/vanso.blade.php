@@ -114,7 +114,7 @@
 
             // Thay thế các ký tự không mong muốn
             for ($i = 1; $i <= count($nowYearIndicator); $i++) {
-                $inputString .= $result;
+                $inputString .= $nowYearIndicator[$i];
             }
 
             // Tách thành từng dòng

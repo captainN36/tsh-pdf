@@ -29,6 +29,28 @@
         </div>
         <?php
             $lifePathIndicator = \App\Http\Controllers\PDFController::renderText('lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
+
+            $inputString = '';
+            for ($i =1; $i <= count($lifePathIndicator); $i++) {
+                $inputString .= $lifePathIndicator[$i]
+            }
+            $lines = explode("\n", $inputString);
+
+            $linesPerPart = 30;
+
+            $parts = array();
+
+            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+                $part = array_slice($lines, $i, $linesPerPart);
+                
+                $part = array_filter($part);
+
+                if (!empty($part)) {
+                    $parts[] = implode("\n", $part);
+                }
+            }
+
+            dd($parts);
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
             <div style="margin-top: 180px">

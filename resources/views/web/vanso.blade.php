@@ -104,10 +104,47 @@
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
         <?php
-            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['yearIndicator']['nowYearIndicator']['content']);
+            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content']);
+            $inputString = '';
+            for ($i = 1; $i <= count($missionIndicator); $i++) {
+                $inputString .= $nowYearIndicator[$i];
+            }
+            $lines = explode("\n", $inputString);
+
+            $linesPerPartFirst = 30;
+            $linesPerPartRest = 100;
+
+            $parts = [];
+
+            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+
+                $part = array_slice($lines, $i, $linesPerPart);
+                
+                $part = array_filter($part);
+
+                if (!empty($part)) {
+                    $parts[] = implode("\n", $part);
+                }
+            }
+            $array = [];
+            for ($i =0; $i < count($parts); $i++) {
+                          
+                if ($i != 0) {
+                    $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                } else {
+                    $html = preg_replace("/\n/", "\r", $parts[$i], 4);  
+                    $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                }
+                $array[$i] = $html;
+            }
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! nl2br(e($nowYearIndicator[1])) !!}
+            {!! nl2br(e($array[0])) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -117,13 +154,13 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-@for($i = 2; $i <= count($nowYearIndicator); $i++)
+@for($i = 1; $i <= count($array); $i++)
 <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                        {!! nl2br(e($nowYearIndicator[$i])) !!}
+                        {!! nl2br(e($array[$i])) !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

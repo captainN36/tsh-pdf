@@ -103,9 +103,7 @@
             $missionIndicator = \App\Http\Controllers\PDFController::renderText('missionIndicator', $data['data']['missionIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($missionIndicator); $i++) {
-                $result = preg_replace('/\·\n\n/', '·', $missionIndicator[$i]);
-                $result = preg_replace('/\.\n\n/', '.', $result);
-                $inputString .= $result;
+                $inputString .= $missionIndicator[$i];
             }
             
             $lines = explode("\n", $inputString);
@@ -126,6 +124,8 @@
                     $parts[] = implode("\n", $part);
                 }
             }
+
+            dd($parts);
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; bottom: 620px">
             {!! nl2br(e($parts[1])) !!}

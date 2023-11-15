@@ -34,7 +34,7 @@
             
             $lines = explode("\n", $inputString);
 
-            $linesPerPart = 30;
+            $linesPerPart = 60;
 
             $parts = [];
 

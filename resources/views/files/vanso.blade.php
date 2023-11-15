@@ -106,7 +106,7 @@
         <?php
             $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['yearIndicator']['nowYearIndicator']['content']);
         ?>
-        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 100% !important; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 ha y75 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 100% !important; white-space: normal; text-align: justify;">
             <?php
                 $text = str_replace(" ", '<span class="_ _c"></span>', $nowYearIndicator[1]);
             ?>

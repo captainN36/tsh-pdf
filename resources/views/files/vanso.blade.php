@@ -108,7 +108,8 @@
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 100% !important; white-space: normal; text-align: justify;">
             <?php
-                $text = str_replace(" ", '<span class="_ _b"></span>', $nowYearIndicator[1])
+                $text = str_replace(" ", '<span class="_ _c"></span>', $nowYearIndicator[1]);
+                dd($text);
             ?>
             {!! nl2br(e($text)) !!}
         </div>

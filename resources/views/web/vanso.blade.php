@@ -128,17 +128,22 @@
                 }
             }
             $array = [];
-            for ($i =0; $i < count($parts); $i++) {
+            $first = preg_replace("/\n/", "\r", $parts[0], 2);
+            $first = str_replace("\n ", '', $first);
+            $first = str_replace("\n\n", "\r", $first);
+            $first = str_replace("\n", " ", $first);
+            dd($first)
+            for ($i = 1; $i < count($parts); $i++) {
                           
                 if ($i != 0) {
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
                 } else {
-                    dd($parts[$i]);
                     $html = preg_replace("/\n/", "\r", $parts[$i], 2);  
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
                 }
                 $array[$i] = $html;
             }

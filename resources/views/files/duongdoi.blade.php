@@ -43,6 +43,24 @@
     </div>
 </div>
 
+@if(count($lifePathIndicator) >= 2)
+@for ($i = 2 ; $i <= count($lifePathIndicator) ; $i++)
+    <div id="pfd" class="pf w0 h0" data-page-no="18">
+    <div class="pc pcb w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+            {!! nl2br(e($lifePathIndicator[$i])) !!}
+        </div>
+        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">18</div>
+    </div>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+</div>
+@endfor
+@endif
+
     <div id="pf7" class="pf w0 h0" data-page-no="38">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""

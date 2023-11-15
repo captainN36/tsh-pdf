@@ -241,7 +241,10 @@
 
 
 
-
+<?php
+    $attitudeIndicator = \App\Http\Controllers\PDFController::renderText('attitudeIndicator', $data['data']['attitudeIndicator']['content']);
+    dd($attitudeIndicator);
+?>
 
 
 

@@ -101,7 +101,29 @@
         </div>
         <?php
             $missionIndicator = \App\Http\Controllers\PDFController::renderText('missionIndicator', $data['data']['missionIndicator']['content'], false);
-            dd($missionIndicator);
+            $inputString = '';
+            for ($i = 1; $i <= count($missionIndicator); $i++) {
+                $inputString .= $missionIndicator[$i];
+            }
+            dd($inputString);
+            $lines = explode("\n", $inputString);
+
+            $linesPerPartFirst = 55;
+            $linesPerPartRest = 75;
+
+            $parts = [];
+
+            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+
+                $part = array_slice($lines, $i, $linesPerPart);
+                
+                $part = array_filter($part);
+
+                if (!empty($part)) {
+                    $parts[] = implode("\n", $part);
+                }
+            }
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; bottom: 620px">
             {!! nl2br(e($missionIndicator[1])) !!}

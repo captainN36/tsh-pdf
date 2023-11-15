@@ -120,10 +120,9 @@
 @for($i = 2; $i <= count($nowYearIndicator); $i++)
 <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 100% !important; white-space: normal; text-align: justify;">
-                        {!! nl2br(e($nowYearIndicator[$i])) !!}
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}" style="width: 100%;">
+        <div class="t m0 x5 ha y77 ff2 fs4 fc2 sc0 ls0 ws0" style="width: 100%; white-space: normal; text-align: justify;">
+            {!! nl2br(e($nowYearIndicator[$i])) !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

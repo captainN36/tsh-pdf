@@ -466,8 +466,8 @@
         <?php
             $thinkingIndicator = \App\Http\Controllers\PDFController::renderText('thinkingIndicator', $data['data']['thinkingIndicator']['content'])
         ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 780px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($thinkingIndicator[1])) !!}
         </div>
 
@@ -493,8 +493,8 @@
         <?php
             $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText('emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
         ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 780px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
         </div>
 
@@ -520,8 +520,8 @@
         <?php
             $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText('intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
         ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 780px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
         </div>
 
@@ -550,8 +550,8 @@
         <?php
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText('actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
         ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 780px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
         </div>
 
@@ -620,8 +620,8 @@
         <?php
             $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText('subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
         ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 780px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
         </div>
 

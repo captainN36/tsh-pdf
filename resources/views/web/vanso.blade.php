@@ -130,11 +130,9 @@
             $array = [];
             $first = preg_replace("/\n/", "\r", $parts[0], 2);
             $first = str_replace("\n ", '', $first);
-            $first = str_replace("\n\n", "\r", $first);
             for ($i = 1; $i < count($parts); $i++) {
                 $html = str_replace("\n ", '', $parts[$i]);
                 $html = str_replace("\n\n", "\r", $parts[$i]);
-                $html = str_replace("\n", " ", $parts[$i]);
                 $array[$i] = $html;
             }
         ?>

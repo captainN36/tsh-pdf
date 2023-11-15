@@ -135,6 +135,7 @@
                 $html = str_replace("\n\n", "\r", $parts[$i]);
                 $array[$i] = $html;
             }
+            dd($array);
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             {!! nl2br(e($first)) !!}

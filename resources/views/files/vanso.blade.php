@@ -202,7 +202,7 @@
             $first = preg_replace("/\n/", "\r", $parts[0], 2);
             $first = str_replace("\n ", '', $parts[0]);
             $first = str_replace("\n", " ", $parts[0]);
-            $array[$i] = $html;
+            $array[$i] = $first;
         } else {
             $html = str_replace("\n ", '', $parts[$i]);
             $html = str_replace("\n\n", "\r", $parts[$i]);

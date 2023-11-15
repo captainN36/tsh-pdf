@@ -106,7 +106,7 @@
         <?php
             $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
             $inputString = '';
-            for ($i = 1; $i <= count($missionIndicator); $i++) {
+            for ($i = 1; $i <= count($nowYearIndicator); $i++) {
                 $inputString .= $nowYearIndicator[$i];
             }
             $lines = explode("\n", $inputString);

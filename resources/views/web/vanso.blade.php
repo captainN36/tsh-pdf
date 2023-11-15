@@ -135,6 +135,7 @@
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
                 } else {
+                    dd($html);
                     $html = preg_replace("/\n/", "\r", $parts[$i], 2);  
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);

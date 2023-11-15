@@ -97,7 +97,7 @@ class PDFController extends Controller
         return asset("/pdf/$namePDF");
     }
 
-    public static function renderText($name, $html)
+    public static function renderText($name, $html, $replace_br = true)
     {
         $namehtml = $name . '.html';
         $namePDF = $name . '.pdf';
@@ -135,10 +135,12 @@ class PDFController extends Controller
             $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
             shell_exec($command);
             $html = file_get_contents($outputFile);
-            $html = preg_replace("/\n/", "\r", $html, 2);            
-            $html = str_replace("\n ", '', $html);
-            $html = str_replace("\n\n", "\r", $html);
-            $html = str_replace("\n", " ", $html);
+            if ($replace_br) {
+                $html = preg_replace("/\n/", "\r", $html, 2);            
+                $html = str_replace("\n ", '', $html);
+                $html = str_replace("\n\n", "\r", $html);
+                $html = str_replace("\n", " ", $html);
+            }
             $pageTexts[$pageNumber] = $html;
             unlink($outputFile);
         }

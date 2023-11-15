@@ -1057,7 +1057,7 @@
 
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 700px">
+                style="white-space: normal; width: 2000px; bottom: 820px">
                 @foreach ($return as $item)
                     {!! $item['title'] !!}
                     <p>{!! $item['content'] !!}</p>

@@ -209,7 +209,8 @@
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">7</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ THÁI ĐỘ</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                {{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</div>
+                {{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}
+            </div>
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
                 {!! $data['data']['attitudeIndicator']['description'] !!}
             </div>

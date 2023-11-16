@@ -32,7 +32,7 @@
             });
             $number = array_values($filter)[0]['indicator'];
         @endphp
-        <div style="left: -60px">
+        <div style="left: 0">
             @php
                 $fileName = $number - 1;
             @endphp

@@ -22,7 +22,7 @@
         <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1650px !important; white-space: normal;text-align: justify;">
             {!! substr($data['data']['cycleFortune']['description'], 0) !!}
         </div>
-        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 70px; top: 300px; width: 1950px">
+        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 75px; top: 300px; width: 1950px">
             {!! $data['data']['cycleFortune']['content'] !!}
         </div>
         @php
@@ -32,22 +32,22 @@
             });
             $number = array_values($filter)[0]['indicator'];
         @endphp
-        <div class="t m0 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="bottom: 65%; left: -60px">
+        <div class="t m0 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="bottom: 62%; left: -60px">
             @php
                 $fileName = $number - 1;
             @endphp
-            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2000px;">
+            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2300px;">
         </div>
 
         @php
             $string = '';
             foreach ($data['data']['cycleFortune']['cycleFortune'] as $item) {
                 $year = $item['year'];
-                $str = $year . '<span class="_ _19"> </span>';
+                $str = $year . '<span class="_ _19" style="width: 90px"> </span>';
                 if ($year == 2023) {
                     $string = $string . '<span class="ff1 fc6">' . $str . '</span>';
                 } else {
-                    $string = $string . $year . '<span class="_ _19"> </span>';
+                    $string = $string . $year . '<span class="_ _19" style="width: 90px"> </span>';
                 }
             }
         @endphp

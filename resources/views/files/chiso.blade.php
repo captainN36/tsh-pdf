@@ -5,27 +5,13 @@
         <div class="t m0 x5 hf y95 ff2 fs9 fc2 sc0 ls0 ws0">Phần này<span class="_ _d"></span> dành<span class="_ _d"></span> cho chuyên<span class="_ _d"></span> gia<span class="_ _d"></span> hoặc những<span class="_ _d"></span> người<span class="_ _d"></span> có hiểu<span class="_ _d"></span> biết<span class="_ _d"></span> về<span class="_ _d"></span> thần số<span class="_ _d"></span> học<span class="_ _d"></span> để nhìn<span class="_ _d"></span> được</div><div class="t m0 x5 hf y96 ff2 fs9 fc2 sc0 ls0 ws0">sơ bộ bức tranh tổng quan của báo cáo.</div>
         <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center; left: 0; bottom: 969px;gap: 200px; width: 10vw">
             
-            {{-- <style>
+            <style>
                 .item {
-                    flex: 1;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     color: black;
                 }
                 
-                @media only screen and (max-width: 992px) {
-                    .chiso {
-                        width: 215vw !important;
-                    }
-                }
-                @media only screen and (min-width: 992px) {
-                    .chiso {
-                        width: 110vw !important;
-                    }
-                }
 
-            </style> --}}
+            </style>
             
             <div class="item" style="flex: 1; text-align: center; margin: 0; padding: 0;">
                 <p>{{ $path }}</p>

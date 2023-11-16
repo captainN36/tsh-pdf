@@ -48,7 +48,7 @@ class PDFController extends Controller
         // }
         // dd($pageTexts);
         // $data = $this->getData($request->all());
-        return view('web.welcome', ['data' => $data]);
+        return view('welcome', ['data' => $data]);
     }
 
     public function download (Request $request) {

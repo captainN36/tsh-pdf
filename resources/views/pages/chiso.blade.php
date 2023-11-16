@@ -3,7 +3,28 @@
         <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$path.'/1.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div><div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG HỢP CÁC CHỈ SỐ QUAN TRỌNG</div>
         <div class="t m0 x5 hf y95 ff2 fs9 fc2 sc0 ls0 ws0">Phần này<span class="_ _d"></span> dành<span class="_ _d"></span> cho chuyên<span class="_ _d"></span> gia<span class="_ _d"></span> hoặc những<span class="_ _d"></span> người<span class="_ _d"></span> có hiểu<span class="_ _d"></span> biết<span class="_ _d"></span> về<span class="_ _d"></span> thần số<span class="_ _d"></span> học<span class="_ _d"></span> để nhìn<span class="_ _d"></span> được</div><div class="t m0 x5 hf y96 ff2 fs9 fc2 sc0 ls0 ws0">sơ bộ bức tranh tổng quan của báo cáo.</div>
-        <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0" style="@php if ($path > 10) { echo 'left: 165px';}  @endphp">{{ $path }}<span class="_ _10" style="@php if ($path > 10) { echo 'margin-left: -35px;';}  @endphp"> </span>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</div>
+        <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;width: 110vw; left: 55px; bottom: 969px; background-color: blue;gap: 66px;">
+            
+            <style>
+                .item {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 50px;
+                }
+            </style>
+            
+            <div class="item" style="flex: 1; text-align: center; color: black; margin: 0; padding: 0;">
+                <p>7</p>
+            </div>
+            <div class="item" style="flex: 1; text-align: center; color: black; margin: 0; padding: 0;">
+                <p>7</p>
+            </div>
+            <div class="item" style="flex: 1; text-align: center; color: black; margin: 0; padding: 0;">
+                <p>7</p>
+            </div>
+        </div>
         <div class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0">ĐƯỜNG ĐỜI<span class="_ _11"> </span>THÁI ĐỘ<span class="_ _12"> </span>TRƯỞNG THÀNH</div>
         <div class="t m0 x16 h11 y99 ff3 fsa fc2 sc0 ls0 ws0">Điểm mạnh yếu, tổng quan về đường</div>
         <div class="t m0 x17 h11 y9a ff3 fsa fc2 sc0 ls0 ws0">đời, các sự phù hợp trong tình yêu, sự</div>

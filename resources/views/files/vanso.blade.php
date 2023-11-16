@@ -32,7 +32,7 @@
             });
             $number = array_values($filter)[0]['indicator'];
         @endphp
-        <div class="t m0 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="bottom: 64%; left: -60px">
+        <div class="t m0 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="bottom: 70% !impotant; left: -60px">
             @php
                 $fileName = $number - 1;
             @endphp

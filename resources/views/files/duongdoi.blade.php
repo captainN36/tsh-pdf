@@ -55,7 +55,7 @@
                 }
             }
         ?>
-        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2400px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             <div style="margin-top: 300px">
                 <?php $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[1]); ?>
                 <?php $result = preg_replace('/\.\n\n/', '.', $result); ?>
@@ -76,7 +76,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
             {!! nl2br(e($parts[$i])) !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -107,7 +107,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 100;
 
             $parts = [];
@@ -185,7 +185,7 @@
         $soulIndicator = \App\Http\Controllers\PDFController::renderText('soulIndicator', $data['data']['soulIndicator']['content'])
     ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 620px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
             {!! nl2br(e($soulIndicator[1])) !!}
         </div>
 

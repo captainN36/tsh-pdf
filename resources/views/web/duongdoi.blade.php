@@ -946,8 +946,8 @@
                 .test {
                     justify-content: center;
                     align-items: center;
-                    color: black;
-                    font-size: 67px;
+                    color: rgb(38, 91, 166);
+                    font-size: 56px;
                 }
                 
                 @media only screen and (max-width: 992px) {

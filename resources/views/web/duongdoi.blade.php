@@ -445,6 +445,7 @@
                     @endif
                     <?php $index++ ?>
                 @endfor
+                <?php dd($index); ?>
             </div>
 
             <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

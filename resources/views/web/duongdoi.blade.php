@@ -420,11 +420,11 @@
         </div>
     </div>
 <?php
-    $pages = ceil(count($data['data']['passionIndicator']['data']) / 2);
+    $pages = ceil((count($data['data']['passionIndicator']['data']) - 1) / 2);
     $index = 1;
 ?>
 
-@for ($i = 0; $i <= $pages - 1; $i++)
+@for ($i = 0; $i < $pages; $i++)
     <div id="pfd-data" class="pf w0 h0" data-page-no="28">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""

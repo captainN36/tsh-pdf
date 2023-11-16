@@ -429,10 +429,9 @@
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-            <?php $index = 1; ?>
-                @for ($j = 0; $j < 2; $j++)
-                    @if (isset($data['data']['passionIndicator']['data'][$index]))
-                        {!! $data['data']['passionIndicator']['data'][$index] !!}
+                @for ($j = $i + 1; $j - $i == 2; $j++)
+                    @if (isset($data['data']['passionIndicator']['data'][$j]))
+                        {!! $data['data']['passionIndicator']['data'][$j] !!}
                     @else
                         <script>
                         var elementToRemove = document.getElementById("pfd-data");
@@ -442,7 +441,6 @@
                         }
                         </script>
                     @endif
-                    <?php $index++; ?>
                 @endfor
             </div>
 

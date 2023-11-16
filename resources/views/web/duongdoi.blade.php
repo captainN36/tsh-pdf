@@ -421,7 +421,6 @@
     </div>
 <?php
     $pages = ceil((count($data['data']['passionIndicator']['data']) - 1) / 2);
-    dd($data['data']['passionIndicator']['data'], $pages);
     $index = 1;
 ?>
 

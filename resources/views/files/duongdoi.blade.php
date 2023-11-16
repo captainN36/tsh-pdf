@@ -144,7 +144,7 @@
 </div>
 
 @if(count($array) >= 2)
-@for ($i = 1; $i <= count($array); $i++)
+@for ($i = 1; $i < count($array); $i++)
     <div id="pfc" class="pf w0 h0" data-page-no="9">
         <div class="pc pce w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
@@ -177,7 +177,7 @@
     <?php
         $soulIndicator = \App\Http\Controllers\PDFController::renderText('soulIndicator', $data['data']['soulIndicator']['content'])
     ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
             {!! nl2br(e($soulIndicator[1])) !!}
         </div>
@@ -222,8 +222,8 @@
     <?php
         $personalIndicator = \App\Http\Controllers\PDFController::renderText('personalIndicator', $data['data']['personalIndicator']['content'])
     ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 620px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
             {!! nl2br(e($personalIndicator[1])) !!}
         </div>
 
@@ -241,7 +241,7 @@
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
         {!! nl2br(e($personalIndicator[$i])) !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -261,14 +261,14 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TỰ NHIÊN</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['dobIndicator']['dobIndicator'] }}</div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             {!! $data['data']['dobIndicator']['description'] !!}
         </div>
     <?php
         $dobIndicator = \App\Http\Controllers\PDFController::renderText('dobIndicator', $data['data']['dobIndicator']['content'])
     ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 620px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
             {!! nl2br(e($dobIndicator[1])) !!}
         </div>
 
@@ -286,7 +286,7 @@
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
         {!! nl2br(e($dobIndicator[$i])) !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -311,7 +311,7 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}
         </div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             {!! $data['data']['attitudeIndicator']['description'] !!}
         </div>
         <?php
@@ -355,7 +355,7 @@
             }
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 620px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
             {!! nl2br(e($array[0])) !!}
         </div>
 
@@ -373,7 +373,7 @@
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
         {!! nl2br(e($array[$i])) !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -396,12 +396,12 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐAM MÊ</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</div>
-        <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+        <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px">
             {!! $data['data']['passionIndicator']['description'] !!}
         </div>
 
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 780px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify;">
             @for ($index = 0; $index <= 1; $index++)
                 @isset($data['data']['passionIndicator']['data'][$index])
                     {!! $data['data']['passionIndicator']['data'][$index] !!}
@@ -421,7 +421,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
             @for ($index = 2; $index <= 3; $index++)
                 @if (isset($data['data']['passionIndicator']['data'][$index]))
                     {!! $data['data']['passionIndicator']['data'][$index] !!}
@@ -455,14 +455,14 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY LÝ TRÍ</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px">
             {!! $data['data']['thinkingIndicator']['description'] !!}
         </div>
         <?php
             $thinkingIndicator = \App\Http\Controllers\PDFController::renderText('thinkingIndicator', $data['data']['thinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($thinkingIndicator[1])) !!}
         </div>
 
@@ -482,14 +482,14 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY CẢM XÚC</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
         </div>
         <?php
             $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText('emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
         </div>
 
@@ -509,14 +509,14 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TRỰC GIÁC</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
         </div>
         <?php
             $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText('intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
         </div>
 
@@ -538,7 +538,7 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY HÀNH ĐỘNG</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             {!! $data['data']['actionThinkingIndicator']['description'] !!}
         </div>
 
@@ -546,7 +546,7 @@
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText('actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
         </div>
 
@@ -566,12 +566,12 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">SỐ BẢN CHẤT CỦA BẠN</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['natureIndicator']['natureIndicator'] }}</div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             {!! $data['data']['natureIndicator']['description'] !!}
         </div>
 
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
             {!! $data['data']['natureIndicator']['data'][0] !!}
         </div>
 
@@ -587,7 +587,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
             {!! $data['data']['natureIndicator']['data'][1] !!}
         </div>
 
@@ -609,14 +609,14 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TIỀM THỨC</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['subconsciousPowerIndicator']['subconsciousPowerIndicator'] }}</div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
         </div>
         <?php
             $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText('subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
         </div>
 
@@ -649,7 +649,7 @@
             </span>30 - 56 tuổi (2031 - 2057)<span class="_ _21"> </span>57 tuổi về sau (2058 trở đi)</div>
 
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; top: 450px">
+            style="white-space: normal; width: 2360px; top: 450px">
             {!! $data['data']['lifeCircleIndicator']['description'] !!}
         </div>
 
@@ -666,7 +666,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal">
             {!! $data['data']['lifeCircleIndicator']['content'] !!}
         </div>
 
@@ -710,7 +710,7 @@
             <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
 
             <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 450px">
+                style="white-space: normal; width: 2360px; bottom: 450px">
                 {!! $data['data']['challengeIndicator']['description'] !!}
             </div>
 
@@ -730,7 +730,7 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ NỢ NGHIỆP</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
-            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px">
                 {!! $data['data']['karmicIndicator']['description'] !!}
             </div>
 
@@ -870,7 +870,7 @@
                     ]);
                 }
             @endphp
-            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px">
                 @foreach ($return as $item)
                     {!! $item['title'] !!}
                     <p>{!! $item['content'] !!}</p>
@@ -912,7 +912,7 @@
                     }
                 }
             @endphp
-            <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; top: 0px">
+            <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; top: 0px">
                 @foreach ($strengthTWO as $item)
                     {!! $item !!}
                 @endforeach
@@ -1052,7 +1052,7 @@
 
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 820px">
+                style="white-space: normal; width: 2360px; bottom: 820px">
                 @foreach ($return as $item)
                     {!! $item['title'] !!}
                     <p>{!! $item['content'] !!}</p>
@@ -1083,7 +1083,7 @@
             @endphp
 
 
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal">
                 @foreach ($missing as $item)
                     {!! $item !!}
                 @endforeach

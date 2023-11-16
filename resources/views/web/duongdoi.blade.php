@@ -776,18 +776,18 @@
                     $strength->{$value[0]} = $text;
                 }
             @endphp
-            <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{3} ?? 'null' }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{6} ?? 'null' }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{9} ?? 'null' }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{2} ?? 'null' }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{5} ?? 'null' }}
+            <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{3} ?? null }}</div>
+            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{6} ?? null }}</div>
+            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{9} ?? null }}</div>
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{2} ?? null }}</div>
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{5} ?? null }}
             </div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{8} ?? 'null' }}
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{8} ?? null }}
             </div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{1} ?? 'null' }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{4} ?? 'null' }}
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{1} ?? null }}</div>
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{4} ?? null }}
             </div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{7} ?? 'null' }}
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{7} ?? null }}
             </div>
             @php
                 $return = [];

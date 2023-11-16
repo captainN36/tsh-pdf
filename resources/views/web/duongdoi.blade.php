@@ -942,7 +942,7 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px;">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px; height: 700px">
                 <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{3} ?? null }}</p>
                 </div>
@@ -970,20 +970,66 @@
             </div>
 
             <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 168px;">
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{2} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{5} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{8} ?? null }} </span>
-                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{2} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{5} ?? null }} </span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{8} ?? null }} </span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{} ?? null }} </span>
+                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{} ?? null }} </span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{} ?? null }} </span>
             </div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 230px;">
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{1} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{4} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{7} ?? null }} </span>
-                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{1} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{4} ?? null }} </span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{7} ?? null }} </span>
+
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px; height: 700px">
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{2} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{5} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{8} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{2} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{5} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{8} ?? null }}</p>
+                </div>
+            </div>
+
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px; height: 700px">
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{1} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{4} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{7} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{1} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{4} ?? null }}</p>
+                </div>
+                <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{7} ?? null }}</p>
+                </div>
             </div>
 
             @php

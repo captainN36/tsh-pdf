@@ -24,15 +24,15 @@
         @endphp
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐƯỜNG ĐỜI (SỐ CHỦ ĐẠO)</div>
         <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center">{{ $numberLifePath }}</div>
-        <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+        <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2400px">
             {!! $data['data']['lifePathIndicator']['description'] !!}
         </div>
         <?php
             $lifePathIndicator = \App\Http\Controllers\PDFController::renderText('lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($lifePathIndicator); $i++) {
-                $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[$i]);
-                $result = preg_replace('/\.\n\n/', '.', $result);
+                $result = preg_replace('/\·\n\n/', '· ', $lifePathIndicator[$i]);
+                $result = preg_replace('/\.\n\n/', '. ', $result);
                 $inputString .= $result;
             }
             
@@ -55,7 +55,7 @@
                 }
             }
         ?>
-        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2400px; text-align: justify;">
             <div style="margin-top: 180px">
                 <?php $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[1]); ?>
                 <?php $result = preg_replace('/\.\n\n/', '.', $result); ?>

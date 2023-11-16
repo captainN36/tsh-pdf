@@ -942,15 +942,7 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center; left: 55px; bottom: 969px;gap: 66px;">
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{3} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{6} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{9} ?? null }} </span>
-                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{3} ?? null }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{6} ?? null }} </span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{9} ?? null }} </span>
-            </div>
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px;">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px;">
                 <div style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{3} ?? null }}</p>
                 </div>

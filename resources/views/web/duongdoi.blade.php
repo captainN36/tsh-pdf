@@ -941,7 +941,7 @@
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
-            <div classt m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
+            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
             <style>
                 .test {
                     justify-content: center;

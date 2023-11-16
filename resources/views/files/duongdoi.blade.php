@@ -434,14 +434,6 @@
                 @for ($j = 0; $j < 2; $j++)
                     @if (isset($data['data']['passionIndicator']['data'][$index]))
                         {!! $data['data']['passionIndicator']['data'][$index] !!}
-                    @else
-                        <script>
-                        var elementToRemove = document.getElementById("pfd-data");
-
-                        if (elementToRemove) {
-                            elementToRemove.remove();
-                        }
-                        </script>
                     @endif
                     <?php $index++ ?>
                 @endfor

@@ -1017,28 +1017,28 @@
 
             <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 100px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{1} ?? null }}</p>
+                    <p>{{ $name->{1} ?? '   ' }}</p>
                 </div>
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{4} ?? null }}</p>
+                    <p>{{ $name->{4} ?? '   ' }}</p>
                 </div>
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{7} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p></p>
+                    <p>{{ $name->{7} ?? '   ' }}</p>
                 </div>
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p></p>
                 </div>
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{1} ?? null }}</p>
+                    <p></p>
                 </div>
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{4} ?? null }}</p>
+                    <p>{{ $summary->{1} ?? '   ' }}</p>
                 </div>
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{7} ?? null }}</p>
+                    <p>{{ $summary->{4} ?? '   ' }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{7} ?? '   ' }}</p>
                 </div>
             </div>
 

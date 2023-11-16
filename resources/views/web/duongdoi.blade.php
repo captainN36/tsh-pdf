@@ -941,8 +941,27 @@
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
-            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px; height: 700px">
+            <div classt m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
+            <style>
+                .test {
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+                    font-size: 67px;
+                }
+                
+                @media only screen and (max-width: 992px) {
+                    .bieudo {
+                        width: 188vw !important;
+                    }
+                }
+                @media only screen and (min-width: 992px) {
+                    .bieudo {
+                        width: 96vw !important;
+                    }
+                }
+            </style>
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 700px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{3} ?? null }}</p>
                 </div>
@@ -969,7 +988,7 @@
                 </div>
             </div>
 
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px; height: 400px">
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 400px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{2} ?? null }}</p>
                 </div>
@@ -996,7 +1015,7 @@
                 </div>
             </div>
 
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;gap: 185px;bottom: 970px; height: 100px">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 100px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{1} ?? null }}</p>
                 </div>

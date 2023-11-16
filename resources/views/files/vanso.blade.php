@@ -32,11 +32,11 @@
             });
             $number = array_values($filter)[0]['indicator'];
         @endphp
-        <div class="t m0 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="top: 28% !important; left: -60px">
+        <div class="t m0 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="top: 500px !important; left: -60px">
             @php
                 $fileName = $number - 1;
             @endphp
-            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2300px;">
+            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2400px;">
         </div>
 
         @php

@@ -359,7 +359,7 @@
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 
-        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1400px; white-space: normal; top: 70px; left: 500px; text-align: justify">
+        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1390px; white-space: normal; top: 70px; left: 470px; text-align: justify">
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
 

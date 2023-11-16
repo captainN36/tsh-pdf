@@ -31,8 +31,8 @@
             $lifePathIndicator = \App\Http\Controllers\PDFController::renderText('lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($lifePathIndicator); $i++) {
-                $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[$i]);
-                $result = preg_replace('/\.\n\n/', '.', $result);
+                $result = preg_replace('/\·\n\n/', '·  ', $lifePathIndicator[$i]);
+                $result = preg_replace('/\.\n\n/', '.  ', $result);
                 $inputString .= $result;
             }
             

@@ -216,7 +216,7 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TÍNH CÁCH</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px">
             {!! $data['data']['personalIndicator']['description'] !!}
         </div>
     <?php
@@ -322,8 +322,8 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 40;
-            $linesPerPartRest = 100;
+            $linesPerPartFirst = 30;
+            $linesPerPartRest = 80;
 
             $parts = [];
 
@@ -355,7 +355,7 @@
             }
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
             {!! nl2br(e($array[0])) !!}
         </div>
 
@@ -401,7 +401,7 @@
         </div>
 
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 800px; text-align: justify;">
             @for ($index = 0; $index <= 1; $index++)
                 @isset($data['data']['passionIndicator']['data'][$index])
                     {!! $data['data']['passionIndicator']['data'][$index] !!}
@@ -462,7 +462,7 @@
             $thinkingIndicator = \App\Http\Controllers\PDFController::renderText('thinkingIndicator', $data['data']['thinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify;">
             {!! nl2br(e($thinkingIndicator[1])) !!}
         </div>
 
@@ -489,7 +489,7 @@
             $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText('emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify;">
             {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
         </div>
 
@@ -516,7 +516,7 @@
             $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText('intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify;">
             {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
         </div>
 
@@ -546,7 +546,7 @@
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText('actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify;">
             {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
         </div>
 
@@ -570,8 +570,8 @@
             {!! $data['data']['natureIndicator']['description'] !!}
         </div>
 
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify;">
             {!! $data['data']['natureIndicator']['data'][0] !!}
         </div>
 
@@ -616,7 +616,7 @@
             $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText('subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify;">
             {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
         </div>
 
@@ -735,7 +735,7 @@
             </div>
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 700px">
+                style="white-space: normal; width: 2360px; bottom: 750px">
                 @foreach ($data['data']['karmicIndicator']['data'] as $item)
                     {!! $item !!}
                 @endforeach

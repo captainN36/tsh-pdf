@@ -36,7 +36,7 @@
             @php
                 $fileName = $number - 1;
             @endphp
-            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2400px; margin-top: 800px !important">
+            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2400px; margin-top: 500px !important">
         </div>
 
         @php

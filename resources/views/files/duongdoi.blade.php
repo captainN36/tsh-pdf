@@ -407,11 +407,9 @@
 
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 780px; text-align: justify;">
-            @for ($index = 0; $index <= 1; $index++)
-                @isset($data['data']['passionIndicator']['data'][$index])
-                    {!! $data['data']['passionIndicator']['data'][$index] !!}
-                @endisset
-            @endfor
+            @isset($data['data']['passionIndicator']['data'][0])
+                {!! $data['data']['passionIndicator']['data'][0] !!}
+            @endisset
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -422,33 +420,41 @@
     </div>
 </div>
 
-<div id="pfd-data" class="pf w0 h0" data-page-no="28">
-    <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            @for ($index = 2; $index <= 3; $index++)
-                @if (isset($data['data']['passionIndicator']['data'][$index]))
-                    {!! $data['data']['passionIndicator']['data'][$index] !!}
-                @else
-                    <script>
-                    var elementToRemove = document.getElementById("pfd-data");
+<?php
+    $pages = ceil(count($data['data']['passionIndicator']['data']) / 2);
+    $index = 1;
+?>
 
-                    if (elementToRemove) {
-                        elementToRemove.remove();
-                    }
-                    </script>
-                @endif
-            @endfor
+@for ($i = 0; $i < $pages - 1; $i++)
+    <div id="pfd-data" class="pf w0 h0" data-page-no="28">
+        <div class="pc pcb w0 h0 opened">
+            <img class="bi x0 y0 w1 h1" alt=""
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+                @for ($j = 0; $j < 2; $j++)
+                    @if (isset($data['data']['passionIndicator']['data'][$index]))
+                        {!! $data['data']['passionIndicator']['data'][$index] !!}
+                    @else
+                        <script>
+                        var elementToRemove = document.getElementById("pfd-data");
+
+                        if (elementToRemove) {
+                            elementToRemove.remove();
+                        }
+                        </script>
+                    @endif
+                    <?php $index++ ?>
+                @endfor
+            </div>
+
+            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">28</div>
         </div>
-
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">28</div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+        </div>
     </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-    </div>
-</div>
+@endfor
 
 
 

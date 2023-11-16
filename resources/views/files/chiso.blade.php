@@ -46,7 +46,7 @@
         <div class="t m0 x1c h11 y99 ff3 fsa fc2 sc0 ls0 ws0">Giá trị, con người của bạn, lĩnh vực mà</div>
         <div class="t m0 x1d h11 y9a ff3 fsa fc2 sc0 ls0 ws0">bạn có nhiều tiềm năng nhất trong giai</div>
         <div class="t m0 x1c h11 y9b ff3 fsa fc2 sc0 ls0 ws0">đoạn trưởng thành (khoảng từ 40 tuổi).</div>
-        <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center; left: 55px; bottom: 730px;gap: 66px;">
+        <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center; left: 55px; bottom: 730px;gap: 66px; width: 215vw">
             <div class="item" style="flex: 1; text-align: center; margin: 0; padding: 0;">
                 <p>{{ $data['data']['missionIndicator']['missionIndicator'] }}</p>
             </div>
@@ -67,7 +67,7 @@
         <div class="t m0 x22 h11 y9e ff3 fsa fc2 sc0 ls0 ws0">Sự khao sát sâu trong con người của</div>
         <div class="t m0 x23 h11 y9f ff3 fsa fc2 sc0 ls0 ws0">bạn. Nó cho biết điều gì mới thực sự</div>
         <div class="t m0 x24 h11 ya0 ff3 fsa fc2 sc0 ls0 ws0">khiến bạn thỏa mãn và trọn vẹn.</div>
-        <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center; left: 55px; bottom: 490px;gap: 66px;">
+        <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center; left: 55px; bottom: 490px;gap: 66px; width: 215vw">
             <div class="item" style="flex: 1; text-align: center; margin: 0; padding: 0;">
                 <p>{{ $data['data']['missionIndicator']['missionIndicator'] }}</p>
             </div>
@@ -88,7 +88,7 @@
         <div class="t m0 x27 h11 ya3 ff3 fsa fc2 sc0 ls0 ws0">Trở ngại mà bạn phải đối mặt bên</div>
         <div class="t m0 x28 h11 ya4 ff3 fsa fc2 sc0 ls0 ws0">trong nội tâm của mình để vượt qua</div>
         <div class="t m0 x29 h11 ya5 ff3 fsa fc2 sc0 ls0 ws0">chúng và trở nên trưởng thành.</div>
-        <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center; left: 55px; bottom: 250px;gap: 66px;">
+        <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 chiso" style="display: flex;justify-content: space-between;align-items: center; left: 55px; bottom: 250px;gap: 66px; width: 215vw">
             <div class="item" style="flex: 1; text-align: center; margin: 0; padding: 0;">
                 <p>{{ $data['data']['dobIndicator']['dobIndicator'] }}</p>
             </div>

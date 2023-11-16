@@ -14,7 +14,7 @@
         <div class="t m0 x1c h11 y99 ff3 fsa fc2 sc0 ls0 ws0">Giá trị, con người của bạn, lĩnh vực mà</div>
         <div class="t m0 x1d h11 y9a ff3 fsa fc2 sc0 ls0 ws0">bạn có nhiều tiềm năng nhất trong giai</div>
         <div class="t m0 x1c h11 y9b ff3 fsa fc2 sc0 ls0 ws0">đoạn trưởng thành (khoảng từ 40 tuổi).</div>
-        <div style="" class="t m0 x3 hc y9c ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['missionIndicator']['missionIndicator'] }}<span class="_ _10" style="width: 512px"> </span>{{ $data['data']['natureIndicator']['natureIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</div>
+        <div style="" class="t m0 x3 hc y9c ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['missionIndicator']['missionIndicator'] }}<span class="_ _10" style="<?php if ($path > 10) { echo 'margin-left: -35px';}  ?>"> </span>{{ $data['data']['natureIndicator']['natureIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</div>
         <div class="t m0 x1e h10 y9d ff1 fs9 fc2 sc0 ls0 ws0">SỨ MỆNH<span class="_ _13"> </span>NHÂN CÁCH<span class="_ _14"> </span>LINH HỒN</div>
         <div class="t m0 x1f h11 y9e ff3 fsa fc2 sc0 ls0 ws0">Cách bạn đạt được các mục tiêu lớn</div>
         <div class="t m0 x17 h11 y9f ff3 fsa fc2 sc0 ls0 ws0">nhỏ. Con số này tác động vào mọi giai</div>
@@ -25,7 +25,7 @@
         <div class="t m0 x22 h11 y9e ff3 fsa fc2 sc0 ls0 ws0">Sự khao sát sâu trong con người của</div>
         <div class="t m0 x23 h11 y9f ff3 fsa fc2 sc0 ls0 ws0">bạn. Nó cho biết điều gì mới thực sự</div>
         <div class="t m0 x24 h11 ya0 ff3 fsa fc2 sc0 ls0 ws0">khiến bạn thỏa mãn và trọn vẹn.</div>
-        <div style="" class="t m0 x3 hc ya1 ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['missionIndicator']['missionIndicator'] }}<span style="width: 512px" class="_ _10"> </span>{{ $data['data']['natureIndicator']['natureIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</div>
+        <div style="" class="t m0 x3 hc ya1 ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['missionIndicator']['missionIndicator'] }}<span style="<?php if ($path > 10) { echo 'margin-left: -35px';}  ?>" class="_ _10"> </span>{{ $data['data']['natureIndicator']['natureIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</div>
         <div class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0">THỬ THÁCH SỨ MỆNH<span class="_ _15"> </span>THỬ THÁCH NHÂN CÁCH<span class="_ _16"> </span>THỬ THÁCH LINH HỒN</div>
         <div class="t m0 x5 h11 ya3 ff3 fsa fc2 sc0 ls0 ws0">Những kiểu thử thách thường gặp nhất</div>
         <div class="t m0 x7 h11 ya4 ff3 fsa fc2 sc0 ls0 ws0">trong suốt cuộc đời mà bạn sẽ phải</div>
@@ -36,7 +36,7 @@
         <div class="t m0 x27 h11 ya3 ff3 fsa fc2 sc0 ls0 ws0">Trở ngại mà bạn phải đối mặt bên</div>
         <div class="t m0 x28 h11 ya4 ff3 fsa fc2 sc0 ls0 ws0">trong nội tâm của mình để vượt qua</div>
         <div class="t m0 x29 h11 ya5 ff3 fsa fc2 sc0 ls0 ws0">chúng và trở nên trưởng thành.</div>
-        <div class="t m0 x3 hc ya6 ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['dobIndicator']['dobIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</div>
+        <div class="t m0 x3 hc ya6 ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['dobIndicator']['dobIndicator'] }}<span class="_ _10" style="<?php if ($path > 10) { echo 'margin-left: -35px';}  ?>"> </span>{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</div>
         <div class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0">NĂNG LỰC TỰ NHIÊN<span class="_ _17"> </span>NĂNG LỰC TƯ DUY<span class="_ _18"> </span>VƯỢT KHÓ</div>
         <div class="t m0 x2b h11 ya8 ff3 fsa fc2 sc0 ls0 ws0">Năng khiếu bẩm sinh, thứ mà bạn có</div>
         <div class="t m0 x7 h11 ya9 ff3 fsa fc2 sc0 ls0 ws0">thể làm dễ dàng; những tài năng và</div>

@@ -572,37 +572,10 @@
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
             {!! $data['data']['natureIndicator']['description'] !!}
         </div>
-        <?php
-            $natureIndicator_1 = \App\Http\Controllers\PDFController::renderText('natureIndicator_1', $data['data']['natureIndicator']['data'][0] . $data['data']['natureIndicator']['data'][1], false);
-            $inputString = '';
-            for ($i = 1; $i <= count($natureIndicator_1); $i++) {
-                $result = preg_replace('/\·\n\n/', '·', $natureIndicator_1[$i]);
-                $result = preg_replace('/\.\n\n/', '.', $result);
-                $inputString .= $result;
-            }
-            
-            $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 55;
-            $linesPerPartRest = 75;
-
-            $parts = [];
-
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-                
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-        ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
-            {!! nl2br(e($parts[0])) !!}
+            {!! $data['data']['natureIndicator']['data'][0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -618,7 +591,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! nl2br(e($parts[1])) !!}
+            {!! $data['data']['natureIndicator']['data'][1] !!}
         </div>
 
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

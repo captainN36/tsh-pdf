@@ -401,12 +401,12 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐAM MÊ</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</div>
-            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify">
                 {!! $data['data']['passionIndicator']['description'] !!}
             </div>
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 780px">
+                style="white-space: normal; width: 2360px; bottom: 780px; text-align: justify">
                     @isset($data['data']['passionIndicator']['data'][0])
                         {!! $data['data']['passionIndicator']['data'][0] !!}
                     @endisset
@@ -424,12 +424,12 @@
     $index = 1;
 ?>
 
-@for ($i = 0; $i < $pages - 1; $i++)
+@for ($i = 0; $i <= $pages - 1; $i++)
     <div id="pfd-data" class="pf w0 h0" data-page-no="28">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify">
                 @for ($j = 0; $j < 2; $j++)
                     @if (isset($data['data']['passionIndicator']['data'][$index]))
                         {!! $data['data']['passionIndicator']['data'][$index] !!}

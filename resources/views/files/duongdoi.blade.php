@@ -108,7 +108,7 @@
             $lines = explode("\n", $inputString);
 
             $linesPerPartFirst = 25;
-            $linesPerPartRest = 65;
+            $linesPerPartRest = 60;
 
             $parts = [];
 
@@ -126,20 +126,13 @@
             $array = [];
             for ($i =0; $i < count($parts); $i++) {
                           
-                if ($i != 0) {
-                    $html = str_replace("\n ", '', $parts[$i]);
-                    $html = str_replace("\n\n", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                } else {
-                    $html = preg_replace("/\n/", "\r", $parts[$i], 4);  
-                    $html = str_replace("\n ", '', $parts[$i]);
-                    $html = str_replace("\n\n", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                }
+                $html = str_replace("\n ", '', $parts[$i]);
+                $html = str_replace("\n\n", "\r", $parts[$i]);
+                $html = str_replace("\n", " ", $parts[$i]);
                 $array[$i] = $html;
             }
         ?>
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 590px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 590px; text-align: justify;">
             {!! nl2br(e($array[0])) !!}
         </div>
     </div>

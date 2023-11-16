@@ -421,17 +421,18 @@
     </div>
 <?php
     $pages = ceil(count($data['data']['passionIndicator']['data']) / 2);
+    $index = 1;
 ?>
 
-@for ($i = 0; $i < $pages; $i++)
+@for ($i = 0; $i < $pages - 1; $i++)
     <div id="pfd-data" class="pf w0 h0" data-page-no="28">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal">
-                @for ($j = $i + 1; $j - $i == 2; $j++)
-                    @if (isset($data['data']['passionIndicator']['data'][$j]))
-                        {!! $data['data']['passionIndicator']['data'][$j] !!}
+                @for ($j = 0; $j < 2; $j++)
+                    @if (isset($data['data']['passionIndicator']['data'][$index]))
+                        {!! $data['data']['passionIndicator']['data'][$index] !!}
                     @else
                         <script>
                         var elementToRemove = document.getElementById("pfd-data");
@@ -441,6 +442,7 @@
                         }
                         </script>
                     @endif
+                    <?php $index++ ?>
                 @endfor
             </div>
 

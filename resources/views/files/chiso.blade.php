@@ -7,23 +7,30 @@
 
         <style>
             .item {
-                color: black;
-                margin: 0;
-                padding: 0;
+                flex: 1;
                 text-align: center;
+                margin: 0;
+                padding: 10px; /* Add padding for better visibility */
+                border: 1px solid #000; /* Add border for better visibility */
+            }
+
+            p {
+                margin: 0;
+                word-break: break-all; /* Allow long text to break and wrap */
             }
         </style>
 
-        <div class="item" style="flex: 1;">
-            <p style="margin: 0;">{{ $path }}</p>
+        <div class="item">
+            <p>{{ $path }}</p>
         </div>
-        <div class="item" style="flex: 1;">
-            <p style="margin: 0;">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</p>
+        <div class="item">
+            <p>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</p>
         </div>
-        <div class="item" style="flex: 1;">
-            <p style="margin: 0;">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</p>
+        <div class="item">
+            <p>{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</p>
         </div>
     </div>
+
 
         <div class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0">ĐƯỜNG ĐỜI<span class="_ _11"> </span>THÁI ĐỘ<span class="_ _12"> </span>TRƯỞNG THÀNH</div>
         <div class="t m0 x16 h11 y99 ff3 fsa fc2 sc0 ls0 ws0">Điểm mạnh yếu, tổng quan về đường</div>

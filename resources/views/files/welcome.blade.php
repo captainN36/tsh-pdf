@@ -1061,6 +1061,7 @@
                     $parts[] = implode("\n", $part);
                 }
             }
+            dd($parts);
             $array = [];
             for ($i = 0; $i < count($parts); $i++) {
                           

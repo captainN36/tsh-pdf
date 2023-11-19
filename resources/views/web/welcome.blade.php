@@ -64,7 +64,7 @@
                 {{ $summary->{3} ?? null }}<span class="_ _21"></span>{{ $summary->{6} ?? null }}<span class="_ _24"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1250px;"> </span><span style="top: -135px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 750px">
-                {{ $summary->{2} ?? null }}<span class="_ _21"></span>{{ $summary->{5} ?? null }}<span class="_ _24"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1105px;"> </span><span style="top: -200px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
+                {{ $summary->{2} ?? null }}<span class="_ _21"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 108px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1105px;"> </span><span style="top: -200px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 680px">
                 {{ $summary->{1} ?? null }}<span class="_ _21"></span>{{ $summary->{4} ?? null }}<span class="_ _24"> </span>{{ $summary->{7} ?? null }}<span class="_ _27" style="width: 1212px;"> </span><span style="top: -275px">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</span>

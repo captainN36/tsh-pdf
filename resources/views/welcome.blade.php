@@ -45,21 +45,20 @@
                 src="{{ asset('/' . $path . '/vochong.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
-            xxxxxxxxxxx
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1070px; height: 77px">
-                {{ $name->{3} ?? null }}<span style="width: 142px" class="_ _21"></span>{{ $name->{6} ?? null }}<span class="_ _21" style="width: 142px"> </span>{{ $name->{9} ?? null }}<span class="_ _27" style="width: 1226px;"> </span>{{ $data['data']['dobIndicator']['dobIndicator'] }}
+                {{ $name->{3} ?? null }}<span style="width: 142px" class="_ _21"></span>{{ $name->{6} ?? null }}<span class="_ _21" style="width: 142px"> </span>{{ $name->{9} ?? null }}<span class="_ _27" style="width: 1230px;"> </span>{{ $data['data']['dobIndicator']['dobIndicator'] }}
             </div>
              <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1000px">
-                {{ $name->{2} ?? null }}<span class="_ _21"></span>{{ $name->{5} ?? null }}<span class="_ _24"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1310px;"> </span><span style="bottom: 75px;right: 90px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
+                {{ $name->{2} ?? null }}<span class="_ _21"></span>{{ $name->{5} ?? null }}<span class="_ _24"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1300px;"> </span><span style="bottom: 75px;right: 90px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 60px;bottom: 930px;height: 85px;">
-                {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 201px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1340px;"> </span><span style="top: -135px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
+                {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 201px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1200px;"> </span><span style="top: -120px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 40px;bottom: 820px">
-                {{ $summary->{3} ?? null }}<span class="_ _21"></span>{{ $summary->{6} ?? null }}<span class="_ _24"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1250px;"> </span><span style="top: -135px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
+                {{ $summary->{3} ?? null }}<span class="_ _21"></span>{{ $summary->{6} ?? null }}<span class="_ _24"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1250px;"> </span><span style="top: -145px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fse fc7 sc0 ls0 ws0" style="left: 45px;bottom: 750px">
                 {{ $summary->{2} ?? null }}<span class="_ _21"></span>{{ $summary->{5} ?? null }}<span class="_ _24"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1200px;"> </span><span style="top: -190px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
@@ -80,7 +79,7 @@
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 405px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</span>
+                <span class="_ _27" style="width: 1610px;"> </span><span style="top: -255px">{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 350px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</span>

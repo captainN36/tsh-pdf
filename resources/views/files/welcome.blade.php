@@ -1464,7 +1464,7 @@
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{3} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{6} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _22">{{ $name->{9} ?? null }} </span>
-                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{3} ?? null }}</span>
+                <span style="color: unset; width: 191px; margin-left: 100px;" class="_ _24">{{ $summary->{3} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{6} ?? null }} </span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{9} ?? null }} </span>
             </div>
@@ -1473,7 +1473,7 @@
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{2} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{5} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _22">{{ $name->{8} ?? null }} </span>
-                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{2} ?? null }}</span>
+                <span style="color: unset; width: 191px; margin-left: 100px;" class="_ _24">{{ $summary->{2} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{5} ?? null }} </span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{8} ?? null }} </span>
             </div>
@@ -1481,7 +1481,7 @@
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{1} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{4} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _22">{{ $name->{7} ?? null }} </span>
-                <span style="color: unset; width: 191px; margin-left: 520px;" class="_ _24">{{ $summary->{1} ?? null }}</span>
+                <span style="color: unset; width: 191px; margin-left: 100px;" class="_ _24">{{ $summary->{1} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{4} ?? null }} </span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{7} ?? null }} </span>
             </div>

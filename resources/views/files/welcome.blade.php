@@ -479,7 +479,7 @@
             $numberLifePath = $final[0];
         @endphp
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐƯỜNG ĐỜI (SỐ CHỦ ĐẠO)</div>
-        <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0" style="left: 0; width: 2360px; text-aligin: center">{{ $numberLifePath }}</div>
+        <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0" style="left: 500px; width: 2360px; text-aligin: center">{{ $numberLifePath }}</div>
         <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px">
             {!! $data['data']['lifePathIndicator']['description'] !!}
         </div>

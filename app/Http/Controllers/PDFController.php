@@ -26,29 +26,7 @@ class PDFController extends Controller
         ];
         $data = $this->getData($params);
         
-        $pdfFilePath = public_path('testtest.pdf');
-
-        // Get the total number of pages
-        // $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
-        // $totalPages = (int) shell_exec($command);
-
-        // // Extract text from each page
-        // $pageTexts = [];
-        // for ($pageNumber = 1; $pageNumber <= $totalPages; $pageNumber++) {
-        //     $outputFile = tempnam(sys_get_temp_dir(), 'pdf_page');
-        //     $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
-        //     shell_exec($command);
-        //     $html = file_get_contents($outputFile);
-        //     $html = preg_replace("/\n/", "\r", $html, 2);            
-        //     $html = str_replace("\n ", '', $html);
-        //     $html = str_replace("\n\n", "\r", $html);
-        //     $html = str_replace("\n", " ", $html);
-        //     $pageTexts[$pageNumber] = $html;
-        //     unlink($outputFile);
-        // }
-        // dd($pageTexts);
-        // $data = $this->getData($request->all());
-        return view('welcome', ['data' => $data]);
+        return view('web.welcome', ['data' => $data]);
     }
 
     public function download (Request $request) {

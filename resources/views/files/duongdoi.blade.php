@@ -651,8 +651,8 @@
         <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - 29 tuổi (2030)<span class="_ _20">
             </span>30 - 56 tuổi (2031 - 2057)<span class="_ _21"> </span>57 tuổi về sau (2058 trở đi)</div>
 
-        <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; top: 450px">
+        <div class="t m0 x5 hf y6f ff2 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px;">
             {!! $data['data']['lifeCircleIndicator']['description'] !!}
         </div>
 

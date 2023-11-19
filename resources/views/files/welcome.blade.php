@@ -1040,7 +1040,12 @@
 <?php
             $natureIndicator1 = \App\Http\Controllers\PDFController::renderText('natureIndicator', $data['data']['natureIndicator']['data'][0], false);
             $natureIndicator2 = \App\Http\Controllers\PDFController::renderText('natureIndicator2', $data['data']['natureIndicator']['data'][1], false);
-            dd($natureIndicator1, $natureIndicator2);
+            
+            $natureIndicator1 = preg_replace("/\n/", "\r", $natureIndicator1[1], 1);
+            $natureIndicator2 = preg_replace("/\n/", "\r", $natureIndicator2[1], 1);
+            $natureIndicator[1] = $natureIndicator1;
+            $natureIndicator[2] = $natureIndicator2;
+            dd($natureIndicator);
             $inputString = '';
             for ($i = 1; $i <= count($natureIndicator); $i++) {
                 $inputString .= $natureIndicator[$i];

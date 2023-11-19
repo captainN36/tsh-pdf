@@ -38,7 +38,6 @@
             });
             $number = array_values($filter)[0]['indicator'];
         @endphp
-        --------------------
 
         <div class="t m0 hb y276 ff2 fs9 fc2 sc0 ls0 ws0 x16-minus" style="left: -75.253333px !important;">
             @php
@@ -46,7 +45,6 @@
             @endphp
             <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2360px;">
         </div>
-        --------------------
         @php
             $string = '';
             foreach ($data['data']['cycleFortune']['cycleFortune'] as $item) {

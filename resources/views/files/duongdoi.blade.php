@@ -650,12 +650,12 @@
         </div>
         <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - 29 tuổi (2030)<span class="_ _20">
             </span>30 - 56 tuổi (2031 - 2057)<span class="_ _21"> </span>57 tuổi về sau (2058 trở đi)</div>
-
-        <div class="t m0 x5 hf y6f ff2 fs9 fc2 sc0 ls0 ws0"
+        xxxxxxxx
+        <div class="t m0 x5 hf y253 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px;">
             {!! $data['data']['lifeCircleIndicator']['description'] !!}
         </div>
-
+        xxxxxxxx
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer')
         <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">36</div>

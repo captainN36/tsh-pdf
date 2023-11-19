@@ -1045,7 +1045,6 @@
             $natureIndicator2 = preg_replace("/\n/", "\r", $natureIndicator2[1], 1);
             $natureIndicator[1] = $natureIndicator1;
             $natureIndicator[2] = $natureIndicator2;
-            dd($natureIndicator);
             $inputString = '';
             for ($i = 1; $i <= count($natureIndicator); $i++) {
                 $inputString .= $natureIndicator[$i];
@@ -1070,19 +1069,12 @@
             }
             $array = [];
             for ($i = 0; $i < count($parts); $i++) {
-                          
-                if ($i != 0) {
-                    $html = str_replace("\n ", '', $parts[$i]);
-                    $html = str_replace("\n\n", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                } else {
-                    $html = preg_replace("/\n/", "\r", $parts[$i], 2);  
-                    $html = str_replace("\n ", '', $parts[$i]);
-                    $html = str_replace("\n\n", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                }
+                $html = str_replace("\n ", '', $parts[$i]);
+                $html = str_replace("\n\n", "\r", $parts[$i]);
+                $html = str_replace("\n", " ", $parts[$i]);
                 $array[$i] = $html;
             }
+            dd($array);
         ?>
 
 

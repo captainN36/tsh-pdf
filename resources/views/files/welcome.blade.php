@@ -1061,20 +1061,23 @@
                     $parts[] = implode("\n", $part);
                 }
             }
-            dd($parts);
+
             $array = [];
             for ($i = 0; $i < count($parts); $i++) {
-                          
-                if ($i != 0) {
-                    $html = str_replace("\n ", '', $parts[$i]);
-                    $html = str_replace("\n\n", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                } else {
-                    $html = preg_replace("/\n/", "\r", $parts[$i], 2);  
-                    $html = str_replace("\n ", '', $parts[$i]);
-                    $html = str_replace("\n\n", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                }
+                $pos1 = strpos($parts[$i], 'Trước sinh nhật -');
+                $pos2 = strpos($parts[$i], 'Sau sinh nhật -');
+                if ($viTri !== false) {
+                $viTriDauTienSauChuoi1 = strpos($parts[$i], "\n", $pos1);
+                $viTriDauTienSauChuoi2 = strpos($parts[$i], "\n", $pos2);
+
+                    if ($viTriDauTienSauChuoi1 !== false) {
+                        $html = substr_replace($chuoi, "\r", $viTriDauTienSauChuoi1, 1);
+                        $html = substr_replace($chuoi, "\r", $viTriDauTienSauChuoi2, 1);
+                    }
+            }
+                $html = str_replace("\n ", '', $parts[$i]);
+                $html = str_replace("\n\n", "\r", $parts[$i]);
+                $html = str_replace("\n", " ", $parts[$i]);
                 $array[$i] = $html;
             }
             dd($array);

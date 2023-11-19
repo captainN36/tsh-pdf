@@ -1068,9 +1068,10 @@
                 $pos2 = strpos($parts[$i], 'Sau sinh nhật -');
                 $viTriDauTienSauChuoi1 = strpos($parts[$i], "\n", $pos1);
                 $viTriDauTienSauChuoi2 = strpos($parts[$i], "\n", $pos2);
+                dd($viTriDauTienSauChuoi1, $viTriDauTienSauChuoi2);
                 $html = substr_replace($parts[$i], "\r", $viTriDauTienSauChuoi1, 1);
                 $html = substr_replace($parts[$i], "\r", $viTriDauTienSauChuoi2, 1);
-                
+
                 $html = str_replace("\n ", '', $parts[$i]);
                 $html = str_replace("\n\n", "\r", $parts[$i]);
                 $html = str_replace("\n", " ", $parts[$i]);

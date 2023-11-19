@@ -1066,15 +1066,15 @@
             for ($i = 0; $i < count($parts); $i++) {
                 $pos1 = strpos($parts[$i], 'Trước sinh nhật -');
                 $pos2 = strpos($parts[$i], 'Sau sinh nhật -');
-                if ($viTri !== false) {
+                if ($pos1 !== false && $pos2 !== false) {
                 $viTriDauTienSauChuoi1 = strpos($parts[$i], "\n", $pos1);
                 $viTriDauTienSauChuoi2 = strpos($parts[$i], "\n", $pos2);
 
-                    if ($viTriDauTienSauChuoi1 !== false) {
+                    if ($viTriDauTienSauChuoi1 !== false && $viTriDauTienSauChuoi2 !== false) {
                         $html = substr_replace($parts[$i], "\r", $viTriDauTienSauChuoi1, 1);
                         $html = substr_replace($parts[$i], "\r", $viTriDauTienSauChuoi2, 1);
                     }
-            }
+                }
                 $html = str_replace("\n ", '', $parts[$i]);
                 $html = str_replace("\n\n", "\r", $parts[$i]);
                 $html = str_replace("\n", " ", $parts[$i]);

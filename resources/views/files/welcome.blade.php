@@ -1038,7 +1038,9 @@
 
 
 <?php
-            $natureIndicator = \App\Http\Controllers\PDFController::renderText('natureIndicator', $data['data']['natureIndicator']['data'][0] . $data['data']['natureIndicator']['data'][1], false);
+            $natureIndicator1 = \App\Http\Controllers\PDFController::renderText('natureIndicator', $data['data']['natureIndicator']['data'][0], false);
+            $natureIndicator2 = \App\Http\Controllers\PDFController::renderText('natureIndicator', $data['data']['natureIndicator']['data'][1], false);
+            dd($natureIndicator1, $natureIndicator2);
             $inputString = '';
             for ($i = 1; $i <= count($natureIndicator); $i++) {
                 $inputString .= $natureIndicator[$i];
@@ -1061,20 +1063,20 @@
                     $parts[] = implode("\n", $part);
                 }
             }
-
+            dd($);
             $array = [];
             for ($i = 0; $i < count($parts); $i++) {
-                $pos1 = strpos($parts[$i], 'Trước sinh nhật -');
-                $pos2 = strpos($parts[$i], 'Sau sinh nhật -');
-                $viTriDauTienSauChuoi1 = strpos($parts[$i], "\n", $pos1);
-                $viTriDauTienSauChuoi2 = strpos($parts[$i], "\n", $pos2);
-                dd($viTriDauTienSauChuoi1, $viTriDauTienSauChuoi2);
-                $html = substr_replace($parts[$i], "\r", $viTriDauTienSauChuoi1, 1);
-                $html = substr_replace($parts[$i], "\r", $viTriDauTienSauChuoi2, 1);
-
-                $html = str_replace("\n ", '', $parts[$i]);
-                $html = str_replace("\n\n", "\r", $parts[$i]);
-                $html = str_replace("\n", " ", $parts[$i]);
+                          
+                if ($i != 0) {
+                    $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                } else {
+                    $html = preg_replace("/\n/", "\r", $parts[$i], 2);  
+                    $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                }
                 $array[$i] = $html;
             }
             dd($array);

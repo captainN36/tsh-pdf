@@ -794,7 +794,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 35;
             $linesPerPartRest = 60;
 
             $parts = [];

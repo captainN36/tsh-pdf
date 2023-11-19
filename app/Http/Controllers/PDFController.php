@@ -18,13 +18,13 @@ use PDF;
 
 class PDFController extends Controller
 {
-    public function view(Request $request)
+    public function view()
     {
         $params = [
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
         ];
-        $data = $this->getData($request->all());
+        $data = $this->getData($params);
         
         $pdfFilePath = public_path('testtest.pdf');
 
@@ -48,7 +48,7 @@ class PDFController extends Controller
         // }
         // dd($pageTexts);
         // $data = $this->getData($request->all());
-        return view('web.welcome', ['data' => $data]);
+        return view('welcome', ['data' => $data]);
     }
 
     public function download (Request $request) {
@@ -56,7 +56,7 @@ class PDFController extends Controller
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
         ];
-        $fileUrl = $this->pdf($request->all());
+        $fileUrl = $this->pdf($params);
 
         // $fileContents = Http::get($fileUrl)->body();
 

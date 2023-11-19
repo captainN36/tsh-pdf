@@ -910,6 +910,7 @@
             class="block w-full py-5 text-center text-[24px] font-black text-blue-800">TỔNG QUAN DỮ LIỆU BÁO CÁO</h3>
         <div class=" flex flex-col justify-center md:flex-row md:justify-around">
             <div class="flex w-full flex-col md:w-2/5">
+            xxxxxxxxxxxxxx
                 <div class="text-center"><p class="py-5 font-bold">BIỂU ĐỒ NGÀY SINH</p>
                     <table class="m-auto text-center font-bold">
                         <tbody>

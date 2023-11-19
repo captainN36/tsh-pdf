@@ -36,9 +36,7 @@
         }
     @endphp
     @include('pages.first')
-    @include('pages.chiso')
-    @include('pages.vanso')
-    @include('pages.duongdoi')
+    
 
 
     <div id="pf7" class="pf w0 h0" data-page-no="54">
@@ -47,6 +45,7 @@
                 src="{{ asset('/' . $path . '/vochong.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
+            xxxxxxxxxxx
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">
             </div>
@@ -62,11 +61,11 @@
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 40px;bottom: 820px">
                 {{ $summary->{3} ?? null }}<span class="_ _21"></span>{{ $summary->{6} ?? null }}<span class="_ _24"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1250px;"> </span><span style="top: -135px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 750px">
-                {{ $summary->{2} ?? null }}<span class="_ _21"></span>{{ $summary->{5} ?? null }}<span class="_ _24"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1270px;"> </span><span style="top: -200px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
+            <div class="t m0 x51 h14 y1c8 ff1 fse fc7 sc0 ls0 ws0" style="left: 45px;bottom: 750px">
+                {{ $summary->{2} ?? null }}<span class="_ _21"></span>{{ $summary->{5} ?? null }}<span class="_ _24"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1200px;"> </span><span style="top: -190px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 680px">
-                {{ $summary->{1} ?? null }}<span class="_ _21"></span>{{ $summary->{4} ?? null }}<span class="_ _24"> </span>{{ $summary->{7} ?? null }}<span class="_ _27" style="width: 1335px;"> </span><span style="top: -275px">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</span>
+                {{ $summary->{1} ?? null }}<span class="_ _21"></span>{{ $summary->{4} ?? null }}<span class="_ _24"> </span>{{ $summary->{7} ?? null }}<span class="_ _27" style="width: 1212px;"> </span><span style="top: -275px">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 640px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -275px">{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</span>
@@ -90,7 +89,7 @@
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 250px">
-                <span class="_ _27" style="width: 1600px;"> </span><span style="top: -100px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -100px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 205px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -100px">{{ $data['data']['missionIndicator']['missionIndicator'] }}</span>

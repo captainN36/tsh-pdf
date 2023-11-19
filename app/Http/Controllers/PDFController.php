@@ -26,7 +26,7 @@ class PDFController extends Controller
         ];
         $data = $this->getData($params);
         
-        return view('welcome', ['data' => $data]);
+        return view('web.welcome', ['data' => $data]);
     }
 
     public function download (Request $request) {

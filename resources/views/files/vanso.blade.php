@@ -19,7 +19,7 @@
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div>
         <div id="header1" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ VẬN SỐ</div>
 
-        <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1500px; white-space: normal">
+        <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1500px; white-space: normal; text-aligin: justify">
             {!! substr($data['data']['cycleFortune']['description'], 0) !!}
         </div>
         <style>
@@ -38,13 +38,13 @@
             });
             $number = array_values($filter)[0]['indicator'];
         @endphp
-
         <div class="t m0 hb y276 ff2 fs9 fc2 sc0 ls0 ws0 x16-minus" style="left: -75.253333px !important;">
             @php
                 $fileName = $number - 1;
             @endphp
             <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2360px;">
         </div>
+
         @php
             $string = '';
             foreach ($data['data']['cycleFortune']['cycleFortune'] as $item) {

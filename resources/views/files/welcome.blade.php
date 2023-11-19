@@ -1036,6 +1036,50 @@
     </div>
 </div>
 
+
+<?php
+            $natureIndicator = \App\Http\Controllers\PDFController::renderText('natureIndicator', $data['data']['natureIndicator']['data'][0] . $data['data']['natureIndicator']['data'][1], false);
+            $inputString = '';
+            for ($i = 1; $i <= count($natureIndicator); $i++) {
+                $inputString .= $natureIndicator[$i];
+            }
+            $lines = explode("\n", $inputString);
+
+            $linesPerPartFirst = 31;
+            $linesPerPartRest = 55;
+
+            $parts = [];
+
+            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+
+                $part = array_slice($lines, $i, $linesPerPart);
+                
+                $part = array_filter($part);
+
+                if (!empty($part)) {
+                    $parts[] = implode("\n", $part);
+                }
+            }
+            $array = [];
+            for ($i = 0; $i < count($parts); $i++) {
+                          
+                if ($i != 0) {
+                    $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                } else {
+                    $html = preg_replace("/\n/", "\r", $parts[$i], 2);  
+                    $html = str_replace("\n ", '', $parts[$i]);
+                    $html = str_replace("\n\n", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                }
+                $array[$i] = $html;
+            }
+            dd($array);
+        ?>
+
+
 <div id="pf7" class="pf w0 h0" data-page-no="33">
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""

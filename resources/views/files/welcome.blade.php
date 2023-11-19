@@ -552,8 +552,8 @@
             src="{{ asset('/' . $path . '/duongdoi.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ SỨ MỆNH</div>
-        <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0" style="left: 250px !important; width: 2380px !important; white-space: normal !important; text-aligin: center !important;">
-            {{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
+        
+        <div class="t m0 x2 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
         <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
             {!! $data['data']['missionIndicator']['description'] !!}
         </div>

@@ -1071,8 +1071,8 @@
                 $viTriDauTienSauChuoi2 = strpos($parts[$i], "\n", $pos2);
 
                     if ($viTriDauTienSauChuoi1 !== false) {
-                        $html = substr_replace($chuoi, "\r", $viTriDauTienSauChuoi1, 1);
-                        $html = substr_replace($chuoi, "\r", $viTriDauTienSauChuoi2, 1);
+                        $html = substr_replace($parts[$i], "\r", $viTriDauTienSauChuoi1, 1);
+                        $html = substr_replace($parts[$i], "\r", $viTriDauTienSauChuoi2, 1);
                     }
             }
                 $html = str_replace("\n ", '', $parts[$i]);

@@ -1090,7 +1090,7 @@
         </div>
 
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify;">
+            style="white-space: normal; width: 2360px; bottom: 800px; text-align: justify;">
             {!! $data['data']['natureIndicator']['data'][0] !!}
         </div>
 

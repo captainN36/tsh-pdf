@@ -1,0 +1,6 @@
+@media print {
+    .image-sample {
+        bottom: unset !important; 
+        left: unset !important;
+    }
+}

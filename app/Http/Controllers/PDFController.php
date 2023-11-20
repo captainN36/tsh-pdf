@@ -44,7 +44,6 @@ class PDFController extends Controller
                 'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
             ];
     
-            // Return the file as a response
             return response()->file($filePath, $headers);
         } else {
             return response()->json(['error' => 'File not found'], 404);

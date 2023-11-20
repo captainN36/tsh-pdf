@@ -1354,12 +1354,12 @@
                 
                 @media only screen and (max-width: 992px) {
                     .bieudo-rps {
-                        width: 188vw !important;
+                        width: 188vw;
                     }
                 }
                 @media only screen and (min-width: 992px) {
                     .bieudo-rps {
-                        width: 188vw !important;
+                        width: 188vw;
                     }
                 }
                 .bieudo {

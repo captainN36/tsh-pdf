@@ -1395,9 +1395,16 @@
                         'content' => 'Người không có cả ba số 1-5-9 trong biểu đồ ngày sinh thường thiếu quyết tâm, hay trì hoãn thậm chí không làm gì cả. Điều này ảnh hưởng tiêu cực đến sự phát triển hay thành công của họ, khiến bản thân họ lẫn mọi người xung quanh đều khó chịu. Điều này cần phải được phát hiện sớm để điều chỉnh kịp thời.',
                     ]);
                 }
+                if (count($return) > 4) {
+                    $data1 = array_slice($return, 0, 3);
+                    $data2 = array_slice($return, 4);
+                } else {
+                    $data1 = $return;
+                }
+                
             @endphp
             <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px">
-                @foreach ($return as $item)
+                @foreach ($data1 as $item)
                     {!! $item['title'] !!}
                     <p>{!! $item['content'] !!}</p>
                 @endforeach

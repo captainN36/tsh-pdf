@@ -1763,7 +1763,7 @@
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 730px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 300px">
-                <span class="_ _27" style="width: 1630px;"> </span><span style="bottom: 600px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 590px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 250px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 600px">{{ $data['data']['missionIndicator']['missionIndicator'] }}</span>

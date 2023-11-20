@@ -35,7 +35,7 @@
                 <img src="{{ asset('/bia/22.png') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
         @endswitch
-        <div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0" style="width: 2384px; text-align: center; left: 0">{{ $data['fullName'] }}</div>
+        <div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0 index-center" style="width: 2800px !important">{{ $data['fullName'] }}</div>
         <div class="t m0 x2 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['dateOfBirth'] }}</div>
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>

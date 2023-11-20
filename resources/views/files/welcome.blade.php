@@ -1723,13 +1723,13 @@
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1070px; height: 77px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1370px; height: 77px">
                 {{ $name->{3} ?? null }}<span style="width: 142px" class="_ _21"></span>{{ $name->{6} ?? null }}<span class="_ _21" style="width: 142px"> </span>{{ $name->{9} ?? null }}<span class="_ _27" style="width: 1226px;"> </span>{{ $data['data']['dobIndicator']['dobIndicator'] }}
             </div>
-             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1000px">
+             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1300px">
                 {{ $name->{2} ?? null }}<span class="_ _21"></span>{{ $name->{5} ?? null }}<span class="_ _24"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1310px;"> </span><span style="bottom: 75px;right: 90px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 60px;bottom: 930px;height: 85px;">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 60px;bottom: 1200px;height: 85px;">
                 {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 201px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1340px;"> </span><span style="top: -135px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 40px;bottom: 820px">

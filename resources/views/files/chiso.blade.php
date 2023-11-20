@@ -13,7 +13,7 @@
         <div class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 130px">Năng Lực Tự Nhiên<span class="_ _15" style="width: 440px"> </span>Thái Độ<span class="_ _16" style="width: 550px"> </span>Tư Duy Lý Trí</div>
         
         <div class="t m0 x3 hc ya6 ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['dobIndicator']['dobIndicator'] }}<span class="_ _10" style="<?php if ($path > 10) { echo 'margin-left: -35px';}  ?>"> </span>{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</div>
-        <div class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 150px">Tư Duy Cảm Xúc<span class="_ _17" style="width: 320px"> </span>Năng Lực Trực Giác<span class="_ _18" style="width: 230px"> </span>Tư Duy Hành Động</div>
+        <div class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 140px">Tư Duy Cảm Xúc<span class="_ _17" style="width: 310px"> </span>Năng Lực Trực Giác<span class="_ _18" style="width: 240px"> </span>Tư Duy Hành Động</div>
         
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

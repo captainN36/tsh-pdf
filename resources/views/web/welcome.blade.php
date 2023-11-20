@@ -1363,7 +1363,7 @@
                     }
                 }
                 .bieudo {
-                    width: 86vw !important;
+                    width: 86vw;
                 }
             </style>
             <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo bieudo-rps" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 700px;">

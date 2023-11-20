@@ -15,16 +15,17 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 use PDF;
+use Svg\Tag\Rect;
 
 class PDFController extends Controller
 {
-    public function view()
+    public function view(Request $request)
     {
         $params = [
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
         ];
-        $data = $this->getData($params);
+        $data = $this->getData($request->all());
         
         return view('web.welcome', ['data' => $data]);
     }
@@ -34,7 +35,7 @@ class PDFController extends Controller
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
         ];
-        $fileUrl = $this->pdf($params);
+        $fileUrl = $this->pdf($request->all());
 
         // $fileContents = Http::get($fileUrl)->body();
 

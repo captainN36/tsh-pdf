@@ -1396,7 +1396,7 @@
                     ]);
                 }
                 if (count($return) > 4) {
-                    $data1 = array_slice($return, 0, 4);
+                    $data1 = array_slice($return, 0, 5);
                     $data2 = array_slice($return, 5);
                 } else {
                     $data1 = $return;
@@ -1653,8 +1653,8 @@
                 }
 
                 if (count($return) > 4) {
-                    $data1 = array_slice($return, 0, 2);
-                    $data2 = array_slice($return, 3);
+                    $data1 = array_slice($return, 0, 5);
+                    $data2 = array_slice($return, 5);
                 } else {
                     $data1 = $return;
                 }

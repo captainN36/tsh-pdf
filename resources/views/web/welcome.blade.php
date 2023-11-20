@@ -1359,7 +1359,7 @@
                 }
                 @media only screen and (min-width: 992px) {
                     .bieudo-rps {
-                        width: 86vw !important;
+                        width: 188vw !important;
                     }
                 }
                 .bieudo {

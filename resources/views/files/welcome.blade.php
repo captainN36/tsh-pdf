@@ -1748,16 +1748,16 @@
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 860px">{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 560px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 800px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 840px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 450px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}aaaa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 600px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}aaaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 405px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}aaaa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 500px">{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}aaaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 350px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 400px">{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 300px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>

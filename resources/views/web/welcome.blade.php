@@ -1366,7 +1366,7 @@
                     width: 86vw !important;
                 }
             </style>
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 700px;">
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0" style="display: flex;justify-content: space-between;align-items: center;left: 90px;bottom: 969px;gap: 177px;height: 700px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{3} ?? null }}</p>
                 </div>

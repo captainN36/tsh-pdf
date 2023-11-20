@@ -10,10 +10,10 @@
         <div class="t m0 x1e h10 y9d ff1 fs9 fc2 sc0 ls0 ws0">SỨ MỆNH<span class="_ _13"> </span>NHÂN CÁCH<span class="_ _14"> </span>LINH HỒN</div>
         
         <div style="" class="t m0 x3 hc ya1 ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['missionIndicator']['missionIndicator'] }}<span style="<?php if ($path > 10) { echo 'margin-left: -35px';}  ?>" class="_ _10"> </span>{{ $data['data']['natureIndicator']['natureIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</div>
-        <div class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0">THỬ THÁCH SỨ MỆNH<span class="_ _15"> </span>THỬ THÁCH NHÂN CÁCH<span class="_ _16"> </span>THỬ THÁCH LINH HỒN</div>
+        <div class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 150px">Năng Lực Tự Nhiên<span class="_ _15" style="width: 320px"> </span>Thái Độ<span class="_ _16" style="width: 230px"> </span>Tư Duy Lý Trí</div>
         
         <div class="t m0 x3 hc ya6 ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['dobIndicator']['dobIndicator'] }}<span class="_ _10" style="<?php if ($path > 10) { echo 'margin-left: -35px';}  ?>"> </span>{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</div>
-        <div class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 150px">Tư Duy Cảm Xúc<span class="_ _17" style="width: 350px"> </span>Năng Lực Trực Giác<span class="_ _18" style="width: 230px"> </span>Tư Duy Hành Động</div>
+        <div class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 150px">Tư Duy Cảm Xúc<span class="_ _17" style="width: 320px"> </span>Năng Lực Trực Giác<span class="_ _18" style="width: 230px"> </span>Tư Duy Hành Động</div>
         
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

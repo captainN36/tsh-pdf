@@ -1751,7 +1751,7 @@
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 850px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 500px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 800px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}aaaa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 780px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}aaaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 450px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 750px">{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}aaaa</span>
@@ -1760,7 +1760,7 @@
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 750px">{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}aaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 350px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 700px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}aaaa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 730px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}aaaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 250px">
                 <span class="_ _27" style="width: 1600px;"> </span><span style="top: -100px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>

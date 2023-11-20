@@ -1750,7 +1750,7 @@
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 560px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 850px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 500px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 490px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 780px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}aaaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 450px">

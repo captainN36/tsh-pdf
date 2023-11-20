@@ -1763,16 +1763,16 @@
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 730px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 250px">
-                <span class="_ _27" style="width: 1600px;"> </span><span style="bottom: 650px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}aa</span>
+                <span class="_ _27" style="width: 1600px;"> </span><span style="bottom: 680px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}aa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 205px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 600px">{{ $data['data']['missionIndicator']['missionIndicator'] }}aa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 650px">{{ $data['data']['missionIndicator']['missionIndicator'] }}aa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 150px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 550px">{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}aa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 600px">{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}aa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 105px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 500px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}aa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 550px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}aa</span>
             </div>
 
             <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 95px">3</div>

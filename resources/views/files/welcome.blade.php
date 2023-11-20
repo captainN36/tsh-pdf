@@ -1742,13 +1742,13 @@
                 {{ $summary->{1} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{4} ?? null }}<span class="_ _24" style="width: 110px"> </span>{{ $summary->{7} ?? null }}<span class="_ _27" style="width: 1335px;"> </span><span style="top: -275px">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 640px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -275px">{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}aaaa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 800px">{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}aaaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 600px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -260px">{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}aaaa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 700px">{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}aaaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 560px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}aaaa</span>
+                <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 600px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}aaaa</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 450px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}aaaa</span>

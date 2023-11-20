@@ -4,7 +4,7 @@
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div><div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG HỢP CÁC CHỈ SỐ QUAN TRỌNG</div>
         <div class="t m0 x5 hf y95 ff2 fs9 fc2 sc0 ls0 ws0">Phần này<span class="_ _d"></span> dành<span class="_ _d"></span> cho chuyên<span class="_ _d"></span> gia<span class="_ _d"></span> hoặc những<span class="_ _d"></span> người<span class="_ _d"></span> có hiểu<span class="_ _d"></span> biết<span class="_ _d"></span> về<span class="_ _d"></span> thần số<span class="_ _d"></span> học<span class="_ _d"></span> để nhìn<span class="_ _d"></span> được</div><div class="t m0 x5 hf y96 ff2 fs9 fc2 sc0 ls0 ws0">sơ bộ bức tranh tổng quan của báo cáo.</div>
         <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0" style="@php if ($path > 10) { echo 'left: 165px';}  @endphp">{{ $path }}<span class="_ _10" style="@php if ($path > 10) { echo 'margin-left: -35px;';}  @endphp"> </span>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</div>
-        <div class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0">ĐƯỜNG ĐỜI<span class="_ _11"> </span>THÁI ĐỘ | LINH HỒN<span class="_ _12"> </span>TRƯỞNG THÀNH | TÍNH CÁCH</div>
+        <div class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0">ĐƯỜNG ĐỜI<span class="_ _11"> </span>THÁI ĐỘ<span class="_ _12"> </span>TRƯỞNG THÀNH</div>
         <div class="t m0 x16 h11 y99 ff3 fsa fc2 sc0 ls0 ws0">Điểm mạnh yếu, tổng quan về đường</div>
         <div class="t m0 x17 h11 y9a ff3 fsa fc2 sc0 ls0 ws0">đời, các sự phù hợp trong tình yêu, sự</div>
         <div class="t m0 x18 h11 y9b ff3 fsa fc2 sc0 ls0 ws0">nghiệp, mối quan hệ, ...</div>
@@ -14,7 +14,7 @@
         <div class="t m0 x1c h11 y99 ff3 fsa fc2 sc0 ls0 ws0">Giá trị, con người của bạn, lĩnh vực mà</div>
         <div class="t m0 x1d h11 y9a ff3 fsa fc2 sc0 ls0 ws0">bạn có nhiều tiềm năng nhất trong giai</div>
         <div class="t m0 x1c h11 y9b ff3 fsa fc2 sc0 ls0 ws0">đoạn trưởng thành (khoảng từ 40 tuổi).</div>
-        <div class="t m0 x3 hc y9c ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['missionIndicator']['missionIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['natureIndicator']['natureIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['soulIndicator']['soulIndicator'] }}</div>
+        <div class="t m0 x3 hc y9c ff1 fs6 fc0 sc0 ls0 ws0">{{ $data['data']['missionIndicator']['missionIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['natureIndicator']['natureIndicator'] }}<span class="_ _10"> </span>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</div>
         <div class="t m0 x1e h10 y9d ff1 fs9 fc2 sc0 ls0 ws0">SỨ MỆNH<span class="_ _13"> </span>NHÂN CÁCH<span class="_ _14"> </span>LINH HỒN</div>
         <div class="t m0 x1f h11 y9e ff3 fsa fc2 sc0 ls0 ws0">Cách bạn đạt được các mục tiêu lớn</div>
         <div class="t m0 x17 h11 y9f ff3 fsa fc2 sc0 ls0 ws0">nhỏ. Con số này tác động vào mọi giai</div>

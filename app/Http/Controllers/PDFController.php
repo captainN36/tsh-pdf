@@ -35,13 +35,20 @@ class PDFController extends Controller
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
         ];
-        $filePath = $this->pdf($request->all());
+        $fileName =  $this->pdf($request->all());
+        $filePath = public_path("/pdf-test/$fileName");
 
-        $headers = [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'attachment; filename="1277-2023-11-05.pdf"',
-        ];
-        return response()->file($filePath, $headers);
+        if (file_exists($filePath)) {
+            $headers = [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
+            ];
+    
+            // Return the file as a response
+            return response()->file($filePath, $headers);
+        } else {
+            return response()->json(['error' => 'File not found'], 404);
+        }
     }
 
     public function pdf($param)
@@ -70,7 +77,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        return public_path("/pdf-test/$namePDF");
+        return $namePDF;
     }
 
     public static function renderText($name, $html, $replace_br = true)

@@ -35,19 +35,27 @@ class PDFController extends Controller
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
         ];
-        $fileName =  $this->pdf($request->all());
-        $filePath = public_path("/pdf-test/$fileName");
+        $fileUrl = $this->pdf($request->all());
 
-        if (file_exists($filePath)) {
-            $headers = [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
-            ];
+        // $fileContents = Http::get($fileUrl)->body();
+
+        // $headers = [
+        //     'Content-Type' => 'application/pdf',
+        //     'Content-Disposition' => 'attachment; filename="1277-2023-11-05.pdf"',
+        // ];
+        
+        // if (file_exists($filePath)) {
+        //     $headers = [
+        //         'Content-Type' => 'application/pdf',
+        //         'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
+        //     ];
     
-            return response()->file($filePath, $headers);
-        } else {
-            return response()->json(['error' => 'File not found'], 404);
-        }
+        //     return response()->file($filePath, $headers);
+        // } else {
+        //     return response()->json(['error' => 'File not found'], 404);
+        // }
+
+        return redirect($fileUrl);
     }
 
     public function pdf($param)
@@ -76,7 +84,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        return $namePDF;
+        return asset("/pdf-test/$namePDF");
     }
 
     public static function renderText($name, $html, $replace_br = true)

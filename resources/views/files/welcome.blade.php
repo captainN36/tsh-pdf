@@ -1539,7 +1539,7 @@
                 <span style="color: unset; width: 1px"></span>{{ $name->{3} ?? "null" }}
                 <span style="color: unset; left: 1px"></span> {{ $name->{6} ?? "null" }}
                 <span style="color: unset; left: 1px"></span>{{ $name->{9} ?? "null" }}
-                <span style="color: unset; width: 100px" class="_ _24"></span>{{ $summary->{3} ?? "null" }}
+                <span style="color: unset; width: 500px" class="_ _24"></span>{{ $summary->{3} ?? "null" }}
                 <span style="color: unset; width: 10px" class="_ _24"> </span>{{ $summary->{6} ?? "null" }}
                 <span style="color: unset; width: 10px" class="_ _24"></span>{{ $summary->{9} ?? "null" }} 
             </div>

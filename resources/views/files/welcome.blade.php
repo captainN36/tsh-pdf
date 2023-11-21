@@ -1535,30 +1535,115 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 70px; width: 2160px">
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{3} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{6} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{9} ?? null }} </span>
-                <span style="color: unset; width: 191px; margin-left: 100px;" class="_ _24">{{ $summary->{3} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{6} ?? "nil" }} </span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{9} ?? "nil" }} </span>
+            <style>
+                .test {
+                    justify-content: center;
+                    align-items: center;
+                    color: rgb(38, 91, 166);
+                    font-size: 56px;
+                }
+
+                .bieudo {
+                    width: 167vw;
+                }
+
+                @media only screen and (min-width: 992px) {
+                    .bieudo {
+                        width: 163vw;
+                    }
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    .bieudo {
+                        width: 120vw;
+                    }
+                }
+
+                @media only screen and (min-width: 1400px) {
+                    .bieudo {
+                        width: 86vw;
+                    }
+                }
+            </style>
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 700px;">
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{3} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{6} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{9} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{3} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{6} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{9} ?? null }}</p>
+                </div>
             </div>
 
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: flex;top: 198px; left: 70px; width: 2360px">
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{2} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{5} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{8} ?? null }} </span>
-                <span style="color: unset; width: 191px; margin-left: 100px;" class="_ _24">{{ $summary->{2} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{5} ?? "nil" }} </span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{8} ?? "nil" }} </span>
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 400px;">
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{2} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{5} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{8} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{2} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{5} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{8} ?? null }}</p>
+                </div>
             </div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: flex;top: 260px; left: 70px; width: 2360px">
-                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{1} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{4} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{7} ?? "nil" }} </span>
-                <span style="color: unset; width: 191px; margin-left: 100px;" class="_ _24">{{ $summary->{1} ?? "nil" }}</span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{4} ?? "nil" }} </span>
-                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{7} ?? "nil" }} </span>
+
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 100px;">
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{1} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{4} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $name->{7} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p></p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{1} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{4} ?? null }}</p>
+                </div>
+                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
+                    <p>{{ $summary->{7} ?? null }}</p>
+                </div>
             </div>
 
             @php

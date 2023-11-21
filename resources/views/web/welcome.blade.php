@@ -1354,7 +1354,8 @@
                 
                 @media only screen and (max-width: 992px) {
                     .bieudo-rps {
-                        width: 188vw;
+                        
+                        width: 138vw !important;
                     }
                 }
                 @media only screen and (min-width: 992px) {

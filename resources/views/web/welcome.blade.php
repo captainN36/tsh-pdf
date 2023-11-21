@@ -1351,24 +1351,30 @@
                     color: rgb(38, 91, 166);
                     font-size: 56px;
                 }
-                
-                @media only screen and (max-width: 992px) {
-                    .bieudo {
-                        width: 138vw !important;
-                    }
+
+                .bieudo {
+                    width: 167vw;
                 }
 
                 @media only screen and (min-width: 992px) {
                     .bieudo {
-                        width: 188vw;
+                        width: 163vw;
                     }
                 }
 
-                .bieudo {
-                    width: 86vw;
+                @media only screen and (min-width: 1200px) {
+                    .bieudo {
+                        width: 120vw;
+                    }
+                }
+
+                @media only screen and (min-width: 1400px) {
+                    .bieudo {
+                        width: 86vw;
+                    }
                 }
             </style>
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 700px;">
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 700px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{3} ?? null }}</p>
                 </div>
@@ -1395,7 +1401,7 @@
                 </div>
             </div>
 
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 400px;">
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 400px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{2} ?? null }}</p>
                 </div>
@@ -1422,7 +1428,7 @@
                 </div>
             </div>
 
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo" style="display: flex;justify-content: space-between;align-items: center;left: 104px;bottom: 969px;gap: 110px;height: 100px;">
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 100px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{1} ?? null }}</p>
                 </div>
@@ -1552,12 +1558,12 @@
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer')
-            <?php $page = $page + 1; ?>
-            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
+            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">1</div>
             <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
     </div>
+
 
     <div id="pfd" class="pf w0 h0" data-page-no="54">
         <div class="pc pcb w0 h0 opened">

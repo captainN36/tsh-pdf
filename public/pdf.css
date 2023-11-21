@@ -194,7 +194,12 @@ body {
     content: '';
     display: inline-block
 }
-
+.t-not-before:before {
+    content: unset;
+}
+.t-not-before:after {
+    content: unset;
+}
 .t span {
     position: relative;
     unicode-bidi: bidi-override

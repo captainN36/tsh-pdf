@@ -1536,7 +1536,7 @@
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
             <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 50px; width: 2360px">
-                <span style="color: unset; width: 10px" class="_ _24"></span>{{ $name->{3} ?? "null" }}
+                <span style="color: unset; width: 10px; display: flex; left: 10px" class="_ _24"></span>{{ $name->{3} ?? "null" }}
                 <span style="color: unset; width: 5px" class="_ _24"></span> {{ $name->{6} ?? "null" }}
                 <span style="color: unset; width: 5px" class="_ _24"></span>{{ $name->{9} ?? "null" }}
                 <span style="color: unset; width: 550px" class="_ _24"></span>{{ $summary->{3} ?? "null" }}

@@ -1840,22 +1840,22 @@
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 50px;bottom: 1120px;height: 85px;">
                 {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 200px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1520px;"> </span><span style="top: -145px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px;bottom: 950px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px;bottom: 1000px">
                 {{ $summary->{3} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{6} ?? "555" }}<span class="_ _24" style="width: 200px"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1410px;"> </span><span style="top: -135px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px;bottom: 900px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px;bottom: 910px">
                 {{ $summary->{2} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 110px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1400px;"> </span><span style="top: -200px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px;bottom: 800px; width: 150px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px;bottom: 850px; width: 150px">
                 {{ $summary->{1} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{4} ?? null }}<span class="_ _24" style="width: 130px"> </span>{{ $summary->{7} ?? null }}<span class="_ _27" style="width: 1480px;"> </span><span style="top: -275px">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 640px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 540px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 880px">{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 600px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 500px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 860px">{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 560px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 460px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="bottom: 850px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 480px">

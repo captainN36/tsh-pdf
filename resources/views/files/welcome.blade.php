@@ -1544,7 +1544,7 @@
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{9} ?? "nil" }} </span>
             </div>
 
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 168px; width: 2360px">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: flex;top: 198px; left: 50px; width: 2360px">
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{2} ?? "nil" }}</span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{5} ?? "nil" }}</span>
                 <span style="color: unset; width: 191px" class="_ _22">{{ $name->{8} ?? null }} </span>
@@ -1552,7 +1552,7 @@
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{5} ?? "nil" }} </span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{8} ?? "nil" }} </span>
             </div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 230px; width: 2360px">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: flex;top: 260px; left: 50px; width: 2360px">
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{1} ?? "nil" }}</span>
                 <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{4} ?? "nil" }}</span>
                 <span style="color: unset; width: 191px" class="_ _22">{{ $name->{7} ?? "nil" }} </span>

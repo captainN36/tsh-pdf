@@ -20,7 +20,13 @@ use Svg\Tag\Rect;
 class PDFController extends Controller
 {
     public function test () {
-        $pathHtml = public_path() . '/html-test/' . 'test.htnl';
+        if (!file_exists(public_path() . '/html-test/')) {
+            mkdir(public_path() . '/html-test/', 0777, true);
+        }
+        if (!file_exists(public_path() . '/pdf-test/')) {
+            mkdir(public_path() . '/pdf-test/', 0777, true);
+        }
+        $pathHtml = public_path() . '/html-test/' . 'test.html';
         $pathPDF = public_path() . '/pdf-test/test.pdf';
 
         $file = fopen($pathHtml, 'w+');

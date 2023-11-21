@@ -1838,7 +1838,7 @@
                 {{ $name->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $name->{5} ?? null }}<span class="_ _24" style="width: 140px"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1560px;"> </span><span style="bottom: 65px;right: 100px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 50px;bottom: 1120px;height: 85px;">
-                {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 200px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1500px;"> </span><span style="top: -155px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
+                {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 200px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1490px;"> </span><span style="top: -155px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px;bottom: 980px">
                 {{ $summary->{3} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{6} ?? "555" }}<span class="_ _24" style="width: 150px"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1390px;"> </span><span style="bottom: 215px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
@@ -1861,26 +1861,26 @@
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 380px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 780px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 350px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 330px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 750px">{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 300px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 270px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 750px">{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 250px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 200px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 730px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 200px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 590px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 150px">
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 490px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 150px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 600px">{{ $data['data']['missionIndicator']['missionIndicator'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 400px">{{ $data['data']['missionIndicator']['missionIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 100px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 600px">{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 4500px">{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 50px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 620px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 450px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</span>
             </div>
 
             <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 577px; left: 109px">3</div>

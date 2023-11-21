@@ -72,7 +72,7 @@
             font-size:45px;
         }
         </style>
-        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 70px; bottom: 1025px; width: 1950px">
+        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 70px; bottom: 1125px; width: 1950px">
             {!! $data['data']['cycleFortune']['content'] !!}
         </div>
         @php

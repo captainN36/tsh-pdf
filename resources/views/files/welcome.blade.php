@@ -1536,15 +1536,15 @@
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
             <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 65px; width: 2360px">
-                <span style="color: unset; width: 300px"></span>{{ $name->{3} ?? "null" }}
-                <span style="color: unset; width: 1px"></span> {{ $name->{6} ?? "null" }}
-                <span style="color: unset; width: 1px"></span>{{ $name->{9} ?? "null" }}
+                <span style="color: unset; width: 30px"></span>{{ $name->{3} ?? "null" }}
+                <span style="color: unset; width: 10pt"></span> {{ $name->{6} ?? "null" }}
+                <span style="color: unset; width: 10pt"></span>{{ $name->{9} ?? "null" }}
                 <span style="color: unset; width: 550px" class="_ _24"></span>{{ $summary->{3} ?? "null" }}
                 <span style="color: unset; width: 5px" class="_ _24"> </span>{{ $summary->{6} ?? "null" }}
                 <span style="color: unset; width: 5px" class="_ _24"></span>{{ $summary->{9} ?? "null" }} 
             </div>
 
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 168px;">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex">
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{2} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{5} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _22">{{ $name->{8} ?? null }} </span>
@@ -1552,7 +1552,7 @@
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{5} ?? null }} </span>
                 <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{8} ?? null }} </span>
             </div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 230px;">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex">
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{1} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{4} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _22">{{ $name->{7} ?? null }} </span>

@@ -1535,10 +1535,10 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 50px">
-                <span style="color: unset; width: 10px !important" class="_ _24"></span>{{ $name->{3} ?? "null" }}
-                <span style="color: unset; width: 10px !important" class="_ _24"></span> {{ $name->{6} ?? "null" }}
-                <span style="color: unset; width: 10px !important" class="_ _22"> </span>{{ $name->{9} ?? "null" }}
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 60px">
+                <span style="color: unset; width: 50px !important" class="_ _24"></span>{{ $name->{3} ?? "null" }}
+                <span style="color: unset; width: 50px !important" class="_ _24"></span> {{ $name->{6} ?? "null" }}
+                <span style="color: unset; width: 50px !important" class="_ _22"> </span>{{ $name->{9} ?? "null" }}
                 <span style="color: unset; width: 40px; margin-left: 100px;" class="_ _24"></span>{{ $summary->{3} ?? "null" }}
                 <span style="color: unset; width: 10px" class="_ _24"> </span>{{ $summary->{6} ?? "null" }}
                 <span style="color: unset; width: 10px" class="_ _24"></span>{{ $summary->{9} ?? "null" }} 

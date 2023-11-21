@@ -1539,7 +1539,7 @@
                 <span style="color: unset; width: 5px" class="_ _24">{{ $name->{3} ?? "nil" }}</span>
                 <span style="color: unset; width: 5px" class="_ _24">{{ $name->{6} ?? "nil" }}</span>
                 <span style="color: unset; width: 5px" class="_ _22">{{ $name->{9} ?? "nil" }} </span>
-                <span style="color: unset; width: 250px; margin-left: 250px;" class="_ _24">{{ $summary->{3} ?? "nil" }}</span>
+                <span style="color: unset; width: 350px;" class="_ _24">{{ $summary->{3} ?? "nil" }}</span>
                 <span style="color: unset; width: 5px" class="_ _24">{{ $summary->{6} ?? "nil" }} </span>
                 <span style="color: unset; width: 5px" class="_ _24">{{ $summary->{9} ?? "nil" }} </span>
             </div>

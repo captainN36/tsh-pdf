@@ -150,7 +150,7 @@
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
             <?php
-                $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
+                $nowYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
                 $inputString = '';
                 for ($i = 1; $i <= count($nowYearIndicator); $i++) {
                     $inputString .= $nowYearIndicator[$i];
@@ -215,7 +215,7 @@
 </div>
 @endfor
 <?php 
-    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText('nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
+    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
     $inputString = '';
     for ($i = 1; $i <= count($nextYearIndicator); $i++) {
         $inputString .= $nextYearIndicator[$i];
@@ -271,7 +271,7 @@
 
 
 <?php 
-    $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
+    $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
     $inputString = '';
     for ($i = 1; $i <= count($twoYearsLaterIndicator); $i++) {
         $inputString .= $twoYearsLaterIndicator[$i];
@@ -348,7 +348,7 @@
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
         <?php
-            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText('nowMonthIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['monthIndicator']['nowMonthIndicator']['content'])
+            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['monthIndicator']['nowMonthIndicator']['content'])
         ?>
         <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; bottom: 730px; text-align: justify;">
             @if ($nowMonthIndicator)
@@ -365,7 +365,7 @@
 </div>
 
 <?php
-    $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText('nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'])
+    $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'])
 ?>
 @if ($nextMonthIndicator)
     @for($i = 1; $i <= count($nextMonthIndicator); $i++)
@@ -387,7 +387,7 @@
     @endfor
 @endif
 <?php
-    $twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'])
+    $twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'])
 ?>
 @if ($twoMonthsLaterIndicator)
     @for($i = 1; $i <= count($twoMonthsLaterIndicator); $i++)
@@ -484,7 +484,7 @@
             {!! $data['data']['lifePathIndicator']['description'] !!}
         </div>
         <?php
-            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText('lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
+            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($lifePathIndicator); $i++) {
                 $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[$i]);
@@ -559,7 +559,7 @@
             {!! $data['data']['missionIndicator']['description'] !!}
         </div>
         <?php
-            $missionIndicator = \App\Http\Controllers\PDFController::renderText('missionIndicator', $data['data']['missionIndicator']['content'], false);
+            $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($missionIndicator); $i++) {
                 $inputString .= $missionIndicator[$i];
@@ -641,7 +641,7 @@
             {!! $data['data']['soulIndicator']['description'] !!}
         </div>
     <?php
-        $soulIndicator = \App\Http\Controllers\PDFController::renderText('soulIndicator', $data['data']['soulIndicator']['content'])
+        $soulIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'soulIndicator', $data['data']['soulIndicator']['content'])
     ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
@@ -688,7 +688,7 @@
             {!! $data['data']['personalIndicator']['description'] !!}
         </div>
     <?php
-        $personalIndicator = \App\Http\Controllers\PDFController::renderText('personalIndicator', $data['data']['personalIndicator']['content'])
+        $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator', $data['data']['personalIndicator']['content'])
     ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
@@ -735,7 +735,7 @@
             {!! $data['data']['dobIndicator']['description'] !!}
         </div>
     <?php
-        $dobIndicator = \App\Http\Controllers\PDFController::renderText('dobIndicator', $data['data']['dobIndicator']['content'])
+        $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator', $data['data']['dobIndicator']['content'])
     ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
@@ -787,7 +787,7 @@
             {!! $data['data']['attitudeIndicator']['description'] !!}
         </div>
         <?php
-            $attitudeIndicator = \App\Http\Controllers\PDFController::renderText('attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
+            $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($attitudeIndicator); $i++) {
                 $inputString .= $attitudeIndicator[$i];
@@ -933,7 +933,7 @@
             {!! $data['data']['thinkingIndicator']['description'] !!}
         </div>
         <?php
-            $thinkingIndicator = \App\Http\Controllers\PDFController::renderText('thinkingIndicator', $data['data']['thinkingIndicator']['content'])
+            $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
@@ -961,7 +961,7 @@
             {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
         </div>
         <?php
-            $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText('emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
+            $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
@@ -989,7 +989,7 @@
             {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
         </div>
         <?php
-            $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText('intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
+            $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
@@ -1020,7 +1020,7 @@
         </div>
 
         <?php
-            $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText('actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
+            $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
@@ -1038,8 +1038,8 @@
 
 
 <?php
-            $natureIndicator1 = \App\Http\Controllers\PDFController::renderText('natureIndicator', $data['data']['natureIndicator']['data'][0], false);
-            $natureIndicator2 = \App\Http\Controllers\PDFController::renderText('natureIndicator2', $data['data']['natureIndicator']['data'][1], false);
+            $natureIndicator1 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator', $data['data']['natureIndicator']['data'][0], false);
+            $natureIndicator2 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator2', $data['data']['natureIndicator']['data'][1], false);
             
             $natureIndicator1 = preg_replace("/\n/", "\r", $natureIndicator1[1], 1);
             $natureIndicator2 = preg_replace("/\n/", "\r", $natureIndicator2[1], 1);
@@ -1134,7 +1134,7 @@
             {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
         </div>
         <?php
-            $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText('subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
+            $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
@@ -1536,9 +1536,9 @@
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
             <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 80px">
-                <span style="color: unset; width: 5px !important" class="_ _24">{{ $name->{3} ?? "null" }}</span>
-                <span style="color: unset; width: 5px !important; margin-left: -10px !important" class="_ _24"> {{ $name->{6} ?? "null" }}</span>
-                <span style="color: unset; width: 5px !important; margin-left: -10px !important" class="_ _22">{{ $name->{9} ?? "null" }} </span>
+                <span style="color: unset; width: 1px !important" class="_ _24">{{ $name->{3} ?? "null" }}</span>
+                <span style="color: unset; width: 1px !important; margin-left: -10px !important" class="_ _24"> {{ $name->{6} ?? "null" }}</span>
+                <span style="color: unset; width: 1px !important; margin-left: -10px !important" class="_ _22">{{ $name->{9} ?? "null" }} </span>
                 <span style="color: unset; width: 40px; margin-left: 100px;" class="_ _24">{{ $summary->{3} ?? "null" }}</span>
                 <span style="color: unset; width: 10px" class="_ _24">{{ $summary->{6} ?? "null" }} </span>
                 <span style="color: unset; width: 10px" class="_ _24">{{ $summary->{9} ?? "null" }} </span>

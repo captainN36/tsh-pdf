@@ -1535,7 +1535,7 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: inline-flex">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1300px; height: 77px">
                 <span style="color: unset; width: 191px" class="_ _24">{{ $name->{3} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _24"> {{ $name->{6} ?? null }}</span>
                 <span style="color: unset; width: 191px" class="_ _22">{{ $name->{9} ?? null }} </span>

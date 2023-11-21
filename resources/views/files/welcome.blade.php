@@ -1535,15 +1535,15 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 70px; width: 2160px">
-            <table style="width: 2160px">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 60px; width: 2360px">
+            <table style="width: 2360px">
                 <tr>
-                    <td style="text-align: center; vertical-align: middle;padding: 5px;">{{ $name->{3} ?? "nil" }}</td>          
-                    <td style="text-align: center; vertical-align: middle;padding: 5px;">{{ $name->{6} ?? "nil" }}</td>           
-                    <td style="text-align: center; vertical-align: middle;padding: 5px;">{{ $name->{9} ?? "nil" }}</td>
-                    <td style="text-align: center; vertical-align: middle;padding: 5px;">{{ $summary->{3} ?? "nil" }}</td>
-                    <td style="text-align: center; vertical-align: middle;padding: 5px;">{{ $summary->{6} ?? "nil" }}</td>
-                    <td style="text-align: center; vertical-align: middle;padding: 5px;">{{ $summary->{9} ?? "nil" }}</td>
+                    <td style="text-align: center; vertical-align: middle;padding-right: 1px;">{{ $name->{3} ?? "nil" }}</td>          
+                    <td style="text-align: center; vertical-align: middle;padding-right: 1px;">{{ $name->{6} ?? "nil" }}</td>           
+                    <td style="text-align: center; vertical-align: middle;padding-right: 1px;">{{ $name->{9} ?? "nil" }}</td>
+                    <td style="text-align: center; vertical-align: middle;padding-right: 1px;">{{ $summary->{3} ?? "nil" }}</td>
+                    <td style="text-align: center; vertical-align: middle;padding-right: 1px;">{{ $summary->{6} ?? "nil" }}</td>
+                    <td style="text-align: center; vertical-align: middle;padding-right: 1px;">{{ $summary->{9} ?? "nil" }}</td>
                 </tr>
             </table>
             </div>

@@ -19,6 +19,17 @@ use Svg\Tag\Rect;
 
 class PDFController extends Controller
 {
+    public function test () {
+        $pathHtml = public_path() . '/html-test/' . 'test.htnl';
+        $pathPDF = public_path() . '/pdf-test/test.pdf';
+
+        $file = fopen($pathHtml, 'w+');
+        $htmlStr = view('test')->render();
+        $processName = "wkhtmltopdf --enable-toc-back-links $pathHtml $pathPDF";
+        Process::run($processName);
+        fwrite($file, $htmlStr);
+        return view("test");
+    }
     public function view(Request $request)
     {
         $params = [

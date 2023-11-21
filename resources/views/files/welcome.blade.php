@@ -1565,7 +1565,7 @@
                     }
                 }
             </style>
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 60px;bottom: 1400px;gap: 110px;height: 700px;">
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 60px;bottom: 1150px; height: 700px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{3} ?? null }}</p>
                 </div>
@@ -1592,7 +1592,7 @@
                 </div>
             </div>
 
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 60px;bottom: 1300px;gap: 110px;height: 400px;">
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 60px;bottom: 1100px; height: 400px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{2} ?? null }}</p>
                 </div>
@@ -1619,7 +1619,7 @@
                 </div>
             </div>
 
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 60px;bottom: 1200px;gap: 110px;height: 100px;">
+            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 60px;bottom: 1050px; height: 100px;">
                 <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
                     <p>{{ $name->{1} ?? null }}</p>
                 </div>

@@ -1535,7 +1535,7 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="" style="height: 60.5px; display: flex; left: 65px; width: 2360px; bootom: 900px">
+            <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 65px; width: 2360px; top: 50px">
                 <span style="color: unset"></span>{{ $name->{3} ?? "null" }}
                 <span style="color: unset; display: flex; left: -5px"></span> {{ $name->{6} ?? "null" }}
                 <span style="color: unset; display: flex; left: -5px"></span>{{ $name->{9} ?? "null" }}
@@ -1679,7 +1679,7 @@
     </div>
 
 
-@if (isset($data2))
+@if (!empty($data2))
     <div id="pfd" class="pf w0 h0" data-page-no="52">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""

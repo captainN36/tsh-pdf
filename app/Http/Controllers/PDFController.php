@@ -31,6 +31,7 @@ class PDFController extends Controller
 
         $file = fopen($pathHtml, 'w+');
         $htmlStr = view('test')->render();
+        Process::run('chmod -R 777 ' . public_path());
         $processName = "wkhtmltopdf --enable-toc-back-links $pathHtml $pathPDF";
         Process::run($processName);
         fwrite($file, $htmlStr);

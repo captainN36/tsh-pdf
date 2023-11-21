@@ -1858,16 +1858,16 @@
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 480px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 830px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 380px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 375px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 780px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 330px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 335px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 750px">{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 270px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 750px">{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 200px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 230px">
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 730px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 150px">
@@ -1877,10 +1877,10 @@
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 400px">{{ $data['data']['missionIndicator']['missionIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 100px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 4500px">{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 450px">{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 50px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 450px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 470px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</span>
             </div>
 
             <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 577px; left: 109px">3</div>

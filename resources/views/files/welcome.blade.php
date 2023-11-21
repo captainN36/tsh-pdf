@@ -1536,12 +1536,12 @@
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
             <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px; display: flex; left: 50px; width: 2360px">
-                <span style="color: unset; width: 10px; display: flex; left: 10px" class="_ _24"></span>{{ $name->{3} ?? "null" }}
-                <span style="color: unset; width: 5px" class="_ _24"></span> {{ $name->{6} ?? "null" }}
-                <span style="color: unset; width: 5px" class="_ _24"></span>{{ $name->{9} ?? "null" }}
-                <span style="color: unset; width: 550px" class="_ _24"></span>{{ $summary->{3} ?? "null" }}
-                <span style="color: unset; width: 5px" class="_ _24"> </span>{{ $summary->{6} ?? "null" }}
-                <span style="color: unset; width: 5px" class="_ _24"></span>{{ $summary->{9} ?? "null" }} 
+                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{3} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $name->{6} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _22">{{ $name->{9} ?? null }} </span>
+                <span style="color: unset; width: 191px; margin-left: 100px;" class="_ _24">{{ $summary->{3} ?? null }}</span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{6} ?? null }} </span>
+                <span style="color: unset; width: 191px" class="_ _24">{{ $summary->{9} ?? null }} </span>
             </div>
 
             <div class="t m0 x51 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="height: 60.5px;display: inline-flex;top: 168px;">
@@ -1829,7 +1829,7 @@
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
-                <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">
+                <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2340px">
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1300px; height: 77px">
                 {{ $name->{3} ?? null }}<span style="width: 142px" class="_ _21"></span>{{ $name->{6} ?? null }}<span class="_ _21" style="width: 142px"> </span>{{ $name->{9} ?? null }}<span class="_ _27" style="width: 1200px;"> </span>{{ $data['data']['dobIndicator']['dobIndicator'] }}

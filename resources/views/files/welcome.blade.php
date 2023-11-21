@@ -1868,19 +1868,19 @@
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 750px">{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 230px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 730px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 720px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 150px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 490px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 530px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 150px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 400px">{{ $data['data']['missionIndicator']['missionIndicator'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 430px">{{ $data['data']['missionIndicator']['missionIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 100px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 450px">{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 440px">{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 50px">
-                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 470px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</span>
+                <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 480px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</span>
             </div>
 
             <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 577px; left: 109px">3</div>

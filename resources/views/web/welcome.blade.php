@@ -1279,9 +1279,16 @@
                         'content' => 'Người không có cả ba số 1-5-9 trong biểu đồ ngày sinh thường thiếu quyết tâm, hay trì hoãn thậm chí không làm gì cả. Điều này ảnh hưởng tiêu cực đến sự phát triển hay thành công của họ, khiến bản thân họ lẫn mọi người xung quanh đều khó chịu. Điều này cần phải được phát hiện sớm để điều chỉnh kịp thời.',
                     ]);
                 }
+
+                if (count($return) > 4) {
+                    $data1 = array_slice($return, 0, 5);
+                    $data2 = array_slice($return, 5);
+                } else {
+                    $data1 = $return;
+                }
             @endphp
             <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
-                @foreach ($return as $item)
+                 @foreach ($data1 as $item)
                     {!! $item['title'] !!}
                     <p>{!! $item['content'] !!}</p>
                 @endforeach
@@ -1295,6 +1302,32 @@
             </div>
         </div>
     </div>
+
+
+@if (!empty($data2))
+    <div id="pfd" class="pf w0 h0" data-page-no="52">
+        <div class="pc pcb w0 h0 opened">
+            <img class="bi x0 y0 w1 h1" alt=""
+                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+            
+            <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; top: 0px">
+                @foreach ($data2 as $item)
+                    {!! $item['title'] !!}
+                    <p>{!! $item['content'] !!}</p>
+                @endforeach
+            </div>
+
+            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+            <?php $page = $page + 1; ?>
+            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
+        </div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+        </div>
+    </div>
+@endif
+
+
 
     <div id="pfd" class="pf w0 h0" data-page-no="52">
         <div class="pc pcb w0 h0 opened">
@@ -1545,12 +1578,19 @@
                         'content' => 'Người không có cả ba số 1-5-9 trong biểu đồ ngày sinh thường thiếu quyết tâm, hay trì hoãn thậm chí không làm gì cả. Điều này ảnh hưởng tiêu cực đến sự phát triển hay thành công của họ, khiến bản thân họ lẫn mọi người xung quanh đều khó chịu. Điều này cần phải được phát hiện sớm để điều chỉnh kịp thời.',
                     ]);
                 }
+
+                if (count($return) > 4) {
+                    $data1 = array_slice($return, 0, 5);
+                    $data2 = array_slice($return, 5);
+                } else {
+                    $data1 = $return;
+                }
             @endphp
 
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 820px">
-                @foreach ($return as $item)
+                @foreach ($data1 as $item)
                     {!! $item['title'] !!}
                     <p>{!! $item['content'] !!}</p>
                 @endforeach
@@ -1563,6 +1603,30 @@
             </div>
         </div>
     </div>
+
+
+@if (!empty($data2))
+<div id="pfd" class="pf w0 h0" data-page-no="52">
+    <div class="pc pcb w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+        
+        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; top: 0px">
+            @foreach ($data2 as $item)
+                {!! $item['title'] !!}
+                <p>{!! $item['content'] !!}</p>
+            @endforeach
+        </div>
+
+        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <?php $page = $page + 1; ?>
+        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
+    </div>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+    </div>
+</div>
+@endif
 
 
     <div id="pfd" class="pf w0 h0" data-page-no="54">

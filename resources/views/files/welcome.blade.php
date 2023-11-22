@@ -1534,15 +1534,15 @@
             
 
 
-            <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 110px">{{ $name->{3} ?? null }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 290px">{{ $name->{6} ?? null }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 370px">{{ $name->{9} ?? null }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 110px">{{ $name->{2} ?? null }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 290px">{{ $name->{5} ?? null }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 370">{{ $name->{8} ?? null }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 110px">{{ $name->{1} ?? null }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 290px">{{ $name->{4} ?? null }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 370px">{{ $name->{7} ?? null }}</div>
+            <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 160px">{{ $name->{3} ?? "null" }}</div>
+            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 270px">{{ $name->{6} ?? "null" }}</div>
+            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 370px">{{ $name->{9} ?? "null" }}</div>
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 160px">{{ $name->{2} ?? "null" }}</div>
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 270px">{{ $name->{5} ?? "null" }}</div>
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 370px">{{ $name->{8} ?? "null" }}</div>
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 160px">{{ $name->{1} ?? "null" }}</div>
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 270px">{{ $name->{4} ?? "null" }}</div>
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 370px">{{ $name->{7} ?? "null" }}</div>
 
 
 

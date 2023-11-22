@@ -1545,15 +1545,15 @@
             <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 370px">{{ $name->{7} ?? "null" }}</div>
 
 
-            <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 650px">{{ $sumary->{3} ?? "null" }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 740px">{{ $sumary->{6} ?? "null" }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 830px">{{ $sumary->{9} ?? "null" }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 650px">{{ $sumary->{2} ?? "null" }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 740px">{{ $sumary->{5} ?? "null" }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 830px">{{ $sumary->{8} ?? "null" }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 650px">{{ $sumary->{1} ?? "null" }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 740px">{{ $sumary->{4} ?? "null" }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 830px">{{ $sumary->{7} ?? "null" }}</div>
+            <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 670px">{{ $sumary->{3} ?? "null" }}</div>
+            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 760px">{{ $sumary->{6} ?? "null" }}</div>
+            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 850px">{{ $sumary->{9} ?? "null" }}</div>
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 670px">{{ $sumary->{2} ?? "null" }}</div>
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 760px">{{ $sumary->{5} ?? "null" }}</div>
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 850px">{{ $sumary->{8} ?? "null" }}</div>
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 670px">{{ $sumary->{1} ?? "null" }}</div>
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 760px">{{ $sumary->{4} ?? "null" }}</div>
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 850px">{{ $sumary->{7} ?? "null" }}</div>
 
 
             @php

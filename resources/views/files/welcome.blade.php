@@ -1859,7 +1859,7 @@
             <?php $array_2 = array(1, 2, 3, 4, 5, 6, 7, 8, 9); ?>
 
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 375px">
-                <span class="_ _27" style="width: 1860px;"> </span><span style="bottom: 810px; font-size: 46px">{{ implode(', ', array_slice($array_2, 0, 5)) }}</span><span style="bottom: 820px; font-size: 45px; display: flex; left: 2175px">{{ implode(', ', array_slice($array_2, 5)) }}</span>
+                <span class="_ _27" style="width: 1860px;"> </span><span style="bottom: 810px; font-size: 41px">{{ implode(', ', array_slice($array_2, 0, 5)) }}</span><span style="bottom: 820px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_2, 5)) }}</span>
                 
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 335px">

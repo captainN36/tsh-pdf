@@ -1840,9 +1840,7 @@
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px; bottom: 910px">
                 {{ $summary->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 120px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1400px;"> </span>
-                @if (count($data['data']['passionIndicator']['passionIndicator']) <= 4)
                     <span style="bottom: 270px; font-size: 46px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
-                @endif
                 
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px; bottom: 820px; width: 150px">

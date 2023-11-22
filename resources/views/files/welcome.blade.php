@@ -1842,9 +1842,6 @@
                 {{ $summary->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 120px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1400px;"> </span>
                 @if (count($data['data']['passionIndicator']['passionIndicator']) <= 4)
                     <span style="bottom: 270px; font-size: 46px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
-                @else
-                    <span style="bottom: 280px; font-size: 41px">{{ implode(', ', array_slice($data['data']['passionIndicator']['passionIndicator'], 0, 5)) }}</span>
-                    <span style="bottom: 290px; font-size: 41px; display: flex; left: 2175px">{{ implode(', ', array_slice($data['data']['passionIndicator']['passionIndicator'], 5)) }}</span>
                 @endif
                 
             </div>

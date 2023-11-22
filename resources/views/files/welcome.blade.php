@@ -1864,7 +1864,7 @@
             <?php $array_4 = $data['data']['missIndicator']['missIndicator']; ?>
             <?php $array_3 = array(1, 2, 3, 4, 5, 6, 7, 8, 9); ?>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 335px">
-                <span class="_ _27" style="@if(count($array_3) > 4) width: 1860px @else width: 1880px; @endif"> </span><span style="bottom: 780px; @if(count($array_3) > 4) font-size: 41px @else font-size: 48px; @endif">{{ implode(', ', array_slice($data['data']['missIndicator']['missIndicator'], 0, 5)) }}</span>@if(count($array_3) > 4)<span style="bottom: 810px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_3, 5)) }}</span>@endif
+                <span class="_ _27" style="@if(count($array_3) > 4) width: 1860px @else width: 1890px; @endif"> </span><span style="bottom: 780px; @if(count($array_3) > 4) font-size: 41px @else font-size: 48px; @endif">{{ implode(', ', array_slice($data['data']['missIndicator']['missIndicator'], 0, 5)) }}</span>@if(count($array_3) > 4)<span style="bottom: 800px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_3, 5)) }}</span>@endif
 
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 270px">

@@ -1852,7 +1852,7 @@
                 {{ $summary->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 120px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1400px;"> </span>
                 @if (count($passionIndicator) < 4)
                     <span style="bottom: 280px">{{ implode(', ', $passionIndicator) }}</span>
-                @elseif (count($passionIndicator) = 4)
+                @elseif (count($passionIndicator) == 4)
                     <span style="bottom: 270px; font-size: 46px">{{ implode(', ', $passionIndicator) }}</span>
                 @else
                     <span style="bottom: 280px; font-size: 41px">{{ implode(', ', $array1) }}</span>

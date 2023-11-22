@@ -1830,7 +1830,7 @@
                 {{ $name->{3} ?? null }}<span style="width: 142px" class="_ _21"></span>{{ $name->{6} ?? null }}<span class="_ _21" style="width: 180px"> </span>{{ $name->{9} ?? null }}<span class="_ _27" style="width: 1450px;"> </span>{{ $data['data']['dobIndicator']['dobIndicator'] }}
             </div>
              <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 1210px">
-                {{ $name->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $name->{5} ?? null }}<span class="_ _24" style="width: 140px"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1560px;"> </span><span style="bottom: 65px;right: 100px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
+                {{ $name->{2} ?? null }}<span class="_ _21" style="width: 145px"></span>{{ $name->{5} ?? null }}<span class="_ _24" style="width: 143px"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1560px;"> </span><span style="bottom: 65px;right: 100px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 50px; bottom: 1120px;height: 85px;">
                 {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 220px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1490px;"> </span><span style="top: -155px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>

@@ -183,6 +183,8 @@
                     $html = str_replace("\n", " ", $parts[$i]);
                     $array[$i] = $html;
                 }
+
+                dd($array);
             ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
             {!! nl2br(e($first)) !!}

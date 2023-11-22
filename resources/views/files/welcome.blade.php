@@ -1293,17 +1293,17 @@
                 }
             @endphp
             <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{3} ?? "nil" }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{6} ?? "nil" }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{9} ?? "nil" }}</div>
+            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{6} ?? "nil" }}</div>
+            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 610px">{{ $strength->{9} ?? "nil" }}</div>
             <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{2} ?? "nil" }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{5} ?? "nil" }}
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{5} ?? "nil" }}
             </div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{8} ?? "nil" }}
+            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 610px">{{ $strength->{8} ?? "nil" }}
             </div>
             <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{1} ?? "nil" }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{4} ?? "nil" }}
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{4} ?? "nil" }}
             </div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{7} ?? "nil" }}
+            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 610px">{{ $strength->{7} ?? "nil" }}
             </div>
             @php
                 $return = [];

@@ -1878,9 +1878,9 @@
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 480px">{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</span>
             </div>
 
-            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 452px; left: 109px">3</div>
-            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 452px; left: 240px">1</div>
-            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 452px; left: 370px">3</div>
+            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 450px; left: 109px">3</div>
+            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 450px; left: 240px">1</div>
+            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 450px; left: 370px">3</div>
             <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 495px; left: 200px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
             <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 495px; left: 278px">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
             <div class="t m0 h14 y16a ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 545px; left: 238px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>

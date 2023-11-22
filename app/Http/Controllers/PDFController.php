@@ -19,24 +19,6 @@ use Svg\Tag\Rect;
 
 class PDFController extends Controller
 {
-    public function test () {
-        if (!file_exists(public_path() . '/html-test/')) {
-            mkdir(public_path() . '/html-test/', 0777, true);
-        }
-        if (!file_exists(public_path() . '/pdf-test/')) {
-            mkdir(public_path() . '/pdf-test/', 0777, true);
-        }
-        $pathHtml = public_path() . '/html-test/' . 'test.html';
-        $pathPDF = public_path() . '/pdf-test/test.pdf';
-
-        $file = fopen($pathHtml, 'w+');
-        $htmlStr = view('test')->render();
-        Process::run('chmod -R 777 ' . public_path());
-        $processName = "wkhtmltopdf $pathHtml $pathPDF";
-        Process::run($processName);
-        fwrite($file, $htmlStr);
-        return view("test");
-    }
     public function view(Request $request)
     {
         $params = [

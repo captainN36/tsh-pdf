@@ -1850,12 +1850,7 @@
                     }
                 @endphp
                 {{ $summary->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 120px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1400px;"> </span>
-                @if (count($passionIndicator) <= 4)
                     <span style="bottom: 270px; font-size: 46px">{{ implode(', ', $passionIndicator) }}</span>
-                @else
-                    <span style="bottom: 280px; font-size: 41px">{{ implode(', ', $array1) }}</span>
-                    <span style="bottom: 290px; font-size: 41px; display: flex; left: 2175px">{{ implode(', ', $array2) }}</span>
-                @endif
                 
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px; bottom: 820px; width: 150px">

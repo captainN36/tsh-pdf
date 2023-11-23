@@ -1907,13 +1907,13 @@
 
             <?php 
                 // $array_3 = $data['data']['missIndicator']['missIndicator'];
-                $array_3 = [1,2];
+                $array_3 = [1,2,3,4,5];
                 switch(count($array_3)) {
                     case 1:
                         $width = 1930;
                         break;
                     case 2:
-                        $width = 1920;
+                        $width = 1915;
                         break;
                     case 3:
                         $width = 1890;

@@ -1840,7 +1840,7 @@
             </div>
             <?php
                 // $array_1 = $data['data']['passionIndicator']['passionIndicator'];
-                $array_1 = [1,2,3,4,5,6,7];
+                $array_1 = [1,2,3,4,5];
                 switch(count($array_1)) {
                     case 1:
                         $width = 1460;

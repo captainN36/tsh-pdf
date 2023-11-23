@@ -1930,7 +1930,7 @@
             ?>
 
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 335px">
-                <span class="_ _27" style="width: {{$width}}px"> </span><span style=" @if(count($array_3) > 4) bottom: 780px; font-size: 41px @else bottom: 760px; font-size: 48px; @endif">{{ implode(', ', array_slice($array_3, 0, 5)) }}</span>@if(count($array_3) > 4)<span style="bottom: 800px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_3, 5)) }}</span>@endif
+                <span class="_ _27" style="width: {{$width}}px"> </span><span style=" @if(count($array_3) > 4) bottom: 780px; font-size: 41px @else bottom: 760px; font-size: 48px; @endif">{{ implode(', ', array_slice($array_3, 0, 5)) }}</span>@if(count($array_3) > 5)<span style="bottom: 800px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_3, 5)) }}</span>@endif
 
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 270px">

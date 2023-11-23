@@ -1839,8 +1839,7 @@
                 {{ $summary->{3} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{6} ?? "555" }}<span class="_ _24" style="width: 150px"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1400px;"> </span><span style="bottom: 215px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
             </div>
             <?php
-                // $array_1 = $data['data']['passionIndicator']['passionIndicator'];
-                $array_1 = [1,2,3,4,6,7,8,9];
+                $array_1 = $data['data']['passionIndicator']['passionIndicator'];
                 switch(count($array_1)) {
                     case 1:
                         $width = 1470;
@@ -1879,8 +1878,7 @@
             </div>
 
             <?php 
-                // $array_2 = $data['data']['repeatIndicator']['repeatIndicator'];
-                $array_2 = [1];
+                $array_2 = $data['data']['repeatIndicator']['repeatIndicator'];
                 switch(count($array_2)) {
                     case 1:
                         $width = 1930;
@@ -1903,14 +1901,36 @@
             ?>
 
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 375px">
-                <span class="_ _27" style="width: {{$width}}px"> </span><span style=" @if(count($array_2) < 3) bottom: 790px; font-size: 60px; @elseif (count($array_2) == 4) bottom: 790px; font-size: 48px @elseif (count($array_2) == 5) bottom: 790px; font-size: 41px @else bottom: 100px; font-size: 41px; @endif">{{ implode(', ', array_slice($array_2, 0, 5)) }}</span>@if(count($array_2) > 5)<span style="bottom: 820px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_2, 5)) }}</span>@endif
+                <span class="_ _27" style="width: {{$width}}px"> </span><span style=" @if(count($array_2) < 3) bottom: 790px; font-size: 60px; @elseif (count($array_2) == 4) bottom: 790px; font-size: 50px @elseif (count($array_2) == 5) bottom: 790px; font-size: 41px @else bottom: 100px; font-size: 41px; @endif">{{ implode(', ', array_slice($array_2, 0, 5)) }}</span>@if(count($array_2) > 5)<span style="bottom: 820px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_2, 5)) }}</span>@endif
                 
             </div>
 
-            <?php $array_3 = $data['data']['missIndicator']['missIndicator']; ?>
+            <?php 
+                // $array_3 = $data['data']['missIndicator']['missIndicator'];
+                $array_3 = [1,2,3,4,5,6,7,8,9];
+                switch(count($array_3)) {
+                    case 1:
+                        $width = 1930;
+                        break;
+                    case 2:
+                        $width = 1920;
+                        break;
+                    case 3:
+                        $width = 1890;
+                        break;
+                    case 4:
+                        $width = 1860;
+                        break;
+                    case 5:
+                        $width = 1860;
+                        break;
+                    default:
+                        $width = 1860;
+                }
+            ?>
 
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 335px">
-                <span class="_ _27" style="@if(count($array_3) > 4) width: 1860px @else width: 1890px; @endif"> </span><span style=" @if(count($array_3) > 4) bottom: 780px; font-size: 41px @else bottom: 760px; font-size: 48px; @endif">{{ implode(', ', array_slice($array_3, 0, 5)) }}</span>@if(count($array_3) > 4)<span style="bottom: 800px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_3, 5)) }}</span>@endif
+                <span class="_ _27" style="width: {{$width}}px"> </span><span style=" @if(count($array_3) > 4) bottom: 780px; font-size: 41px @else bottom: 760px; font-size: 48px; @endif">{{ implode(', ', array_slice($array_3, 0, 5)) }}</span>@if(count($array_3) > 4)<span style="bottom: 800px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_3, 5)) }}</span>@endif
 
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 270px">

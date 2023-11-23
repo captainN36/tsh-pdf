@@ -1883,7 +1883,7 @@
                 $array_2 = [1];
                 switch(count($array_2)) {
                     case 1:
-                        $width = 1900;
+                        $width = 1920;
                         break;
                     case 2:
                         $width = 1900;

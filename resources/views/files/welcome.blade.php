@@ -1839,8 +1839,8 @@
                 {{ $summary->{3} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{6} ?? "555" }}<span class="_ _24" style="width: 150px"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1400px;"> </span><span style="bottom: 215px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
             </div>
             <?php
-                $array_1 = $data['data']['passionIndicator']['passionIndicator'];
-
+                // $array_1 = $data['data']['passionIndicator']['passionIndicator'];
+                $array_1 = [1,2,3,4,5,6,7];
                 switch(count($array_1)) {
                     case 1:
                         $width = 1460;

@@ -1880,7 +1880,7 @@
 
             <?php 
                 // $array_2 = $data['data']['repeatIndicator']['repeatIndicator'];
-                $array_2 = [1,2,3,4,6];
+                $array_2 = [1,2,3,4];
                 switch(count($array_2)) {
                     case 1:
                         $width = 1900;

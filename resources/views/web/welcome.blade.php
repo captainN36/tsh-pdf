@@ -1762,19 +1762,44 @@
                 {{ $name->{3} ?? null }}<span style="width: 142px" class="_ _21"></span>{{ $name->{6} ?? null }}<span class="_ _21" style="width: 142px"> </span>{{ $name->{9} ?? null }}<span class="_ _27" style="width: 1226px;"> </span>{{ $data['data']['dobIndicator']['dobIndicator'] }}
             </div>
              <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 1000px">
-                {{ $name->{2} ?? null }}<span class="_ _21"></span>{{ $name->{5} ?? null }}<span class="_ _24"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1310px;"> </span><span style="bottom: 75px;right: 90px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
+                {{ $name->{2} ?? null }}<span class="_ _21"></span>{{ $name->{5} ?? null }}<span class="_ _24"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1295px;"> </span><span style="bottom: 75px;right: 90px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 60px;bottom: 930px;height: 85px;">
-                {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 201px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1200px;"> </span><span style="top: -135px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
+                {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 201px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1199px;"> </span><span style="top: -125px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 40px;bottom: 820px">
-                {{ $summary->{3} ?? null }}<span class="_ _21"></span>{{ $summary->{6} ?? null }}<span class="_ _24"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1250px;"> </span><span style="top: -135px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
+                {{ $summary->{3} ?? null }}<span class="_ _21"></span>{{ $summary->{6} ?? null }}<span class="_ _24"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1221px;"> </span><span style="top: -145px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 750px">
-                {{ $summary->{2} ?? null }}<span class="_ _21"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 108px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: 1105px;"> </span><span style="top: -200px">{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</span>
+            <?php 
+                $array_1 = $data['data']['passionIndicator']['passionIndicator'];
+
+                switch (count($array_1)) {
+                    case 1:
+                        $width = 1216;
+                        break;
+                    case 2:
+                        $width = 1193;
+                        break;
+                    case 3:
+                        $width = 1168;
+                        break;
+                    case 4:
+                        $width = 1139;
+                        break;
+                    case 5:
+                        $width = 1139;
+                        break;
+                    default:
+                        $width = 1133;
+                }
+
+            ?>
+
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px; bottom: 750px">
+                {{ $summary->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 120px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: {{ $width }}px"> </span><span style="@if(count($array_1) <= 4) bottom: 222px; font-size: 48px @elseif(count($array_1) == 4) bottom: 260px; font-size: 46px @elseif(count($array_1) == 5) bottom: 226px; font-size: 38px @else bottom: 245px; font-size: 37px  @endif">{{ implode(', ', array_slice($array_1, 0, 5)) }}</span>@if(count($array_1) > 5) <span style="bottom: 256px; font-size: 37px; display: flex; left: 1832px">{{ implode(', ', array_slice($array_1, 5)) }}</span> @endif
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 680px">
-                {{ $summary->{1} ?? null }}<span class="_ _21"></span>{{ $summary->{4} ?? null }}<span class="_ _24"> </span>{{ $summary->{7} ?? null }}<span class="_ _27" style="width: 1212px;"> </span><span style="top: -275px">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</span>
+                {{ $summary->{1} ?? null }}<span class="_ _21"></span>{{ $summary->{4} ?? null }}<span class="_ _24"> </span>{{ $summary->{7} ?? null }}<span class="_ _27" style="width: 1210px;"> </span><span style="top: -285px">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 640px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -275px">{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</span>
@@ -1785,11 +1810,64 @@
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 560px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 450px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</span>
+            <?php 
+                $array_2 = $data['data']['repeatIndicator']['repeatIndicator'];
+
+                switch (count($array_2)) {
+                    case 1:
+                        $width = 1642;
+                        break;
+                    case 2:
+                        $width = 1615;
+                        break;
+                    case 3:
+                        $width = 1593;
+                        break;
+                    case 4:
+                        $width = 1558;
+                        break;
+                    case 5:
+                        $width = 1558;
+                        break;
+                    default:
+                        $width = 1558;
+                }
+
+            ?>
+
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 250px">
+                <span class="_ _27" style="width: {{$width}}px"> </span><span style="@if(count($array_2) <= 3) bottom: 790px; font-size: 48px; @elseif(count($array_2) == 4) bottom: 790px; font-size: 48px; @elseif(count($array_2) == 5) bottom: 795px; font-size: 37px @else bottom: 805px; font-size: 38px; @endif">{{ implode(', ', array_slice($array_2, 0, 5)) }}</span>@if(count($array_2) > 5)<span style="bottom: 820px; font-size: 38px; display: flex; left: 1808px">{{ implode(', ', array_slice($array_2, 5)) }}</span>@endif
+                
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 405px">
-                <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</span>
+
+            <?php 
+                $array_3 = $data['data']['missIndicator']['missIndicator'];
+
+                switch (count($array_3)) {
+                    case 1:
+                        $width = 1642;
+                        break;
+                    case 2:
+                        $width = 1615;
+                        break;
+                    case 3:
+                        $width = 1593;
+                        break;
+                    case 4:
+                        $width = 1558;
+                        break;
+                    case 5:
+                        $width = 1558;
+                        break;
+                    default:
+                        $width = 1558;
+                }
+
+            ?>
+
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 335px">
+                <span class="_ _27" style="width: {{$width}}px"> </span><span style=" @if(count($array_3) <= 3) bottom: 450px; font-size: 48px @elseif(count($array_3) == 4) bottom: 450px; font-size: 48px; @elseif(count($array_3) == 5) bottom: 450px; font-size: 38px; @else bottom: 465px; font-size: 38px; @endif">{{ implode(', ', array_slice($array_3, 0, 5)) }}</span>@if(count($array_3) > 4)<span style="bottom: 479px; font-size: 38px; display: flex; left: 1810px">{{ implode(', ', array_slice($array_3, 5)) }}</span>@endif
+
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 350px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</span>
@@ -1797,7 +1875,7 @@
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 300px">
                 <span class="_ _27" style="width: 1640px;"> </span><span style="top: -250px">{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</span>
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 250px">
+            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 60px;bottom: 250px">
                 <span class="_ _27" style="width: 1600px;"> </span><span style="top: -100px">{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</span>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px;bottom: 205px">

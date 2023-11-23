@@ -1838,10 +1838,32 @@
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px; bottom: 970px">
                 {{ $summary->{3} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{6} ?? "555" }}<span class="_ _24" style="width: 150px"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1400px;"> </span><span style="bottom: 215px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>
             </div>
-            <?php $array_1 = $data['data']['passionIndicator']['passionIndicator']; ?>
+            <?php
+                $array_1 = $data['data']['passionIndicator']['passionIndicator'];
+
+                switch(count($array_1)) {
+                    case 1:
+                        $width = 1460;
+                        break;
+                    case 2:
+                        $width = 1440;
+                        break;
+                    case 3:
+                        $width = 1420;
+                        break;
+                    case 4:
+                        $width = 1400;
+                        break;
+                    case 5:
+                        $width = 1400;
+                        break;
+                    default:
+                        $width = 1400;
+                }
+            ?>
 
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px; bottom: 910px">
-                {{ $summary->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 120px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="@if(count($array_1) <= 3) width: 1420px @else width: 1400px; @endif"> </span><span style="@if(count($array_1) <= 3) bottom: 260px; font-size: 48px @elseif(count($array_1) > 3 && count($array_1) <= 4) bottom: 260px; font-size: 46px @else bottom: 270px; font-size: 41px  @endif">{{ implode(', ', array_slice($array_1, 0, 5)) }}</span>@if(count($array_1) > 4) <span style="bottom: 290px; font-size: 41px; display: flex; left: 2175px">{{ implode(', ', array_slice($array_1, 5)) }}</span> @endif
+                {{ $summary->{2} ?? null }}<span class="_ _21" style="width: 140px"></span>{{ $summary->{5} ?? null }}<span class="_ _24" style="width: 120px"> </span>{{ $summary->{8} ?? null }}<span class="_ _27" style="width: {{$width}}px"> </span><span style="@if(count($array_1) <= 3) bottom: 260px; font-size: 48px @elseif(count($array_1) > 3 && count($array_1) <= 4) bottom: 260px; font-size: 46px @else bottom: 270px; font-size: 41px  @endif">{{ implode(', ', array_slice($array_1, 0, 5)) }}</span>@if(count($array_1) > 4) <span style="bottom: 290px; font-size: 41px; display: flex; left: 2175px">{{ implode(', ', array_slice($array_1, 5)) }}</span> @endif
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px; bottom: 820px; width: 150px">
                 {{ $summary->{1} ?? null }}<span class="_ _21" style="width: 120px"></span>{{ $summary->{4} ?? "222" }}<span class="_ _24" style="width: 150px"> </span>{{ $summary->{7} ?? null }}<span class="_ _27" style="width: 1400px;"> </span><span style="bottom: 350px">{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</span>

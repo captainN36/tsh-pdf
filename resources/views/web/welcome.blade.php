@@ -214,6 +214,7 @@
 
 <?php
     $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content']);
+    dd($nextYearIndicator);
     $inputString = '';
     for ($i = 1; $i <= count($nextYearIndicator); $i++) {
         $inputString .= $nextYearIndicator[$i];

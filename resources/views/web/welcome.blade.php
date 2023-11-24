@@ -239,17 +239,18 @@
         $html = str_replace("\r", "\n", $parts[$i]);
         $array[$i] = $html;
     }
-    dd($array);
 ?>
 
-@for($i = 1; $i <= count($array); $i++)
+@for($i = 0; $i < count($array); $i++)
 <?php $page++; ?>
 <div id="pfd" class="pf w0 h0" data-page-no="10">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! implode('<br>', explode("\n", $array[$i])) !!}
+            @if (isset($array[$i]))
+                {!! nl2br(e($array[$i])) !!}
+            @endif
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

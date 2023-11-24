@@ -219,7 +219,8 @@
         $html = str_replace("\r", "\n", $nextYearIndicator[$i]);
         $array[$i] = $html;
     }
-    ?>
+    dd($array);
+?>
 
 @for($i = 1; $i <= count($array); $i++)
 <?php $page++; ?>

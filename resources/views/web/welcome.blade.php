@@ -236,10 +236,9 @@
     }
     $array = [];
     for ($i = 0; $i < count($parts); $i++) {
-        $html = str_replace("\r", "\n", $parts[$i]);
+        $html = str_replace("\r", "<br>", $parts[$i]);
         $array[$i] = $html;
     }
-    dd($array);
 ?>
 
 @for($i = 0; $i < count($array); $i++)

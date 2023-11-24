@@ -219,7 +219,7 @@
         $inputString .= $nextYearIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 50;
+    $linesPerPart = 45;
 
     $parts = [];
 
@@ -283,7 +283,7 @@
         $inputString .= $twoYearsLaterIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 45;
+    $linesPerPart = 50;
 
     $parts = [];
 

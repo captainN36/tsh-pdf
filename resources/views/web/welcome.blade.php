@@ -239,6 +239,7 @@
         $html = str_replace("\n ", '', $parts[$i]);
         $array[$i] = $html;
     }
+    dd($array);
 ?>
 
 @for($i = 0; $i < count($array); $i++)

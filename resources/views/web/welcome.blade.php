@@ -283,7 +283,7 @@
         $inputString .= $twoYearsLaterIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 50;
+    $linesPerPart = 55;
 
     $parts = [];
 

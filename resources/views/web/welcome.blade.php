@@ -214,12 +214,32 @@
 
 <?php
     $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content']);
-    $array = [];
-    dd($nextYearIndicator);
+    $inputString = '';
     for ($i = 1; $i <= count($nextYearIndicator); $i++) {
-        $html = str_replace("\r", "\n", $nextYearIndicator[$i]);
+        $inputString .= $nextYearIndicator[$i];
+    }
+    $lines = explode("\r", $inputString);
+
+    $linesPerPart = 50;
+
+    $parts = [];
+
+    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+
+        $part = array_slice($lines, $i, $linesPerPart);
+
+        $part = array_filter($part);
+
+        if (!empty($part)) {
+            $parts[] = implode("\r", $part);
+        }
+    }
+    $array = [];
+    for ($i = 0; $i < count($parts); $i++) {
+        $html = str_replace("\r ", "\n", $parts[$i]);
         $array[$i] = $html;
     }
+    dd($array);
 ?>
 
 @for($i = 1; $i <= count($array); $i++)

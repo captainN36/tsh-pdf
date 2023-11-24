@@ -235,9 +235,14 @@
         }
     }
     for ($i = 0; $i < count($parts); $i++) {
-        $html = preg_replace("/\n/", "\r", $parts[$i], 2);
-        $html = str_replace("\n ", '', $parts[$i]);
-        $array[$i] = $html;
+        if ($i == 0) {
+            $html = preg_replace("/\n/", "\r", $parts[$i], 2);
+            $html = str_replace("\n ", '', $parts[$i]);
+            $array[$i] = $html;
+        } else {
+            $html = str_replace("\n ", '', $parts[$i]);
+            $array[$i] = $html;
+        }
     }
     dd($array);
 ?>

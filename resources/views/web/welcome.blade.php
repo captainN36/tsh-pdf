@@ -213,7 +213,7 @@
 @endfor
 
 <?php
-    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content']);
+    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
     dd($nextYearIndicator);
     $inputString = '';
     for ($i = 1; $i <= count($nextYearIndicator); $i++) {

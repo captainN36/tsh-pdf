@@ -1881,7 +1881,7 @@
                         <td>{{ $name->{7} ?? null }}</td>
                     </tr>
                 </table>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 720px;bottom: 1110px;width: 62%;height: 115px;max-width: 62%;">
+                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 740px;bottom: 1130px;width: 62%;height: 115px;max-width: 62%;">
                     <tr class="chiso1">
                         <td>{{ $data['data']['dobIndicator']['dobIndicator'] }}</td>
                     </tr>

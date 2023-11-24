@@ -233,7 +233,6 @@
         if (!empty($part)) {
             $parts[] = implode("\n", $part);
         }
-        dd($parts);
     }
     for ($i = 0; $i < count($parts); $i++) {
         $html = str_replace("\n ", '', $parts[$i]);
@@ -250,7 +249,7 @@
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
+                {!! nl2br(e(implode('<br>', explode("\n", $array[$i])))) !!}
             @endif
         </div>
 

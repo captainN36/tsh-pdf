@@ -220,7 +220,7 @@
     }
     $lines = explode("\r", $inputString);
 
-    $linesPerPart = 45;
+    $linesPerPart = 35;
 
     $parts = [];
 

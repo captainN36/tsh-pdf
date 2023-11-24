@@ -244,7 +244,6 @@
             $array[$i] = $html;
         }
     }
-    dd($array);
 ?>
 
 @for($i = 0; $i < count($array); $i++)

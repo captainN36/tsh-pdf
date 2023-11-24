@@ -220,7 +220,7 @@
     }
     $lines = explode("\r", $inputString);
 
-    $linesPerPart = 50;
+    $linesPerPart = 45;
 
     $parts = [];
 
@@ -239,6 +239,7 @@
         $html = str_replace("\r", "\n", $parts[$i]);
         $array[$i] = $html;
     }
+    dd($array);
 ?>
 
 @for($i = 0; $i < count($array); $i++)

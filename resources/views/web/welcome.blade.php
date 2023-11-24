@@ -233,6 +233,7 @@
         if (!empty($part)) {
             $parts[] = implode("\n", $part);
         }
+        dd($parts);
     }
     for ($i = 0; $i < count($parts); $i++) {
         $html = str_replace("\n ", '', $parts[$i]);

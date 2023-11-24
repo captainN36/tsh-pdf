@@ -214,17 +214,21 @@
 
 <?php
     $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content']);
-    dd($nextYearIndicator);
+    $array = [];
+    for ($i = 1; $i < count($nextYearIndicator); $i++) {
+        $html = str_replace("\r", "\n", $nextYearIndicator[$i]);
+        $array[$i] = $html;
+    }
     ?>
 
-@for($i = 1; $i <= count($nextYearIndicator); $i++)
+@for($i = 1; $i <= count($array); $i++)
 <?php $page++; ?>
 <div id="pfd" class="pf w0 h0" data-page-no="10">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                        {!! nl2br(e($nextYearIndicator[$i])) !!}
+                        {!! nl2br(e($array[$i])) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

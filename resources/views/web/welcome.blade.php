@@ -518,7 +518,7 @@
             }
 
             $lines = explode("\n", $inputString);
-dd($lifePathIndicator, $lines);
+dd($data['data']['lifePathIndicator']['content'],$lifePathIndicator, $lines);
             $linesPerPartFirst = 55;
             $linesPerPartRest = 75;
 

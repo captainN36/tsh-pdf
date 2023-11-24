@@ -231,9 +231,10 @@
         $part = array_filter($part);
 
         if (!empty($part)) {
-            $parts[] = implode("\r", $part);
+            $parts[] = implode("\n", $part);
         }
     }
+    dd($parts);
     for ($i = 0; $i < count($parts); $i++) {
         $html = str_replace("\r", "<br>", $parts[$i]);
         $array[$i] = $html;

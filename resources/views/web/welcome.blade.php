@@ -352,8 +352,8 @@
         <div class="t m0 x35 h10 yc8 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][2][1] }}%</div>
         <div class="t m0 x5 h8 yc9 ff1 fs4 fc2 sc0 ls0 ws0">1.4. Cẩn thận - Cầu toàn - Thực tế</div>
         <div class="t m0 x34 h10 yca ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][3][1] }}%</div>
-        <div class="t m0 x5 h8 ycb ff1 fs4 fc2 sc0 ls0 ws0">1.5. Năng động - Linh hoạt - Tò mò</div>
-        <div class="t m0 x35 h10 ycc ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][4][1] }}%</div>
+        {{-- <div class="t m0 x5 h8 ycb ff1 fs4 fc2 sc0 ls0 ws0">1.5. Năng động - Linh hoạt - Tò mò</div>
+        <div class="t m0 x35 h10 ycc ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][4][1] }}%</div> --}}
         <div class="t m0 x5 h8 ycd ff1 fs4 fc2 sc0 ls0 ws0">1.6. Quan tâm - Yêu thương - Kiểm soát</div>
         <div class="t m0 x12 h10 yce ff1 fs9 fc0 sc0 ls0 ws0">2%</div>
         <div class="t m0 x5 h8 ycf ff1 fs4 fc2 sc0 ls0 ws0">1.7. Thông thái - Khám phá - Truyền đạt</div>

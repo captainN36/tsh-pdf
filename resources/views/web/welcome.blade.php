@@ -1139,7 +1139,7 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ NỢ NGHIỆP</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
-            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px">
+            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify">
                 {!! $data['data']['karmicIndicator']['description'] !!}
             </div>
 

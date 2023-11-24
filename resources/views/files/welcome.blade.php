@@ -1864,7 +1864,7 @@
                         max-width: 66px;
                     }
                 </style>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 120px;bottom: 1200px;width: 62%;height: 115px;max-width: 62%;">
+                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 120px;bottom: 1100px;width: 62%;height: 115px;max-width: 62%;">
                     <tr class="name">
                         <td>{{ $name->{3} ?? null }}</td>
                         <td>{{ $name->{6} ?? null }}</td>

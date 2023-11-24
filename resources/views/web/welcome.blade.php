@@ -235,7 +235,7 @@
         }
     }
     $array = [];
-    $first = preg_replace("/\n/", "\r", $parts[0], 2);
+    $first = preg_replace("/\n/", "<br>", $parts[0], 2);
     $first = str_replace("\n ", '', $first);
     $first = str_replace("\n", " ", $first);
     for ($i = 1; $i < count($parts); $i++) {
@@ -267,7 +267,7 @@
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
+                {!! $array[$i] !!}
             @endif
         </div>
 

@@ -220,7 +220,7 @@
     }
     $lines = explode("\n", $inputString);
 
-    $linesPerPart = 35;
+    $linesPerPart = 40;
 
     $parts = [];
 
@@ -234,6 +234,10 @@
             $parts[] = implode("\r", $part);
         }
     }
+    for ($i = 0; $i < count($parts); $i++) {
+        $html = str_replace("\r", "<br>", $parts[$i]);
+        $array[$i] = $html;
+    }
 ?>
 
 @for($i = 0; $i < count($parts); $i++)
@@ -244,7 +248,7 @@
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if (isset($parts[$i]))
-                {!! nl2br(e($parts[$i])) !!}
+                {!! $parts[$i] !!}
             @endif
         </div>
 

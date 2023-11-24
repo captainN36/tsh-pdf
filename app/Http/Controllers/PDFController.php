@@ -30,6 +30,34 @@ class PDFController extends Controller
         return view('web.welcome', ['data' => $data]);
     }
 
+    public function viewFile (Request $request) {
+        $params = [
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
+        ];
+        $fileUrl = $this->viewPdf($params);
+
+        // $fileContents = Http::get($fileUrl)->body();
+
+        // $headers = [
+        //     'Content-Type' => 'application/pdf',
+        //     'Content-Disposition' => 'attachment; filename="1277-2023-11-05.pdf"',
+        // ];
+        
+        // if (file_exists($filePath)) {
+        //     $headers = [
+        //         'Content-Type' => 'application/pdf',
+        //         'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
+        //     ];
+    
+        //     return response()->file($filePath, $headers);
+        // } else {
+        //     return response()->json(['error' => 'File not found'], 404);
+        // }
+
+        return redirect($fileUrl);
+    }
+
     public function download (Request $request) {
         $params = [
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
@@ -37,7 +65,7 @@ class PDFController extends Controller
         ];
         $fileName = $this->pdf($request->all());
 
-        $filePath = public_path() . '/pdf-test/' . $fileName;
+        $filePath = public_path() . '/pdf/' . $fileName;
         if (file_exists($filePath)) {
             $headers = [
                 'Content-Type' => 'application/pdf',
@@ -51,7 +79,7 @@ class PDFController extends Controller
 
     }
 
-    public function pdf($param)
+    public function viewPdf($param)
     {
         $data = $this->getData($param);
         $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
@@ -65,6 +93,35 @@ class PDFController extends Controller
         Process::run('chmod -R 777 ' . public_path());
         $pathHtml = public_path() . '/html-test/' . $name;
         $pathPDF = public_path() . '/pdf-test/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+        if (!file_exists($pathPDF)) {
+            $file = fopen($pathHtml, 'w+');
+            $htmlStr = view('files.welcome', ['data' => $data])->render();
+            fwrite($file, $htmlStr);
+            try {
+                $processName = "wkhtmltopdf $pathHtml $pathPDF";
+                Process::run($processName);
+                Log::info('process', ['process' => $processName]);
+            } catch (\Exception $exception) {
+                throw $exception;
+            }
+        }
+        return asset("/pdf-test/$namePDF");
+    }
+
+    public function pdf($param)
+    {
+        $data = $this->getData($param);
+        $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
+        $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+        if (!file_exists(public_path() . '/html/')) {
+            mkdir(public_path() . '/html/', 0777, true);
+        }
+        if (!file_exists(public_path() . '/pdf/')) {
+            mkdir(public_path() . '/pdf/', 0777, true);
+        }
+        Process::run('chmod -R 777 ' . public_path());
+        $pathHtml = public_path() . '/html/' . $name;
+        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('files.welcome', ['data' => $data])->render();

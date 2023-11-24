@@ -509,7 +509,7 @@
             {!! $data['data']['lifePathIndicator']['description'] !!}
         </div>
         <?php
-            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
+            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['lifePathIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($lifePathIndicator); $i++) {
                 $result = preg_replace('/\·\n\n/', '·  ', $lifePathIndicator[$i]);
@@ -518,7 +518,7 @@
             }
 
             $lines = explode("\n", $inputString);
-
+dd($lifePathIndicator, $lines);
             $linesPerPartFirst = 55;
             $linesPerPartRest = 75;
 

@@ -1611,7 +1611,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         
-        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; top: 0px; text-align: justify">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; top: 0px; text-align: justify">
             @foreach ($data2 as $item)
                 {!! $item['title'] !!}
                 <p>{!! $item['content'] !!}</p>

@@ -234,6 +234,7 @@
             $parts[] = implode("\n", $part);
         }
     }
+    dd($parts);
     for ($i = 0; $i < count($parts); $i++) {
         if ($i == 0) {
             $html = preg_replace("/\n/", "\r", $parts[$i], 2);

@@ -155,7 +155,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 27;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 50;
 
             $parts = [];
@@ -164,7 +164,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -212,7 +212,7 @@
 </div>
 @endfor
 
-<?php 
+<?php
     $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content']);
 ?>
 
@@ -233,7 +233,7 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 @endfor
-<?php 
+<?php
     $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'])
 ?>
 @for($i = 1; $i <= count($twoYearsLaterIndicator); $i++)
@@ -269,7 +269,7 @@
         <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1060px">
             {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nextMonthIndicator'] }}</div>
         <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(2)->format('m/Y') }}</div>
-        
+
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
             {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['twoMonthsLaterIndicator'] }}
         </div>
@@ -427,7 +427,7 @@
                 $result = preg_replace('/\.\n\n/', '.  ', $result);
                 $inputString .= $result;
             }
-            
+
             $lines = explode("\n", $inputString);
 
             $linesPerPartFirst = 55;
@@ -439,7 +439,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -510,7 +510,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -519,13 +519,13 @@
             }
             $array = [];
             for ($i =0; $i < count($parts); $i++) {
-                          
+
                 if ($i != 0) {
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
                 } else {
-                    $html = preg_replace("/\n/", "\r", $parts[$i], 4);  
+                    $html = preg_replace("/\n/", "\r", $parts[$i], 4);
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
@@ -738,7 +738,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -747,20 +747,20 @@
             }
             $array = [];
             for ($i = 0; $i < count($parts); $i++) {
-                          
+
                 if ($i != 0) {
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
                 } else {
-                    $html = preg_replace("/\n/", "\r", $parts[$i], 2);  
+                    $html = preg_replace("/\n/", "\r", $parts[$i], 2);
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
                 }
                 $array[$i] = $html;
             }
-            
+
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 620px; text-align: justify;">
@@ -1319,7 +1319,7 @@
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            
+
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; top: 0px; text-align: justify">
                 @foreach ($data2 as $item)
                     {!! $item['title'] !!}
@@ -1620,7 +1620,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        
+
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; top: 0px; text-align: justify">
             @foreach ($data2 as $item)
                 {!! $item['title'] !!}

@@ -234,9 +234,9 @@
             $parts[] = implode("\n", $part);
         }
     }
-    dd($parts);
     for ($i = 0; $i < count($parts); $i++) {
-        $html = str_replace("\r", "<br>", $parts[$i]);
+        $html = preg_replace("/\n/", "\r", $parts[$i], 2);
+        $html = str_replace("\n ", '', $parts);
         $array[$i] = $html;
     }
 ?>

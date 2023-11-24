@@ -1826,14 +1826,72 @@
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2340px">
             </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 1280px; height: 77px">
-                {{ $name->{3} ?? null }}<span style="width: 142px" class="_ _21"></span>{{ $name->{6} ?? null }}<span class="_ _21" style="width: 180px"> </span>{{ $name->{9} ?? null }}<span class="_ _27" style="width: 1450px;"> </span>{{ $data['data']['dobIndicator']['dobIndicator'] }}
-            </div>
-             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 1210px">
-                {{ $name->{2} ?? null }}<span class="_ _21" style="width: 145px"></span>{{ $name->{5} ?? null }}<span class="_ _24" style="width: 143px"> </span>{{ $name->{8} ?? null }}<span class="_ _27" style="width: 1550px;"> </span><span style="bottom: 65px;right: 100px;">{{ $data['data']['personalIndicator']['personalIndicator'] }}</span>
-            </div>
-            <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 50px; bottom: 1120px;height: 85px;">
-                {{ $name->{1} ?? null }}<span class="_ _21"></span>{{ $name->{4} ?? null }}<span class="_ _24" style="width: 220px"> </span>{{ $name->{7} ?? null }}<span class="_ _27" style="width: 1450px;"> </span><span style="top: -155px">{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</span>
+            <div>
+                <style>
+                    tr.name {
+                        height: 173px;
+                        text-align: center;
+                    }
+
+                    tr.summary {
+                        height: 173px;
+                        text-align: center;
+                    }
+
+                    tr.chiso1 {
+                        height: 126px;
+                        text-align: center;
+                    }
+
+                    tr.chiso2 {
+                        height: 118px;
+                        text-align: center;
+                    }
+
+                    tr.chiso3 {
+                        height: 118px;
+                        text-align: center;
+                    }
+
+                    tr.chiso4 {
+                        height: 118px;
+                        text-align: center;
+                    }
+
+                    td {
+                        text-align: center;
+                        width: 66px;
+                        max-width: 66px;
+                    }
+                </style>
+                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 109px;bottom: 888px;width: 62%;height: 115px;max-width: 62%;">
+                    <tr class="name">
+                        <td>{{ $name->{3} ?? null }}</td>
+                        <td>{{ $name->{6} ?? null }}</td>
+                        <td>{{ $name->{9} ?? null }}</td>
+                    </tr>
+                    <tr class="name">
+                        <td>{{ $name->{2} ?? null }}</td>
+                        <td>{{ $name->{5} ?? null }}</td>
+                        <td>{{ $name->{8} ?? null }}</td>
+                    </tr>
+                    <tr class="name">
+                        <td>{{ $name->{1} ?? null }}</td>
+                        <td>{{ $name->{4} ?? null }}</td>
+                        <td>{{ $name->{7} ?? null }}</td>
+                    </tr>
+                </table>
+                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px;bottom: 935px;width: 62%;height: 115px;max-width: 62%;">
+                    <tr class="chiso1">
+                        <td>{{ $data['data']['dobIndicator']['dobIndicator'] }}</td>
+                    </tr>
+                    <tr class="chiso1">
+                        <td>{{ $data['data']['personalIndicator']['personalIndicator'] }}</td>
+                    </tr>
+                    <tr class="chiso1">
+                        <td>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</td>
+                    </tr>
+                </table>
             </div>
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 35px; bottom: 970px">
                 {{ $summary->{3} ?? null }}<span class="_ _21" style="width: 110px"></span>{{ $summary->{6} ?? "555" }}<span class="_ _24" style="width: 150px"> </span>{{ $summary->{9} ?? null }}<span class="_ _27" style="width: 1400px;"> </span><span style="bottom: 215px">{{ $data['data']['soulIndicator']['soulIndicator'] }}</span>

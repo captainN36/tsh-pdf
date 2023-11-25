@@ -519,8 +519,8 @@
 
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 55;
-            $linesPerPartRest = 75;
+            $linesPerPartFirst = 50;
+            $linesPerPartRest = 70;
 
             $parts = [];
 
@@ -1275,19 +1275,29 @@
                     $strength->{$value[0]} = $text;
                 }
             @endphp
-            <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{3} ?? null }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{6} ?? null }}</div>
-            <div class="t m0 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{9} ?? null }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{2} ?? null }}</div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{5} ?? null }}
-            </div>
-            <div class="t m0 x55 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{8} ?? null }}
-            </div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0">{{ $strength->{1} ?? null }}</div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 450px">{{ $strength->{4} ?? null }}
-            </div>
-            <div class="t m0 x2 h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px">{{ $strength->{7} ?? null }}
-            </div>
+            <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 335px;bottom: 947px;width: 73%;height: 115px;max-width: 73%;">
+                <style>
+                    .strength {
+                        height: 167px;
+                        text-align: center;
+                    }
+                </style>
+                <tr class="strength">
+                    <td>{{ $strength->{3} ?? null }}</td>
+                    <td>{{ $strength->{6} ?? null }}</td>
+                    <td>{{ $strength->{9} ?? null }}</td>
+                </tr>
+                <tr class="strength">
+                    <td>{{ $strength->{2} ?? null }}</td>
+                    <td>{{ $strength->{5} ?? null }}</td>
+                    <td>{{ $strength->{8} ?? null }}</td>
+                </tr>
+                <tr class="strength">
+                    <td>{{ $strength->{1} ?? null }}</td>
+                    <td>{{ $strength->{4} ?? null }}</td>
+                    <td>{{ $strength->{7} ?? null }}</td>
+                </tr>
+            </table>
             @php
                 $return = [];
                 if (isset($strength->{1}) && isset($strength->{2}) && isset($strength->{3})) {
@@ -1476,116 +1486,52 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <style>
-                .test {
-                    justify-content: center;
-                    align-items: center;
-                    color: rgb(38, 91, 166);
-                    font-size: 56px;
-                }
-
-                .bieudo {
-                    width: 167vw;
-                }
-
-                @media only screen and (min-width: 992px) {
-                    .bieudo {
-                        width: 163vw;
+            <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 127px;bottom: 947px;width: 73%;height: 115px;max-width: 73%;">
+                <style>
+                    .chart-name {
+                        height: 167px;
+                        text-align: center;
                     }
-                }
-
-                @media only screen and (min-width: 1200px) {
-                    .bieudo {
-                        width: 120vw;
+                </style>
+                <tr class="chart-name">
+                    <td>{{ $name->{3} ?? null }}</td>
+                    <td>{{ $name->{6} ?? null }}</td>
+                    <td>{{ $name->{9} ?? null }}</td>
+                </tr>
+                <tr class="chart-name">
+                    <td>{{ $name->{2} ?? null }}</td>
+                    <td>{{ $name->{5} ?? null }}</td>
+                    <td>{{ $name->{8} ?? null }}</td>
+                </tr>
+                <tr class="chart-name">
+                    <td>{{ $name->{1} ?? null }}</td>
+                    <td>{{ $name->{4} ?? null }}</td>
+                    <td>{{ $name->{7} ?? null }}</td>
+                </tr>
+            </table>
+            <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px;bottom: 947px;width: 73%;height: 115px;max-width: 73%;">
+                <style>
+                    .chart-summary {
+                        height: 167px;
+                        text-align: center;
                     }
-                }
-
-                @media only screen and (min-width: 1400px) {
-                    .bieudo {
-                        width: 86vw;
-                    }
-                }
-            </style>
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 700px;">
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{3} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{6} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{9} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p></p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p></p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{3} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{6} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{9} ?? null }}</p>
-                </div>
-            </div>
-
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 400px;">
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{2} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{5} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{8} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p></p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p></p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{2} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{5} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{8} ?? null }}</p>
-                </div>
-            </div>
-
-            <div class="t m0 x3 hc y97 ff1 fs6 fc0 sc0 ls0 ws0 bieudo t-not-before" style="display: flex;justify-content: space-between;align-items: center;left: 140px;bottom: 969px;gap: 110px;height: 100px;">
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{1} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{4} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $name->{7} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p></p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p></p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{1} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{4} ?? null }}</p>
-                </div>
-                <div class="test" style="display: flex; flex: 1; text-align: center; margin: 0; padding: 0;">
-                    <p>{{ $summary->{7} ?? null }}</p>
-                </div>
-            </div>
+                </style>
+                <tr class="chart-summary">
+                    <td>{{ $summary->{3} ?? null }}</td>
+                    <td>{{ $summary->{6} ?? null }}</td>
+                    <td>{{ $summary->{9} ?? null }}</td>
+                </tr>
+                <tr class="chart-name">
+                    <td>{{ $summary->{2} ?? null }}</td>
+                    <td>{{ $summary->{5} ?? null }}</td>
+                    <td>{{ $summary->{8} ?? null }}</td>
+                </tr>
+                <tr class="chart-name">
+                    <td>{{ $summary->{1} ?? null }}</td>
+                    <td>{{ $summary->{4} ?? null }}</td>
+                    <td>{{ $summary->{7} ?? null }}</td>
+                </tr>
+            </table>
 
             @php
                 $return = [];

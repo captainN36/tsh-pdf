@@ -200,7 +200,7 @@
 <div id="pf4" class="pf w0 h0" data-page-no="4">
     <div class="pc pc4 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$path.'/phai.png') }}">
-        <div class="t m0 x5 h9 y62 ff4 fs4 fc2 sc0 ls0 ws0">Trong bảo báo cáo này, bạn sẽ khám phá các luận giải về:
+        <div class="t m0 x5 h9 y62 ff4 fs4 fc2 sc0 ls0 ws0">Trong bản báo cáo này, bạn sẽ khám phá các luận giải về:
         </div>
         <div class="t m0 x5 ha y63 ff2 fs4 fc2 sc0 ls0 ws0">- Ý nghĩa tên khai sinh của bạn, bao gồm ý nghĩa của họ tên đầy đủ, tên thường gọi
         </div>

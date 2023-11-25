@@ -155,8 +155,8 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 25;
-            $linesPerPartRest = 50;
+            $linesPerPartFirst = 28;
+            $linesPerPartRest = 55;
 
             $parts = [];
 
@@ -219,7 +219,7 @@
         $inputString .= $nextYearIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 45;
+    $linesPerPart = 55;
 
     $parts = [];
 

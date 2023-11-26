@@ -244,6 +244,7 @@
         $html = str_replace("\n ", " ", $parts[$i]);
         $html = str_replace("\n", " ", $parts[$i]);
         $html = str_replace("<br>", "\r", $parts[$i]);
+        $html = str_replace("\n", " ", $parts[$i]);
 
         $array[$i] = $html;
     }

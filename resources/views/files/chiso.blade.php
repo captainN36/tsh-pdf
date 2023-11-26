@@ -56,7 +56,13 @@
                 <td>{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</td>
             </tr>
         </table>
-        <div class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 140px">Tư Duy Cảm Xúc<span class="_ _17" style="width: 310px"> </span>Năng Lực Trực Giác<span class="_ _18" style="width: 240px"> </span>Tư Duy Hành Động</div>
+        <table class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2450px; left: 70px; bottom: 217px;">
+            <tr>
+                <td>Tư Duy Cảm Xúc</td>
+                <td>Năng Lực Trực Giác</td>
+                <td>Tư Duy Hành Động</td>
+            </tr>
+        </table>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

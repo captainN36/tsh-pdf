@@ -39,7 +39,7 @@
             </tr>
         </table>
         <div class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 126.56px;">Tư Duy Cảm Xúc<span class="_ _17" style="width: 264.336px"> </span>Năng Lực Trực Giác<span class="_ _18" style="width: 233.096px"> </span>Tư Duy Hành Động</div>
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
         <div class="t m0 x6 h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">5</div>
     </div>

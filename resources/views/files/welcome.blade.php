@@ -234,6 +234,7 @@
             $parts[] = implode("\n", $part);
         }
     }
+
     $array = [];
     $first = preg_replace("/\n/", "\r", $parts[0], 2);
     $first = str_replace("\n ", '', $first);
@@ -256,7 +257,7 @@
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
             @if (isset($array[$i]))
-                {!! $array[$i] !!}
+                {!! nl2br(e($array[$i])) !!}
             @endif
         </div>
 

@@ -235,15 +235,18 @@
 
     $array = [];
     $first = preg_replace("/\n/", "\r", $parts[0], 2);
-    $first = str_replace("\n ", '', $first);
+    $first = str_replace("\n ", ' ', $first);
     $first = str_replace("\n", " ", $first);
     $first = str_replace("<br>", "\r", $first);
     $array[0] = $first;
-    $html = str_replace("\n\n", "\r", $parts[1]);
-    $html = str_replace("\n", " ", $parts[1]);
-    $html = str_replace("<br>", "\r", $parts[1]);
 
-    $array[1] = $html;
+    for ($i = 1; $i < count($parts); $i++) {
+        $html = str_replace("\n ", " ", $parts[$i]);
+        $html = str_replace("\n", " ", $parts[$i]);
+        $html = str_replace("<br>", "\r", $parts[$i]);
+
+        $array[$i] = $html;
+    }
 ?>
 
 @for($i = 0; $i < count($array); $i++)

@@ -86,7 +86,7 @@
             @php
                 $fileName = $number - 1;
             @endphp
-            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2360px;">
+            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2360px; bottom: 900px">
         </div>
 
         @php
@@ -166,7 +166,7 @@
                     $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                     $part = array_slice($lines, $i, $linesPerPart);
-                    
+
                     $part = array_filter($part);
 
                     if (!empty($part)) {
@@ -214,7 +214,7 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 @endfor
-<?php 
+<?php
     $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
     $inputString = '';
     for ($i = 1; $i <= count($nextYearIndicator); $i++) {
@@ -227,7 +227,7 @@
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {
         $part = array_slice($lines, $i, $linesPerPart);
-        
+
         $part = array_filter($part);
 
         if (!empty($part)) {
@@ -270,7 +270,7 @@
 @endfor
 
 
-<?php 
+<?php
     $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
     $inputString = '';
     for ($i = 1; $i <= count($twoYearsLaterIndicator); $i++) {
@@ -283,7 +283,7 @@
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {
         $part = array_slice($lines, $i, $linesPerPart);
-        
+
         $part = array_filter($part);
 
         if (!empty($part)) {
@@ -339,7 +339,7 @@
         <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1260px">
             {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nextMonthIndicator'] }}</div>
         <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(2)->format('m/Y') }}</div>
-        
+
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="width: 2360px !important; left: 630px; bottom: 1190px">
             {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['twoMonthsLaterIndicator'] }}
         </div>
@@ -491,7 +491,7 @@
                 $result = preg_replace('/\.\n\n/', '.', $result);
                 $inputString .= $result;
             }
-            
+
             $lines = explode("\n", $inputString);
 
             $linesPerPartFirst = 50;
@@ -503,7 +503,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -575,7 +575,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -584,13 +584,13 @@
             }
             $array = [];
             for ($i =0; $i < count($parts); $i++) {
-                          
+
                 if ($i != 0) {
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
                 } else {
-                    $html = preg_replace("/\n/", "\r", $parts[$i], 4);  
+                    $html = preg_replace("/\n/", "\r", $parts[$i], 4);
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
@@ -803,7 +803,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -812,13 +812,13 @@
             }
             $array = [];
             for ($i = 0; $i < count($parts); $i++) {
-                          
+
                 if ($i != 0) {
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
                 } else {
-                    $html = preg_replace("/\n/", "\r", $parts[$i], 2);  
+                    $html = preg_replace("/\n/", "\r", $parts[$i], 2);
                     $html = str_replace("\n ", '', $parts[$i]);
                     $html = str_replace("\n\n", "\r", $parts[$i]);
                     $html = str_replace("\n", " ", $parts[$i]);
@@ -1040,7 +1040,7 @@
 <?php
             $natureIndicator1 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator', $data['data']['natureIndicator']['data'][0], false);
             $natureIndicator2 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator2', $data['data']['natureIndicator']['data'][1], false);
-            
+
             $natureIndicator1 = preg_replace("/\n/", "\r", $natureIndicator1[1], 1);
             $natureIndicator2 = preg_replace("/\n/", "\r", $natureIndicator2[1], 1);
             $natureIndicator[1] = $natureIndicator1;
@@ -1060,7 +1060,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -1397,7 +1397,7 @@
                 } else {
                     $data1 = $return;
                 }
-                
+
             @endphp
             <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify">
                 @foreach ($data1 as $item)
@@ -1420,7 +1420,7 @@
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            
+
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; top: 0px; text-align: justify">
                 @foreach ($data2 as $item)
                     {!! $item['title'] !!}
@@ -1437,7 +1437,7 @@
         </div>
     </div>
 @endif
-    
+
 
 
 
@@ -1531,7 +1531,7 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            
+
 
 
             <div class="t m0 x55 h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 190px">{{ $name->{3} ?? null }}</div>
@@ -1679,7 +1679,7 @@
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            
+
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; top: 0px; text-align: justify">
                 @foreach ($data2 as $item)
                     {!! $item['title'] !!}
@@ -1935,7 +1935,7 @@
                 <span class="_ _27" style="width: 1940px;"> </span><span style="bottom: 830px">{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</span>
             </div>
 
-            <?php 
+            <?php
                 $array_2 = $data['data']['repeatIndicator']['repeatIndicator'];
                 switch(count($array_2)) {
                     case 1:
@@ -1960,10 +1960,10 @@
 
             <div class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 45px; bottom: 375px">
                 <span class="_ _27" style="width: {{$width}}px"> </span><span style=" @if(count($array_2) < 3) bottom: 790px; font-size: 60px; @elseif (count($array_2) == 4) bottom: 790px; font-size: 50px @elseif (count($array_2) == 5) bottom: 790px; font-size: 41px @else bottom: 100px; font-size: 41px; @endif">{{ implode(', ', array_slice($array_2, 0, 5)) }}</span>@if(count($array_2) > 5)<span style="bottom: 820px; font-size: 45px; display: flex; left: 2160px">{{ implode(', ', array_slice($array_2, 5)) }}</span>@endif
-                
+
             </div>
 
-            <?php 
+            <?php
                 $array_3 = $data['data']['missIndicator']['missIndicator'];
                 switch(count($array_3)) {
                     case 1:

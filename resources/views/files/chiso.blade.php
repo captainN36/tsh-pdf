@@ -31,7 +31,7 @@
         </table>
         <div class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 130px">Năng Lực Tự Nhiên<span class="_ _15" style="width: 440px"> </span>Thái Độ<span class="_ _16" style="width: 550px"> </span>Tư Duy Lý Trí</div>
 
-        <table class="t m0 x3 hc ya6 ff1 fs6 fc0 sc0 ls0 ws0" style="width: 2450px; left: 70px; color: black; bottom: 290px;">
+        <table class="t m0 x3 hc ya6 ff1 fs6 fc0 sc0 ls0 ws0" style="width: 2450px; left: 70px; color: black; bottom: 285px;">
             <tr>
                 <td>{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</td>
                 <td>{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</td>

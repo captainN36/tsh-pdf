@@ -240,10 +240,13 @@
     $first = str_replace("<br>", "\r", $first);
     $array[0] = $first;
 
-$html = str_replace("\n ", " ", $parts[1]);
-$html = str_replace("\n", " ", $parts[1]);
-$html = str_replace("<br>", "\r", $parts[1]);
-$array[1] = $html;
+    for ($i = 1; $i < count($parts); $i++) {
+        $html = str_replace("\n ", " ", $parts[$i]);
+        $html = str_replace("\n", " ", $parts[$i]);
+        $html = str_replace("<br>", "\r", $parts[$i]);
+
+        $array[$i] = $html;
+    }
 ?>
 
 @for($i = 0; $i < count($array); $i++)
@@ -253,8 +256,10 @@ $array[1] = $html;
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
-            @if (isset($array[$i]))
+            @if (isset($array[$i]) && $i != 0)
                 {!! nl2br(e($array[$i])) !!}
+            @else
+                {!! $array[$i] !!}
             @endif
         </div>
 

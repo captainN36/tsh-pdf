@@ -255,7 +255,7 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
-            @if (isset($array[$i]) && $i != 0)
+            @if (isset($array[$i]) && $i != 1)
                 {!! nl2br(e($array[$i])) !!}
             @else
                 {!! $array[$i] !!}

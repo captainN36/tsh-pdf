@@ -40,8 +40,8 @@ class PDFController extends Controller
      */
     public function viewFile (Request $request) {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/0c82f030-4167-46f5-92d7-4eb50227015e',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyNywicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDA3NDc0MzAsImV4cCI6MTcwMzMzOTQzMH0.XQ_14YcRzV2wzbg_GckpStIGyiVZnrWIz6adtwE_X3Q'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/0d470c36-b494-4462-a72f-84879e77b5f4',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzAwODEzMjY5LCJleHAiOjE3MDM0MDUyNjl9.hvQItYL0QpGplTUc8YSEFnvgSzCv3s7k-FQzXLRxoQM'
         ];
         $fileName = $this->pdf($params);
         return redirect(asset('/pdf/' . $fileName));

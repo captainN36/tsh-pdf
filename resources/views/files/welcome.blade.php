@@ -350,7 +350,7 @@
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
         <?php
-            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['monthIndicator']['nowMonthIndicator']['content'])
+            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content'])
         ?>
         <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; bottom: 730px; text-align: justify;">
             @if ($nowMonthIndicator)
@@ -506,7 +506,7 @@
 
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 50;
+            $linesPerPartFirst = 48;
             $linesPerPartRest = 75;
 
             $parts = [];
@@ -610,7 +610,7 @@
                 $array[$i] = $html;
             }
         ?>
-        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 590px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 600px; text-align: justify;">
             {!! nl2br(e($array[0])) !!}
         </div>
     </div>

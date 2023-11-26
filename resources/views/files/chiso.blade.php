@@ -12,9 +12,9 @@
         </table>
         <table class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2450px; left: 70px; bottom: 1070px;">
             <tr>
-                <td>Đường Đời</td>
-                <td>Linh Hồn</td>
-                <td>Tính Cách</td>
+                <td>ĐƯỜNG ĐỜI</td>
+                <td>LINH HỒN</td>
+                <td>TÍNH CÁCH</td>
             </tr>
         </table>
 
@@ -28,9 +28,9 @@
         </table>
         <table class="t m0 x1e h10 y9d ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2450px; left: 70px; bottom: 780px;">
             <tr>
-                <td>Sứ Mệnh</td>
-                <td>Trưởng Thành</td>
-                <td>Bản Chất</td>
+                <td>SỨ MỆNH</td>
+                <td>TRƯỞNG THÀNH</td>
+                <td>BẢN CHẤT</td>
             </tr>
         </table>
 
@@ -43,9 +43,9 @@
         </table>
         <table class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2450px; left: 70px; bottom: 500px;">
             <tr>
-                <td>Năng Lực Tự Nhiên</td>
-                <td>Thái Độ</td>
-                <td>Tư Duy Lý Trí</td>
+                <td>NĂNG LỰC TỰ NHIÊN</td>
+                <td>THÁI ĐỘ</td>
+                <td>TƯ DUY LÝ TRÝ</td>
             </tr>
         </table>
 
@@ -58,9 +58,9 @@
         </table>
         <table class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2450px; left: 70px; bottom: 217px;">
             <tr>
-                <td>Tư Duy Cảm Xúc</td>
-                <td>Năng Lực Trực Giác</td>
-                <td>Tư Duy Hành Động</td>
+                <td>TƯ DUY CẢM XÚC</td>
+                <td>NĂNG LỰC TRỰC GIÁC</td>
+                <td>TƯ DUY HÀNH ĐỘNG</td>
             </tr>
         </table>
 

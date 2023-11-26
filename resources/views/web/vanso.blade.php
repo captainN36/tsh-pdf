@@ -87,6 +87,7 @@
 <div id="pfb" class="pf w0 h0" data-page-no="8">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
+             {{dd($path)}}
             src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÁC NĂM</div>
@@ -120,7 +121,7 @@
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
                 $part = array_slice($lines, $i, $linesPerPart);
-                
+
                 $part = array_filter($part);
 
                 if (!empty($part)) {
@@ -167,7 +168,7 @@
 </div>
 @endfor
 
-<?php 
+<?php
     $nextYearIndicator = \App\Http\Controllers\PDFController::renderText('nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'])
 ?>
 
@@ -188,7 +189,7 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 @endfor
-<?php 
+<?php
     $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'])
 ?>
 @for($i = 1; $i <= count($twoYearsLaterIndicator); $i++)
@@ -224,7 +225,7 @@
         <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1060px">
             {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nextMonthIndicator'] }}</div>
         <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(2)->format('m/Y') }}</div>
-        
+
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
             {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['twoMonthsLaterIndicator'] }}
         </div>

@@ -227,9 +227,7 @@
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {
         $part = array_slice($lines, $i, $linesPerPart);
-
         $part = array_filter($part);
-
         if (!empty($part)) {
             $parts[] = implode("\n", $part);
         }
@@ -241,12 +239,11 @@
     $first = str_replace("\n", " ", $first);
     $first = str_replace("<br>", "\r", $first);
     $array[0] = $first;
+    $html = str_replace("\n\n", "\r", $parts[1]);
+    $html = str_replace("\n", " ", $parts[1]);
+    $html = str_replace("<br>", "\r", $parts[1]);
 
-    for ($i = 1; $i < count($parts); $i++) {
-        $html = str_replace("\n\n", "\r", $parts[$i]);
-        $html = str_replace("\n", " ", $parts[$i]);
-        $array[$i] = $html;
-    }
+    $array[1] = $html;
 ?>
 
 @for($i = 0; $i < count($array); $i++)

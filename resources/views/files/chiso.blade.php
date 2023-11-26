@@ -10,7 +10,13 @@
                 <td>{{ $data['data']['personalIndicator']['personalIndicator'] }}</td>
             </tr>
         </table>
-        <div class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0">Đường Đời<span class="_ _11"> </span>Linh Hồn<span class="_ _12"> </span>Tính Cách</div>
+        <table class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2450px; left: 70px; bottom: 940px;">
+            <tr>
+                <td>Đường Đời</td>
+                <td>Linh Hồn</td>
+                <td>Tính Cách</td>
+            </tr>
+        </table>
 
         <table class="t m0 x3 hc y9c ff1 fs6 fc0 sc0 ls0 ws0" style="width: 2450px; left: 70px; bottom: 850px;">
             <tr>

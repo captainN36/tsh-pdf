@@ -49,10 +49,10 @@ class PDFController extends Controller
 
     public function download (Request $request) {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/0c82f030-4167-46f5-92d7-4eb50227015e',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyNywicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDA3NDc0MzAsImV4cCI6MTcwMzMzOTQzMH0.XQ_14YcRzV2wzbg_GckpStIGyiVZnrWIz6adtwE_X3Q'
         ];
-        $fileName = $this->pdf($request->all());
+        $fileName = $this->pdf($params);
 
         $filePath = public_path() . '/pdf/' . $fileName;
         if (file_exists($filePath)) {

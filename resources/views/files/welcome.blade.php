@@ -248,7 +248,7 @@
     }
 ?>
 
-@for($i = 0; $i < count($array); $i++)
+@for($i = 0; $i <= count($array); $i++)
 <?php $page++; ?>
 <div id="pfd" class="pf w0 h0" data-page-no="13">
     <div class="pc pcb w0 h0 opened">

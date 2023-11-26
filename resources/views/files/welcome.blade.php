@@ -240,12 +240,10 @@
     $first = str_replace("<br>", "\r", $first);
     $array[0] = $first;
 
-    for ($i = 1; $i < count($parts); $i++) {
+    for ($i = 1; $i <= count($parts); $i++) {
         $html = str_replace("\n ", " ", $parts[$i]);
         $html = str_replace("\n", " ", $parts[$i]);
         $html = str_replace("<br>", "\r", $parts[$i]);
-        $html = str_replace("\n", " ", $parts[$i]);
-
         $array[$i] = $html;
     }
 ?>

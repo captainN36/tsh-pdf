@@ -240,15 +240,13 @@
     $first = str_replace("<br>", "\r", $first);
     $array[0] = $first;
 
-    for ($i = 1; $i <= count($parts); $i++) {
-        $html = str_replace("\n ", " ", $parts[$i]);
-        $html = str_replace("\n", " ", $parts[$i]);
-        $html = str_replace("<br>", "\r", $parts[$i]);
-        $array[$i] = $html;
-    }
+$html = str_replace("\n ", " ", $parts[1]);
+$html = str_replace("\n", " ", $parts[1]);
+$html = str_replace("<br>", "\r", $parts[1]);
+$array[1] = $html;
 ?>
 
-@for($i = 0; $i <= count($array); $i++)
+@for($i = 0; $i < count($array); $i++)
 <?php $page++; ?>
 <div id="pfd" class="pf w0 h0" data-page-no="13">
     <div class="pc pcb w0 h0 opened">

@@ -130,7 +130,6 @@
 
 <div id="pfb" class="pf w0 h0" data-page-no="8">
     <div class="pc pc5 w0 h0 opened">
-        {{dd($path)}}
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">2</div>

@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 // use Barryvdh\DomPDF\Facade\Pdf;
 use ConvertApi\ConvertApi;
 use FontLib\Table\Type\name;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Log\Logger;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
@@ -30,6 +33,20 @@ class PDFController extends Controller
         return view('web.welcome', ['data' => $data]);
     }
 
+    /**
+     * @param Request $request
+     * @return Application|\Illuminate\Foundation\Application|RedirectResponse|Redirector
+     * @throws \Exception
+     */
+    public function viewFile (Request $request) {
+        $params = [
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IlVTRVIiLCJpYXQiOjE2OTk5NTE2NzUsImV4cCI6MTcwMjU0MzY3NX0.Mt6GcRYxoui5p8jSsFiOwB59OxP_NfXNf4sBIr32KrA'
+        ];
+        $fileName = $this->pdf($params);
+        return redirect(asset('/pdf/' . $fileName));
+    }
+
     public function download (Request $request) {
         $params = [
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/a1b3d0c7-796d-4c51-9c46-ac49c7d9d7d8',
@@ -48,7 +65,6 @@ class PDFController extends Controller
         } else {
             return response()->json(['error' => 'File not found'], 404);
         }
-
     }
 
     public function pdf($param)

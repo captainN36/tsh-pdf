@@ -139,7 +139,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][0][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][0][1] : 135 }}px;
-            bottom: 1077.410000px;
+            bottom: 950px;
             left: 90px;
         }
         @endisset
@@ -151,7 +151,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][1][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][1][1] : 135 }}px;
-            bottom: 920px;
+            bottom: 930px;
             left: 90px;
         }
         @endisset
@@ -163,7 +163,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][2][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
-            bottom: 820x;
+            bottom: 810x;
             left: 90px;
         }
         @endisset
@@ -175,7 +175,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][3][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][3][1] : 135 }}px;
-            bottom: 720px;
+            bottom: 710px;
             left: 90px;
         }
         @endisset
@@ -187,7 +187,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][4][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][4][1] : 135 }}px;
-            bottom: 580px;
+            bottom: 610px;
             left: 90px;
         }
         @endisset
@@ -198,7 +198,7 @@
             justify-content: center;
             align-items: center;
             width: 135px;
-            bottom: 500px;
+            bottom: 490px;
             left: 90px;
         }
         @isset($data['data']['percentIndicator'][5])
@@ -209,7 +209,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][5][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
-            bottom: 400px;
+            bottom: 100px;
             left: 90px;
         }
         @endisset

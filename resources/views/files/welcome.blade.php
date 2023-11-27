@@ -162,7 +162,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][2][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
-            bottom: 750x;
+            bottom: 850px;
             left: 110px;
         }
         @endisset

@@ -180,7 +180,7 @@
                 $array[$i] = $html;
             }
         ?>
-        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 630px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 650px; text-align: justify;">
             {!! nl2br(e($array[0])) !!}
         </div>
     </div>

@@ -538,7 +538,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 2px;
+            width: 135px;
             top: 950px;
             left: 90px;
         }

@@ -542,16 +542,18 @@
             left: 90px;
         }
         @endisset
+        @isset($data['data']['percentIndicator'][7])
         .bannga-9 {
             height: 79px;
             background-color: #FACC14;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 135px;
+            width: {{$data['data']['percentIndicator'][7][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][7][1] : 135 }}px;
             top: 1040px;
             left: 90px;
         }
+        @endisset
     </style>
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
@@ -594,7 +596,9 @@
             <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0 bannga-8">{{ $data['data']['percentIndicator'][6][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 yd3 ff1 fs4 fc2 sc0 ls0 ws0">1.9. Trách nhiệm - Rộng lượng - Hào phóng</div>
-            <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-9">10%</div>
+        @isset($data['data']['percentIndicator'][7])
+            <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-9">{{ $data['data']['percentIndicator'][7][1] }}%</div>
+        @endisset
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
         <?php $page = $page + 1; ?>

@@ -457,7 +457,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][3][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][3][1] : 135 }}px;
-            bottom: 807.410000px;
+            bottom: 770px;
             left: 90px;
         }
         @endisset
@@ -469,7 +469,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][4][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][4][1] : 135 }}px;
-            bottom: 717.410000px;
+            bottom: 680px;
             left: 90px;
         }
         @endisset
@@ -480,7 +480,7 @@
             justify-content: center;
             align-items: center;
             width: 135px;
-            bottom: 627.410000px;
+            bottom: 520px;
             left: 90px;
         }
         @isset($data['data']['percentIndicator'][5])
@@ -491,7 +491,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][5][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
-            bottom: 527px;
+            bottom: 420px;
             left: 90px;
         }
         @endisset
@@ -503,7 +503,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][6][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][6][1] : 135 }}px;
-            bottom: 427px;
+            bottom: 350px;
             left: 90px;
         }
         @endisset
@@ -526,7 +526,7 @@
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 
-        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1133px; text-align: justify; white-space: normal; top: 70px; left: 400px">
+        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1233px; text-align: justify; white-space: normal; top: 70px; left: 500px">
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
 

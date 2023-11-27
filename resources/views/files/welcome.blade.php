@@ -162,7 +162,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][2][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
-            bottom: 850px;
+            bottom: 820px;
             left: 110px;
         }
         @endisset
@@ -232,7 +232,7 @@
             align-items: center;
             width: 135px;
             bottom: 180px;
-            left: 110px;
+            left: 100px;
         }
     </style>
     <div class="pc pcb w0 h0 opened">

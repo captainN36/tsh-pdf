@@ -3,22 +3,15 @@
 namespace App\Http\Controllers;
 
 // use Barryvdh\DomPDF\Facade\Pdf;
-use ConvertApi\ConvertApi;
-use FontLib\Table\Type\name;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Log\Logger;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
-use PDF;
-use Svg\Tag\Rect;
 
 class PDFController extends Controller
 {
@@ -28,7 +21,7 @@ class PDFController extends Controller
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/0c82f030-4167-46f5-92d7-4eb50227015e',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyNywicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDA3NDc0MzAsImV4cCI6MTcwMzMzOTQzMH0.XQ_14YcRzV2wzbg_GckpStIGyiVZnrWIz6adtwE_X3Q'
         ];
-        $data = $this->getData($request->all());
+        $data = $this->getData($params);
 
         return view('web.welcome', ['data' => $data]);
     }

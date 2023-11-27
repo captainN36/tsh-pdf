@@ -10,8 +10,13 @@
                 <td>{{ $data['data']['personalIndicator']['personalIndicator'] }}</td>
             </tr>
         </table>
-        <div class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 151.67px;">Đường Đời<span class="_ _11" style="width: 453.472px;"> </span>Linh Hồn<span class="_ _12" style="width: 465.312px;"> </span>Tính Cách</div>
-
+        <table class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2060px; left: 65px; bottom: 900px;">
+            <tr>
+                <td>ĐƯỜNG ĐỜI</td>
+                <td>LINH HỒN</td>
+                <td>TÍNH CÁCH</td>
+            </tr>
+        </table>
         <table class="t m0 x3 hc y9c ff1 fs6 fc0 sc0 ls0 ws0" style="width: 2034px; left: 70px; bottom: 723px;">
             <tr>
                 <td>{{ $data['data']['missionIndicator']['missionIndicator'] }}</td>
@@ -20,8 +25,13 @@
             </tr>
 
         </table>
-        <div class="t m0 x1e h10 y9d ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 158.535px;">Sứ Mệnh<span class="_ _13"> </span>Trưởng Thành<span class="_ _14" style="width: 397.688px"> </span>Bản Chất</div>
-
+        <table class="t m0 x1e h10 y9d ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2060px; left: 65px; bottom: 660px;">
+            <tr>
+                <td>SỨ MỆNH</td>
+                <td>TRƯỞNG THÀNH</td>
+                <td>BẢN CHẤT</td>
+            </tr>
+        </table>
         <table class="t m0 x3 hc ya1 ff1 fs6 fc0 sc0 ls0 ws0" style="width: 2034px; left: 70px; bottom: 480px;">
             <tr>
                 <td>{{ $data['data']['dobIndicator']['dobIndicator'] }}</td>
@@ -29,8 +39,13 @@
                 <td>{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</td>
             </tr>
         </table>
-        <div class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 111.735px;">Năng Lực Tự Nhiên<span class="_ _15" style="width: 365.984px"> </span>Thái Độ<span class="_ _16" style="width: 444.224px"> </span>Tư Duy Lý Trí</div>
-
+        <table class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2060px; left: 65px; bottom: 420px;">
+            <tr>
+                <td>NĂNG LỰC TỰ NHIÊN</td>
+                <td>THÁI ĐỘ</td>
+                <td>TƯ DUY LÝ TRÝ</td>
+            </tr>
+        </table>
         <table class="t m0 x3 hc ya6 ff1 fs6 fc0 sc0 ls0 ws0" style="width: 2034px; left: 70px; bottom: 240px;">
             <tr>
                 <td>{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</td>
@@ -38,7 +53,13 @@
                 <td>{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</td>
             </tr>
         </table>
-        <div class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="font-weight: bold; left: 126.56px;">Tư Duy Cảm Xúc<span class="_ _17" style="width: 264.336px"> </span>Năng Lực Trực Giác<span class="_ _18" style="width: 233.096px"> </span>Tư Duy Hành Động</div>
+        <table class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2060px; left: 65px; bottom: 180px;">
+            <tr>
+                <td>TƯ DUY CẢM XÚC</td>
+                <td>NĂNG LỰC TRỰC GIÁC</td>
+                <td>TƯ DUY HÀNH ĐỘNG</td>
+            </tr>
+        </table>
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
         <div class="t m0 x6 h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">5</div>

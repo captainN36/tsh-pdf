@@ -525,6 +525,7 @@
             justify-content: center;
             align-items: center;
             width: {{ $data['data']['percentIndicator'][8][1] == $max ? 2280 : ( 2280/100) * (($data['data']['percentIndicator'][8][1]/$max) * 100) }}px;
+            bottom: 180px;
             left: 110px;
         }
         @endisset

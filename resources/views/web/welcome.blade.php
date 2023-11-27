@@ -445,6 +445,13 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 @endfor
+<?php
+    $array = [];
+    foreach ($data['data']['percentIndicator'] as $key => $val) {
+        $array[] = $val[1];
+    }
+    $max = max($array);
+?>
 
 <div id="pfd" class="pf w0 h0" data-page-no="15">
     <style>
@@ -455,7 +462,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][0][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][0][1] : 135 }}px;
+            width: {{ $data['data']['percentIndicator'][0][1] == $max ? 1940 : ( 1940/100) * (($data['data']['percentIndicator'][0][1]/$max) * 100) }}px;
             top: 320px;
             left: 90px;
         }
@@ -467,7 +474,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][1][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][1][1] : 135 }}px;
+            width: {{ $data['data']['percentIndicator'][1][1] == $max ? 1940 : ( 1940/100) * (($data['data']['percentIndicator'][1][1]/$max) * 100) }}px;
             top: 410px;
             left: 90px;
         }
@@ -479,7 +486,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][2][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
+            width: {{ $data['data']['percentIndicator'][2][1] == $max ? 1940 : ( 1940/100) * (($data['data']['percentIndicator'][2][1]/$max) * 100) }}px;
             top: 500px;
             left: 90px;
         }
@@ -491,7 +498,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][3][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][3][1] : 135 }}px;
+            width: {{ $data['data']['percentIndicator'][3][1] == $max ? 1940 : ( 1940/100) * (($data['data']['percentIndicator'][3][1]/$max) * 100) }}px;
             top: 590px;
             left: 90px;
         }
@@ -503,7 +510,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][4][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][4][1] : 135 }}px;
+            width: {{ $data['data']['percentIndicator'][4][1] == $max ? 1940 : ( 1940/100) * (($data['data']['percentIndicator'][4][1]/$max) * 100) }}px;
             top: 680px;
             left: 90px;
         }
@@ -525,7 +532,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][5][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
+            width: {{ $data['data']['percentIndicator'][5][1] == $max ? 1940 : ( 1940/100) * (($data['data']['percentIndicator'][5][1]/$max) * 100) }}px;
             top: 860px;
             left: 90px;
         }
@@ -537,7 +544,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][6][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][6][1] : 135 }}px;
+            width: {{ $data['data']['percentIndicator'][6][1] == $max ? 1940 : ( 1940/100) * (($data['data']['percentIndicator'][6][1]/$max) * 100) }}px;
             top: 950px;
             left: 90px;
         }
@@ -549,7 +556,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][7][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][7][1] : 135 }}px;
+            width: {{ $data['data']['percentIndicator'][7][1] == $max ? 1940 : ( 1940/100) * (($data['data']['percentIndicator'][7][1]/$max) * 100) }}px;
             top: 1040px;
             left: 90px;
         }

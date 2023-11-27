@@ -530,8 +530,11 @@
         @endisset
     </style>
     <div class="pc pcb w0 h0 opened">
+        <?php
+            $pth = $path == 9 ? 8 : $path;
+        ?>
         <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/bannga.png') }}">
+            src="{{ asset('/' . $pth . '/bannga.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 

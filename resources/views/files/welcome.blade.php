@@ -137,7 +137,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 2280px;
+            width: {{$data['data']['percentIndicator'][0][1] >= 10 ? (2280/100) * $data['data']['percentIndicator'][0][1] : 135 }}px;
             bottom: 1030px;
             left: 110px;
         }
@@ -149,7 +149,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][1][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][1][1] : 135 }}px;
+            width: {{$data['data']['percentIndicator'][1][1] >= 10 ? (2280/100) * $data['data']['percentIndicator'][1][1] : 135 }}px;
             bottom: 920px;
             left: 110px;
         }
@@ -161,7 +161,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][2][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
+            width: {{$data['data']['percentIndicator'][2][1] >= 10 ? (2280/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
             bottom: 810px;
             left: 110px;
         }
@@ -173,7 +173,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][3][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][3][1] : 135 }}px;
+            width: {{$data['data']['percentIndicator'][3][1] >= 10 ? (2280/100) * $data['data']['percentIndicator'][3][1] : 135 }}px;
             bottom: 710px;
             left: 110px;
         }
@@ -185,7 +185,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][4][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][4][1] : 135 }}px;
+            width: {{$data['data']['percentIndicator'][4][1] >= 10 ? (2280/100) * $data['data']['percentIndicator'][4][1] : 135 }}px;
             bottom: 600px;
             left: 110px;
         }
@@ -207,7 +207,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][5][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
+            width: {{$data['data']['percentIndicator'][5][1] >= 10 ? (2280/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
             bottom: 385px;
             left: 110px;
         }
@@ -219,21 +219,22 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][6][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][6][1] : 135 }}px;
+            width: {{$data['data']['percentIndicator'][6][1] >= 10 ? (2280/100) * $data['data']['percentIndicator'][6][1] : 135 }}px;
             bottom: 280px;
             left: 110px;
         }
         @endisset
+        @isset($data['data']['percentIndicator'][7])
         .bannga-9 {
             height: 90px;
             background-color: #FACC14;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 135px;
-            bottom: 170px;
+            width: {{$data['data']['percentIndicator'][7][1] >= 10 ? (2280/100) * $data['data']['percentIndicator'][7][1] : 135 }}px;            bottom: 170px;
             left: 110px;
         }
+        @endisset
     </style>
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
@@ -276,7 +277,9 @@
             <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0 bannga-8">{{ $data['data']['percentIndicator'][6][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 yd3 ff1 fs4 fc2 sc0 ls0 ws0">1.9. Trách nhiệm - Rộng lượng - Hào phóng</div>
-            <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-9">9%</div>
+        @isset($data['data']['percentIndicator'][7])
+            <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-9">$data['data']['percentIndicator'][7][1]%</div>
+        @endisset    
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
         <?php $page = $page + 1; ?>

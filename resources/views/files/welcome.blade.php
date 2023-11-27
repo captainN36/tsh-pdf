@@ -137,7 +137,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 2300px;
+            width: 2280px;
             bottom: 1030px;
             left: 110px;
         }

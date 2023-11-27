@@ -447,6 +447,114 @@
 @endfor
 
 <div id="pfd" class="pf w0 h0" data-page-no="15">
+    <style>
+        @isset($data['data']['percentIndicator'][0])
+        .bannga-1 {
+            height: 79px;
+            background-color: #DC3444;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: {{( 1940/100) * $data['data']['percentIndicator'][0][1] }}px;
+            top: 320px;
+            left: 90px;
+        }
+        @endisset
+        @isset($data['data']['percentIndicator'][1])
+        .bannga-2 {
+            height: 79px;
+            background-color: #CA8A03;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: {{( 1940/100) * $data['data']['percentIndicator'][1][1] }}px;
+            top: 410px;
+            left: 90px;
+        }
+        @endisset
+        @isset($data['data']['percentIndicator'][2])
+        .bannga-3 {
+            height: 79px;
+            background-color: #21C55D;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: {{( 1940/100) * $data['data']['percentIndicator'][2][1] }}px;
+            top: 500px;
+            left: 90px;
+        }
+        @endisset
+        @isset($data['data']['percentIndicator'][3])
+        .bannga-4 {
+            height: 79px;
+            background-color: #166434;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: {{( 1940/100) * $data['data']['percentIndicator'][3][1] }}px;
+            top: 590px;
+            left: 90px;
+        }
+        @endisset
+        @isset($data['data']['percentIndicator'][4])
+        .bannga-5 {
+            height: 79px;
+            background-color: #1C4ED8;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: {{( 1940/100) * $data['data']['percentIndicator'][4][1] }}px;
+            top: 680px;
+            left: 90px;
+        }
+        @endisset
+        @isset($data['data']['percentIndicator'][5])
+        .bannga-6 {
+            height: 79px;
+            background-color: #2463EB;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: {{( 1940/100) * $data['data']['percentIndicator'][5][1] }}px;
+            top: 770px;
+            left: 90px;
+        }
+        @endisset
+        @isset($data['data']['percentIndicator'][6])
+        .bannga-7 {
+            height: 79px;
+            background-color: #9333E9;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: {{( 1940/100) * $data['data']['percentIndicator'][6][1] }}px;
+            top: 860px;
+            left: 90px;
+        }
+        @endisset
+        .bannga-8 {
+            height: 79px;
+            background-color: #EC4899;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 2px;
+            top: 950px;
+            left: 90px;
+        }
+        @isset($data['data']['percentIndicator'][7])
+        .bannga-9 {
+            height: 79px;
+            background-color: #FACC14;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: {{( 1940/100) * $data['data']['percentIndicator'][7][1] }}px;
+            top: 1040px;
+            left: 90px;
+        }
+        @endisset
+    </style>
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/bannga.png') }}">
@@ -459,37 +567,37 @@
 
         <div class="t m0 x5 h8 yc3 ff1 fs4 fc2 sc0 ls0 ws0">1.1. Mạnh mẽ - Độc lập - Tự tin</div>
         @isset($data['data']['percentIndicator'][0])
-            <div class="t m0 x33 h10 yc4 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][0][1] }}%</div>
+            <div class="t m0 x33 h10 yc4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-1">{{ $data['data']['percentIndicator'][0][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 yc5 ff1 fs4 fc2 sc0 ls0 ws0">1.2. Lắng nghe - Khéo léo - Nhạy cảm</div>
         @isset($data['data']['percentIndicator'][1])
-            <div class="t m0 x34 h10 yc6 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][1][1] }}%</div>
+            <div class="t m0 x34 h10 yc6 ff1 fs9 fc0 sc0 ls0 ws0 bannga-2">{{ $data['data']['percentIndicator'][1][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 yc7 ff1 fs4 fc2 sc0 ls0 ws0">1.3. Sáng tạo - Hoạt bát - Lạc quan</div>
         @isset($data['data']['percentIndicator'][2])
-            <div class="t m0 x35 h10 yc8 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][2][1] }}%</div>
+            <div class="t m0 x35 h10 yc8 ff1 fs9 fc0 sc0 ls0 ws0 bannga-3">{{ $data['data']['percentIndicator'][2][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 yc9 ff1 fs4 fc2 sc0 ls0 ws0">1.4. Cẩn thận - Cầu toàn - Thực tế</div>
         @isset($data['data']['percentIndicator'][3])
-            <div class="t m0 x34 h10 yca ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][3][1] }}%</div>
+            <div class="t m0 x34 h10 yca ff1 fs9 fc0 sc0 ls0 ws0 bannga-4">{{ $data['data']['percentIndicator'][3][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 ycb ff1 fs4 fc2 sc0 ls0 ws0">1.5. Năng động - Linh hoạt - Tò mò</div>
         @isset($data['data']['percentIndicator'][4])
-            <div class="t m0 x35 h10 ycc ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][4][1] }}%</div>
+            <div class="t m0 x35 h10 ycc ff1 fs9 fc0 sc0 ls0 ws0 bannga-5">{{ $data['data']['percentIndicator'][4][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 ycd ff1 fs4 fc2 sc0 ls0 ws0">1.6. Quan tâm - Yêu thương - Kiểm soát</div>
-            <div class="t m0 x12 h10 yce ff1 fs9 fc0 sc0 ls0 ws0">2%</div>
+            <div class="t m0 x12 h10 yce ff1 fs9 fc0 sc0 ls0 ws0 bannga-6">2%</div>
         <div class="t m0 x5 h8 ycf ff1 fs4 fc2 sc0 ls0 ws0">1.7. Thông thái - Khám phá - Truyền đạt</div>
         @isset($data['data']['percentIndicator'][5])
-            <div class="t m0 x36 h10 yd0 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][5][1] }}%</div>
+            <div class="t m0 x36 h10 yd0 ff1 fs9 fc0 sc0 ls0 ws0 bannga-7">{{ $data['data']['percentIndicator'][5][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 yd1 ff1 fs4 fc2 sc0 ls0 ws0">1.8. Công bằng - Tập trung - Lý tưởng</div>
         @isset($data['data']['percentIndicator'][6])
-            <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][6][1] }}%</div>
+            <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0 bannga-8">{{ $data['data']['percentIndicator'][6][1] }}%</div>
         @endisset
         <div class="t m0 x5 h8 yd3 ff1 fs4 fc2 sc0 ls0 ws0">1.9. Trách nhiệm - Rộng lượng - Hào phóng</div>
         @isset($data['data']['percentIndicator'][7])
-            <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0">{{ $data['data']['percentIndicator'][7][1] }}%</div>
+            <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-9">{{ $data['data']['percentIndicator'][7][1] }}%</div>
         @endisset
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

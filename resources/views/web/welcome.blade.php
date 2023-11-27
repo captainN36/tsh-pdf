@@ -227,7 +227,7 @@
         $inputString .= $nextYearIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 47;
+    $linesPerPart = 45;
     foreach($lines as $key => $line) {
         if ($line == "") {
             $lines[$key] = $line . "\r";
@@ -249,30 +249,33 @@
             $parts[] = implode("\n", $part);
         }
     }
-    $array = [];
     $first = $parts[0];
     $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\n", " ", $first);
+    $first = str_replace("<br>", "\r", $first);
     for ($i = 1; $i < count($parts); $i++) {
         $html = str_replace("\r\n ", "\r", $parts[$i]);
         $html = str_replace("\n", " ", $parts[$i]);
+        $html = str_replace("<br>", "\r", $parts[$i]);
         $array[$i] = $html;
     }
 ?>
-    <div id="pfd" class="pf w0 h0" data-page-no="10">
-        <div class="pc pcb w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                 src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                {!! nl2br(e($first)) !!}
-            </div>
 
-            <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
+<div id="pfd" class="pf w0 h0" data-page-no="10">
+    <div class="pc pcb w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+            {!! nl2br(e($first)) !!}
         </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+
+        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
     </div>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+</div>
+
 @for($i = 1; $i <= count($array); $i++)
 <?php $page++; ?>
 <div id="pfd" class="pf w0 h0" data-page-no="10">
@@ -406,7 +409,7 @@
 </div>
 
 <?php
-    $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'])
+    $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content']);
 ?>
 @for($i = 1; $i <= count($nextMonthIndicator); $i++)
 <?php $page++; ?>
@@ -1151,7 +1154,7 @@
             {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
         </div>
         <?php
-            $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
+            $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content']);
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
@@ -1186,7 +1189,7 @@
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 740px; text-align: justify;">
-            {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
+            {!! nl2br(e($actionThinkingIndicator[1])) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

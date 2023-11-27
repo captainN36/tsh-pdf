@@ -508,40 +508,40 @@
             left: 90px;
         }
         @endisset
-        @isset($data['data']['percentIndicator'][5])
         .bannga-6 {
             height: 79px;
             background-color: #2463EB;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][5][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
+            width: 135px;
             top: 770px;
             left: 90px;
         }
-        @endisset
-        @isset($data['data']['percentIndicator'][6])
+        @isset($data['data']['percentIndicator'][5])
         .bannga-7 {
             height: 79px;
             background-color: #9333E9;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: {{$data['data']['percentIndicator'][6][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][6][1] : 135 }}px;
+            width: {{$data['data']['percentIndicator'][5][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
             top: 860px;
             left: 90px;
         }
         @endisset
+        @isset($data['data']['percentIndicator'][6])
         .bannga-8 {
             height: 79px;
             background-color: #EC4899;
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 135px;
+            width: {{$data['data']['percentIndicator'][6][1] >= 10 ? ( 1940/100) * $data['data']['percentIndicator'][6][1] : 135 }}px;
             top: 950px;
             left: 90px;
         }
+        @endisset
         @isset($data['data']['percentIndicator'][7])
         .bannga-9 {
             height: 79px;

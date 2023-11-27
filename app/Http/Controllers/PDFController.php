@@ -18,8 +18,8 @@ class PDFController extends Controller
     public function view(Request $request)
     {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/0c82f030-4167-46f5-92d7-4eb50227015e',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyNywicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDA3NDc0MzAsImV4cCI6MTcwMzMzOTQzMH0.XQ_14YcRzV2wzbg_GckpStIGyiVZnrWIz6adtwE_X3Q'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/8395181d-c755-4794-8457-bd5a0ca5d1d0',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzAwNDUxMjU2LCJleHAiOjE3MDMwNDMyNTZ9.qWBKVswOKczORbIGEQZQrC4IGWr0QqpYLetpEWBxKrA'
         ];
         $data = $this->getData($request->all());
 
@@ -33,8 +33,8 @@ class PDFController extends Controller
      */
     public function viewFile (Request $request) {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/9dbbdbf0-d09d-45a4-9767-f2cb4858543e',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyNywicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDA3NDc0MzAsImV4cCI6MTcwMzMzOTQzMH0.XQ_14YcRzV2wzbg_GckpStIGyiVZnrWIz6adtwE_X3Q'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/8395181d-c755-4794-8457-bd5a0ca5d1d0',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzAwNDUxMjU2LCJleHAiOjE3MDMwNDMyNTZ9.qWBKVswOKczORbIGEQZQrC4IGWr0QqpYLetpEWBxKrA'
         ];
         $fileName = $this->pdf($params);
         return redirect(asset('/pdf/' . $fileName));
@@ -45,7 +45,7 @@ class PDFController extends Controller
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/0c82f030-4167-46f5-92d7-4eb50227015e',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyNywicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDA3NDc0MzAsImV4cCI6MTcwMzMzOTQzMH0.XQ_14YcRzV2wzbg_GckpStIGyiVZnrWIz6adtwE_X3Q'
         ];
-        $fileName = $this->pdf($params);
+        $fileName = $this->pdf($request->all());
 
         $filePath = public_path() . '/pdf/' . $fileName;
         if (file_exists($filePath)) {

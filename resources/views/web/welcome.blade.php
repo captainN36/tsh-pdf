@@ -155,9 +155,17 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 28;
+            $linesPerPartFirst = 24;
             $linesPerPartRest = 55;
+            foreach($lines as $key => $line) {
+                if ($line == "") {
+                    $lines[$key] = $line . "\r";
+                }
 
+                if (strlen($line) < 100) {
+                    $lines[$key] = $line . "\r";
+                }
+            }
             $parts = [];
 
             for ($i = 0; $i < count($lines); $i += $linesPerPart) {
@@ -172,15 +180,15 @@
                 }
             }
             $array = [];
-            $first = preg_replace("/\n/", "\r", $parts[0], 2);
-            $first = str_replace("\n ", '', $first);
+            $first = $parts[0];
+            $first = str_replace("\r\n", "\r", $first);
             $first = str_replace("\n", " ", $first);
             for ($i = 1; $i < count($parts); $i++) {
-                $html = str_replace("\n ", '', $parts[$i]);
-                $html = str_replace("\n\n", "\r", $parts[$i]);
+                $html = str_replace("\r\n ", "\r", $parts[$i]);
                 $html = str_replace("\n", " ", $parts[$i]);
                 $array[$i] = $html;
             }
+
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             {!! nl2br(e($first)) !!}
@@ -219,8 +227,16 @@
         $inputString .= $nextYearIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 55;
+    $linesPerPart = 47;
+    foreach($lines as $key => $line) {
+        if ($line == "") {
+            $lines[$key] = $line . "\r";
+        }
 
+        if (strlen($line) < 100) {
+            $lines[$key] = $line . "\r";
+        }
+    }
     $parts = [];
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {
@@ -234,11 +250,11 @@
         }
     }
     $array = [];
-    $first = preg_replace("/\n/", "<br>", $parts[0], 2);
-    $first = str_replace("\n ", '', $first);
+    $first = $parts[0];
+    $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\n", " ", $first);
     for ($i = 1; $i < count($parts); $i++) {
-        $html = str_replace("\n ", '', $parts[$i]);
+        $html = str_replace("\r\n ", "\r", $parts[$i]);
         $html = str_replace("\n", " ", $parts[$i]);
         $array[$i] = $html;
     }
@@ -248,7 +264,7 @@
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
             <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                {!! $first !!}
+                {!! nl2br(e($first)) !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -265,7 +281,7 @@
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if (isset($array[$i]))
-                {!! $array[$i] !!}
+                {!! nl2br(e($array[$i])) !!}
             @endif
         </div>
 
@@ -283,8 +299,16 @@
         $inputString .= $twoYearsLaterIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 55;
+    $linesPerPart = 47;
+    foreach($lines as $key => $line) {
+        if ($line == "") {
+            $lines[$key] = $line . "\r";
+        }
 
+        if (strlen($line) < 100) {
+            $lines[$key] = $line . "\r";
+        }
+    }
     $parts = [];
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {
@@ -298,11 +322,11 @@
         }
     }
     $array = [];
-    $first = preg_replace("/\n/", "<br>", $parts[0], 2);
-    $first = str_replace("\n ", '', $first);
+    $first = $parts[0];
+    $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\n", " ", $first);
     for ($i = 1; $i < count($parts); $i++) {
-        $html = str_replace("\n ", '', $parts[$i]);
+        $html = str_replace("\r\n ", "\r", $parts[$i]);
         $html = str_replace("\n", " ", $parts[$i]);
         $array[$i] = $html;
     }
@@ -313,7 +337,7 @@
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                {!! $first !!}
+                {!! nl2br(e($first)) !!}
             </div>
 
             <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -331,7 +355,7 @@
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if(isset($array[$i]))
-            {!! $array[$i] !!}
+            {!! nl2br($array[$i]) !!}
             @endif
         </div>
 

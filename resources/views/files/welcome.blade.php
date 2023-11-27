@@ -137,7 +137,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 2360px;
+            width: 2340px;
             bottom: 1030px;
             left: 110px;
         }
@@ -241,7 +241,7 @@
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 
-        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1300px; text-align: justify; white-space: normal; top: 70px; left: 450px">
+        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1330px; text-align: justify; white-space: normal; top: 70px; left: 450px">
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
 

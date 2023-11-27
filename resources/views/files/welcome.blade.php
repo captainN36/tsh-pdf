@@ -422,7 +422,7 @@
             align-items: center;
             width: {{$data['data']['percentIndicator'][0][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][0][1] : 135 }}px;
             bottom: 1030px;
-            left: 90px;
+            left: 110px;
         }
         @endisset
         @isset($data['data']['percentIndicator'][1])
@@ -434,7 +434,7 @@
             align-items: center;
             width: {{$data['data']['percentIndicator'][1][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][1][1] : 135 }}px;
             bottom: 920px;
-            left: 90px;
+            left: 110px;
         }
         @endisset
         @isset($data['data']['percentIndicator'][2])
@@ -446,7 +446,7 @@
             align-items: center;
             width: {{$data['data']['percentIndicator'][2][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
             bottom: 750x;
-            left: 90px;
+            left: 110px;
         }
         @endisset
         @isset($data['data']['percentIndicator'][3])
@@ -458,7 +458,7 @@
             align-items: center;
             width: {{$data['data']['percentIndicator'][3][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][3][1] : 135 }}px;
             bottom: 710px;
-            left: 100px;
+            left: 110px;
         }
         @endisset
         @isset($data['data']['percentIndicator'][4])
@@ -470,7 +470,7 @@
             align-items: center;
             width: {{$data['data']['percentIndicator'][4][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][4][1] : 135 }}px;
             bottom: 600px;
-            left: 100px;
+            left: 110px;
         }
         @endisset
         .bannga-6 {
@@ -481,7 +481,7 @@
             align-items: center;
             width: 135px;
             bottom: 495px;
-            left: 100px;
+            left: 110px;
         }
         @isset($data['data']['percentIndicator'][5])
         .bannga-7 {
@@ -492,7 +492,7 @@
             align-items: center;
             width: {{$data['data']['percentIndicator'][5][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
             bottom: 390px;
-            left: 100px;
+            left: 110px;
         }
         @endisset
         @isset($data['data']['percentIndicator'][6])
@@ -504,7 +504,7 @@
             align-items: center;
             width: {{$data['data']['percentIndicator'][6][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][6][1] : 135 }}px;
             bottom: 280px;
-            left: 100px;
+            left: 110px;
         }
         @endisset
         @isset($data['data']['percentIndicator'][7])
@@ -516,7 +516,7 @@
             align-items: center;
             width: {{$data['data']['percentIndicator'][7][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][7][1] : 135 }}px;
             bottom: 57.410000px;
-            left: 100px;
+            left: 110px;
         }
         @endisset
     </style>

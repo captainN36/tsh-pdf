@@ -139,7 +139,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][0][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][0][1] : 135 }}px;
-            bottom: 950px;
+            bottom: 1050px;
             left: 90px;
         }
         @endisset
@@ -163,7 +163,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][2][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
-            bottom: 810x;
+            bottom: 800x;
             left: 90px;
         }
         @endisset
@@ -187,7 +187,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][4][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][4][1] : 135 }}px;
-            bottom: 610px;
+            bottom: 600px;
             left: 90px;
         }
         @endisset
@@ -198,7 +198,7 @@
             justify-content: center;
             align-items: center;
             width: 135px;
-            bottom: 490px;
+            bottom: 495px;
             left: 90px;
         }
         @isset($data['data']['percentIndicator'][5])
@@ -209,7 +209,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][5][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
-            bottom: 100px;
+            bottom: 110px;
             left: 90px;
         }
         @endisset
@@ -221,7 +221,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][6][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][6][1] : 135 }}px;
-            bottom: 380px;
+            bottom: 480px;
             left: 90px;
         }
         @endisset

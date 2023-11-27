@@ -86,7 +86,7 @@
             @php
                 $fileName = $number - 1;
             @endphp
-            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2360px; bottom: 900px">
+            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2370px; bottom: 900px">
         </div>
 
         @php
@@ -101,7 +101,7 @@
                 }
             }
         @endphp
-        <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0">
+        <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0" style="left: 90px">
             {!! $string !!}
         </div>
         <div class="t m0 x1a h9 yb9 ff4 fs4 fc2 sc0 ls0 ws0">Chu kỳ vận số của bạn</div>

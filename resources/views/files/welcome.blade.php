@@ -163,7 +163,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][2][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][2][1] : 135 }}px;
-            bottom: 790x;
+            bottom: 770x;
             left: 90px;
         }
         @endisset
@@ -209,7 +209,7 @@
             justify-content: center;
             align-items: center;
             width: {{$data['data']['percentIndicator'][5][1] >= 10 ? (2360/100) * $data['data']['percentIndicator'][5][1] : 135 }}px;
-            bottom: 380px;
+            bottom: 390px;
             left: 90px;
         }
         @endisset
@@ -244,7 +244,7 @@
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 
-        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1250px; text-align: justify; white-space: normal; top: 70px; left: 490px">
+        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1270px; text-align: justify; white-space: normal; top: 70px; left: 490px">
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
 

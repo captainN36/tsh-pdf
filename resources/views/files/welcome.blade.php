@@ -1159,7 +1159,7 @@
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
-            {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
+            {!! nl2br(e($actionThinkingIndicator[1])) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1173,43 +1173,43 @@
 
 
 <?php
-            $natureIndicator1 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator', $data['data']['natureIndicator']['data'][0], false);
-            $natureIndicator2 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator2', $data['data']['natureIndicator']['data'][1], false);
+    $natureIndicator1 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator', $data['data']['natureIndicator']['data'][0], false);
+    $natureIndicator2 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator2', $data['data']['natureIndicator']['data'][1], false);
 
-            $natureIndicator1 = preg_replace("/\n/", "\r", $natureIndicator1[1], 1);
-            $natureIndicator2 = preg_replace("/\n/", "\r", $natureIndicator2[1], 1);
-            $natureIndicator[1] = $natureIndicator1;
-            $natureIndicator[2] = $natureIndicator2;
-            $inputString = '';
-            for ($i = 1; $i <= count($natureIndicator); $i++) {
-                $inputString .= $natureIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
+    $natureIndicator1 = preg_replace("/\n/", "\r", $natureIndicator1[1], 1);
+    $natureIndicator2 = preg_replace("/\n/", "\r", $natureIndicator2[1], 1);
+    $natureIndicator[1] = $natureIndicator1;
+    $natureIndicator[2] = $natureIndicator2;
+    $inputString = '';
+    for ($i = 1; $i <= count($natureIndicator); $i++) {
+        $inputString .= $natureIndicator[$i];
+    }
+    $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 20;
-            $linesPerPartRest = 55;
+    $linesPerPartFirst = 20;
+    $linesPerPartRest = 55;
 
-            $parts = [];
+    $parts = [];
 
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+        $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
-                $part = array_slice($lines, $i, $linesPerPart);
+        $part = array_slice($lines, $i, $linesPerPart);
 
-                $part = array_filter($part);
+        $part = array_filter($part);
 
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            for ($i = 0; $i < count($parts); $i++) {
-                $html = str_replace("\n ", '', $parts[$i]);
-                $html = str_replace("\n\n", "\r", $parts[$i]);
-                $html = str_replace("\n", " ", $parts[$i]);
-                $array[$i] = $html;
-            }
-        ?>
+        if (!empty($part)) {
+            $parts[] = implode("\n", $part);
+        }
+    }
+    $array = [];
+    for ($i = 0; $i < count($parts); $i++) {
+        $html = str_replace("\n ", '', $parts[$i]);
+        $html = str_replace("\n\n", "\r", $parts[$i]);
+        $html = str_replace("\n", " ", $parts[$i]);
+        $array[$i] = $html;
+    }
+?>
 
 
 <div id="pf7" class="pf w0 h0" data-page-no="33">

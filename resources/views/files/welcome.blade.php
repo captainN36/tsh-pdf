@@ -411,6 +411,14 @@
     @endfor
 @endif
 
+<?php
+    $array = [];
+    foreach ($data['data']['percentIndicator'] as $key => $val) {
+        $array[] = $val[1];
+    }
+    $max = max($array);
+?>
+
 <div id="pfd" class="pf w0 h0" data-page-no="15">
     <style>
         @isset($data['data']['percentIndicator'][0])

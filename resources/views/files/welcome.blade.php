@@ -354,7 +354,7 @@
 
             <?php
             $monthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'monthIndicator', $data['data']['monthIndicator']['description'], false);
-            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content']);
+            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content'], false);
             $page = $page + 1;
 
             $inputString = '';
@@ -366,7 +366,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 15;
+            $linesPerPartFirst = 20;
             $linesPerPartRest = 30;
             foreach($lines as $key => $line) {
 

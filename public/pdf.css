@@ -8360,6 +8360,11 @@ body {
     }
 
 }
+td {
+    text-align: center;
+    width: 66px;
+    max-width: 66px;
+}
 .pdf7-table__container {
     position: relative;
     display: flex;
@@ -8411,4 +8416,6 @@ body {
     white-space: nowrap;
     text-align: center;
     padding: 40px 30px;
+    width: auto;
+    max-width: unset;
 }

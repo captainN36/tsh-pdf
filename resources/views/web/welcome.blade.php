@@ -581,7 +581,7 @@
                 left: 90px;
             }
         @endisset
-
+        @isset($data['data']['percentIndicator'][5])
         .bannga-6 {
             height: 79px;
             background-color: #2463EB;
@@ -592,7 +592,8 @@
             top: 770px;
             left: 90px;
         }
-
+        @endisset
+        
         @isset($data['data']['percentIndicator'][6])
             .bannga-7 {
                 height: 79px;

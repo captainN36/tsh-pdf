@@ -1472,10 +1472,19 @@
                 {!! $data['data']['karmicIndicator']['description'] !!}
             </div>
             <?php
-            $karmicIndicator = [];
-            foreach ($data['data']['karmicIndicator']['data'] as $key => $item) {
-                $karmicIndicator[] = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator-' . $key, $item, false);
-            }
+                $karmicIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator_description', $data['data']['karmicIndicator']['description'], false);
+
+                $karmicIndicator = [];
+                foreach ($data['data']['karmicIndicator']['data'] as $key => $item) {
+                    $karmicIndicator[] = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator-' . $key, $item, false);
+                }
+
+                $new_data = [];
+                foreach ($karmicIndicator as $values) {
+                    foreach ($values as $val) {
+                        $new_data[] = $val;
+                    }
+                }
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 700px; text-align: justify">

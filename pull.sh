@@ -5,3 +5,7 @@ rm -rf public/html;
 git add .;
 git commit -m "commit";
 git pull origin new-view;
+php artisan cache:clear;
+php artisan view:clear;
+php artisan route:clear;
+php artisan config:clear;

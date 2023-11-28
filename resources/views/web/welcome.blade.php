@@ -1416,29 +1416,25 @@
                     $strength->{$value[0]} = $text;
                 }
             @endphp
-            <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 335px;bottom: 947px;width: 73%;height: 115px;max-width: 73%;">
-                <style>
-                    .strength {
-                        height: 167px;
-                        text-align: center;
-                    }
-                </style>
-                <tr class="strength">
-                    <td>{{ $strength->{3} ?? null }}</td>
-                    <td>{{ $strength->{6} ?? null }}</td>
-                    <td>{{ $strength->{9} ?? null }}</td>
-                </tr>
-                <tr class="strength">
-                    <td>{{ $strength->{2} ?? null }}</td>
-                    <td>{{ $strength->{5} ?? null }}</td>
-                    <td>{{ $strength->{8} ?? null }}</td>
-                </tr>
-                <tr class="strength">
-                    <td>{{ $strength->{1} ?? null }}</td>
-                    <td>{{ $strength->{4} ?? null }}</td>
-                    <td>{{ $strength->{7} ?? null }}</td>
-                </tr>
-            </table>
+            <div class="strength-table">
+                <table class="pdf7-table">
+                    <tr>
+                        <td>{{ $strength->{3} ?? null }}</td>
+                        <td>{{ $strength->{6} ?? null }}</td>
+                        <td>{{ $strength->{9} ?? null }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ $strength->{2} ?? null }}</td>
+                        <td>{{ $strength->{5} ?? null }}</td>
+                        <td>{{ $strength->{8} ?? null }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ $strength->{1} ?? null }}</td>
+                        <td>{{ $strength->{4} ?? null }}</td>
+                        <td>{{ $strength->{7} ?? null }}</td>
+                    </tr>
+                </table>
+            </div>
             @php
                 $return = [];
                 if (isset($strength->{1}) && isset($strength->{2}) && isset($strength->{3})) {

@@ -8365,6 +8365,13 @@ td {
     width: 66px;
     max-width: 66px;
 }
+
+.strength-table {
+    margin-top: 120px;
+    padding: 0 110px;
+    display: flex;
+    justify-content: center;
+}
 .pdf7-table__container {
     position: relative;
     display: flex;
@@ -8383,6 +8390,7 @@ td {
     font-weight: bold;
     border-collapse: collapse;
     color: rgb(38, 91, 166);
+    position: relative;
 }
 .pdf7-table tr td {
     min-width: 60px;

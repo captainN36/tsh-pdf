@@ -190,7 +190,7 @@
                 }
             ?>
             ?>
-        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify; bottom: 900px">
+        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify; bottom: 1010px">
             {!! nl2br(e($first)) !!}
         </div>
 

@@ -401,7 +401,6 @@
             }        ?>
             <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; bottom: 1010px; text-align: justify;">
                 @if ($nowMonthIndicator)
-                    {!! nl2br(e($first)) !!}
                 @endif
             </div>
 

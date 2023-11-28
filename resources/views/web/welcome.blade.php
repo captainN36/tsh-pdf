@@ -1939,44 +1939,7 @@
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">
             </div>
             <div>
-                <style>
-                    tr.name {
-                        height: 173px;
-                        text-align: center;
-                    }
-
-                    tr.summary {
-                        height: 173px;
-                        text-align: center;
-                    }
-
-                    tr.chiso1 {
-                        height: 126px;
-                        text-align: center;
-                    }
-
-                    tr.chiso2 {
-                        height: 118px;
-                        text-align: center;
-                    }
-
-                    tr.chiso3 {
-                        height: 118px;
-                        text-align: center;
-                    }
-
-                    tr.chiso4 {
-                        height: 118px;
-                        text-align: center;
-                    }
-
-                    td {
-                        text-align: center;
-                        width: 66px;
-                        max-width: 66px;
-                    }
-                </style>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 109px;bottom: 888px;width: 62%;height: 115px;max-width: 62%;">
+                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0 report-table" style="left: 109px;bottom: 888px;width: 62%;max-width: 62%;">
                     <tr class="name">
                         <td>{{ $name->{3} ?? null }}</td>
                         <td>{{ $name->{6} ?? null }}</td>
@@ -2005,9 +1968,8 @@
                     </tr>
                 </table>
             </div>
-
             <div>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 109px;bottom: 630px;width: 62%;height: 115px;max-width: 62%;">
+                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0 report-table" style="left: 109px;bottom: 630px;width: 62%;max-width: 62%;">
                     <tr class="summary">
                         <td>{{ $summary->{3} ?? null }}</td>
                         <td>{{ $summary->{6} ?? null }}</td>

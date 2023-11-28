@@ -8388,10 +8388,27 @@ body {
     padding: 0 10px;
     width: auto;
     max-width: unset;
+    text-align: center;
 }
 .pdf7-table tr td:last-child {
     border-right: 0;
 }
 .pdf7-table tr:last-child td {
     border-bottom: 0;
+}
+.report-table {
+    border-spacing: 15px;
+}
+.report-table tr {
+
+}
+.report-table tr td {
+    border-radius: 10px;
+    box-shadow: 5px 5px 9px 3px #b8c1cf;
+    background: rgb(214,218,223);
+    background: linear-gradient(90deg, rgba(214,218,223,1) 0%, rgba(240,241,243,1) 90%);
+    min-width: 70px;
+    white-space: nowrap;
+    text-align: center;
+    padding: 40px 30px;
 }

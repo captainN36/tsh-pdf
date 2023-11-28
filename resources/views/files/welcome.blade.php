@@ -366,7 +366,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 17;
+            $linesPerPartFirst = 10;
             $linesPerPartRest = 42;
             foreach($lines as $key => $line) {
 

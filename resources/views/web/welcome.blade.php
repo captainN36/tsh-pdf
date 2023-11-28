@@ -804,12 +804,13 @@
             for ($i = 1; $i <= count($missionIndicator_description); $i++) {
                 $inputString .= $missionIndicator_description[$i];
             }
+            $inputString .= "\r\r";
             for ($i = 1; $i <= count($missionIndicator); $i++) {
                 $inputString .= $missionIndicator[$i];
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 35;
+            $linesPerPartFirst = 32;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 

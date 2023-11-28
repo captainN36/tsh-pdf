@@ -1472,59 +1472,6 @@
                 {!! $data['data']['karmicIndicator']['description'] !!}
             </div>
 
-            <?php
-                $karmicIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator_description', $data['data']['karmicIndicator']['description'], false);
-                $data = [];
-                foreach ($data['data']['karmicIndicator']['data'] as $key => $item) {
-                    $data[$key] = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator-' . $key, $item, false);
-                }
-                
-                /* $inputString = '';
-
-                for ($i = 1; $i <= count($attitudeIndicator_description); $i++) {
-                    $inputString .= $attitudeIndicator_description[$i];
-                }
-
-                for ($i = 1; $i <= count($attitudeIndicator); $i++) {
-                    $inputString .= $attitudeIndicator[$i];
-                }
-                $lines = explode("\n", $inputString);
-
-                $linesPerPartFirst = 35;
-                $linesPerPartRest = 45;
-                foreach($lines as $key => $line) {
-
-                    if (strlen($line) < 100) {
-                        $lines[$key] = $line . "\r";
-                    }
-                }
-                $parts = [];
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                    $part = array_slice($lines, $i, $linesPerPart);
-
-                    $part = array_filter($part);
-
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = $parts[0];
-                $first = str_replace("\r\n", "\r", $first);
-                $first = str_replace("\n", " ", $first);
-                $array[0] = $first;
-                if (count($parts) > 1) {
-                    for ($i = 1; $i < count($parts); $i++) {
-                        $html = str_replace("\r\n ", "\r", $parts[$i]);
-                        $html = str_replace("\n", " ", $parts[$i]);
-                        $array[$i] = $html;
-                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                    }
-                } */
-            ?>
-
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 700px; text-align: justify">
                 @foreach ($data['data']['karmicIndicator']['data'] as $item)

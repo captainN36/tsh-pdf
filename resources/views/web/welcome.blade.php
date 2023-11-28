@@ -144,31 +144,28 @@
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}</div>
 
-        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! $data['data']['yearIndicator']['description'] !!}
-        </div>
+        
         <?php
             $yearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'yearIndicator', $data['data']['yearIndicator']['description'], false);
             $nowYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
             $inputString = '';
+            for ($i = 1; $i <= count($yearIndicator); $i++) {
+                $inputString .= $yearIndicator[$i];
+            }
             for ($i = 1; $i <= count($nowYearIndicator); $i++) {
                 $inputString .= $nowYearIndicator[$i];
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 24;
+            $linesPerPartFirst = 31;
             $linesPerPartRest = 55;
             foreach($lines as $key => $line) {
-                if ($line == "") {
-                    $lines[$key] = $line . "\r";
-                }
 
                 if (strlen($line) < 100) {
                     $lines[$key] = $line . "\r";
                 }
             }
             $parts = [];
-
             for ($i = 0; $i < count($lines); $i += $linesPerPart) {
                 $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
 
@@ -187,11 +184,12 @@
             for ($i = 1; $i < count($parts); $i++) {
                 $html = str_replace("\r\n ", "\r", $parts[$i]);
                 $html = str_replace("\n", " ", $parts[$i]);
+                
                 $array[$i] = $html;
+                $array[$i] = str_replace("\r \r", "\r", $array[$i]);
             }
-
         ?>
-        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify; bottom: 900px">
             {!! nl2br(e($first)) !!}
         </div>
 
@@ -237,6 +235,7 @@
         if (strlen($line) < 100) {
             $lines[$key] = $line . "\r";
         }
+        $lines[$key] = str_replace("<br>", "\r", $line);
     }
     $parts = [];
 
@@ -251,13 +250,12 @@
         }
     }
     $first = $parts[0];
+    $first = preg_replace("/\n/", "\r", $first, 2);
     $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\n", " ", $first);
-    $first = str_replace("<br>", "\r", $first);
     for ($i = 1; $i < count($parts); $i++) {
         $html = str_replace("\r\n ", "\r", $parts[$i]);
         $html = str_replace("\n", " ", $parts[$i]);
-        $html = str_replace("<br>", "\r", $parts[$i]);
         $array[$i] = $html;
     }
 ?>
@@ -303,12 +301,8 @@
         $inputString .= $twoYearsLaterIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 47;
+    $linesPerPart = 52;
     foreach($lines as $key => $line) {
-        if ($line == "") {
-            $lines[$key] = $line . "\r";
-        }
-
         if (strlen($line) < 100) {
             $lines[$key] = $line . "\r";
         }
@@ -329,6 +323,7 @@
     $first = $parts[0];
     $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\n", " ", $first);
+    $first = str_replace("\r\r", "\r", $first);
     for ($i = 1; $i < count($parts); $i++) {
         $html = str_replace("\r\n ", "\r", $parts[$i]);
         $html = str_replace("\n", " ", $parts[$i]);
@@ -395,7 +390,8 @@
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
         <?php
-            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content']);
+            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['description'], false);
+            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content'], false);
             $page = $page + 1;
         ?>
         <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; bottom: 730px; text-align: justify;">

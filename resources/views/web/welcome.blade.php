@@ -726,6 +726,7 @@
             for ($i = 1; $i <= count($lifePathIndicator_description); $i++) {
                 $inputString .= $lifePathIndicator_description[$i];
             }
+            $inputString .= "\r\r";
             for ($i = 1; $i <= count($lifePathIndicator); $i++) {
                 $result = preg_replace('/\·\n\n/', '·  ', $lifePathIndicator[$i]);
                 $result = preg_replace('/\.\n\n/', '.  ', $result);

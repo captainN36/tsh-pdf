@@ -420,6 +420,7 @@
     for ($i = 1; $i <= count($nextMonthIndicator); $i++) {
         $inputString .= $nextMonthIndicator[$i];
     }
+    $inputString .= "\r";
     for ($i = 1; $i <= count($twoMonthsLaterIndicator); $i++) {
         $inputString .= $twoMonthsLaterIndicator[$i];
     }
@@ -447,6 +448,7 @@
     $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\f", " ", $first);
     $first = str_replace("\n", " ", $first);
+    dd($first);
     $array[0] = $first;
     if (count($parts) > 1) {
         for ($i = 1; $i < count($parts); $i++) {

@@ -390,7 +390,7 @@
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
         <?php
-            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['description'], false);
+            $monthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'monthIndicator', $data['data']['monthIndicator']['description'], false);
             $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content'], false);
             $page = $page + 1;
         ?>
@@ -650,6 +650,7 @@
             {!! $data['data']['lifePathIndicator']['description'] !!}
         </div>
         <?php
+            $lifePathIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePath_description', $data['data']['lifePathIndicator']['description'], false);
             $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($lifePathIndicator); $i++) {
@@ -724,6 +725,7 @@
             {!! $data['data']['missionIndicator']['description'] !!}
         </div>
         <?php
+            $missionIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator_description', $data['data']['missionIndicator']['description'], false);
             $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($missionIndicator); $i++) {
@@ -853,6 +855,7 @@
             {!! $data['data']['personalIndicator']['description'] !!}
         </div>
     <?php
+        $personalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator_description', $data['data']['personalIndicator']['description']);
         $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator', $data['data']['personalIndicator']['content']);
         $page = $page + 1;
     ?>
@@ -900,6 +903,7 @@
             {!! $data['data']['dobIndicator']['description'] !!}
         </div>
     <?php
+        $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
         $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator', $data['data']['dobIndicator']['content']);
         $page = $page + 1;
     ?>
@@ -948,6 +952,7 @@
             {!! $data['data']['attitudeIndicator']['description'] !!}
         </div>
         <?php
+            $attitudeIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator_description', $data['data']['attitudeIndicator']['description'], false);
             $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($attitudeIndicator); $i++) {

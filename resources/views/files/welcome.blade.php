@@ -774,7 +774,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 25;
+            $linesPerPartFirst = 27;
             $linesPerPartRest = 43;
             foreach($lines as $key => $line) {
 
@@ -808,7 +808,7 @@
                 }
             }
             ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 1050px; text-align: justify;">
+            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 1010px; text-align: justify;">
                 {!! nl2br(e($array[0])) !!}
             </div>
         </div>
@@ -821,14 +821,16 @@
     </div>
 
     @if(count($array) >= 2)
-        @for ($i = 1; $i < count($array); $i++)
+        @for ($i = 1; $i <= count($array); $i++)
                 <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
+                        @if($array[$i])
                         {!! nl2br(e($array[$i])) !!}
+                        @endif
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -852,7 +854,7 @@
             $soulIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'soulIndicator', $data['data']['soulIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                 {!! $data['data']['soulIndicator']['description'] !!}
                 <br>
                 <br>

@@ -149,7 +149,6 @@
         </div>
         <?php
             $yearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'yearIndicator', $data['data']['yearIndicator']['description'], false);
-            dd($yearIndicator);
             $nowYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($nowYearIndicator); $i++) {

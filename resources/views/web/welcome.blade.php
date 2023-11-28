@@ -1938,118 +1938,133 @@
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">
             </div>
-            <div>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0 report-table" style="left: 109px;bottom: 888px;width: 62%;max-width: 62%;">
-                    <tr class="name">
-                        <td>{{ $name->{3} ?? null }}</td>
-                        <td>{{ $name->{6} ?? null }}</td>
-                        <td>{{ $name->{9} ?? null }}</td>
-                    </tr>
-                    <tr class="name">
-                        <td>{{ $name->{2} ?? null }}</td>
-                        <td>{{ $name->{5} ?? null }}</td>
-                        <td>{{ $name->{8} ?? null }}</td>
-                    </tr>
-                    <tr class="name">
-                        <td>{{ $name->{1} ?? null }}</td>
-                        <td>{{ $name->{4} ?? null }}</td>
-                        <td>{{ $name->{7} ?? null }}</td>
-                    </tr>
-                </table>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px;bottom: 935px;width: 62%;height: 115px;max-width: 62%;">
-                    <tr class="chiso1">
-                        <td>{{ $data['data']['dobIndicator']['dobIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso1">
-                        <td>{{ $data['data']['personalIndicator']['personalIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso1">
-                        <td>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</td>
-                    </tr>
-                </table>
-            </div>
-            <div>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0 report-table" style="left: 109px;bottom: 630px;width: 62%;max-width: 62%;">
-                    <tr class="summary">
-                        <td>{{ $summary->{3} ?? null }}</td>
-                        <td>{{ $summary->{6} ?? null }}</td>
-                        <td>{{ $summary->{9} ?? null }}</td>
-                    </tr>
-                    <tr class="summary">
-                        <td>{{ $summary->{2} ?? null }}</td>
-                        <td>{{ $summary->{5} ?? null }}</td>
-                        <td>{{ $summary->{8} ?? null }}</td>
-                    </tr>
-                    <tr class="summary">
-                        <td>{{ $summary->{1} ?? null }}</td>
-                        <td>{{ $summary->{4} ?? null }}</td>
-                        <td>{{ $summary->{7} ?? null }}</td>
-                    </tr>
-                </table>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 610px;width: 62%;height: 115px;max-width: 62%;">
-                    <tr class="chiso2">
-                        <td>{{ $data['data']['soulIndicator']['soulIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso2">
-                        <td>{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</td>
-                    </tr>
-                    <tr class="chiso2">
-                        <td>{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso2">
-                        <td>{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso2">
-                        <td>{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso2">
-                        <td>{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</td>
-                    </tr>
-                </table>
-            </div>
+            <div class="report-table__container">
+                <div class="report-table-col report-table-left">
+                    <div>
+                        <table class="fc7 sc0 ls0 ws0 report-table">
+                            <caption>BIỂU ĐỒ NGÀY SINH</caption>
+                            <tr>
+                                <td>{{ $name->{3} ?? null }}</td>
+                                <td>{{ $name->{6} ?? null }}</td>
+                                <td>{{ $name->{9} ?? null }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ $name->{2} ?? null }}</td>
+                                <td>{{ $name->{5} ?? null }}</td>
+                                <td>{{ $name->{8} ?? null }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ $name->{1} ?? null }}</td>
+                                <td>{{ $name->{4} ?? null }}</td>
+                                <td>{{ $name->{7} ?? null }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="fc7 sc0 ls0 ws0 report-table">
+                            <caption>BIỂU ĐỒ TỔNG HỢP HỌ TÊN VÀ NGÀY SINH</caption>
+                            <tr class="summary">
+                                <td>{{ $summary->{3} ?? null }}</td>
+                                <td>{{ $summary->{6} ?? null }}</td>
+                                <td>{{ $summary->{9} ?? null }}</td>
+                            </tr>
+                            <tr class="summary">
+                                <td>{{ $summary->{2} ?? null }}</td>
+                                <td>{{ $summary->{5} ?? null }}</td>
+                                <td>{{ $summary->{8} ?? null }}</td>
+                            </tr>
+                            <tr class="summary">
+                                <td>{{ $summary->{1} ?? null }}</td>
+                                <td>{{ $summary->{4} ?? null }}</td>
+                                <td>{{ $summary->{7} ?? null }}</td>
+                            </tr>
+                        </table>
+                    </div>
 
-            <div>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 366px;width: 62%;height: 115px;max-width: 62%;">
-                    <tr class="chiso3">
-                        <td>{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</td>
-                    </tr>
-                    <tr class="chiso3">
-                        <td>{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</td>
-                    </tr>
-                    <tr class="chiso3">
-                        <td>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso3">
-                        <td>{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</td>
-                    </tr>
-                </table>
-                <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 116px;width: 62%;height: 115px;max-width: 62%;">
-                    <tr class="chiso4">
-                        <td>{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso4">
-                        <td>{{ $data['data']['missionIndicator']['missionIndicator'] }}</td>
-                    </tr>
-                    <tr class="chiso4">
-                        <td>{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</td>
-                    </tr>
-                    <tr class="chiso4">
-                        <td>{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</td>
-                    </tr>
-                </table>
+                    <div>
+                        <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 95px">3</div>
+                        <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 205px">1</div>
+                        <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 315px">3</div>
+                        <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 400px; left: 170px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 400px; left: 245px">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y16a ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 440px; left: 205px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y16d ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 487px; left: 205px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y170 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 310px; left: 170px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b" style="width: 170px;"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
+                        <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 260px; left: 205px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}</div>
+                        <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 220px; left: 205px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
+                    </div>
+                </div>
+                <div class="report-table-col report-table-right">
+                    <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px;bottom: 935px;width: 62%;height: 115px;max-width: 62%;">
+                        <tr>
+                            <td colspan="">
+                                PHẦN 1. CHÂN DUNG CỦA BẠN
+                                A/THẾ GIỚI BÊN NGOÀI:
+                            </td>
+                        </tr>
+                        <tr class="chiso1">
+                            <td>CHỈ SỐ NĂNG LỰC TỰ NHIÊN</td>
+                            <td>{{ $data['data']['dobIndicator']['dobIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso1">
+                            <td>CHỈ SỐ TÍNH CÁCH</td>
+                            <td>{{ $data['data']['personalIndicator']['personalIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso1">
+                            <td>CHỈ SỐ THÁI ĐỘ</td>
+                            <td>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</td>
+                        </tr>
+                    </table>
+                    <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 610px;width: 62%;height: 115px;max-width: 62%;">
+                        <tr class="chiso2">
+                            <td>{{ $data['data']['soulIndicator']['soulIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso2">
+                            <td>{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</td>
+                        </tr>
+                        <tr class="chiso2">
+                            <td>{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso2">
+                            <td>{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso2">
+                            <td>{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso2">
+                            <td>{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</td>
+                        </tr>
+                    </table>
+                    <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 366px;width: 62%;height: 115px;max-width: 62%;">
+                        <tr class="chiso3">
+                            <td>{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</td>
+                        </tr>
+                        <tr class="chiso3">
+                            <td>{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</td>
+                        </tr>
+                        <tr class="chiso3">
+                            <td>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso3">
+                            <td>{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</td>
+                        </tr>
+                    </table>
+                    <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 116px;width: 62%;height: 115px;max-width: 62%;">
+                        <tr class="chiso4">
+                            <td>{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso4">
+                            <td>{{ $data['data']['missionIndicator']['missionIndicator'] }}</td>
+                        </tr>
+                        <tr class="chiso4">
+                            <td>{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</td>
+                        </tr>
+                        <tr class="chiso4">
+                            <td>{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-
-            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 95px">3</div>
-            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 205px">1</div>
-            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 315px">3</div>
-            <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 400px; left: 170px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
-            <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 400px; left: 245px">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
-            <div class="t m0 h14 y16a ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 440px; left: 205px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>
-            <div class="t m0 h14 y16d ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 487px; left: 205px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}</div>
-            <div class="t m0 h14 y170 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 310px; left: 170px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b" style="width: 170px;"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
-            <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 260px; left: 205px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}</div>
-            <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 220px; left: 205px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
-
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer')
             <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page + 1}}</div>

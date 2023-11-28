@@ -8402,20 +8402,36 @@ td {
     border-bottom: 0;
 }
 .report-table {
-    border-spacing: 15px;
-}
-.report-table tr {
-
+    border-spacing: 5px;
+    position: relative;
 }
 .report-table tr td {
-    border-radius: 10px;
-    box-shadow: 5px 5px 9px 3px #b8c1cf;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0 #b8c1cf;
     background: rgb(214,218,223);
     background: linear-gradient(90deg, rgba(214,218,223,1) 0%, rgba(240,241,243,1) 90%);
-    min-width: 70px;
+    min-width: 50px;
+    height: 65px;
     white-space: nowrap;
     text-align: center;
-    padding: 40px 30px;
+    padding: 0 10px;
     width: auto;
     max-width: unset;
+    font-size: 22px;
+    font-weight: bold;
+}
+.report-table caption {
+    color: #000;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+.report-table__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    padding: 0 110px;
+}
+.report-table__container .report-table-col {
+    width: 50%;
 }

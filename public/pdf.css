@@ -8412,6 +8412,7 @@ td {
 .report-table {
     border-spacing: 5px;
     position: relative;
+    width: 100%;
 }
 .report-table tr td {
     border-radius: 5px;
@@ -8439,6 +8440,9 @@ td {
     justify-content: space-between;
     margin-top: 120px;
     padding: 0 90px 0 110px;
+}
+.report-table__container .report-table-left {
+    padding-right: 30px;
 }
 .report-table__container .report-table-col {
     width: 50%;

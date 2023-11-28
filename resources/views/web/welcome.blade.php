@@ -1446,11 +1446,6 @@
             <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}</div>
             <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
 
-            <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 450px; text-align: justify">
-                {!! $data['data']['challengeIndicator']['description'] !!}
-            </div>
-
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer')
             <?php $page = $page + 1; ?>
@@ -1468,9 +1463,7 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ NỢ NGHIỆP</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
-            <div class="t m0 x5 hf yd6 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify">
-                {!! $data['data']['karmicIndicator']['description'] !!}
-            </div>
+            
             <?php
                 $karmicIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator_description', $data['data']['karmicIndicator']['description'], false);
 
@@ -1485,12 +1478,55 @@
                         $new_data[] = $val;
                     }
                 }
+                $inputString = '';
+                for ($i = 1; $i <= count($karmicIndicator_description); $i++) {
+                    $inputString .= $karmicIndicator_description[$i];
+                }
+                $inputString .= "\r\r";
+                for ($i = 0; $i < count($new_data); $i++) {
+                    $inputString .= $new_data[$i];
+                }
+                $lines = explode("\n", $inputString);
+
+                $linesPerPartFirst = 33;
+                $linesPerPartRest = 55;
+                foreach($lines as $key => $line) {
+                    $line =str_replace("\f", "", $line);
+                    if (strlen($line) < 100) {
+                        $lines[$key] = $line . "\r";
+                    }
+                }
+                
+                $parts = [];
+                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+                    $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+
+                    $part = array_slice($lines, $i, $linesPerPart);
+
+                    $part = array_filter($part);
+
+                    if (!empty($part)) {
+                        $parts[] = implode("\n", $part);
+                    }
+                }
+                $array = [];
+                $first = $parts[0];
+                $first = str_replace("\r\n", "\r", $first);
+                $first = str_replace("\n", " ", $first);
+                $first = str_replace("\r \r", "\r", $first);
+                for ($i = 1; $i <= count($parts); $i++) {
+                    if (isset($parts[$i])) {
+                        $html = str_replace("\r\n ", "\r", $parts[$i]);
+                        $html = str_replace("\n", " ", $parts[$i]);
+                        
+                        $array[$i] = $html;
+                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
+                    }
+                }
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 700px; text-align: justify">
-                @foreach ($data['data']['karmicIndicator']['data'] as $item)
-                    {!! $item !!}
-                @endforeach
+                style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify">
+                {!! nl2br(e($first)) !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1501,6 +1537,27 @@
             </div>
         </div>
     </div>
+
+
+@for($i = 1; $i <= count($array); $i++)
+<?php $page++; ?>
+<div id="pfc" class="pf w0 h0" data-page-no="9">
+    <div class="pc pce w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+            @if (isset($array[$i]))
+                {!! nl2br(e($array[$i])) !!}
+            @endif
+        </div>
+        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
+    </div>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+</div>
+@endfor
+
 
     <div id="pf7" class="pf w0 h0" data-page-no="51">
         <div class="pc pc6 w0 h0 opened">
@@ -1885,6 +1942,7 @@
 
 
 @if (!empty($data2))
+
 <div id="pfd" class="pf w0 h0" data-page-no="52">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""

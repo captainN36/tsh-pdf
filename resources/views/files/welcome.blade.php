@@ -903,7 +903,7 @@
             $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator', $data['data']['personalIndicator']['content']);
             ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                 {!! $data['data']['personalIndicator']['description'] !!}
                 <br>
                 {!! nl2br(e($personalIndicator[1])) !!}
@@ -945,15 +945,13 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TỰ NHIÊN</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['dobIndicator']['dobIndicator'] }}</div>
-            <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
-                {!! $data['data']['dobIndicator']['description'] !!}
-            </div>
+
             <?php
             $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
             $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator', $data['data']['dobIndicator']['content']);
             ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 620px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                 {!! $data['data']['dobIndicator']['description'] !!}
                 <br>
                 <br>
@@ -1047,7 +1045,7 @@
             }
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 850px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                 {!! nl2br(e($first)) !!}
             </div>
 
@@ -1092,7 +1090,7 @@
                 {{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}
             </div>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 800px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                 {!! $data['data']['passionIndicator']['description'] !!}
                 <br>
                 <br>
@@ -1156,7 +1154,7 @@
             $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
                 {!! nl2br(e($thinkingIndicator[1])) !!}
             </div>
 
@@ -1184,7 +1182,7 @@
             $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
                 {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
             </div>
 
@@ -1243,7 +1241,7 @@
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
                 {!! nl2br(e($actionThinkingIndicator[1])) !!}
             </div>
 
@@ -1357,7 +1355,7 @@
             $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
                 {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
             </div>
 
@@ -1409,7 +1407,7 @@
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify; font-size: 45px;">
                 {!! $data['data']['lifeCircleIndicator']['content'] !!}
             </div>
 
@@ -1537,7 +1535,7 @@
             ?>
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify">
+                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify">
                 {!! nl2br(e($first)) !!}
             </div>
 
@@ -1556,7 +1554,7 @@
             <div class="pc pce w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt=""
                      src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+                <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
                     @if (isset($array[$i]))
                         {!! nl2br(e($array[$i])) !!}
                     @endif
@@ -1906,7 +1904,7 @@
 
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 1000px; text-align: justify">
+                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify">
                 @foreach ($data1 as $item)
                     {!! $item['title'] !!}
                     <p>{!! $item['content'] !!}</p>
@@ -1957,7 +1955,7 @@
                 $arr = ['con số của sự độc lập, quyết đoán (biểu đồ của bạn còn có khả năng tạo được cặp số đẹp 11).', 'con số của sự nhẹ nhàng, hợp tác và cảm xúc (biểu đồ của bạn còn có khả năng tạo được cặp số đẹp 22).', 'con số của trí tuệ sáng tạo, vui vẻ và hoạt ngôn.', 'con số của sự cẩn thận và thực tế, kiên trì và chăm chỉ.', 'con số của tự do, khám phá và thay đổi linh hoạt.', 'con số của trí tuệ cảm xúc và quan tâm người khác.', 'con số của tri thức và khả năng tự học hỏi.', 'con số của khả năng nhạy bén tài chính và quyền lực.', 'con số của lý tưởng, sự cho đi và đức hy sinh.'];
                 $missing = [];
                 foreach (range(1, 9) as $item) {
-                    if (empty($summary->{$item})) {
+                    if (!empty($summary->{$item})) {
                         array_push($missing, $arr[$item - 1]);
                     }
                 }

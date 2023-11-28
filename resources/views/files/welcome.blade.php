@@ -386,7 +386,6 @@
                     $parts[] = implode("\n", $part);
                 }
             }
-            dd($parts);
             $array = [];
             $first = $parts[0];
             $first = str_replace("\r\n", "\r", $first);

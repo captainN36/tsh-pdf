@@ -443,6 +443,7 @@
         }
     }
     $array = [];
+    dd($parts);
     $first = $parts[0];
     $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\n", " ", $first);

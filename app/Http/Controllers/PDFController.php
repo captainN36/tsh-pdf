@@ -21,7 +21,7 @@ class PDFController extends Controller
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/8395181d-c755-4794-8457-bd5a0ca5d1d0',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzAwNDUxMjU2LCJleHAiOjE3MDMwNDMyNTZ9.qWBKVswOKczORbIGEQZQrC4IGWr0QqpYLetpEWBxKrA'
         ];
-        $data = $this->getData($request->all());
+        $data = $this->getData($params);
 
         return view('web.welcome', ['data' => $data]);
     }

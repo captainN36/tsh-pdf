@@ -1010,7 +1010,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 35;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 
@@ -1154,7 +1154,7 @@
             $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
                 {!! nl2br(e($thinkingIndicator[1])) !!}
             </div>
 
@@ -1182,7 +1182,7 @@
             $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
                 {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
             </div>
 
@@ -1210,7 +1210,7 @@
             $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 750px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
                 {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
             </div>
 
@@ -1241,7 +1241,7 @@
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
                 {!! nl2br(e($actionThinkingIndicator[1])) !!}
             </div>
 
@@ -1355,7 +1355,7 @@
             $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
                 {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
             </div>
 
@@ -1407,7 +1407,7 @@
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify; font-size: 45px;">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify; font-size: 48px;">
                 {!! $data['data']['lifeCircleIndicator']['content'] !!}
             </div>
 
@@ -1497,7 +1497,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 33;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 55;
             foreach($lines as $key => $line) {
                 $line =str_replace("\f", "", $line);

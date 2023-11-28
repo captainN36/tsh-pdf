@@ -1154,7 +1154,7 @@
             $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify;">
                 {!! nl2br(e($thinkingIndicator[1])) !!}
             </div>
 
@@ -1182,7 +1182,7 @@
             $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify;">
                 {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
             </div>
 
@@ -1203,14 +1203,15 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TRỰC GIÁC</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
-            <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
-                {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
-            </div>
+
             <?php
             $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 940px; text-align: justify;">
+                {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
+                <br>
+                <br>
                 {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
             </div>
 
@@ -1241,7 +1242,7 @@
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify;">
                 {!! nl2br(e($actionThinkingIndicator[1])) !!}
             </div>
 
@@ -1348,14 +1349,14 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TIỀM THỨC</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['subconsciousPowerIndicator']['subconsciousPowerIndicator'] }}</div>
-            <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
-                {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
-            </div>
             <?php
             $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 920px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
+                {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
+                <br>
+                <br>
                 {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
             </div>
 

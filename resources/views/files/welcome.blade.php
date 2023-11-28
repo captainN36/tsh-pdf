@@ -774,7 +774,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 32;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 43;
             foreach($lines as $key => $line) {
 
@@ -808,7 +808,7 @@
                 }
             }
             ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 1110px; text-align: justify;">
+            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2360px;bottom: 1050px; text-align: justify;">
                 {!! nl2br(e($array[0])) !!}
             </div>
         </div>
@@ -852,7 +852,7 @@
             $soulIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'soulIndicator', $data['data']['soulIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 1110px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                 {!! $data['data']['soulIndicator']['description'] !!}
                 <br>
                 <br>

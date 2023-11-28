@@ -768,7 +768,7 @@
             for ($i = 1; $i <= count($missionIndicator_description); $i++) {
                 $inputString .= $missionIndicator_description[$i];
             }
-            $inputString .= "\r\r";
+            $inputString .= "\r";
             for ($i = 1; $i <= count($missionIndicator); $i++) {
                 $inputString .= $missionIndicator[$i];
             }
@@ -819,9 +819,9 @@
         <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
         <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
     </div>
-
+<?php dd($array); ?>
     @if(count($array) >= 2)
-        @for ($i = 1; $i <= count($array); $i++)
+        @for ($i = 1; $i < count($array); $i++)
                 <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">

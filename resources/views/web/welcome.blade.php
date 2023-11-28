@@ -1627,52 +1627,46 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 127px;bottom: 947px;width: 73%;height: 115px;max-width: 73%;">
-                <style>
-                    .chart-name {
-                        height: 167px;
-                        text-align: center;
-                    }
-                </style>
-                <tr class="chart-name">
-                    <td>{{ $name->{3} ?? null }}</td>
-                    <td>{{ $name->{6} ?? null }}</td>
-                    <td>{{ $name->{9} ?? null }}</td>
-                </tr>
-                <tr class="chart-name">
-                    <td>{{ $name->{2} ?? null }}</td>
-                    <td>{{ $name->{5} ?? null }}</td>
-                    <td>{{ $name->{8} ?? null }}</td>
-                </tr>
-                <tr class="chart-name">
-                    <td>{{ $name->{1} ?? null }}</td>
-                    <td>{{ $name->{4} ?? null }}</td>
-                    <td>{{ $name->{7} ?? null }}</td>
-                </tr>
-            </table>
-            <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px;bottom: 947px;width: 73%;height: 115px;max-width: 73%;">
-                <style>
-                    .chart-summary {
-                        height: 167px;
-                        text-align: center;
-                    }
-                </style>
-                <tr class="chart-summary">
-                    <td>{{ $summary->{3} ?? null }}</td>
-                    <td>{{ $summary->{6} ?? null }}</td>
-                    <td>{{ $summary->{9} ?? null }}</td>
-                </tr>
-                <tr class="chart-name">
-                    <td>{{ $summary->{2} ?? null }}</td>
-                    <td>{{ $summary->{5} ?? null }}</td>
-                    <td>{{ $summary->{8} ?? null }}</td>
-                </tr>
-                <tr class="chart-name">
-                    <td>{{ $summary->{1} ?? null }}</td>
-                    <td>{{ $summary->{4} ?? null }}</td>
-                    <td>{{ $summary->{7} ?? null }}</td>
-                </tr>
-            </table>
+            <div class="pdf7-table__container">
+                <div class="pdf7-table-col">
+                    <table class="pdf7-table">
+                        <tr>
+                            <td>{{ $name->{3} ?? null }}</td>
+                            <td>{{ $name->{6} ?? null }}</td>
+                            <td>{{ $name->{9} ?? null }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ $name->{2} ?? null }}</td>
+                            <td>{{ $name->{5} ?? null }}</td>
+                            <td>{{ $name->{8} ?? null }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ $name->{1} ?? null }}</td>
+                            <td>{{ $name->{4} ?? null }}</td>
+                            <td>{{ $name->{7} ?? null }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="pdf7-table-col">
+                    <table class="pdf7-table">
+                        <tr>
+                            <td>{{ $summary->{3} ?? null }}</td>
+                            <td>{{ $summary->{6} ?? null }}</td>
+                            <td>{{ $summary->{9} ?? null }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ $summary->{2} ?? null }}</td>
+                            <td>{{ $summary->{5} ?? null }}</td>
+                            <td>{{ $summary->{8} ?? null }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ $summary->{1} ?? null }}</td>
+                            <td>{{ $summary->{4} ?? null }}</td>
+                            <td>{{ $summary->{7} ?? null }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 
             @php
                 $return = [];

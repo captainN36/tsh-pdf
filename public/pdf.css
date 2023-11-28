@@ -8360,3 +8360,38 @@ body {
     }
 
 }
+.pdf7-table__container {
+    position: relative;
+    display: flex;
+    margin-top: 125px;
+    padding: 0 120px;
+}
+.pdf7-table__container .pdf7-table-col {
+    width: 50%;
+}
+.pdf7-table__container .pdf7-table-col:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+.pdf7-table {
+    font-size: 22px;
+    font-weight: bold;
+    border-collapse: collapse;
+    color: rgb(38, 91, 166);
+}
+.pdf7-table tr td {
+    min-width: 60px;
+    height: 63px;
+    border-bottom: 3px solid rgb(38, 91, 166);
+    border-right: 3px solid rgb(38, 91, 166);
+    white-space: nowrap;
+    padding: 0 10px;
+    width: auto;
+    max-width: unset;
+}
+.pdf7-table tr td:last-child {
+    border-right: 0;
+}
+.pdf7-table tr:last-child td {
+    border-bottom: 0;
+}

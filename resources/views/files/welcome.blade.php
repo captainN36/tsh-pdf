@@ -366,7 +366,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 10;
+            $linesPerPartFirst = 2;
             $linesPerPartRest = 42;
             foreach($lines as $key => $line) {
 
@@ -400,7 +400,8 @@
                 }
             }        ?>
             <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; bottom: 1010px; text-align: justify;">
-                @if ($nowMonthIndicator)
+                @if ($first)
+                    {!! nl2br(e($first)) !!}
                 @endif
             </div>
 

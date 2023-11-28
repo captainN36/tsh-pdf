@@ -716,7 +716,7 @@
                 }
             }
             ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify; bottom: 930px">
+            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify; bottom: 1010px">
                 <div style="margin-top: 180px">
                     <?php $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[1]); ?>
                     <?php $result = preg_replace('/\.\n\n/', '.', $result); ?>
@@ -755,7 +755,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">2</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1540px">2</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ SỨ MỆNH</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['missionIndicator']['missionIndicator'] }}

@@ -448,7 +448,6 @@
     $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\f", " ", $first);
     $first = str_replace("\n", " ", $first);
-    dd($first);
     $array[0] = $first;
     if (count($parts) > 1) {
         for ($i = 1; $i < count($parts); $i++) {
@@ -461,7 +460,7 @@
     ?>
     @if (!empty($array))
         @for($i = 0; $i < count($array); $i++)
-                <?php $page++; ?>
+            <?php $page++; ?>
             <div id="pfd" class="pf w0 h0" data-page-no="13">
                 <div class="pc pcb w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""

@@ -1940,46 +1940,42 @@
             </div>
             <div class="report-table__container">
                 <div class="report-table-col report-table-left">
-                    <div>
-                        <table class="fc7 sc0 ls0 ws0 report-table">
-                            <caption>BIỂU ĐỒ NGÀY SINH</caption>
-                            <tr>
-                                <td>{{ $name->{3} ?? null }}</td>
-                                <td>{{ $name->{6} ?? null }}</td>
-                                <td>{{ $name->{9} ?? null }}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ $name->{2} ?? null }}</td>
-                                <td>{{ $name->{5} ?? null }}</td>
-                                <td>{{ $name->{8} ?? null }}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ $name->{1} ?? null }}</td>
-                                <td>{{ $name->{4} ?? null }}</td>
-                                <td>{{ $name->{7} ?? null }}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div>
-                        <table class="fc7 sc0 ls0 ws0 report-table">
-                            <caption>BIỂU ĐỒ TỔNG HỢP HỌ TÊN VÀ NGÀY SINH</caption>
-                            <tr class="summary">
-                                <td>{{ $summary->{3} ?? null }}</td>
-                                <td>{{ $summary->{6} ?? null }}</td>
-                                <td>{{ $summary->{9} ?? null }}</td>
-                            </tr>
-                            <tr class="summary">
-                                <td>{{ $summary->{2} ?? null }}</td>
-                                <td>{{ $summary->{5} ?? null }}</td>
-                                <td>{{ $summary->{8} ?? null }}</td>
-                            </tr>
-                            <tr class="summary">
-                                <td>{{ $summary->{1} ?? null }}</td>
-                                <td>{{ $summary->{4} ?? null }}</td>
-                                <td>{{ $summary->{7} ?? null }}</td>
-                            </tr>
-                        </table>
-                    </div>
+                    <table class="fc7 sc0 ls0 ws0 report-table">
+                        <caption>BIỂU ĐỒ NGÀY SINH</caption>
+                        <tr>
+                            <td>{{ $name->{3} ?? null }}</td>
+                            <td>{{ $name->{6} ?? null }}</td>
+                            <td>{{ $name->{9} ?? null }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ $name->{2} ?? null }}</td>
+                            <td>{{ $name->{5} ?? null }}</td>
+                            <td>{{ $name->{8} ?? null }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ $name->{1} ?? null }}</td>
+                            <td>{{ $name->{4} ?? null }}</td>
+                            <td>{{ $name->{7} ?? null }}</td>
+                        </tr>
+                    </table>
+                    <table class="fc7 sc0 ls0 ws0 report-table">
+                        <caption>BIỂU ĐỒ TỔNG HỢP HỌ TÊN VÀ NGÀY SINH</caption>
+                        <tr class="summary">
+                            <td>{{ $summary->{3} ?? null }}</td>
+                            <td>{{ $summary->{6} ?? null }}</td>
+                            <td>{{ $summary->{9} ?? null }}</td>
+                        </tr>
+                        <tr class="summary">
+                            <td>{{ $summary->{2} ?? null }}</td>
+                            <td>{{ $summary->{5} ?? null }}</td>
+                            <td>{{ $summary->{8} ?? null }}</td>
+                        </tr>
+                        <tr class="summary">
+                            <td>{{ $summary->{1} ?? null }}</td>
+                            <td>{{ $summary->{4} ?? null }}</td>
+                            <td>{{ $summary->{7} ?? null }}</td>
+                        </tr>
+                    </table>
 
                     <div>
                         <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 95px">3</div>
@@ -1995,71 +1991,100 @@
                     </div>
                 </div>
                 <div class="report-table-col report-table-right">
-                    <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px;bottom: 935px;width: 62%;height: 115px;max-width: 62%;">
-                        <tr>
-                            <td colspan="">
-                                PHẦN 1. CHÂN DUNG CỦA BẠN
+                    <table class="fc7 sc0 ls0 ws0 index-table">
+                        <tr class="index-caption">
+                            <td colspan="2">
+                                PHẦN 1. CHÂN DUNG CỦA BẠN<br>
                                 A/THẾ GIỚI BÊN NGOÀI:
                             </td>
                         </tr>
-                        <tr class="chiso1">
+                        <tr>
                             <td>CHỈ SỐ NĂNG LỰC TỰ NHIÊN</td>
                             <td>{{ $data['data']['dobIndicator']['dobIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso1">
+                        <tr>
                             <td>CHỈ SỐ TÍNH CÁCH</td>
                             <td>{{ $data['data']['personalIndicator']['personalIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso1">
+                        <tr>
                             <td>CHỈ SỐ THÁI ĐỘ</td>
                             <td>{{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}</td>
                         </tr>
                     </table>
-                    <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 610px;width: 62%;height: 115px;max-width: 62%;">
-                        <tr class="chiso2">
+                    <table class="fc7 sc0 ls0 ws0 index-table">
+                        <tr class="index-caption">
+                            <td colspan="2">
+                                B/THẾ GIỚI BÊN TRONG:
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CHỈ SỐ LINH HỒN</td>
                             <td>{{ $data['data']['soulIndicator']['soulIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso2">
+                        <tr>
+                            <td>CHỈ SỐ ĐAM MÊ</td>
                             <td>{{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</td>
                         </tr>
-                        <tr class="chiso2">
+                        <tr>
+                            <td>CHỈ SỐ TƯ DUY LÝ TRÍ</td>
                             <td>{{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso2">
+                        <tr>
+                            <td>CHỈ SỐ TƯ DUY CẢM XÚC</td>
                             <td>{{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso2">
+                        <tr>
+                            <td>CHỈ SỐ NĂNG LỰC TRỰC GIÁC</td>
                             <td>{{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso2">
+                        <tr>
+                            <td>CHỈ SỐ TƯ DUY HÀNH ĐỘNG</td>
                             <td>{{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</td>
                         </tr>
                     </table>
-                    <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 366px;width: 62%;height: 115px;max-width: 62%;">
-                        <tr class="chiso3">
+                    <table class="fc7 sc0 ls0 ws0 index-table">
+                        <tr class="index-caption">
+                            <td colspan="2">
+                                C/LỜI KHUYÊN PHÁT TRIỂN BẢN THÂN:
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CHỈ SỐ LẶP</td>
                             <td>{{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}</td>
                         </tr>
-                        <tr class="chiso3">
+                        <tr>
+                            <td>CHỈ SỐ THIẾU</td>
                             <td>{{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}</td>
                         </tr>
-                        <tr class="chiso3">
+                        <tr>
+                            <td>CHỈ SỐ LIÊN KẾT LINH HỒN VÀ TÍNH CÁCH</td>
                             <td>{{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso3">
+                        <tr>
+                            <td>CHỈ SỐ CÂN BẰNG</td>
                             <td>{{ $data['data']['balanceIndicator']['balanceIndicator'] }}</td>
                         </tr>
                     </table>
-                    <table class="t m0 x51 h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 655px; bottom: 116px;width: 62%;height: 115px;max-width: 62%;">
-                        <tr class="chiso4">
+                    <table class="fc7 sc0 ls0 ws0 index-table">
+                        <tr class="index-caption">
+                            <td colspan="2">
+                                PHẦN 2: HÀNH TRÌNH CỦA BẠN
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CHỈ SỐ ĐƯỜNG ĐỜI</td>
                             <td>{{ $data['data']['lifePathIndicator']['lifePathIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso4">
+                        <tr>
+                            <td>CHỈ SỐ SỨ MỆNH</td>
                             <td>{{ $data['data']['missionIndicator']['missionIndicator'] }}</td>
                         </tr>
-                        <tr class="chiso4">
+                        <tr>
+                            <td>CHỈ SỐ KẾT NỐI ĐƯỜNG ĐỜI SỨ MỆNH</td>
                             <td>{{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}</td>
                         </tr>
-                        <tr class="chiso4">
+                        <tr>
+                            <td>CHỈ SỐ TRƯỞNG THÀNH</td>
                             <td>{{ $data['data']['maturityIndicator']['maturityIndicator'] }}</td>
                         </tr>
                     </table>

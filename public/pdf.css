@@ -8424,14 +8424,49 @@ td {
     color: #000;
     padding: 15px 0;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 }
 .report-table__container {
     display: flex;
     justify-content: space-between;
     margin-top: 120px;
-    padding: 0 110px;
+    padding: 0 90px 0 110px;
 }
 .report-table__container .report-table-col {
     width: 50%;
+}
+.report-table__container .index-table {
+    position: relative;
+    width: 100%;
+    background: rgb(58,129,244);
+    background: linear-gradient(90deg, rgba(58,129,244,1) 0%, rgba(31,61,143,1) 60%);
+    border-radius: 15px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+}
+.report-table__container .index-table:last-of-type {
+    margin-bottom: 0;
+}
+.index-table td {
+    width: auto;
+    max-width: unset;
+    background-color: #fff;
+    padding: 10px;
+    font-weight: bold;
+}
+.index-table tr:not(.index-caption) td:first-child {
+    text-align: left;
+    color: #c09460;
+    font-size: 10px;
+}
+.index-table tr:not(.index-caption) td:last-child {
+    font-size: 20px;
+    white-space: nowrap;
+}
+.index-table tr.index-caption td {
+    background-color: transparent;
+    text-align: left;
+    color: #fff;
+    padding: 0 0 5px;
+    font-size: 15px;
 }

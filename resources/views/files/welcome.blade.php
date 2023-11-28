@@ -388,6 +388,7 @@
             }
             $array = [];
             $first = $parts[0];
+            dd($first);
             $first = str_replace("\r\n", "\r", $first);
             $first = str_replace("\n", " ", $first);
             $array[0] = $first;

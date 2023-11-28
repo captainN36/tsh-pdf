@@ -1914,7 +1914,7 @@
                         'content' => 'Người không có cả ba số 1-5-9 trong biểu đồ ngày sinh thường thiếu quyết tâm, hay trì hoãn thậm chí không làm gì cả. Điều này ảnh hưởng tiêu cực đến sự phát triển hay thành công của họ, khiến bản thân họ lẫn mọi người xung quanh đều khó chịu. Điều này cần phải được phát hiện sớm để điều chỉnh kịp thời.',
                     ]);
                 }
-
+                
                 if (count($return) > 4) {
                     $data1 = array_slice($return, 0, 5);
                     $data2 = array_slice($return, 5);
@@ -1925,10 +1925,10 @@
 
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 820px; text-align: justify">
-                @foreach ($data1 as $item)
-                    {!! $item['title'] !!}
-                    <p>{!! $item['content'] !!}</p>
+                style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify">
+                @foreach($data1 as $item)
+                    {{$item['title']}}
+                    <p>{{$item['content']}}</p>
                 @endforeach
             </div>
 
@@ -1942,7 +1942,6 @@
 
 
 @if (!empty($data2))
-
 <div id="pfd" class="pf w0 h0" data-page-no="52">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
@@ -1975,7 +1974,7 @@
                 $arr = ['con số của sự độc lập, quyết đoán (biểu đồ của bạn còn có khả năng tạo được cặp số đẹp 11).', 'con số của sự nhẹ nhàng, hợp tác và cảm xúc (biểu đồ của bạn còn có khả năng tạo được cặp số đẹp 22).', 'con số của trí tuệ sáng tạo, vui vẻ và hoạt ngôn.', 'con số của sự cẩn thận và thực tế, kiên trì và chăm chỉ.', 'con số của tự do, khám phá và thay đổi linh hoạt.', 'con số của trí tuệ cảm xúc và quan tâm người khác.', 'con số của tri thức và khả năng tự học hỏi.', 'con số của khả năng nhạy bén tài chính và quyền lực.', 'con số của lý tưởng, sự cho đi và đức hy sinh.'];
                 $missing = [];
                 foreach (range(1, 9) as $item) {
-                    if (empty($summary->{$item})) {
+                    if (!empty($summary->{$item})) {
                         array_push($missing, $arr[$item - 1]);
                     }
                 }

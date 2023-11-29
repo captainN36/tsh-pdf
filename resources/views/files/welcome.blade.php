@@ -2048,7 +2048,7 @@
                     </div>
                 </div>
                 <div class="report-table-col report-table-right">
-                    <table class="fc7 sc0 ls0 ws0 index-table" style="background: linear-gradient(90deg, rgba(58,129,244,1) 0%, rgba(31,61,143,1) 60%)">
+                    <table class="fc7 sc0 ls0 ws0 index-table">
                         <tr class="index-caption">
                             <td colspan="2">
                                 PHẦN 1. CHÂN DUNG CỦA BẠN<br>

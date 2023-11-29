@@ -832,7 +832,7 @@
 </div>
 
 @if(count($array) >= 2)
-    @for ($i = 1; $i <= count($array); $i++)
+    @for ($i = 1; $i < count($array); $i++)
     <?php $page++; ?>
     <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
@@ -1438,10 +1438,10 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">17</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LẶP</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-
+                {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
             </div>
             <?php
             $repeatIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'repeatIndicator_description', $data['data']['repeatIndicator']['description'], false);
@@ -1507,7 +1507,7 @@
     </div>
 
     @if(count($array) >= 2)
-        @for ($i = 1; $i <= count($array); $i++)
+        @for ($i = 1; $i < count($array); $i++)
                 <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
@@ -1531,10 +1531,10 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">18</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ THIẾU</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-
+                {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
             </div>
             <?php
             $missIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator_description', $data['data']['missIndicator']['description'], false);
@@ -1600,7 +1600,7 @@
     </div>
 
     @if(count($array) >= 2)
-        @for ($i = 1; $i <= count($array); $i++)
+        @for ($i = 1; $i < count($array); $i++)
                 <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
@@ -1624,10 +1624,10 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">19</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÂN BẰNG</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-
+                {{ $data['data']['balanceIndicator']['balanceIndicator'] }}
             </div>
             <?php
             $balanceIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator_description', $data['data']['balanceIndicator']['description'], false);
@@ -1693,8 +1693,8 @@
     </div>
 
     @if(count($array) >= 2)
-        @for ($i = 1; $i <= count($array); $i++)
-                <?php $page++; ?>
+        @for ($i = 1; $i < count($array); $i++)
+            <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
@@ -1717,10 +1717,10 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">20</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI ĐƯỜNG ĐỜI VÀ SỨ MỆNH</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-
+                {{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}
             </div>
             <?php
             $linkLifePathAndMission_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission_description', $data['data']['linkLifePathAndMission']['description'], false);
@@ -1786,8 +1786,8 @@
     </div>
 
     @if(count($array) >= 2)
-        @for ($i = 1; $i <= count($array); $i++)
-                <?php $page++; ?>
+        @for ($i = 1; $i < count($array); $i++)
+            <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
@@ -1811,10 +1811,10 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">21</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI LINH HỒN VÀ TÍNH CÁCH</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-
+                {{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}
             </div>
             <?php
             $linkSoulAndPersonalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator_description', $data['data']['linkSoulAndPersonalIndicator']['description'], false);
@@ -1880,8 +1880,8 @@
     </div>
 
     @if(count($array) >= 2)
-        @for ($i = 1; $i <= count($array); $i++)
-                <?php $page++; ?>
+        @for ($i = 1; $i < count($array); $i++)
+            <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
@@ -2008,7 +2008,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/suc-manh.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">23</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ SỨC MẠNH(rất quan trọng)</div>
             @php
                 $strength = new stdClass();
@@ -2226,7 +2226,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">24</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
             <div class="pdf7-table__container" style="margin-top: 125px">
                 <div class="pdf7-table-col">
@@ -2379,7 +2379,8 @@
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer')
-            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">1</div>
+            <?php $page = $page + 1; ?>
+            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
             <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
@@ -2446,7 +2447,7 @@
             <div class="pc pc6 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt=""
                     src="{{ asset('/' . $path . '/vochong.png') }}">
-                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
+                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">25</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP VỢ CHỒNG</div>
                 <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; top: 200px">
                     @switch($data['data']['coupleIndicator'])
@@ -2534,7 +2535,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/vochong.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0">26</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">

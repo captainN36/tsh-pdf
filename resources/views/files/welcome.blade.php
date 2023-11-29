@@ -108,7 +108,7 @@
                     <table class="fc7 sc0 ls0 ws0 index-table">
                         <tr class="index-caption">
                             <td colspan="2">
-                                PHẦN 1. CHÂN DUNG CỦA BẠN<b
+                                PHẦN 1. CHÂN DUNG CỦA BẠN<br>
                                 A/THẾ GIỚI BÊN NGOÀI:
                             </td>
                         </tr>

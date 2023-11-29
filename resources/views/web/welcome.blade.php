@@ -1935,7 +1935,7 @@
             {{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}
         </div>
         <?php
-            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['linkSoulAndPersonalIndicator']['descrption'], false);
+            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['linkSoulAndPersonalIndicator']['description'], false);
             $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['linkSoulAndPersonalIndicator']['content'], false);
             $page = $page + 1;
 

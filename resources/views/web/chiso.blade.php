@@ -11,7 +11,7 @@
             </tr>
         </table>
         <table class="t m0 x15 h10 y98 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2060px; left: 65px; bottom: 900px;">
-            <tr>
+            <tr class="custom-font">
                 <td>ĐƯỜNG ĐỜI</td>
                 <td>LINH HỒN</td>
                 <td>TÍNH CÁCH</td>
@@ -26,7 +26,7 @@
 
         </table>
         <table class="t m0 x1e h10 y9d ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2060px; left: 65px; bottom: 660px;">
-            <tr>
+            <tr class="custom-font">
                 <td>SỨ MỆNH</td>
                 <td>TRƯỞNG THÀNH</td>
                 <td>BẢN CHẤT</td>
@@ -40,7 +40,7 @@
             </tr>
         </table>
         <table class="t m0 x9 h10 ya2 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2060px; left: 65px; bottom: 420px;">
-            <tr>
+            <tr class="custom-font">
                 <td>NĂNG LỰC TỰ NHIÊN</td>
                 <td>THÁI ĐỘ</td>
                 <td>TƯ DUY LÝ TRÝ</td>
@@ -54,7 +54,7 @@
             </tr>
         </table>
         <table class="t m0 x2a h10 ya7 ff1 fs9 fc2 sc0 ls0 ws0" style="width: 2060px; left: 65px; bottom: 180px;">
-            <tr>
+            <tr class="custom-font">
                 <td>TƯ DUY CẢM XÚC</td>
                 <td>NĂNG LỰC TRỰC GIÁC</td>
                 <td>TƯ DUY HÀNH ĐỘNG</td>

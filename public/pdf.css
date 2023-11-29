@@ -2,6 +2,11 @@ body {
     font-family: Arial, serif;
 }
 
+.custom-font {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
 #sidebar {
     position: absolute;
     top: 0;

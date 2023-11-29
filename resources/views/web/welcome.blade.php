@@ -1439,23 +1439,23 @@
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
-            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
+            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LẶP</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
+
             </div>
             <?php
-            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content'], false);
-            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content'], false);
+            $repeatIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'repeatIndicator_description', $data['data']['repeatIndicator']['description'], false);
+            $repeatIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'repeatIndicator', $data['data']['repeatIndicator']['content'], false);
             $page = $page + 1;
 
             $inputString = '';
 
-            for ($i = 1; $i <= count($maturityIndicator_description); $i++) {
-                $inputString .= $maturityIndicator_description[$i];
+            for ($i = 1; $i <= count($repeatIndicator_description); $i++) {
+                $inputString .= $repeatIndicator_description[$i];
             }
             $inputString .= "\r\r";
-            for ($i = 1; $i <= count($maturityIndicator); $i++) {
-                $inputString .= $maturityIndicator[$i];
+            for ($i = 1; $i <= count($repeatIndicator); $i++) {
+                $inputString .= $repeatIndicator[$i];
             }
             $lines = explode("\n", $inputString);
 
@@ -1532,23 +1532,23 @@
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
-            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
+            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ THIẾU</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
+
             </div>
             <?php
-            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content'], false);
-            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content'], false);
+            $missIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator_description', $data['data']['missIndicator']['description'], false);
+            $missIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator', $data['data']['missIndicator']['content'], false);
             $page = $page + 1;
 
             $inputString = '';
 
-            for ($i = 1; $i <= count($maturityIndicator_description); $i++) {
-                $inputString .= $maturityIndicator_description[$i];
+            for ($i = 1; $i <= count($missIndicator_description); $i++) {
+                $inputString .= $missIndicator_description[$i];
             }
             $inputString .= "\r\r";
-            for ($i = 1; $i <= count($maturityIndicator); $i++) {
-                $inputString .= $maturityIndicator[$i];
+            for ($i = 1; $i <= count($missIndicator); $i++) {
+                $inputString .= $missIndicator[$i];
             }
             $lines = explode("\n", $inputString);
 
@@ -1625,23 +1625,23 @@
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
-            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
+            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÂN BẰNG</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
+
             </div>
             <?php
-            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content'], false);
-            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content'], false);
+            $balanceIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator_description', $data['data']['balanceIndicator']['description'], false);
+            $balanceIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator', $data['data']['balanceIndicator']['content'], false);
             $page = $page + 1;
 
             $inputString = '';
 
-            for ($i = 1; $i <= count($maturityIndicator_description); $i++) {
-                $inputString .= $maturityIndicator_description[$i];
+            for ($i = 1; $i <= count($balanceIndicator_description); $i++) {
+                $inputString .= $balanceIndicator_description[$i];
             }
             $inputString .= "\r\r";
-            for ($i = 1; $i <= count($maturityIndicator); $i++) {
-                $inputString .= $maturityIndicator[$i];
+            for ($i = 1; $i <= count($balanceIndicator); $i++) {
+                $inputString .= $balanceIndicator[$i];
             }
             $lines = explode("\n", $inputString);
 
@@ -1718,23 +1718,23 @@
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
-            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
+            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI ĐƯỜNG ĐỜI VÀ SỨ MỆNH</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
+
             </div>
             <?php
-            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content'], false);
-            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content'], false);
+            $linkLifePathAndMission_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission_description', $data['data']['linkLifePathAndMission']['description'], false);
+            $linkLifePathAndMission = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission', $data['data']['linkLifePathAndMission']['content'], false);
             $page = $page + 1;
 
             $inputString = '';
 
-            for ($i = 1; $i <= count($maturityIndicator_description); $i++) {
-                $inputString .= $maturityIndicator_description[$i];
+            for ($i = 1; $i <= count($linkLifePathAndMission_description); $i++) {
+                $inputString .= $linkLifePathAndMission_description[$i];
             }
             $inputString .= "\r\r";
-            for ($i = 1; $i <= count($maturityIndicator); $i++) {
-                $inputString .= $maturityIndicator[$i];
+            for ($i = 1; $i <= count($linkLifePathAndMission); $i++) {
+                $inputString .= $linkLifePathAndMission[$i];
             }
             $lines = explode("\n", $inputString);
 
@@ -1812,23 +1812,23 @@
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
-            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
+            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI LINH HỒN VÀ TÍNH CÁCH</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
+
             </div>
             <?php
-            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content'], false);
-            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content'], false);
+            $linkSoulAndPersonalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator_description', $data['data']['linkSoulAndPersonalIndicator']['description'], false);
+            $linkSoulAndPersonalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator', $data['data']['linkSoulAndPersonalIndicator']['content'], false);
             $page = $page + 1;
 
             $inputString = '';
 
-            for ($i = 1; $i <= count($maturityIndicator_description); $i++) {
-                $inputString .= $maturityIndicator_description[$i];
+            for ($i = 1; $i <= count($linkSoulAndPersonalIndicator_description); $i++) {
+                $inputString .= $linkSoulAndPersonalIndicator_description[$i];
             }
             $inputString .= "\r\r";
-            for ($i = 1; $i <= count($maturityIndicator); $i++) {
-                $inputString .= $maturityIndicator[$i];
+            for ($i = 1; $i <= count($linkSoulAndPersonalIndicator); $i++) {
+                $inputString .= $linkSoulAndPersonalIndicator[$i];
             }
             $lines = explode("\n", $inputString);
 

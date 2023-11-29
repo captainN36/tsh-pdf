@@ -885,16 +885,58 @@
             {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
         </div>
         <?php
-            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content']);
-            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content']);
+            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content'], false);
+            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content'], false);
             $page = $page + 1;
+
+            $inputString = '';
+
+            for ($i = 1; $i <= count($maturityIndicator_description); $i++) {
+                $inputString .= $maturityIndicator_description[$i];
+            }
+            $inputString .= "\r\r";
+            for ($i = 1; $i <= count($maturityIndicator); $i++) {
+                $inputString .= $maturityIndicator[$i];
+            }
+            $lines = explode("\n", $inputString);
+
+            $linesPerPartFirst = 25;
+            $linesPerPartRest = 45;
+            foreach($lines as $key => $line) {
+
+                if (strlen($line) < 100) {
+                    $lines[$key] = $line . "\r";
+                }
+            }
+            $parts = [];
+            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+
+                $part = array_slice($lines, $i, $linesPerPart);
+
+                $part = array_filter($part);
+
+                if (!empty($part)) {
+                    $parts[] = implode("\n", $part);
+                }
+            }
+            $array = [];
+            $first = $parts[0];
+            $first = str_replace("\r\n", "\r", $first);
+            $first = str_replace("\n", " ", $first);
+            $array[0] = $first;
+            if (count($parts) > 1) {
+                for ($i = 1; $i < count($parts); $i++) {
+                    $html = str_replace("\r\n ", "\r", $parts[$i]);
+                    $html = str_replace("\n", " ", $parts[$i]);
+                    $array[$i] = $html;
+                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
+                }
+            }
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-            {!! $data['data']['maturityIndicator']['description'] !!}
-            <br>
-            <br>
-            {!! $data['data']['maturityIndicator']['content'] !!}
+            {!! nl2br(e($array[0])) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -905,15 +947,15 @@
     </div>
 </div>
 
-@if(count($maturityIndicator) >= 2)
-@for ($i = 2; $i <= count($maturityIndicator); $i++)
+@if(count($array) >= 2)
+@for ($i = 2; $i <= count($array); $i++)
 <?php $page++; ?>
 <div id="pfc" class="pf w0 h0" data-page-no="9">
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-        {!! nl2br(e($maturityIndicator[$i])) !!}
+        {!! nl2br(e($array[$i])) !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

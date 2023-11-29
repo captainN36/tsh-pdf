@@ -1577,7 +1577,7 @@
                     $strength->{$value[0]} = $text;
                 }
             @endphp
-            <div class="strength-table">
+            <div class="strength-table" style="margin-top: 125px;">
                 <table class="pdf7-table">
                     <tr>
                         <td>{{ $strength->{3} ?? null }}</td>
@@ -1784,7 +1784,7 @@
                 src="{{ asset('/' . $path . '/ngay-sinh.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH</div>
-            <div class="pdf7-table__container">
+            <div class="pdf7-table__container" style="margin-top: 125px">
                 <div class="pdf7-table-col">
                     <table class="pdf7-table">
                         <tr>
@@ -2095,7 +2095,7 @@
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">
             </div>
-            <div class="report-table__container">
+            <div class="report-table__container" style="margin-top: 125px">
                 <div class="report-table-col report-table-left">
                     <table class="fc7 sc0 ls0 ws0 report-table">
                         <caption>BIỂU ĐỒ NGÀY SINH</caption>

@@ -756,7 +756,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 
@@ -790,7 +790,7 @@
                 }
             }
             ?>
-            <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
+            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                 {!! nl2br(e($array[0])) !!}
             </div>

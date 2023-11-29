@@ -96,7 +96,7 @@
                         <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 440px; left: 245px">1</div>
                         <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 440px; left: 375px">3</div>
                         <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 495px; left: 200px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
-                        <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 495px; left: 285px">{{ $da['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 495px; left: 285px">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
                         <div class="t m0 h14 y16a ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 545px; left: 245px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>
                         <div class="t m0 h14 y16d ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 600px; left: 245px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}</div>
                         <div class="t m0 h14 y170 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 390px; left: 170px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b" style="width: 170px;"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
@@ -108,7 +108,7 @@
                     <table class="fc7 sc0 ls0 ws0 index-table">
                         <tr class="index-caption">
                             <td colspan="2">
-                                PHẦN 1. CHÂN DUNG CỦA BẠN<br>
+                                PHẦN 1. CHÂN DUNG CỦA BẠN<b
                                 A/THẾ GIỚI BÊN NGOÀI:
                             </td>
                         </tr>

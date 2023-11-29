@@ -8367,7 +8367,7 @@ td {
 }
 
 .strength-table {
-    top: 120px;
+    bottom: 1200px;
     padding: 0 110px;
     display: flex;
     justify-content: center;

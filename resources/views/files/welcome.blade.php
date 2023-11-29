@@ -1175,14 +1175,14 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY CẢM XÚC</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
-            <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
-                {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
-            </div>
             <?php
             $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1000px; text-align: justify;">
+                 {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
+                 <br>
+                 <br>
                 {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
             </div>
 
@@ -1208,7 +1208,7 @@
             $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 940px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1000px; text-align: justify;">
                 {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
                 <br>
                 <br>
@@ -1234,15 +1234,16 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY HÀNH ĐỘNG</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</div>
-            <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
-                {!! $data['data']['actionThinkingIndicator']['description'] !!}
-            </div>
+        
 
             <?php
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1000px; text-align: justify;">
+                 {!! $data['data']['actionThinkingIndicator']['description'] !!}
+                 <br>
+                 <br>
                 {!! nl2br(e($actionThinkingIndicator[1])) !!}
             </div>
 
@@ -1905,7 +1906,7 @@
 
 
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify">
+                 style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify">
                 @foreach ($data1 as $item)
                     {!! $item['title'] !!}
                     <p>{!! $item['content'] !!}</p>

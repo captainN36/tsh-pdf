@@ -1455,7 +1455,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">17</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px; bottom: 1440px">17</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LẶP</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}
@@ -1476,7 +1476,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 
@@ -1547,7 +1547,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">18</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px; bottom: 1440px">18</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ THIẾU</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
@@ -1568,7 +1568,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 
@@ -1639,7 +1639,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">19</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px; bottom: 1440px">19</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÂN BẰNG</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['balanceIndicator']['balanceIndicator'] }}
@@ -1660,7 +1660,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 
@@ -1731,7 +1731,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">20</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px; bottom: 1440px">20</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI ĐƯỜNG ĐỜI VÀ SỨ MỆNH</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}
@@ -1752,7 +1752,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 
@@ -1823,7 +1823,7 @@
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">21</div>
+            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px; bottom: 1440px">21</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ KẾT NỐI LINH HỒN VÀ TÍNH CÁCH</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}
@@ -1844,7 +1844,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 30;
+            $linesPerPartFirst = 25;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 

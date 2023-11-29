@@ -1995,15 +1995,6 @@
             <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                 <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2340px">
             </div>
-            <div id="pf7" class="pf w0 h0" data-page-no="54">
-        <div class="pc pc6 w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                 src="{{ asset('/' . $path . '/vochong.png') }}">
-            <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0"></div>
-            <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
-            <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
-                <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2340px">
-            </div>
             <div class="report-table__container">
                 <div class="report-table-col report-table-left">
                     <table class="fc7 sc0 ls0 ws0 report-table">
@@ -2056,8 +2047,8 @@
                         <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 290px; left: 240px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
                     </div>
                 </div>
-                <div class="report-table-col report-table-right" style="color: black">
-                    <table class="fc7 sc0 ls0 ws0 index-table" style="color: black">
+                <div class="report-table-col report-table-right">
+                    <table class="fc7 sc0 ls0 ws0 index-table">
                         <tr class="index-caption">
                             <td colspan="2">
                                 PHẦN 1. CHÂN DUNG CỦA BẠN<br>

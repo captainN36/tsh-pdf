@@ -93,15 +93,15 @@
 
                     <div>
                         <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 110px">3</div>
-                        <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 245px">1</div>
-                        <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 375px">3</div>
-                        <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 500px; left: 200px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}-1</div>
-                        <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 500px; left: 275px">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}-2</div>
-                        <div class="t m0 h14 y16a ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 550px; left: 235px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}-3</div>
-                        <div class="t m0 h14 y16d ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 600px; left: 235px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}-4</div>
-                        <div class="t m0 h14 y170 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 410px; left: 170px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b" style="width: 170px;"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
-                        <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 330px; left: 235px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}-6</div>
-                        <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 290px; left: 235px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}-7</div>
+                        <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 440px; left: 245px">1</div>
+                        <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 440px; left: 375px">3</div>
+                        <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 495px; left: 200px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 495px; left: 285px">{{ $da['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y16a ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 545px; left: 245px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y16d ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 600px; left: 245px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}</div>
+                        <div class="t m0 h14 y170 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 390px; left: 170px">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b" style="width: 170px;"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
+                        <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 340px; left: 240px">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}</div>
+                        <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 290px; left: 240px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
                     </div>
                 </div>
                 <div class="report-table-col report-table-right">

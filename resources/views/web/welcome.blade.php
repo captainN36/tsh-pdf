@@ -145,8 +145,8 @@
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
         </div>
         <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'yearIndicator', $data['data']['yearIndicator']['description'], false);
-            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
+            $yearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'yearIndicator', $data['data']['yearIndicator']['description'], false);
+            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($yearIndicator); $i++) {
                 $inputString .= $yearIndicator[$i];
@@ -219,7 +219,7 @@
 @endfor
 
 <?php
-    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
+    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
     $inputString = '';
     for ($i = 1; $i <= count($nextYearIndicator); $i++) {
         $inputString .= $nextYearIndicator[$i];
@@ -294,7 +294,7 @@
 </div>
 @endfor
 <?php
-    $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
+    $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
     $inputString = '';
     for ($i = 1; $i <= count($twoYearsLaterIndicator); $i++) {
         $inputString .= $twoYearsLaterIndicator[$i];
@@ -386,8 +386,8 @@
         </div>
 
         <?php
-            $monthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'monthIndicator', $data['data']['monthIndicator']['description'], false);
-            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content']);
+            $monthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'monthIndicator', $data['data']['monthIndicator']['description'], false);
+            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content']);
             $page = $page + 1;
 
             $inputString = '';
@@ -445,8 +445,8 @@
 </div>
 
 <?php
-    $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'], false);
-    $twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'], false);
+    $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'], false);
+    $twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'], false);
     $inputString = '';
     for ($i = 1; $i <= count($nextMonthIndicator); $i++) {
         $inputString .= $nextMonthIndicator[$i];
@@ -721,8 +721,8 @@
         <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center">{{ $numberLifePath }}</div>
 
         <?php
-            $lifePathIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePath_description', $data['data']['lifePathIndicator']['description'], false);
-            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
+            $lifePathIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'lifePath_description', $data['data']['lifePathIndicator']['description'], false);
+            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
             $inputString = '';
             for ($i = 1; $i <= count($lifePathIndicator_description); $i++) {
                 $inputString .= $lifePathIndicator_description[$i];
@@ -797,8 +797,8 @@
             {{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
 
         <?php
-            $missionIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator_description', $data['data']['missionIndicator']['description'], false);
-            $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
+            $missionIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missionIndicator_description', $data['data']['missionIndicator']['description'], false);
+            $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
 
             $inputString = '';
             for ($i = 1; $i <= count($missionIndicator_description); $i++) {
@@ -879,6 +879,56 @@
     <div class="pc pc6 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/duongdoi.png') }}">
+        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
+        <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
+        <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
+            {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
+        </div>
+        <?php
+            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content']);
+            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content']);
+            $page = $page + 1;
+        ?>
+        <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
+            {!! $data['data']['maturityIndicator']['description'] !!}
+            <br>
+            <br>
+            {!! $data['data']['maturityIndicator']['content'] !!}
+        </div>
+
+        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer')
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+        </div>
+    </div>
+</div>
+
+@if(count($soulIndicator) >= 2)
+@for ($i = 2; $i <= count($soulIndicator); $i++)
+<?php $page++; ?>
+<div id="pfc" class="pf w0 h0" data-page-no="9">
+<div class="pc pce w0 h0 opened">
+    <img class="bi x0 y0 w1 h1" alt=""
+        src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        {!! nl2br(e($soulIndicator[$i])) !!}
+    </div>
+    <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+    @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+    <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+</div>
+<div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+</div>
+@endfor
+@endif
+
+
+<div id="pf7-8" class="pf w0 h0" data-page-no="22">
+    <div class="pc pc6 w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/duongdoi.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LINH HỒN</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
@@ -902,7 +952,7 @@
         <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
         </div>
     </div>
-</div>
+ '-' .</div>
 
 @if(count($soulIndicator) >= 2)
 @for ($i = 2; $i <= count($soulIndicator); $i++)
@@ -933,8 +983,8 @@
             {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
 
         <?php
-            $personalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator_description', $data['data']['personalIndicator']['description']);
-            $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator', $data['data']['personalIndicator']['content']);
+            $personalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'personalIndicator_description', $data['data']['personalIndicator']['description']);
+            $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'personalIndicator', $data['data']['personalIndicator']['content']);
             $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
@@ -982,8 +1032,8 @@
         </div>
 
     <?php
-        $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
-        $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator', $data['data']['dobIndicator']['content']);
+        $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
+        $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'dobIndicator', $data['data']['dobIndicator']['content']);
         $page = $page + 1;
     ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
@@ -1032,8 +1082,8 @@
         </div>
 
         <?php
-            $attitudeIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator_description', $data['data']['attitudeIndicator']['description'], false);
-            $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
+            $attitudeIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'attitudeIndicator_description', $data['data']['attitudeIndicator']['description'], false);
+            $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
 
             $inputString = '';
 
@@ -1184,7 +1234,7 @@
             {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
 
         <?php
-            $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content']);
+            $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'thinkingIndicator', $data['data']['thinkingIndicator']['content']);
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
@@ -1213,7 +1263,7 @@
             {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
 
         <?php
-            $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content']);
+            $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content']);
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
@@ -1242,7 +1292,7 @@
             {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
 
         <?php
-            $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content']);
+            $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content']);
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
@@ -1274,7 +1324,7 @@
 
 
         <?php
-            $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
+            $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
@@ -1348,7 +1398,7 @@
             {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
         </div>
         <?php
-            $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
+            $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
@@ -1466,11 +1516,11 @@
                 {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
 
             <?php
-                $karmicIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator_description', $data['data']['karmicIndicator']['description'], false);
+                $karmicIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'karmicIndicator_description', $data['data']['karmicIndicator']['description'], false);
 
                 $karmicIndicator = [];
                 foreach ($data['data']['karmicIndicator']['data'] as $key => $item) {
-                    $karmicIndicator[] = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator-' . $key, $item, false);
+                    $karmicIndicator[] = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'karmicIndicator-' . $key, $item, false);
                 }
 
                 $new_data = [];
@@ -1577,7 +1627,7 @@
                     $strength->{$value[0]} = $text;
                 }
             @endphp
-            <div class="strength-table" style="margin-top: 125px;">
+            <div class="strength-table" style="margin-top: 125px">
                 <table class="pdf7-table">
                     <tr>
                         <td>{{ $strength->{3} ?? null }}</td>

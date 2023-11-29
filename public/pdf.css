@@ -8438,7 +8438,7 @@ td {
 .report-table__container {
     display: flex;
     justify-content: space-between;
-    margin-top: 220px;
+    margin-top: 250px;
     padding: 0 90px 0 110px;
 }
 .report-table__container .report-table-left {

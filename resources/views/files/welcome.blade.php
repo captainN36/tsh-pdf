@@ -1542,7 +1542,7 @@
             </div>
         @endfor
     @endif
-
+@if(isset($data['data']['missIndicator']))
     <div id="pf7-8" class="pf w0 h0" data-page-no="22">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
@@ -1634,7 +1634,7 @@
             </div>
         @endfor
     @endif
-
+@endif
     <div id="pf7-8" class="pf w0 h0" data-page-no="22">
         <div class="pc pc6 w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
@@ -1997,7 +1997,7 @@
     </div>
 
     @for($i = 1; $i <= count($array); $i++)
-            <?php $page++; ?>
+        <?php $page++; ?>
         <div id="pfc" class="pf w0 h0" data-page-no="9">
             <div class="pc pce w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt=""

@@ -1125,7 +1125,7 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY HÀNH ĐỘNG</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</div>
-        
+
 
             <?php
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
@@ -2057,7 +2057,7 @@
                     </div>
                 </div>
                 <div class="report-table-col report-table-right">
-                    <table class="fc7 sc0 ls0 ws0 index-table">
+                    <table class="fc7 sc0 ls0 ws0 index-table" style="color: black">
                         <tr class="index-caption">
                             <td colspan="2">
                                 PHẦN 1. CHÂN DUNG CỦA BẠN<br>

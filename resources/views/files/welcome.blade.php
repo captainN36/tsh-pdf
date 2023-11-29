@@ -2056,7 +2056,7 @@
                         <div class="t m0 h14 y171 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 290px; left: 240px">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
                     </div>
                 </div>
-                <div class="report-table-col report-table-right">
+                <div class="report-table-col report-table-right" style="color: black">
                     <table class="fc7 sc0 ls0 ws0 index-table" style="color: black">
                         <tr class="index-caption">
                             <td colspan="2">

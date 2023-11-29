@@ -142,8 +142,9 @@
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}</div>
         <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2025</div>
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
-            {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
-        </div>
+            {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}</div>
+
+        
         <?php
             $yearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'yearIndicator', $data['data']['yearIndicator']['description'], false);
             $nowYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
@@ -183,7 +184,7 @@
             for ($i = 1; $i < count($parts); $i++) {
                 $html = str_replace("\r\n ", "\r", $parts[$i]);
                 $html = str_replace("\n", " ", $parts[$i]);
-
+                
                 $array[$i] = $html;
                 $array[$i] = str_replace("\r \r", "\r", $array[$i]);
             }
@@ -567,7 +568,7 @@
                 left: 90px;
             }
         @endisset
-
+        
         @isset($data['data']['percentIndicator'][4])
             .bannga-5 {
                 height: 79px;
@@ -605,7 +606,7 @@
                 left: 90px;
             }
         @endisset
-
+        
         @isset($data['data']['percentIndicator'][7])
             .bannga-8 {
                 height: 79px;
@@ -719,10 +720,11 @@
         @endphp
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐƯỜNG ĐỜI (SỐ CHỦ ĐẠO)</div>
         <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center">{{ $numberLifePath }}</div>
-
+        
         <?php
             $lifePathIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePath_description', $data['data']['lifePathIndicator']['description'], false);
             $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
+            /* dd($lifePathIndicator_description, $lifePathIndicator); */
             $inputString = '';
             for ($i = 1; $i <= count($lifePathIndicator_description); $i++) {
                 $inputString .= $lifePathIndicator_description[$i];
@@ -751,6 +753,7 @@
                     $parts[] = implode("\n", $part);
                 }
             }
+
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
             <div style="margin-top: 0">
@@ -795,11 +798,11 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ SỨ MỆNH</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
-
+        
         <?php
             $missionIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator_description', $data['data']['missionIndicator']['description'], false);
             $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
-
+            
             $inputString = '';
             for ($i = 1; $i <= count($missionIndicator_description); $i++) {
                 $inputString .= $missionIndicator_description[$i];
@@ -882,8 +885,8 @@
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LINH HỒN</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-            {{ $data['data']['soulIndicator']['soulIndicator'] }}
-        </div>
+            {{ $data['data']['soulIndicator']['soulIndicator'] }}</div>
+        
         <?php
             $soulIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'soulIndicator', $data['data']['soulIndicator']['content']);
             $page = $page + 1;
@@ -931,7 +934,7 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TÍNH CÁCH</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
-
+        
         <?php
             $personalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator_description', $data['data']['personalIndicator']['description']);
             $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator', $data['data']['personalIndicator']['content']);
@@ -980,7 +983,7 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['dobIndicator']['dobIndicator'] }}
         </div>
-
+        
     <?php
         $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
         $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator', $data['data']['dobIndicator']['content']);
@@ -1030,17 +1033,17 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}
         </div>
-
+        
         <?php
             $attitudeIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator_description', $data['data']['attitudeIndicator']['description'], false);
             $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
-
+            
             $inputString = '';
 
             for ($i = 1; $i <= count($attitudeIndicator_description); $i++) {
                 $inputString .= $attitudeIndicator_description[$i];
             }
-            $inputString .= "\r\r";
+
             for ($i = 1; $i <= count($attitudeIndicator); $i++) {
                 $inputString .= $attitudeIndicator[$i];
             }
@@ -1123,8 +1126,9 @@
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">8</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐAM MÊ</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                {{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}
-            </div>
+                {{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}</div>
+            
+
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify">
                 {!! $data['data']['passionIndicator']['description'] !!}
@@ -1182,7 +1186,7 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY LÝ TRÍ</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
-
+        
         <?php
             $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content']);
         ?>
@@ -1211,7 +1215,7 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY CẢM XÚC</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
-
+        
         <?php
             $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content']);
         ?>
@@ -1240,7 +1244,7 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ NĂNG LỰC TRỰC GIÁC</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
-
+        
         <?php
             $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content']);
         ?>
@@ -1271,7 +1275,7 @@
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY HÀNH ĐỘNG</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</div>
-
+        
 
         <?php
             $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
@@ -1464,7 +1468,7 @@
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ NỢ NGHIỆP</div>
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
-
+            
             <?php
                 $karmicIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator_description', $data['data']['karmicIndicator']['description'], false);
 
@@ -1497,7 +1501,7 @@
                         $lines[$key] = $line . "\r";
                     }
                 }
-
+                
                 $parts = [];
                 for ($i = 0; $i < count($lines); $i += $linesPerPart) {
                     $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
@@ -1519,7 +1523,7 @@
                     if (isset($parts[$i])) {
                         $html = str_replace("\r\n ", "\r", $parts[$i]);
                         $html = str_replace("\n", " ", $parts[$i]);
-
+                        
                         $array[$i] = $html;
                         $array[$i] = str_replace("\r \r", "\r", $array[$i]);
                     }
@@ -1915,7 +1919,7 @@
                         'content' => 'Người không có cả ba số 1-5-9 trong biểu đồ ngày sinh thường thiếu quyết tâm, hay trì hoãn thậm chí không làm gì cả. Điều này ảnh hưởng tiêu cực đến sự phát triển hay thành công của họ, khiến bản thân họ lẫn mọi người xung quanh đều khó chịu. Điều này cần phải được phát hiện sớm để điều chỉnh kịp thời.',
                     ]);
                 }
-
+                
                 if (count($return) > 4) {
                     $data1 = array_slice($return, 0, 5);
                     $data2 = array_slice($return, 5);

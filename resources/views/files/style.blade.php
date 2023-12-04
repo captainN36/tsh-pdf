@@ -10,35 +10,35 @@
         left: 280px;
     }
     span.indicator.indicator-10 {
-        bottom: 430px;
+        bottom: 440px;
         left: 270px;
     }
     span.indicator.indicator-9 {
-        bottom: 620px;
+        bottom: 630px;
         left: 260px;
     }
     span.indicator.indicator-8 {
-        bottom: 840px;
+        bottom: 850px;
         left: 240px;
     }
     span.indicator.indicator-7 {
-        bottom: 850px;
+        bottom: 860px;
         left: 220px;
     }
     span.indicator.indicator-6 {
-        bottom: 460px;
+        bottom: 470px;
         left: 205px;
     }
     span.indicator.indicator-5 {
-        bottom: 224px;
+        bottom: 234px;
         left: 185px;
     }
     span.indicator.indicator-4 {
-        bottom: 279px;
+        bottom: 289px;
         left: 170px;
     }
     span.indicator.indicator-3 {
-        bottom: 226px;
+        bottom: 236px;
         left: 150px;
     }
     span.indicator.indicator-2 {

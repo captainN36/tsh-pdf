@@ -18,19 +18,20 @@
         bottom: 761px;
     }
     span.indicator.indicator-7 {
-        bottom: 764px;
+        bottom: 770px;
+        left: 160px;
     }
     span.indicator.indicator-6 {
         bottom: 440px;
-        left: 155px;
+        left: 160px;
     }
     span.indicator.indicator-5 {
         bottom: 224px;
-        left: 155px;
+        left: 160px;
     }
     span.indicator.indicator-4 {
         bottom: 279px;
-        left: 155px;
+        left: 160px;
     }
     span.indicator.indicator-3 {
         bottom: 226px;

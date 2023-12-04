@@ -1,7 +1,7 @@
 <style>
 
     span.indicator {
-        left: 130px;
+        left: 100px;
         margin-left: 130px;
     }
     span.indicator.indicator-11 {

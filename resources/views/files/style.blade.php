@@ -6,27 +6,27 @@
         margin-left: 140px;
     }
     span.indicator.indicator-11 {
-        bottom: 354px;
-        left: 220px;
+        bottom: 364px;
+        left: 240px;
     }
     span.indicator.indicator-10 {
-        bottom: 410px;
-        left: 220px;
+        bottom: 420px;
+        left: 240px;
     }
     span.indicator.indicator-9 {
-        bottom: 596px;
-        left: 220px;
+        bottom: 610px;
+        left: 240px;
     }
     span.indicator.indicator-8 {
-        bottom: 790px;
-        left: 220px;
+        bottom: 810px;
+        left: 230px;
     }
     span.indicator.indicator-7 {
-        bottom: 800px;
-        left: 210px;
+        bottom: 820px;
+        left: 220px;
     }
     span.indicator.indicator-6 {
-        bottom: 450px;
+        bottom: 460px;
         left: 200px;
     }
     span.indicator.indicator-5 {

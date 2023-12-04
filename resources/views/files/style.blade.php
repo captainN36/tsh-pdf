@@ -23,15 +23,15 @@
     }
     span.indicator.indicator-6 {
         bottom: 440px;
-        left: 160px;
+        left: 170px;
     }
     span.indicator.indicator-5 {
         bottom: 224px;
-        left: 160px;
+        left: 170px;
     }
     span.indicator.indicator-4 {
         bottom: 279px;
-        left: 160px;
+        left: 165px;
     }
     span.indicator.indicator-3 {
         bottom: 226px;

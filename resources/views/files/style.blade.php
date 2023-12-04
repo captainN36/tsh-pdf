@@ -7,23 +7,27 @@
     }
     span.indicator.indicator-11 {
         bottom: 344px;
+        left: 200px;
     }
     span.indicator.indicator-10 {
         bottom: 398px;
+        left: 200px;
     }
     span.indicator.indicator-9 {
         bottom: 576px;
+        left: 200px;
     }
     span.indicator.indicator-8 {
         bottom: 770px;
+        left: 200px;
     }
     span.indicator.indicator-7 {
         bottom: 780px;
-        left: 180px;
+        left: 200px;
     }
     span.indicator.indicator-6 {
         bottom: 440px;
-        left: 180px;
+        left: 190px;
     }
     span.indicator.indicator-5 {
         bottom: 224px;

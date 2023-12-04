@@ -21,17 +21,19 @@
         bottom: 764px;
     }
     span.indicator.indicator-6 {
-        bottom: 433px;
+        bottom: 440px;
+        left: 155px;
     }
     span.indicator.indicator-5 {
         bottom: 224px;
+        left: 155px;
     }
     span.indicator.indicator-4 {
         bottom: 279px;
-        left: 150px;
+        left: 155px;
     }
     span.indicator.indicator-3 {
-        bottom: 222px;
+        bottom: 226px;
         left: 150px;
     }
     span.indicator.indicator-2 {

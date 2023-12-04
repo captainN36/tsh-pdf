@@ -86,7 +86,7 @@
             @php
                 $fileName = $number - 1;
             @endphp
-            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2360px; bottom: 900px">
+            <img src="{{ asset('9/chuky/8.png') }}" alt="" style="width: 2360px; bottom: 900px">
         </div>
 
         @php

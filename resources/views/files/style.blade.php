@@ -7,22 +7,22 @@
     }
     span.indicator.indicator-11 {
         bottom: 374px;
-        left: 260px;
+        left: 280px;
     }
     span.indicator.indicator-10 {
         bottom: 430px;
-        left: 260px;
+        left: 270px;
     }
     span.indicator.indicator-9 {
         bottom: 620px;
-        left: 250px;
+        left: 260px;
     }
     span.indicator.indicator-8 {
-        bottom: 820px;
+        bottom: 840px;
         left: 240px;
     }
     span.indicator.indicator-7 {
-        bottom: 830px;
+        bottom: 850px;
         left: 220px;
     }
     span.indicator.indicator-6 {

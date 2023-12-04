@@ -28,9 +28,11 @@
     }
     span.indicator.indicator-4 {
         bottom: 279px;
+        left: 150px;
     }
     span.indicator.indicator-3 {
         bottom: 222px;
+        left: 150px;
     }
     span.indicator.indicator-2 {
         bottom: 137px;

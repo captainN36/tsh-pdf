@@ -6,36 +6,36 @@
         margin-left: 140px;
     }
     span.indicator.indicator-11 {
-        bottom: 364px;
-        left: 240px;
+        bottom: 374px;
+        left: 260px;
     }
     span.indicator.indicator-10 {
-        bottom: 420px;
-        left: 240px;
+        bottom: 430px;
+        left: 260px;
     }
     span.indicator.indicator-9 {
-        bottom: 610px;
-        left: 240px;
+        bottom: 620px;
+        left: 250px;
     }
     span.indicator.indicator-8 {
-        bottom: 810px;
-        left: 230px;
+        bottom: 820px;
+        left: 240px;
     }
     span.indicator.indicator-7 {
-        bottom: 820px;
+        bottom: 830px;
         left: 220px;
     }
     span.indicator.indicator-6 {
         bottom: 460px;
-        left: 200px;
+        left: 205px;
     }
     span.indicator.indicator-5 {
         bottom: 224px;
-        left: 180px;
+        left: 185px;
     }
     span.indicator.indicator-4 {
         bottom: 279px;
-        left: 165px;
+        left: 170px;
     }
     span.indicator.indicator-3 {
         bottom: 226px;

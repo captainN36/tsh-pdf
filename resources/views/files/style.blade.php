@@ -43,10 +43,10 @@
     }
     span.indicator.indicator-2 {
         bottom: 137px;
-        left: 170px;
     }
     span.indicator.indicator-1 {
         bottom: 220px;
+        left: 150px;
     }
 
     @isset($data['data']['percentIndicator'][0])

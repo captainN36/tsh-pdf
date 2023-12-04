@@ -6,19 +6,19 @@
         margin-left: 140px;
     }
     span.indicator.indicator-11 {
-        bottom: 334px;
+        bottom: 344px;
     }
     span.indicator.indicator-10 {
-        bottom: 388px;
+        bottom: 398px;
     }
     span.indicator.indicator-9 {
-        bottom: 566px;
+        bottom: 576px;
     }
     span.indicator.indicator-8 {
-        bottom: 761px;
+        bottom: 770px;
     }
     span.indicator.indicator-7 {
-        bottom: 770px;
+        bottom: 780px;
         left: 160px;
     }
     span.indicator.indicator-6 {

@@ -106,7 +106,7 @@
                 $num++;
             }
         @endphp
-        <div style="display: inline-flex; bottom: 700px; left: 100px">
+        <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0" style="display: inline-flex; bottom: 700px; left: 100px">
             {!! $indicator !!}
         </div>
         <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0">

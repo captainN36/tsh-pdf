@@ -86,21 +86,29 @@
             @php
                 $fileName = $number - 1;
             @endphp
-            <img src="{{ asset($path . '/chuky/' . $fileName . '.png') }}" alt="" style="width: 2000px;">
+            <img src="{{ asset('9/chuky/8.png') }}" alt="" style="width: 2000px;">
         </div>
 
         @php
             $string = '';
+            $indicator = '';
+            $num = 1;
             foreach ($data['data']['cycleFortune']['cycleFortune'] as $item) {
                 $year = $item['year'];
+                $index = $item['indicator'];
                 $str = $year . '<span class="_ _19"> </span>';
+                $indicator .= '<span class="indicator indicator-' . $num . '">' . $index . '</span>';
                 if ($year == 2023) {
                     $string = $string . '<span class="ff1 fc6">' . $str . '</span>';
                 } else {
                     $string = $string . $year . '<span class="_ _19"> </span>';
                 }
+                $num++;
             }
         @endphp
+        <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0" style="display: inline-flex">
+            {!! $indicator !!}
+        </div>
         <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0">
             {!! $string !!}
         </div>

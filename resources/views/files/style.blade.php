@@ -3,7 +3,7 @@
 
     span.indicator {
         left: 150px;
-        margin-left: 134px;
+        margin-left: 140px;
     }
     span.indicator.indicator-11 {
         bottom: 334px;
@@ -24,19 +24,19 @@
         bottom: 433px;
     }
     span.indicator.indicator-5 {
-        bottom: 219px;
+        bottom: 224px;
     }
     span.indicator.indicator-4 {
-        bottom: 274px;
+        bottom: 279px;
     }
     span.indicator.indicator-3 {
-        bottom: 217px;
+        bottom: 222px;
     }
     span.indicator.indicator-2 {
-        bottom: 132px;
+        bottom: 137px;
     }
     span.indicator.indicator-1 {
-        bottom: 214px;
+        bottom: 220px;
     }
 
     @isset($data['data']['percentIndicator'][0])

@@ -872,7 +872,7 @@
             {{ $data['data']['soulIndicator']['soulIndicator'] }}
         </div>
         <?php
-            $soulIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'soulIndicator', $data['data']['soulIndicator']['content']);
+            $soulIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'soulIndicator', $data['data']['soulIndicator']['content']);
             $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"

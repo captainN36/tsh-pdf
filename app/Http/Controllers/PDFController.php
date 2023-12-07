@@ -170,23 +170,4 @@ class PDFController extends Controller
         $data['data']['dateOfBirth'] = Carbon::create($data['data']['dateOfBirth'])->format('d/m/Y');
         return $data['data'];
     }
-
-    public static function dataGet($data)
-    {
-        $token = $data['token'];
-        $url = $data['url'];
-        $callAPI = Http::withHeaders([
-            'Authorization' => "Bearer $token"
-        ])->get($url);
-        $data = $callAPI->json();
-        $title = $data['data']['data'];
-                $count = 1;
-        foreach ($title as $key => $item) {
-            if (isset($item['title'])) {
-                    $data['data']['data'][$key]['page'] =  $count++;
-            }
-        }
-        $data['data']['dateOfBirth'] = Carbon::create($data['data']['dateOfBirth'])->format('d/m/Y');
-        return $data['data'];
-    }
 }

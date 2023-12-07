@@ -104,7 +104,7 @@ class PDFController extends Controller
         $pathPDF = public_path() . '/pdf-test/' . $name . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('test.welcome', ['html' => $html])->render();
+            $htmlStr = view('render.welcome', ['html' => $html])->render();
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf --margin-bottom 95 $pathHtml $pathPDF";

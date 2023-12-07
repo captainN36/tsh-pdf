@@ -13,7 +13,7 @@
     </div>
 </div>
 <div id="page-container">
-    @include('test.vanso')
+    @include('render.html')
 </div>
 </body>
 

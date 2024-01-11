@@ -15,6 +15,32 @@ use Illuminate\Support\Facades\Storage;
 
 class PDFController extends Controller
 {
+
+    public function index()
+    {
+        if (!file_exists(public_path() . '/html/')) {
+            mkdir(public_path() . '/html/', 0777, true);
+        }
+        if (!file_exists(public_path() . '/pdf/')) {
+            mkdir(public_path() . '/pdf/', 0777, true);
+        }
+        Process::run('chmod -R 777 ' . public_path());
+        $pathHtml = public_path() . '/html/' . 'test.html';
+        $pathPDF = public_path() . '/pdf/' . 'test.pdf';
+        if (!file_exists($pathPDF)) {
+            $file = fopen($pathHtml, 'w+');
+            $htmlStr = view('test')->render();
+            fwrite($file, $htmlStr);
+            try {
+                $processName = "wkhtmltopdf $pathHtml $pathPDF";
+                Process::run($processName);
+                Log::info('process', ['process' => $processName]);
+            } catch (\Exception $exception) {
+                throw $exception;
+            }
+        }
+        return redirect(asset('/pdf/test.pdf'));
+    }
     public function view(Request $request)
     {
         $params = [

@@ -19,3 +19,4 @@ Route::get('/a', [\App\Http\Controllers\PDFController::class, 'pdf']);
 Route::get('/download-file', [\App\Http\Controllers\PDFController::class, 'downLoad']);
 
 Route::get('/html', [\App\Http\Controllers\PDFController::class, 'mappingKey']);
+Route::get('/index', [\App\Http\Controllers\PDFController::class, 'index']);

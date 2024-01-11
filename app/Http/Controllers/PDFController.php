@@ -18,6 +18,7 @@ class PDFController extends Controller
 
     public function index()
     {
+        return view('test');
         if (!file_exists(public_path() . '/html/')) {
             mkdir(public_path() . '/html/', 0777, true);
         }
@@ -48,7 +49,7 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA0OTQ3MTcwLCJleHAiOjE3MDc1MzkxNzB9.e0V-6QwidQ7XJbNbOer_-Vup7MiWRJi_X--3aIkPMT0'
         ];
         $data = $this->getData($params);
-
+        dd($data);
         return view('web.welcome', ['data' => $data]);
     }
 

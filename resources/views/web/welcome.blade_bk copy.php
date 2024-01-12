@@ -136,14 +136,6 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-<?php
-    $content = $data['data']['yearIndicator']['nowYearIndicator']['content'];
-    $midpoint = 2860;
-    $beforeMidpoint = strrpos(substr($content, 0, $midpoint), ' ');
-    $afterMidpoint = strpos(substr($content, $midpoint), ' ');
-    $splitPosition = ($midpoint - $beforeMidpoint < $afterMidpoint) ? $beforeMidpoint : $afterMidpoint + $midpoint;
-?>
-
 <div id="pfb" class="pf w0 h0" data-page-no="8">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
@@ -160,13 +152,52 @@
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
         </div>
+        <?php
+            $yearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'yearIndicator', $data['data']['yearIndicator']['description'], false);
+            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
+            $inputString = '';
+            for ($i = 1; $i <= count($yearIndicator); $i++) {
+                $inputString .= $yearIndicator[$i];
+            }
+            for ($i = 1; $i <= count($nowYearIndicator); $i++) {
+                $inputString .= $nowYearIndicator[$i];
+            }
+            $lines = explode("\n", $inputString);
 
-        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1133px; text-align: justify; white-space: normal; top: 70px; left: 400px">
-            {!! $data['data']['yearIndicator']['description'] !!}
-        </div>
+            $linesPerPartFirst = 31;
+            $linesPerPartRest = 55;
+            foreach($lines as $key => $line) {
 
+                if (strlen($line) < 100) {
+                    $lines[$key] = $line . "\r";
+                }
+            }
+            $parts = [];
+            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
+
+                $part = array_slice($lines, $i, $linesPerPart);
+
+                $part = array_filter($part);
+
+                if (!empty($part)) {
+                    $parts[] = implode("\n", $part);
+                }
+            }
+            $array = [];
+            $first = $parts[0];
+            $first = str_replace("\r\n", "\r", $first);
+            $first = str_replace("\n", " ", $first);
+            for ($i = 1; $i < count($parts); $i++) {
+                $html = str_replace("\r\n ", "\r", $parts[$i]);
+                $html = str_replace("\n", " ", $parts[$i]);
+
+                $array[$i] = $html;
+                $array[$i] = str_replace("\r \r", "\r", $array[$i]);
+            }
+        ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify; bottom: 900px">
-            {!! substr($content, 0, $splitPosition) !!}
+            {!! nl2br(e($first)) !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -176,52 +207,16 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-<?php
-    $remain = strlen($content) - $splitPosition;
-
-    
-
-    while ($remain > 0) {
-?>
-    <?php 
-        $midpoint = strlen($content) - $remain;
-        $beforeMidpoint = strrpos(substr($content, 0, $midpoint), ' ');
-        $afterMidpoint = strpos(substr($content, $midpoint), ' ');
-        $splitPosition = ($midpoint - $beforeMidpoint < $afterMidpoint) ? $beforeMidpoint : $afterMidpoint + $midpoint;
-    ?>
-
-    <div id="pfc" class="pf w0 h0" data-page-no="9">
-        <div class="pc pce w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                {!! substr($content, $splitPosition, 3500) !!}
-            </div>
-            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
-        </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-    </div>
-<?php $remain -= 3500; } ?>
-
-
-
-
-
-
-
-<?php
-    $content = $data['data']['yearIndicator']['nextYearIndicator']['content'];
-    $splitPosition = 3500;
-?>
-
+@for($i = 1; $i <= count($array); $i++)
+<?php $page++; ?>
 <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! substr($content, $splitPosition, 3500) !!}
+            @if (isset($array[$i]))
+                {!! nl2br(e($array[$i])) !!}
+            @endif
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -229,38 +224,84 @@
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
+@endfor
 
 <?php
-    $remain = strlen($content) - $splitPosition;
-    while ($remain > 0) {
+    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
+    $inputString = '';
+    for ($i = 1; $i <= count($nextYearIndicator); $i++) {
+        $inputString .= $nextYearIndicator[$i];
+    }
+    $lines = explode("\n", $inputString);
+    $linesPerPart = 45;
+    foreach($lines as $key => $line) {
+        if ($line == "") {
+            $lines[$key] = $line . "\r";
+        }
+
+        if (strlen($line) < 100) {
+            $lines[$key] = $line . "\r";
+        }
+        $lines[$key] = str_replace("<br>", "\r", $line);
+    }
+    $parts = [];
+
+    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+
+        $part = array_slice($lines, $i, $linesPerPart);
+
+        $part = array_filter($part);
+
+        if (!empty($part)) {
+            $parts[] = implode("\n", $part);
+        }
+    }
+    $first = $parts[0];
+    $first = preg_replace("/\n/", "\r", $first, 2);
+    $first = str_replace("\r\n", "\r", $first);
+    $first = str_replace("\n", " ", $first);
+    for ($i = 1; $i < count($parts); $i++) {
+        $html = str_replace("\r\n ", "\r", $parts[$i]);
+        $html = str_replace("\n", " ", $parts[$i]);
+        $array[$i] = $html;
+    }
 ?>
-    <?php 
-        $midpoint = strlen($content) - $remain;
-        $beforeMidpoint = strrpos(substr($content, 0, $midpoint), ' ');
-        $afterMidpoint = strpos(substr($content, $midpoint), ' ');
-        $splitPosition = ($midpoint - $beforeMidpoint < $afterMidpoint) ? $beforeMidpoint : $afterMidpoint + $midpoint;
-    ?>
 
-    <div id="pfc" class="pf w0 h0" data-page-no="9">
-        <div class="pc pce w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                {!! substr($content, $splitPosition, 3500) !!}
-            </div>
-            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
+<div id="pfd" class="pf w0 h0" data-page-no="10">
+    <div class="pc pcb w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+            {!! nl2br(e($first)) !!}
         </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+
+        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <?php $page++; ?>
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
     </div>
-<?php $remain -= 3500; } ?>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+</div>
 
+@for($i = 1; $i <= count($array); $i++)
+<?php $page++; ?>
+<div id="pfd" class="pf w0 h0" data-page-no="10">
+    <div class="pc pcb w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+            @if (isset($array[$i]))
+                {!! nl2br(e($array[$i])) !!}
+            @endif
+        </div>
 
-
-
-
-
+        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
+    </div>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+</div>
+@endfor
 <?php
     $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
     $inputString = '';

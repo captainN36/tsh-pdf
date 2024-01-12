@@ -317,6 +317,8 @@
     $first = preg_replace("/\n/", "\r", $parts[0], 2);
     $first = str_replace("\n ", '', $first);
     $first = str_replace("\n", " ", $first);
+    $first = str_replace("<br>", "\n", $first);
+
     $array[0] = $first;
 
     for ($i = 1; $i < count($parts); $i++) {

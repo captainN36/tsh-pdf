@@ -1,3 +1,3 @@
-<div style="margin: 95px; text-align: justify">
+<div style="text-align: justify">
     {!! $html !!}
 </div>

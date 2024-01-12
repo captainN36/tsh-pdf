@@ -309,7 +309,7 @@
         $inputString .= $twoYearsLaterIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 52;
+    $linesPerPart = 45;
     foreach($lines as $key => $line) {
         if (strlen($line) < 100) {
             $lines[$key] = $line . "\r";
@@ -332,6 +332,7 @@
     $first = str_replace("\r\n", "\r", $first);
     $first = str_replace("\n", " ", $first);
     $first = str_replace("\r\r", "\r", $first);
+    $first = str_replace("<br>", "\n", $first);
     for ($i = 1; $i < count($parts); $i++) {
         $html = str_replace("\r\n ", "\r", $parts[$i]);
         $html = str_replace("\n", " ", $parts[$i]);
@@ -362,7 +363,7 @@
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if(isset($array[$i]))
-            {!! nl2br($array[$i]) !!}
+            {!! nl2br(e($array[$i])) !!}
             @endif
         </div>
 
@@ -1033,7 +1034,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 35;
+            $linesPerPartFirst = 32;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 

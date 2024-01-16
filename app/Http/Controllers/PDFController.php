@@ -23,29 +23,29 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA0OTQ3MTcwLCJleHAiOjE3MDc1MzkxNzB9.e0V-6QwidQ7XJbNbOer_-Vup7MiWRJi_X--3aIkPMT0'
         ];
         $data = $this->getData($params);
-        
-        if (!file_exists(public_path() . '/html/')) {
-            mkdir(public_path() . '/html/', 0777, true);
-        }
-        if (!file_exists(public_path() . '/pdf/')) {
-            mkdir(public_path() . '/pdf/', 0777, true);
-        }
-        Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . 'test.html';
-        $pathPDF = public_path() . '/pdf/' . 'test.pdf';
-        if (!file_exists($pathPDF)) {
-            $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('test')->render();
-            fwrite($file, $htmlStr);
-            try {
-                $processName = "wkhtmltopdf $pathHtml $pathPDF";
-                Process::run($processName);
-                Log::info('process', ['process' => $processName]);
-            } catch (\Exception $exception) {
-                throw $exception;
-            }
-        }
-        return redirect(asset('/pdf/test.pdf'));
+        return view('web.welcome', ['data' => $data]);
+        // if (!file_exists(public_path() . '/html/')) {
+        //     mkdir(public_path() . '/html/', 0777, true);
+        // }
+        // if (!file_exists(public_path() . '/pdf/')) {
+        //     mkdir(public_path() . '/pdf/', 0777, true);
+        // }
+        // Process::run('chmod -R 777 ' . public_path());
+        // $pathHtml = public_path() . '/html/' . 'test.html';
+        // $pathPDF = public_path() . '/pdf/' . 'test.pdf';
+        // if (!file_exists($pathPDF)) {
+        //     $file = fopen($pathHtml, 'w+');
+        //     $htmlStr = view('test')->render();
+        //     fwrite($file, $htmlStr);
+        //     try {
+        //         $processName = "wkhtmltopdf $pathHtml $pathPDF";
+        //         Process::run($processName);
+        //         Log::info('process', ['process' => $processName]);
+        //     } catch (\Exception $exception) {
+        //         throw $exception;
+        //     }
+        // }
+        // return redirect(asset('/pdf/test.pdf'));
     }
     public function view(Request $request)
     {

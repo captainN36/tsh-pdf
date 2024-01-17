@@ -142,13 +142,13 @@
             src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÁC NĂM</div>
-        <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2023</div>
+        <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year }}</div>
         <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1120px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nowYearIndicator'] }}</div>
-        <div class="t m0 x4d h12 y66 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2024</div>
+        <div class="t m0 x4d h12 y66 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year + 1 }}</div>
         <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1060px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}</div>
-        <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2025</div>
+        <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year + 2 }}</div>
         <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 530px; bottom: 1000px">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
         </div>
@@ -164,7 +164,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 31;
+            $linesPerPartFirst = 26;
             $linesPerPartRest = 55;
             foreach($lines as $key => $line) {
 
@@ -309,7 +309,7 @@
         $inputString .= $twoYearsLaterIndicator[$i];
     }
     $lines = explode("\n", $inputString);
-    $linesPerPart = 45;
+    $linesPerPart = 37;
     foreach($lines as $key => $line) {
         if (strlen($line) < 100) {
             $lines[$key] = $line . "\r";
@@ -704,10 +704,9 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 32;
-            $linesPerPartRest = 43;
+            $linesPerPartFirst = 26;
+            $linesPerPartRest = 37;
             foreach($lines as $key => $line) {
-
                 if (strlen($line) < 100) {
                     $lines[$key] = $line . "\r";
                 }
@@ -752,6 +751,8 @@
 
 @if(count($array) >= 2)
 @for ($i = 1; $i < count($array); $i++)
+
+<?php $array[$i] =str_replace("\f", "", $array[$i]); ?>
 <?php $page = $page + 1; ?>
     <div id="pfc" class="pf w0 h0" data-page-no="9">
         <div class="pc pce w0 h0 opened">
@@ -1034,8 +1035,8 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 32;
-            $linesPerPartRest = 45;
+            $linesPerPartFirst = 26;
+            $linesPerPartRest = 37;
             foreach($lines as $key => $line) {
 
                 if (strlen($line) < 100) {

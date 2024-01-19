@@ -301,7 +301,7 @@
     }
     $lines = explode("\n", $inputString);
 
-    $linesPerPart = 32;
+    $linesPerPart = 29;
     $parts = [];
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {

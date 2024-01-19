@@ -172,8 +172,8 @@
                 }
                 $lines = explode("\n", $inputString);
 
-                $linesPerPartFirst = 19;
-                $linesPerPartRest = 39;
+                $linesPerPartFirst = 20;
+                $linesPerPartRest = 37;
                 foreach($lines as $key => $line) {
 
                     if (strlen($line) < 100) {
@@ -301,7 +301,7 @@
     }
     $lines = explode("\n", $inputString);
 
-    $linesPerPart = 43;
+    $linesPerPart = 39;
     $parts = [];
 
     for ($i = 0; $i < count($lines); $i += $linesPerPart) {
@@ -383,7 +383,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 23;
+            $linesPerPartFirst = 21;
             $linesPerPartRest = 30;
             foreach($lines as $key => $line) {
 
@@ -682,8 +682,8 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 27;
-            $linesPerPartRest = 43;
+            $linesPerPartFirst = 23;
+            $linesPerPartRest = 40;
             foreach($lines as $key => $line) {
 
                 if (strlen($line) < 100) {
@@ -773,7 +773,7 @@
             }
             $lines = explode("\n", $inputString);
 
-            $linesPerPartFirst = 25;
+            $linesPerPartFirst = 22;
             $linesPerPartRest = 45;
             foreach($lines as $key => $line) {
 

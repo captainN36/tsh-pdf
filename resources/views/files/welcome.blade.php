@@ -172,8 +172,8 @@
                 }
                 $lines = explode("\n", $inputString);
 
-                $linesPerPartFirst = 22;
-                $linesPerPartRest = 42;
+                $linesPerPartFirst = 19;
+                $linesPerPartRest = 39;
                 foreach($lines as $key => $line) {
 
                     if (strlen($line) < 100) {

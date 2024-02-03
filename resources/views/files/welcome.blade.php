@@ -95,7 +95,6 @@
             @endphp
             <img src="{{ asset('9/chuky/8.png') }}" alt="" style="width: 2360px; bottom: 900px">
         </div>
-        @include('style')
         @php
             $string = '';
             $indicator = '';

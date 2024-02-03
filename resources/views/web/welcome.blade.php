@@ -135,6 +135,7 @@
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
+@include('files.style', ['data' => $data])
 <style>
     .content p {
         margin: 0 !important;

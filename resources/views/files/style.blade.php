@@ -49,7 +49,7 @@
         left: 150px;
     }
 
-    @isset($data['data']['percentIndicator'][0])
+    /* @isset($data['data']['percentIndicator'][0])
         .bannga-1 {
             height: 90px;
             background-color: #DC3444;
@@ -162,5 +162,5 @@
             bottom: 170px;
             left: 110px;
         }
-    @endisset
+    @endisset */
 </style>

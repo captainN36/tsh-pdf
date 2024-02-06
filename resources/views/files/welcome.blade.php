@@ -181,7 +181,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
              src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff2 fs2 fc2 sc0 ls0 ws0 content" style="top: 0 ! important; width: 2360px; white-space: normal; text-align: justify; bottom: 1010px">
+        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0 content" style="top: 0 ! important; width: 2360px; white-space: normal; text-align: justify; bottom: 1010px">
             {!! $html[1] !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

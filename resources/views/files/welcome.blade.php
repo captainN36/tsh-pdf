@@ -143,7 +143,7 @@
 </div>
 @include('files.style', ['data' => $data])
 <style>
-    .content p {
+    p {
         margin: 0 !important;
     }
 </style>

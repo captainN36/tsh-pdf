@@ -176,13 +176,24 @@
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
+@for ($i = 1; $i < $count; $i++)
+<?php
 
+$substringToRemove = "<></>";
+$position = strpos($html[$i], $substringToRemove);
+
+if ($position !== false) {
+    $newText = substr_replace($html[$i], '', $position, strlen($substringToRemove));
+} else {
+    dd(123);
+}
+?>
 <div id="pfd" class="pf w0 h0" data-page-no="13">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
              src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0 content" style="top: 0 ! important; width: 2360px !important; white-space: normal; text-align: justify; bottom: 1030px">
-            {!! $html[1] !!}
+            {!! $newText !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -190,6 +201,8 @@
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
+
+@endfor
 
 </body>
 

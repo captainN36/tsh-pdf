@@ -179,7 +179,7 @@
 @for ($i = 1; $i < count($html); $i++)
 <?php
 
-$substringToRemove = "<></>";
+$substringToRemove = "<p><br></p>";
 $position = strpos($html[$i], $substringToRemove);
 
 if ($position !== false) {

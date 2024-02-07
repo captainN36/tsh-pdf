@@ -176,7 +176,7 @@
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
-@for ($i = 1; $i < $count; $i++)
+@for ($i = 1; $i < count($html); $i++)
 <?php
 
 $substringToRemove = "<></>";

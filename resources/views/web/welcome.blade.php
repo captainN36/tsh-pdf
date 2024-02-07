@@ -140,6 +140,9 @@
     .content p {
         margin: 0 !important;
     }
+    dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+        margin: 0;
+    }
 </style>
 <div id="pfb" class="pf w0 h0" data-page-no="8">
     <div class="pc pcb w0 h0 opened">

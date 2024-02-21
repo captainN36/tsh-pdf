@@ -74,7 +74,7 @@ class PDFController extends Controller
     public function download (Request $request) {
         $params = [
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/0c82f030-4167-46f5-92d7-4eb50227015e',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyNywicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDA3NDc0MzAsImV4cCI6MTcwMzMzOTQzMH0.XQ_14YcRzV2wzbg_GckpStIGyiVZnrWIz6adtwE_X3Q'
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4MzUyOTQyLCJleHAiOjE3MTA5NDQ5NDJ9.-4ebzgjDrbEK3c4QhH3S-nEFas9CkKlh6JPUZQz5k3M'
         ];
         $fileName = $this->pdf($request->all());
 

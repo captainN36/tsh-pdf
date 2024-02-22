@@ -153,51 +153,10 @@
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
         </div>
         <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'yearIndicator', $data['data']['yearIndicator']['description'], false);
-            $nowYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
-            $inputString = '';
-            for ($i = 1; $i <= count($yearIndicator); $i++) {
-                $inputString .= $yearIndicator[$i];
-            }
-            for ($i = 1; $i <= count($nowYearIndicator); $i++) {
-                $inputString .= $nowYearIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 26;
-            $linesPerPartRest = 55;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            for ($i = 1; $i < count($parts); $i++) {
-                $html = str_replace("\r\n ", "\r", $parts[$i]);
-                $html = str_replace("\n", " ", $parts[$i]);
-
-                $array[$i] = $html;
-                $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-            }
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
         ?>
         <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify; bottom: 900px">
-            {!! nl2br(e($first)) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -207,7 +166,7 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-@for($i = 1; $i <= count($array); $i++)
+@for($i = 1; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
 <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
@@ -215,7 +174,7 @@
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
+                {!! $yearIndicator[$i] !!}
             @endif
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -226,53 +185,16 @@
 </div>
 @endfor
 
-<?php
-    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
-    $inputString = '';
-    for ($i = 1; $i <= count($nextYearIndicator); $i++) {
-        $inputString .= $nextYearIndicator[$i];
-    }
-    $lines = explode("\n", $inputString);
-    $linesPerPart = 45;
-    foreach($lines as $key => $line) {
-        if ($line == "") {
-            $lines[$key] = $line . "\r";
-        }
-
-        if (strlen($line) < 100) {
-            $lines[$key] = $line . "\r";
-        }
-        $lines[$key] = str_replace("<br>", "\r", $line);
-    }
-    $parts = [];
-
-    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-
-        $part = array_slice($lines, $i, $linesPerPart);
-
-        $part = array_filter($part);
-
-        if (!empty($part)) {
-            $parts[] = implode("\n", $part);
-        }
-    }
-    $first = $parts[0];
-    $first = preg_replace("/\n/", "\r", $first, 2);
-    $first = str_replace("\r\n", "\r", $first);
-    $first = str_replace("\n", " ", $first);
-    for ($i = 1; $i < count($parts); $i++) {
-        $html = str_replace("\r\n ", "\r", $parts[$i]);
-        $html = str_replace("\n", " ", $parts[$i]);
-        $array[$i] = $html;
-    }
-?>
+        <?php
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
+        ?>
 
 <div id="pfd" class="pf w0 h0" data-page-no="10">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! nl2br(e($first)) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -283,15 +205,15 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-@for($i = 1; $i <= count($array); $i++)
+@for($i = 1; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
 <div id="pfd" class="pf w0 h0" data-page-no="10">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
+            @if (isset($yearIndicator[$i]))
+                {!! $yearIndicator[$i] !!}
             @endif
         </div>
 
@@ -303,48 +225,14 @@
 </div>
 @endfor
 <?php
-    $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
-    $inputString = '';
-    for ($i = 1; $i <= count($twoYearsLaterIndicator); $i++) {
-        $inputString .= $twoYearsLaterIndicator[$i];
-    }
-    $lines = explode("\n", $inputString);
-    $linesPerPart = 37;
-    foreach($lines as $key => $line) {
-        if (strlen($line) < 100) {
-            $lines[$key] = $line . "\r";
-        }
-    }
-    $parts = [];
-
-    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-
-        $part = array_slice($lines, $i, $linesPerPart);
-
-        $part = array_filter($part);
-
-        if (!empty($part)) {
-            $parts[] = implode("\n", $part);
-        }
-    }
-    $array = [];
-    $first = $parts[0];
-    $first = str_replace("\r\n", "\r", $first);
-    $first = str_replace("\n", " ", $first);
-    $first = str_replace("\r\r", "\r", $first);
-    $first = str_replace("<br>", "\n", $first);
-    for ($i = 1; $i < count($parts); $i++) {
-        $html = str_replace("\r\n ", "\r", $parts[$i]);
-        $html = str_replace("\n", " ", $parts[$i]);
-        $array[$i] = $html;
-    }
-?>
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
+        ?>
     <div id="pfd" class="pf w0 h0" data-page-no="11">
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                {!! nl2br(e($first)) !!}
+                {!! $yearIndicator[0] !!}
             </div>
 
             <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -355,15 +243,15 @@
         <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
     </div>
 
-@for($i = 1; $i <= count($array); $i++)
+@for($i = 1; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
 <div id="pfd" class="pf w0 h0" data-page-no="11">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            @if(isset($array[$i]))
-            {!! nl2br(e($array[$i])) !!}
+            @if(isset($yearIndicator[$i]))
+            {!! $yearIndicator[$i] !!}
             @endif
         </div>
 
@@ -396,55 +284,10 @@
         </div>
 
         <?php
-            $monthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'monthIndicator', $data['data']['monthIndicator']['description'], false);
-            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content']);
-            $page = $page + 1;
-
-            $inputString = '';
-            for ($i = 1; $i <= count($monthIndicator); $i++) {
-                $inputString .= $monthIndicator[$i];
-            }
-            for ($i = 1; $i <= count($nowMonthIndicator); $i++) {
-                $inputString .= $nowMonthIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 35;
-            $linesPerPartRest = 55;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
         ?>
         <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; bottom: 880px; text-align: justify;">
-            {!! nl2br(e($first)) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -455,48 +298,8 @@
 </div>
 
 <?php
-    $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'], false);
-    $twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'], false);
-    $inputString = '';
-    for ($i = 1; $i <= count($nextMonthIndicator); $i++) {
-        $inputString .= $nextMonthIndicator[$i];
-    }
-    for ($i = 1; $i <= count($twoMonthsLaterIndicator); $i++) {
-        $inputString .= $twoMonthsLaterIndicator[$i];
-    }
-    $lines = explode("\n", $inputString);
-
-    $linesPerPart = 55;
-    foreach($lines as $key => $line) {
-
-        if (strlen($line) < 100) {
-            $lines[$key] = $line . "\r";
-        }
-    }
-    $parts = [];
-    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-        $part = array_slice($lines, $i, $linesPerPart);
-
-        $part = array_filter($part);
-
-        if (!empty($part)) {
-            $parts[] = implode("\n", $part);
-        }
-    }
-    $array = [];
-    $first = $parts[0];
-    $first = str_replace("\r\n", "\r", $first);
-    $first = str_replace("\n", " ", $first);
-    $array[0] = $first;
-    if (count($parts) > 1) {
-        for ($i = 1; $i < count($parts); $i++) {
-            $html = str_replace("\r\n ", "\r", $parts[$i]);
-            $html = str_replace("\n", " ", $parts[$i]);
-            $array[$i] = $html;
-            $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-        }
-    }
-?>
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
+        ?>
 @for($i = 0; $i < count($array); $i++)
 <?php $page++; ?>
 <div id="pfd" class="pf w0 h0" data-page-no="13">
@@ -504,8 +307,8 @@
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
+            @if (isset($yearIndicator[$i]))
+                {!! $yearIndicator[$i] !!}
             @endif
         </div>
 
@@ -615,42 +418,11 @@
         <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center">{{ $numberLifePath }}</div>
 
         <?php
-            $lifePathIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'lifePath_description', $data['data']['lifePathIndicator']['description'], false);
-            $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
-            $inputString = '';
-            for ($i = 1; $i <= count($lifePathIndicator_description); $i++) {
-                $inputString .= $lifePathIndicator_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($lifePathIndicator); $i++) {
-                $result = preg_replace('/\·\n\n/', '·  ', $lifePathIndicator[$i]);
-                $result = preg_replace('/\.\n\n/', '.  ', $result);
-                $inputString .= $result;
-            }
-            $lifePathIndicator_description_lines = explode("\n", $lifePathIndicator_description[1]);
-            $lines = explode("\n", $inputString);
-            $linesPerPartFirst = 50;
-            $linesPerPartRest = 70;
-
-            $parts = [];
-
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
             <div style="margin-top: 0">
-                <?php $result = preg_replace('/\·\n\n/', '·', $lifePathIndicator[1]); ?>
-                <?php $result = preg_replace('/\.\n\n/', '.', $result); ?>
-                {!! nl2br(e($parts[0])) !!}
+                {!! $yearIndicator[0] !!}
             </div>
         </div>
 
@@ -662,15 +434,15 @@
     </div>
 </div>
 
-@if(count($parts) >= 2)
-@for ($i = 1 ; $i < count($parts) ; $i++)
+@if(count($yearIndicator) >= 2)
+@for ($i = 1 ; $i < count($yearIndicator) ; $i++)
 <?php $page++; ?>
     <div id="pfd" class="pf w0 h0" data-page-no="18">
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            {!! nl2br(e($parts[$i])) !!}
+            {!! $yearIndicator[$i] !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -690,55 +462,11 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
 
-        <?php
-            $missionIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missionIndicator_description', $data['data']['missionIndicator']['description'], false);
-            $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
-
-            $inputString = '';
-            for ($i = 1; $i <= count($missionIndicator_description); $i++) {
-                $inputString .= $missionIndicator_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($missionIndicator); $i++) {
-                $inputString .= $missionIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 26;
-            $linesPerPartRest = 37;
-            foreach($lines as $key => $line) {
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
+            <?php
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2000px;bottom: 850px; text-align: justify;">
-            {!! nl2br(e($array[0])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
     </div>
 
@@ -749,17 +477,16 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-@if(count($array) >= 2)
-@for ($i = 1; $i < count($array); $i++)
+@if(count($yearIndicator) >= 2)
+@for ($i = 1; $i < count($yearIndicator); $i++)
 
-<?php $array[$i] =str_replace("\f", "", $array[$i]); ?>
 <?php $page = $page + 1; ?>
     <div id="pfc" class="pf w0 h0" data-page-no="9">
         <div class="pc pce w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
             <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                {!! nl2br(e($array[$i])) !!}
+                {!! $yearIndicator[$i] !!}
             </div>
             <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -780,58 +507,11 @@
             {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
         </div>
         <?php
-            $maturityIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator_description', $data['data']['maturityIndicator']['content'], false);
-            $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content'], false);
-            $page = $page + 1;
-
-            $inputString = '';
-
-            for ($i = 1; $i <= count($maturityIndicator_description); $i++) {
-                $inputString .= $maturityIndicator_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($maturityIndicator); $i++) {
-                $inputString .= $maturityIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 30;
-            $linesPerPartRest = 45;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-            {!! nl2br(e($array[0])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -842,16 +522,16 @@
     </div>
 </div>
 
-@if(count($array) >= 2)
-    @for ($i = 1; $i < count($array); $i++)
+@if(count($yearIndicator) >= 2)
+    @for ($i = 1; $i < count($yearIndicator); $i++)
     <?php $page++; ?>
     <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            @if(isset($array[$i]))
-            {!! nl2br(e($array[$i])) !!}
+            @if(isset($yearIndicator[$i]))
+            {!! $yearIndicator[$i] !!}
             @endif
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -862,7 +542,11 @@
     </div>
     @endfor
 @endif
-
+<style>
+    p {
+        margin: 0;
+    }
+</style>
 
 <div id="pf7-8" class="pf w0 h0" data-page-no="22">
     <div class="pc pc6 w0 h0 opened">
@@ -874,15 +558,15 @@
             {{ $data['data']['soulIndicator']['soulIndicator'] }}
         </div>
         <?php
-            $soulIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'soulIndicator', $data['data']['soulIndicator']['content']);
-            $page = $page + 1;
-        ?>
+        $yearIndicator = \App\Http\Controllers\PDFController::text();
+        $page = $page + 1;
+    ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['soulIndicator']['description'] !!}
             <br>
             <br>
-            {!! nl2br(e($soulIndicator[1])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -893,15 +577,15 @@
     </div>
  '-' .</div>
 
-@if(count($soulIndicator) >= 2)
-@for ($i = 2; $i <= count($soulIndicator); $i++)
+@if(count($yearIndicator) >= 2)
+@for ($i = 2; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
 <div id="pfc" class="pf w0 h0" data-page-no="9">
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-        {!! nl2br(e($soulIndicator[$i])) !!}
+        {!! $yearIndicator[$i] !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -921,16 +605,15 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
 
-        <?php
-            $personalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'personalIndicator_description', $data['data']['personalIndicator']['description']);
-            $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'personalIndicator', $data['data']['personalIndicator']['content']);
+            <?php
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
             $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['personalIndicator']['description'] !!}
             <br>
-            {!! nl2br(e($personalIndicator[1])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -941,15 +624,15 @@
     </div>
 </div>
 
-@if(count($personalIndicator) >= 2)
-@for ($i = 2; $i <= count($personalIndicator); $i++)
+@if(count($yearIndicator) >= 2)
+@for ($i = 2; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
 <div id="pfc" class="pf w0 h0" data-page-no="9">
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-        {!! nl2br(e($personalIndicator[$i])) !!}
+        {!! $yearIndicator[$i] !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -970,9 +653,8 @@
             {{ $data['data']['dobIndicator']['dobIndicator'] }}
         </div>
 
-    <?php
-        $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
-        $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'dobIndicator', $data['data']['dobIndicator']['content']);
+        <?php
+        $yearIndicator = \App\Http\Controllers\PDFController::text();
         $page = $page + 1;
     ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
@@ -980,7 +662,7 @@
             {!! $data['data']['dobIndicator']['description'] !!}
             <br>
             <br>
-            {!! nl2br(e($dobIndicator[1])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -991,15 +673,15 @@
     </div>
 </div>
 
-@if(count($dobIndicator) >= 2)
-@for ($i = 2; $i <= count($dobIndicator); $i++)
+@if(count($yearIndicator) >= 2)
+@for ($i = 1; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
 <div id="pfc" class="pf w0 h0" data-page-no="9">
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-        {!! nl2br(e($dobIndicator[$i])) !!}
+        {!! $yearIndicator[$i] !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -1021,57 +703,12 @@
         </div>
 
         <?php
-            $attitudeIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'attitudeIndicator_description', $data['data']['attitudeIndicator']['description'], false);
-            $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
-
-            $inputString = '';
-
-            for ($i = 1; $i <= count($attitudeIndicator_description); $i++) {
-                $inputString .= $attitudeIndicator_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($attitudeIndicator); $i++) {
-                $inputString .= $attitudeIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 26;
-            $linesPerPartRest = 37;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
-        ?>
+        $yearIndicator = \App\Http\Controllers\PDFController::text();
+        $page = $page + 1;
+    ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-            {!! nl2br(e($first)) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1083,15 +720,15 @@
     </div>
 </div>
 
-@if(count($array) >= 2)
-@for ($i = 1; $i < count($array); $i++)
+@if(count($yearIndicator) >= 2)
+@for ($i = 1; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
 <div id="pfc" class="pf w0 h0" data-page-no="9">
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-        {!! nl2br(e($array[$i])) !!}
+        {!! $yearIndicator[$i] !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -1172,15 +809,16 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
 
-        <?php
-            $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'thinkingIndicator', $data['data']['thinkingIndicator']['content']);
+            <?php
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
+            $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['thinkingIndicator']['description'] !!}
             <br>
             <br>
-            {!! nl2br(e($thinkingIndicator[1])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1201,15 +839,16 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
 
-        <?php
-            $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content']);
+            <?php
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
+            $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
             <br>
             <br>
-            {!! $emotionalThinkingIndicator[1] !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1230,15 +869,16 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
 
-        <?php
-            $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content']);
+            <?php
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
+            $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
             <br>
             <br>
-            {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1262,15 +902,16 @@
             {{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</div>
 
 
-        <?php
-            $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content'])
+            <?php
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
+            $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['actionThinkingIndicator']['description'] !!}
             <br>
             <br>
-            {!! nl2br(e($actionThinkingIndicator[1])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1337,11 +978,12 @@
             {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
         </div>
         <?php
-            $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content'])
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
+            $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
-            {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
+            {!! $yearIndicator[0] !!}
         </div>
 
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1455,58 +1097,12 @@
                 {{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}
             </div>
             <?php
-            $repeatIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'repeatIndicator_description', $data['data']['repeatIndicator']['description'], false);
-            $repeatIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'repeatIndicator', $data['data']['repeatIndicator']['content'], false);
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
             $page = $page + 1;
-
-            $inputString = '';
-
-            for ($i = 1; $i <= count($repeatIndicator_description); $i++) {
-                $inputString .= $repeatIndicator_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($repeatIndicator); $i++) {
-                $inputString .= $repeatIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 30;
-            $linesPerPartRest = 45;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
-            ?>
+        ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-                {!! nl2br(e($array[0])) !!}
+                {!! $yearIndicator[0] !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1517,16 +1113,16 @@
         </div>
     </div>
 
-    @if(count($array) >= 2)
-        @for ($i = 1; $i < count($array); $i++)
+    @if(count($yearIndicator) >= 2)
+        @for ($i = 1; $i < count($yearIndicator); $i++)
                 <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                        @if(isset($array[$i]))
-                            {!! nl2br(e($array[$i])) !!}
+                        @if(isset($yearIndicator[$i]))
+                            {!! $yearIndicator[$i] !!}
                         @endif
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1548,59 +1144,13 @@
                 {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
             </div>
             <?php
-            $missIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator_description', $data['data']['missIndicator']['description'], false);
-            $missIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator', $data['data']['missIndicator']['content'], false);
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
             $page = $page + 1;
-
-            $inputString = '';
-
-            for ($i = 1; $i <= count($missIndicator_description); $i++) {
-                $inputString .= $missIndicator_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($missIndicator); $i++) {
-                $inputString .= $missIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 30;
-            $linesPerPartRest = 45;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
-            ?>
+        ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-                {!! nl2br(e($array[0])) !!}
-            </div>
+                {!! $yearIndicator[0] !!}
+          </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer')
@@ -1610,16 +1160,16 @@
         </div>
     </div>
 
-    @if(count($array) >= 2)
-        @for ($i = 1; $i < count($array); $i++)
+    @if(count($yearIndicator) >= 2)
+        @for ($i = 1; $i < count($yearIndicator); $i++)
                 <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                        @if(isset($array[$i]))
-                            {!! nl2br(e($array[$i])) !!}
+                        @if(isset($yearIndicator[$i]))
+                            {!! $yearIndicator[$i] !!}
                         @endif
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1641,59 +1191,13 @@
                 {{ $data['data']['balanceIndicator']['balanceIndicator'] }}
             </div>
             <?php
-            $balanceIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator_description', $data['data']['balanceIndicator']['description'], false);
-            $balanceIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator', $data['data']['balanceIndicator']['content'], false);
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
             $page = $page + 1;
-
-            $inputString = '';
-
-            for ($i = 1; $i <= count($balanceIndicator_description); $i++) {
-                $inputString .= $balanceIndicator_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($balanceIndicator); $i++) {
-                $inputString .= $balanceIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 30;
-            $linesPerPartRest = 45;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
-            ?>
+        ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-                {!! nl2br(e($array[0])) !!}
-            </div>
+                {!! $array[0] !!}
+          </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer')
@@ -1703,16 +1207,16 @@
         </div>
     </div>
 
-    @if(count($array) >= 2)
-        @for ($i = 1; $i < count($array); $i++)
+    @if(count($yearIndicator) >= 2)
+        @for ($i = 1; $i < count($yearIndicator); $i++)
             <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                        @if(isset($array[$i]))
-                            {!! nl2br(e($array[$i])) !!}
+                        @if(isset($yearIndicator[$i]))
+                            {!! $yearIndicator[$i] !!}
                         @endif
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1734,58 +1238,12 @@
                 {{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}
             </div>
             <?php
-            $linkLifePathAndMission_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission_description', $data['data']['linkLifePathAndMission']['description'], false);
-            $linkLifePathAndMission = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission', $data['data']['linkLifePathAndMission']['content'], false);
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
             $page = $page + 1;
-
-            $inputString = '';
-
-            for ($i = 1; $i <= count($linkLifePathAndMission_description); $i++) {
-                $inputString .= $linkLifePathAndMission_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($linkLifePathAndMission); $i++) {
-                $inputString .= $linkLifePathAndMission[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 30;
-            $linesPerPartRest = 45;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
-            ?>
+        ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-                {!! nl2br(e($array[0])) !!}
+                {!! $yearIndicator[0] !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1796,16 +1254,16 @@
         </div>
     </div>
 
-    @if(count($array) >= 2)
-        @for ($i = 1; $i < count($array); $i++)
+    @if(count($yearIndicator) >= 2)
+        @for ($i = 1; $i < count($yearIndicator); $i++)
             <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                        @if(isset($array[$i]))
-                            {!! nl2br(e($array[$i])) !!}
+                        @if(isset($yearIndicator[$i]))
+                            {!! $yearIndicator[$i] !!}
                         @endif
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1828,59 +1286,13 @@
                 {{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}
             </div>
             <?php
-            $linkSoulAndPersonalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator_description', $data['data']['linkSoulAndPersonalIndicator']['description'], false);
-            $linkSoulAndPersonalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator', $data['data']['linkSoulAndPersonalIndicator']['content'], false);
+            $yearIndicator = \App\Http\Controllers\PDFController::text();
             $page = $page + 1;
-
-            $inputString = '';
-
-            for ($i = 1; $i <= count($linkSoulAndPersonalIndicator_description); $i++) {
-                $inputString .= $linkSoulAndPersonalIndicator_description[$i];
-            }
-            $inputString .= "\r\r";
-            for ($i = 1; $i <= count($linkSoulAndPersonalIndicator); $i++) {
-                $inputString .= $linkSoulAndPersonalIndicator[$i];
-            }
-            $lines = explode("\n", $inputString);
-
-            $linesPerPartFirst = 30;
-            $linesPerPartRest = 45;
-            foreach($lines as $key => $line) {
-
-                if (strlen($line) < 100) {
-                    $lines[$key] = $line . "\r";
-                }
-            }
-            $parts = [];
-            for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                $part = array_slice($lines, $i, $linesPerPart);
-
-                $part = array_filter($part);
-
-                if (!empty($part)) {
-                    $parts[] = implode("\n", $part);
-                }
-            }
-            $array = [];
-            $first = $parts[0];
-            $first = str_replace("\r\n", "\r", $first);
-            $first = str_replace("\n", " ", $first);
-            $array[0] = $first;
-            if (count($parts) > 1) {
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\r\n ", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                    $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                }
-            }
-            ?>
+        ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-                {!! nl2br(e($array[0])) !!}
-            </div>
+                {!! $array[0] !!}
+          </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer')
@@ -1890,16 +1302,16 @@
         </div>
     </div>
 
-    @if(count($array) >= 2)
-        @for ($i = 1; $i < count($array); $i++)
+    @if(count($yearIndicator) >= 2)
+        @for ($i = 1; $i < count($yearIndicator); $i++)
             <?php $page++; ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-                        @if(isset($array[$i]))
-                            {!! nl2br(e($array[$i])) !!}
+                        @if(isset($yearIndicator[$i]))
+                            {!! $yearIndicator[$i] !!}
                         @endif
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1920,69 +1332,13 @@
             <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                 {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
 
-            <?php
-                $karmicIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'karmicIndicator_description', $data['data']['karmicIndicator']['description'], false);
-
-                $karmicIndicator = [];
-                foreach ($data['data']['karmicIndicator']['data'] as $key => $item) {
-                    $karmicIndicator[] = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'karmicIndicator-' . $key, $item, false);
-                }
-
-                $new_data = [];
-                foreach ($karmicIndicator as $values) {
-                    foreach ($values as $val) {
-                        $new_data[] = $val;
-                    }
-                }
-                $inputString = '';
-                for ($i = 1; $i <= count($karmicIndicator_description); $i++) {
-                    $inputString .= $karmicIndicator_description[$i];
-                }
-                $inputString .= "\r\r";
-                for ($i = 0; $i < count($new_data); $i++) {
-                    $inputString .= $new_data[$i];
-                }
-                $lines = explode("\n", $inputString);
-
-                $linesPerPartFirst = 33;
-                $linesPerPartRest = 55;
-                foreach($lines as $key => $line) {
-                    $line =str_replace("\f", "", $line);
-                    if (strlen($line) < 100) {
-                        $lines[$key] = $line . "\r";
-                    }
-                }
-
-                $parts = [];
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                    $part = array_slice($lines, $i, $linesPerPart);
-
-                    $part = array_filter($part);
-
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = $parts[0];
-                $first = str_replace("\r\n", "\r", $first);
-                $first = str_replace("\n", " ", $first);
-                $first = str_replace("\r \r", "\r", $first);
-                for ($i = 1; $i <= count($parts); $i++) {
-                    if (isset($parts[$i])) {
-                        $html = str_replace("\r\n ", "\r", $parts[$i]);
-                        $html = str_replace("\n", " ", $parts[$i]);
-
-                        $array[$i] = $html;
-                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                    }
-                }
+                <?php
+                $yearIndicator = \App\Http\Controllers\PDFController::text();
+                $page = $page + 1;
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                 style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify">
-                {!! nl2br(e($first)) !!}
+                {!! $yearIndicator[0] !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1995,15 +1351,15 @@
     </div>
 
 
-@for($i = 1; $i <= count($array); $i++)
+@for($i = 1; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
 <div id="pfc" class="pf w0 h0" data-page-no="9">
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
-            @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
+            @if (isset($yearIndicator[$i]))
+                {!! $yearIndicator[$i] !!}
             @endif
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

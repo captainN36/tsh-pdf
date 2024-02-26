@@ -368,7 +368,7 @@ $yearIndicator = contentText($text);
     ?>
 
     <div id="pfd" class="pf w0 h0" data-page-no="15">
-        @include('file.style', ['data' => $data])
+        @include('new_file.style', ['data' => $data])
         <div class="pc pcb w0 h0 opened">
             <?php
             $pth = $path == 9 ? 8 : $path;

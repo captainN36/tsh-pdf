@@ -312,7 +312,7 @@ $yearIndicator = contentText($text);
                      src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                 <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
                     @if(isset($yearIndicator[$i]))
-                    {!! nl2br(e($yearIndicator[$i])) !!}
+                    {!! $yearIndicator[$i] !!}
                     @endif
                 </div>
                 <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -363,7 +363,7 @@ $yearIndicator = contentText($text);
         <div class="pc pcb w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                  src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
+            <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
                 @if (isset($yearIndicator[$i]))
                     {!! $yearIndicator[$i] !!}
                 @endif
@@ -548,7 +548,7 @@ $yearIndicator = contentText($text);
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
                         @if(isset($yearIndicator[$i]))
-                        {!! nl2br(e($yearIndicator[$i])) !!}
+                        {!! $yearIndicator[$i] !!}
                         @endif
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -629,7 +629,7 @@ $yearIndicator = contentText($text);
             $yearIndicator = contentText($text);
             $page = $page + 1;
             ?>
-            <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
+            <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                 {!! $data['data']['soulIndicator']['description'] !!}
             </div>
@@ -654,7 +654,7 @@ $yearIndicator = contentText($text);
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
+                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
                         {!! $yearIndicator[$i] !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -708,7 +708,7 @@ $yearIndicator = contentText($text);
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
+                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
                         {!! $yearIndicator[$i] !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -761,7 +761,7 @@ $yearIndicator = contentText($text);
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
+                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
                         {!! $yearIndicator[$i] !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -792,7 +792,7 @@ $yearIndicator = contentText($text);
             $page = $page + 1;
             
             ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2360px; top: 0; text-align: justify;">
                 {!! $yearIndicator[0] !!}
             </div>
@@ -813,7 +813,7 @@ $yearIndicator = contentText($text);
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
+                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
                         {!! $yearIndicator[$i] !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -904,7 +904,7 @@ $yearIndicator = contentText($text);
                 $yearIndicator = contentText($text);
                 $page = $page + 1;
             ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+            <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2360px; top: 0; text-align: justify;">
                 {!! $yearIndicator[0] !!}
             </div>
@@ -1352,7 +1352,7 @@ $yearIndicator = contentText($text);
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2360px; top: 0; text-align: justify;">
-                {!! nl2br(e($yearIndicator[0])) !!}
+                {!! $yearIndicator[0] !!}
             </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1393,8 +1393,8 @@ $yearIndicator = contentText($text);
                 {{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}
             </div>
             <?php
-            $linkLifePathAndMission_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission_description', $data['data']['linkLifePathAndMission']['description'], false);
-            $linkLifePathAndMission = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission', $data['data']['linkLifePathAndMission']['content'], false);
+            // $linkLifePathAndMission_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission_description', $data['data']['linkLifePathAndMission']['description'], false);
+            // $linkLifePathAndMission = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission', $data['data']['linkLifePathAndMission']['content'], false);
             $page = $page + 1;
 
             $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em style="color: rgb(20, 20, 20);"><span class="ql-cursor">﻿</span>Chỉ số này cho bạn biết cần phải làm gì để có thể nhanh chóng đưa các bài học mà cuộc đời đã dạy bạn vào việc hoàn thành sứ mệnh của cuộc đời. Hay nói cách khác, nó là sự kết nối giữa đường đời của bạn và sứ mệnh của bạn. Nếu chỉ số này trùng với năng lực tự nhiên của bạn thì thật là tuyệt vời!</em></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Nếu bạn có con số cầu nối 0 nghĩa là bạn có ít nhất hai con số cốt lõi giống nhau. Đây là một điều may mắn và là cơ hội để bạn tiến bộ trong cuộc sống được thể hiện qua những con số lặp lại. Tuy nhiên, nếu bạn có ba hoặc nhiều hơn các con số cốt lõi giống nhau, bạn có thể không còn duy trì được sự cân bằng. Nếu bạn có ba con số lõi giống nhau trở lên, hãy nghiên cứu con số này và tự hỏi bản thân xem liệu bạn có biểu hiện quá mức các đặc điểm của nó hay không.</span></p>';

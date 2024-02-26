@@ -294,7 +294,7 @@
         </div>
 
         <?php
-            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Những con số này cho biết ở mỗi năm bạn nên tập trung định hướng phát triển theo con số nào. Thường thì cuộc đời sẽ tự đẩy bạn đi theo những con số này. Nếu đi lệch ra bạn thường sẽ bị cảm thấy cuộc sống mất cân bằng hoặc bất an. Còn nếu đi đúng hướng bạn thường cảm thấy rất bình an và thuận lợi.</span></p><p><span style="color: rgb(20, 20, 20);">Lưu ý: Sau khi sử dụng VIP, mỗi năm bạn vào lại website tra cứu hoặc tải lại file để xem luận giải 3 năm tiếp theo và các nội dung luận giải mới nếu có!</span></p><p><br></p><h1><strong style="color: rgb(20, 20, 20);">CHỈ SỐ THÁNG 1/2024 CỦA BẠN LÀ 9</strong></h1><p><span style="color: rgb(20, 20, 20);">Đây là tháng để bạn nhìn lại cuộc sống của mình trong suốt thời gian qua và xem bạn đã đạt được những gì. Liên quan</span></p><p><span style="color: rgb(20, 20, 20);">đến công việc, tháng này bạn nên xem xét nghề nghiệp hiện tại có thực sự phù hợp với bạn hay không. Hoặc bạn nên đánh giá lại xem những gì bạn đã làm tốt, những gì vẫn còn thiếu sót để bắt đầu lên kế hoạch học tập và phát triển trong tháng tiếp theo. Cuối cùng là hãy hoàn thành các dự án còn dang dở và giải quyết nốt những công việc còn tồn động. Xét về sức khỏe, đây là thời điểm phù hợp để bạn đi kiểm tra sức khỏe tổng quát hằng năm. Ngoài ra, bạn cũng nên chấm dứt những thói quen xấu. Điều này sẽ giúp bạn giải phóng thời gian và năng lượng cho cuộc sống. Về bản thân, hãy tổ chức lại các kế hoạch của bạn và chuẩn bị cho những nguồn năng lượng mới đang đến. Dành thời gian để thư giãn và cầu nguyện. Nếu bạn vẫn thấy cuộc sống của mình khó khăn, bạn có thể cần suy nghĩ lại về những gì mình đang làm, phải chăng ở đâu đó trên con đường đang đi, bạn đã đầu tư năng lượng của mình sai chỗ. Đây cũng là thời điểm để bạn bừng tỉnh, đừng đắm mình trong quá khứ. Lưu ý rằng, bạn đang sống trong hiện tại và bạn cần tập trung vào cách để bản thân có thể cải thiện cuộc sống của mình cho hôm nay và ngày mai. Năng lượng mới sẽ đến trong tháng tới để bạn tạo ra một tương lai đầy hy vọng. Tóm lại, đây là tháng bạn nên nhìn lại và chấm dứt một cách tốt đẹp những việc cần kết thúc hoặc những thứ không còn phù hợp với bạn nữa. Đã đến lúc suy nghĩ về đích đến và tương lai của bạn.</span></p>';
+            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em>Những con số này cho biết ở mỗi năm bạn nên tập trung định hướng phát triển theo con số nào. Thường thì cuộc đời sẽ tự đẩy bạn đi theo những con số này. Nếu đi lệch ra bạn thường sẽ bị cảm thấy cuộc sống mất cân bằng hoặc bất an. Còn nếu đi đúng hướng bạn thường cảm thấy rất bình an và thuận lợi.</em></p><p><em>Lưu ý: Sau khi sử dụng VIP, mỗi năm bạn vào lại website tra cứu hoặc tải lại file để xem luận giải 3 năm tiếp theo và các nội dung luận giải mới nếu có!</em></p><p><br></p><h1><strong><em>CHỈ SỐ THÁNG 1/2024 CỦA BẠN LÀ 9</em></strong></h1><p>Đây là tháng để bạn nhìn lại cuộc sống của mình trong suốt thời gian qua và xem bạn đã đạt được những gì. Liên quan</p><p>đến công việc, tháng này bạn nên xem xét nghề nghiệp hiện tại có thực sự phù hợp với bạn hay không. Hoặc bạn nên đánh giá lại xem những gì bạn đã làm tốt, những gì vẫn còn thiếu sót để bắt đầu lên kế hoạch học tập và phát triển trong tháng tiếp theo. Cuối cùng là hãy hoàn thành các dự án còn dang dở và giải quyết nốt những công việc còn tồn động. Xét về sức khỏe, đây là thời điểm phù hợp để bạn đi kiểm tra sức khỏe tổng quát hằng năm. Ngoài ra, bạn cũng nên chấm dứt những thói quen xấu. Điều này sẽ giúp bạn giải phóng thời gian và năng lượng cho cuộc sống. Về bản thân, hãy tổ chức lại các kế hoạch của bạn và chuẩn bị cho những nguồn năng lượng mới đang đến. Dành thời gian để thư giãn và cầu nguyện. Nếu bạn vẫn thấy cuộc sống của mình khó khăn, bạn có thể cần suy nghĩ lại về những gì mình đang làm, phải chăng ở đâu đó trên con đường đang đi, bạn đã đầu tư năng lượng của mình sai chỗ. Đây cũng là thời điểm để bạn bừng tỉnh, đừng đắm mình trong quá khứ. Lưu ý rằng, bạn đang sống trong hiện tại và bạn cần tập trung vào cách để bản thân có thể cải thiện cuộc sống của mình cho hôm nay và ngày mai. Năng lượng mới sẽ đến trong tháng tới để bạn tạo ra một tương lai đầy hy vọng. Tóm lại, đây là tháng bạn nên nhìn lại và chấm dứt một cách tốt đẹp những việc cần kết thúc hoặc những thứ không còn phù hợp với bạn nữa. Đã đến lúc suy nghĩ về đích đến và tương lai của bạn.</p><p><br></p>';
             $yearIndicator = contentText($text);
         ?>
         <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; top: 0; text-align: justify;">
@@ -309,7 +309,32 @@
 </div>
 
 <?php
-    $yearIndicator = \App\Http\Controllers\PDFController::text();
+    $text = '<h1><strong style="color: rgb(20, 20, 20);"><em>CHỈ SỐ THÁNG 2/2024 CỦA BẠN LÀ 1</em></strong></h1><p><span style="color: rgb(20, 20, 20);">Đây là một tháng quan trọng đối với bạn.Trong công việc, tháng này là thời điểm tuyệt vời để bắt đầu một dự án mới, kế hoạch mới hoặc một công việc mới. Bạn nên suy ngẫm về các mục tiêu của mình và tập trung vào phát triển chúng. Đặc biệt, khoảng thời gian này thuận lợi cho mọi việc bạn làm, vì vậy tốt hơn hết bạn nên hoàn thành những nhiệm vụ quan trọng và có lợi cho mình chứ không phải ai khác. Ngoài ra, một điều bạn cần lưu ý là những gì bạn làm trong tháng này có thể có tác động lâu dài, vì vậy hãy làm cho nó có giá trị! Liên quan đến sức khỏe, đa phần tháng này bạn khá khỏe mạnh. Đây là tháng tốt để bạn bắt đầu thiết lập thói quen tập thể dục nếu bạn muốn có một cơ thể đẹp và sức khỏe dẻo dai sau này. Về học tập phát triển bản thân, tháng này bạn nên bắt đầu những thói quen mới giúp nâng cao giá trị bản thân. Bạn có thể tham gia vào một số khóa học, học một ngôn ngữ mới, tạo lập một thói quen tốt mới,... Những điều này sẽ giúp bạn đi đúng năng lượng của tháng và đem lại cho bạn rất nhiều giá trị trong thời gian tới.Tóm lại, đây là một tháng rất tốt để bạn bắt đầu làm những điều mới mẻ. Vì vậy, hãy nắm bắt lấy nó.</span></p>';
+    $yearIndicator = contentText($text);
+?>
+@for($i = 0; $i < count($yearIndicator); $i++)
+<?php $page++; ?>
+<div id="pfd" class="pf w0 h0" data-page-no="13">
+    <div class="pc pcb w0 h0 opened">
+        <img class="bi x0 y0 w1 h1" alt=""
+            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+            @if (isset($yearIndicator[$i]))
+                {!! $yearIndicator[$i] !!}
+            @endif
+        </div>
+
+        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
+    </div>
+    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+</div>
+@endfor
+
+<?php
+    $text = '<h1><strong style="color: rgb(20, 20, 20);"><em>CHỈ SỐ THÁNG 3/2024 CỦA BẠN LÀ 2</em></strong></h1><p><span style="color: rgb(20, 20, 20);">Tháng này bạn nên tạo được sự cân bằng trong cuộc sống của mình. Trực giác của bạn sẽ trở nên nhạy bén hơn, chính nó sẽ dẫn dắt bạn đi đến những quyết định đúng đắn trong cuộc sống của mình. Về các mối quan hệ, đây là một tháng để bạn kết nối sâu sắc hơn với những người xung quanh trong cuộc sống như bạn bè, đồng nghiệp, đối tác,... Nếu gần đây bạn là người cô độc, thì đã đến lúc tìm kiếm tình yêu cùng với sự lãng mạn. Xét về công việc, tháng này đề cao sự hợp tác thay vì làm việc hoặc đưa ra những quyết định độc lập. Nếu có thể, bạn nên tham gia vào các dự án nhóm hoặc những việc đề cao tính đồng đội. Những người làm các công việc liên quan đến sáng tạo sẽ thấy công việc của mình được cải thiện nhờ trực giác của tháng số 2 này. Liên quan đến sức khỏe, đây là tháng mà bạn cần học cách kiểm soát cảm xúc của mình để giữ được sức khỏe tinh thần tốt. Sự nhạy cảm của bạn trong tháng này sẽ tăng lên, đồng nghĩa với việc bạn dễ dàng đồng cảm với cảm xúc của những người xung quanh. Thế nhưng, bạn cũng có thể dễ bị những cảm xúc tiêu cực quấn lấy, vậy nên hãy tỉnh táo hơn nhé. Về thể chất, đôi khi bạn có thể cảm thấy không được khỏe mạnh và trì hoãn trong việc tập thể dục. Bạn cần học cách chăm sóc bản thân mình và kiên trì luyện tập thể dục thể thao. Về học tập và rèn luyện, tháng này bạn nên bắt đầu hoặc duy trì thói quen đọc sách, thiền định, yoga,...Điều này sẽ giúp bạn tập trung, kiểm soát cảm xúc tốt hơn và nâng cao trí tuệ cũng như thể chất. Tóm lại, đây là tháng mà bạn nên tập trung vào sự hợp tác và phát triển giá trị của bản thân. Bạn cũng nên tin tưởng vào bản thân và cảm xúc của mình, bạn sẽ thấy rằng những điều này không bao giờ biết nói dối.</span></p>';
+    $yearIndicator = contentText($text);
 ?>
 @for($i = 0; $i < count($yearIndicator); $i++)
 <?php $page++; ?>
@@ -429,9 +454,10 @@
         <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center">{{ $numberLifePath }}</div>
 
         <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
+            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em style="color: rgb(20, 20, 20);">Chỉ số này hé lộ con đường mà bạn sẽ trải qua trong cuộc đời này. Nó cho bạn thấy bạn sẽ gặp phải những trải nghiệm</em></p><p><em style="color: rgb(20, 20, 20);">như thế nào, và bạn học được gì sau những trải nghiệm đó. Nó cung cấp nhiều thông tin về con người bạn và cuộc đời mà</em></p><p><em style="color: rgb(20, 20, 20);">bạn sẽ sống.</em></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">1. NHẬN DIỆN NHANH TÍNH CÁCH CỦA BẠN QUA CÁC ĐỨC TÍNH SAU :</span></p><p><span style="color: rgb(20, 20, 20);">· MỤC TIÊU</span></p><p><span style="color: rgb(20, 20, 20);">· QUYẾT ĐOÁN</span></p><p><span style="color: rgb(20, 20, 20);">· TỰ TIN</span></p><p><span style="color: rgb(20, 20, 20);">· LÃNH ĐẠO</span></p><p><span style="color: rgb(20, 20, 20);">· TIÊN PHONG</span></p><p><span style="color: rgb(20, 20, 20);">· MẠNH MẼ</span></p><p><span style="color: rgb(20, 20, 20);">· NĂNG LƯỢNG</span></p><p><span style="color: rgb(20, 20, 20);">· DẪN ĐẦU</span></p><p><span style="color: rgb(20, 20, 20);">2. ĐIỂM MẠNH</span></p><p><span style="color: rgb(20, 20, 20);">· Sẵn sàng đón nhận cái mới</span></p><p><span style="color: rgb(20, 20, 20);">· Có khả năng làm đa nhiệm vụ</span></p><p><span style="color: rgb(20, 20, 20);">· Khả năng tập trung và điều phối tốt</span></p><p><span style="color: rgb(20, 20, 20);">· Không ngại ra quyết định</span></p><p><span style="color: rgb(20, 20, 20);">· Dám vượt ngưỡng bản thân</span></p><p><span style="color: rgb(20, 20, 20);">· Có tầm nhìn và dám mơ lớn</span></p><p><span style="color: rgb(20, 20, 20);">3.ĐIỂM YẾU</span></p><p><span style="color: rgb(20, 20, 20);">· Thiếu kiên nhẫn và sự nhạy cảm</span></p><p><span style="color: rgb(20, 20, 20);">· Lòng tự tôn</span></p><p><span style="color: rgb(20, 20, 20);">· Xu hướng tỏ ra “biết tất cả"</span></p><p><span style="color: rgb(20, 20, 20);">· Đôi khi quá quan trọng vẻ ngoài</span></p><p><span style="color: rgb(20, 20, 20);">· Dễ nổi giận</span></p><></><p><br></p><p><span style="color: rgb(20, 20, 20);">4. HOÀN THIỆN BẢN THÂN</span></p><p><span style="color: rgb(20, 20, 20);">· Chấp nhận rằng mình không thể biết hết mọi thứ</span></p><p><span style="color: rgb(20, 20, 20);">· Nhận ra hành trình cũng tuyệt vời như đích đến</span></p><p><span style="color: rgb(20, 20, 20);"><span class="ql-cursor">﻿</span>Kiểm soát cái tôi và cơn nóng giận</span></p><p><span style="color: rgb(20, 20, 20);">· Lắng nghe và tôn trọng ý kiến người khác</span></p><p><span style="color: rgb(20, 20, 20);">5. GỢI Ý NGHỀ NGHIỆP</span></p><p><span style="color: rgb(20, 20, 20);">· Những công việc cho mình quyền tự chủ và Quyết định. · Công việc cho mình cơ hội thành người dẫn đầu</span></p><p><span style="color: rgb(20, 20, 20);">· Công việc có yếu tố sáng tạo, cải tiến</span></p><p><span style="color: rgb(20, 20, 20);">· Tự làm cho bản thân hoặc doanh nhân</span></p><p><span style="color: rgb(20, 20, 20);">• NHỮNG NGƯỜI NỔI TIẾNG CÓ SỐ 10:</span></p><p><span style="color: rgb(20, 20, 20);">- Phạm Nhật Vượng – Chủ tịch tập đoàn Vin Group</span></p><p><span style="color: rgb(20, 20, 20);">- Nguyễn Xuân Phúc – Chủ tịch nước Việt Nam</span></p><p><span style="color: rgb(20, 20, 20);">- Messi – Cầu thủ bóng đá nổi tiếng</span></p><p><span style="color: rgb(20, 20, 20);">- Steve Jobs – Cố Chủ tịch tập đoàn Apple</span></p><p><span style="color: rgb(20, 20, 20);">- Một vài người khác như: Miley Cyrus, Lady Gaga, Scarlett Johansson, Shakira Steve Jobs, Tom Cruise, Nikola Tesla,</span></p><p><span style="color: rgb(20, 20, 20);">Martin Luther King, Jr., Vua hề Chaplin, Hoàng tử Harry</span></p><p><span style="color: rgb(20, 20, 20);">Bên cạnh số đường đời, sẽ còn hơn 20 chỉ số quan trọng khác phân tích chi tiết về bạn, đặc biệt bạn xem kĩ các chỉ số ở</span></p><p><span style="color: rgb(20, 20, 20);">biểu đồ kim tự tháp để xem các năm đỉnh cao trong cuộc đời và biểu đồ sức mạnh để xem các giá trị năng lực mà bạn có</span></p><p><span style="color: rgb(20, 20, 20);">cùng với các chỉ số khác kèm lời khuyên tương ứng để kích hoạt được các điểm mạnh của bạn giúp bạn phát triển, gặp</span></p><p><span style="color: rgb(20, 20, 20);">nhiều thuận lợi trong cuộc sống.</span></p>';
+            $yearIndicator = contentText($text);
         ?>
-        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2000px; text-align: justify; top: 0">
             <div style="margin-top: 0">
                 {!! $yearIndicator[0] !!}
             </div>
@@ -452,7 +478,7 @@
     <div class="pc pcb w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             {!! $yearIndicator[$i] !!}
         </div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -473,10 +499,11 @@
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
             {{ $data['data']['missionIndicator']['missionIndicator'] }}</div>
 
-            <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
+        <?php
+            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em style="color: rgb(20, 20, 20);">Trong Thần số học, chỉ số sứ mệnh giúp bạn biết cách đạt được mục tiêu của bạn, lớn và nhỏ. Sứ mệnh khác với số đường đời. Con số đường đời của bạn ám chỉ đến mục đích tổng thể lớn hơn của bạn. Chỉ số sứ mệnh của bạn tập trung nhiều hơn vào các đặc điểm, tính cách của bạn. Nhưng số đường đời và số mệnh của bạn có thể đi đôi với nhau. Theo thần số học, số đường đời của bạn cho bạn biết bạn đến cuộc đời này để làm gì, số sứ mệnh của bạn mô tả cách bạn tiếp tục thực hiện nó.</em></p><p><em style="color: rgb(20, 20, 20);">Phép tính đơn giản của chúng tôi xác định số sứ mệnh giúp bạn xác định các đặc điểm chính của mình và nơi bạn xuất sắc trong cuộc sống. Không chỉ một giai đoạn của cuộc đời, mà con số này tác động vào mọi giai đoạn của cuộc đời bạn. Bạn có thể chọn một con đường đi, nhưng nó có thể không phải lúc nào cũng đúng. Chỉ số này giúp xác định con đường nào là con đường phù hợp sẽ khiến bạn hài lòng và mãn nguyện.</em></p><p><br></p><p><strong style="color: rgb(20, 20, 20);">Sứ mệnh số 1 có ý nghĩa gì ?</strong></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Sáng tạo, kỷ luật, độc lập, lãnh đạo...</span></p><p><span style="color: rgb(20, 20, 20);">Đây là những đặc điểm gắn liền với chỉ số sứ mệnh là 1.</span></p><p><span style="color: rgb(20, 20, 20);">Bạn là một nhà lãnh đạo bẩm sinh. Ý chí, sức mạnh và lòng quyết tâm giúp bạn đạt được vị trí lãnh đạo, đạt được thành công trong khi đạt được mục tiêu. Với sứ mệnh số 1, bạn là người làm chủ vận mệnh và đường đời của mình. Bạn sẽ không chấp nhận mọi người bảo bạn phải làm gì. Bạn ra lệnh cho họ trong khi bạn là trung tâm của sự chú ý. Sự sáng tạo của bạn sẽ giúp bạn luôn dẫn đầu và bạn sẽ tiếp tục tìm ra những cách mới để đạt được mục tiêu. Cho dù đó là mục tiêu trong gia đình hay sự nghiệp - bạn sẽ xuất sắc trong bất kỳ sự nghiệp nào mà bạn có thể dẫn đầu, với tư cách là số 1. Nhưng bạn cần phải cẩn thận. Bạn là một người có ý chí mạnh mẽ, điều này có thể khiến bạn có vẻ thẳng thừng, ích kỷ và một số tiêu cực khác.</span></p><p><br></p><p><strong style="color: rgb(20, 20, 20);">Nhu cầu về quyền lực</strong></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Bạn sẽ không hạnh phúc khi không nắm quyền. Vì vậy, những người sứ mệnh số 1 có xu hướng trở thành doanh nhân, CEO, hiệu trưởng, giám đốc điều hành và chính trị gia.</span></p><></><p><span style="color: rgb(20, 20, 20);"> Những nghề nghiệp quyền lực cao này sẽ đáp ứng mong muốn quyền lực của bạn.</span></p><p><span style="color: rgb(20, 20, 20);">Bởi vì bạn là một người độc lập, bạn có thể mong đợi những người xung quanh bạn cũng vậy. Điều này có thể dẫn đến tình huống bạn thiếu kiên nhẫn với những người không thể phù hợp với mình. Người mệnh số 1 cần cẩn thận kẻo hách dịch ra ngoài với mọi người. Năng lượng quyền lực mạnh mẽ là bản chất của bạn, nhưng khả năng lãnh đạo của bạn có thể khiến một số người rơi vào tình huống không thoải mái nếu bạn không tôn trọng họ. Điều này áp dụng trong các mối quan hệ kinh doanh và cá nhân với số mệnh 1. Ham muốn quyền lực của bạn có thể mang lại cho bạn khí chất vượt trội trong kinh doanh và thậm chí trong hôn nhân, vì vậy bạn sẽ bỏ lỡ cơ hội để cải thiện bản thân. Có thể bạn chỉ quen với tính tự lập nên bạn chưa có thời gian để trưởng thành. Bạn sẽ cần phải kiên nhẫn với người khác, lắng nghe họ và biết rằng bạn không cần phải dẫn đầu liên tục. Để xem bạn có thể xuất sắc ở vị trí lãnh đạo nào, hãy đọc Chỉ số linh hồn của bạn.</span></p><p><span style="color: rgb(20, 20, 20);">Sự nghiệp phù hợp</span></p><p><span style="color: rgb(20, 20, 20);">Thần số học cho thấy rằng số 1 phù hợp với một số vai trò. Có thể khó chọn một con đường. Bạn có thể chọn một sự nghiệp mà bạn có một chú quyền lực để giúp đỡ người khác, hoặc bạn muốn lãnh đạo các nhóm lớn và ảnh hưởng đến nhiều người hơn. Bạn cần nhìn nhận bản thân là 1 và xem điều gì có ích cho cuộc sống của mình thì hãy đi theo con đường đó.</span></p><p><span style="color: rgb(20, 20, 20);">Nếu bạn có xu hướng nhượng bộ và nhẹ nhàng trong tính cách bản ngã của mình (xem phần nhóm tính cách), có lẽ bạn sẽ lùi lại một bước khỏi sự ham muốn quyền lực. Khi đó, trở thành giáo viên hoặc hiệu trưởng có thể hiệu quả. Bạn sẽ dẫn dắt mọi người mà không cần phải đi quá xa. Với tư cách là hiệu trưởng, nhân viên và học sinh trông đợi vào bạn để điều hành trường học. Là một giáo viên, bạn phải trở thành trung tâm của sự chú ý của học sinh và linh hoạt trong khả năng sáng tạo của mình. Thật không may là, bạn không phải lúc nào cũng để cho khía cạnh sáng tạo của mình thể hiện. Giáo dục trẻ em cần một số tính độc đáo thực sự để truyền bá những ý tưởng và trí tuệ của bạn một cách đáng tin cậy đến tâm trí trẻ. Đó là những cách bạn có thể đi nếu bạn không muốn hành động một cách quá quyết đoán. Nếu tiền bạc, cơ hội phát triển và thể hiện khả năng là mong muốn của bạn, bạn có thể muốn hướng tới mục tiêu cao hơn. Miễn là bạn cần biết bạn sẽ không thẳng thừng hoặc gay gắt với mọi người . Bạn có thể bắt đầu kinh doanh và xây dựng một đế chế. Đạt được sự tin tưởng và ngưỡng mộ của nhân viên, khách hàng và đối tác kinh doanh, đồng thời thấy nỗ lực của bạn được hoan nghênh trên quy mô lớn hơn. Bạn có các công cụ để tạo ra sự thay đổi trên thế giới. Hãy cho phép bản thân quyết tâm làm điều đó. Chỉ cần đừng để công việc mạnh mẽ của bạn quan trọng hơn tình yêu hoặc gia đình. Bạn có thể là một tài sản lớn, thống trị trong một gia đình, nếu bạn luôn kiểm soát được cái tôi của mình.</span></p><p><span style="color: rgb(20, 20, 20);">Bạn cũng sẽ thấy rằng sự lựa chọn nghề nghiệp của bạn bị ảnh hưởng nhiều bởi chỉ số linh hồn và chỉ số đường đời. Hãy đọc thêm các luận giải về những con số này để suy ngẫm.</span></p><p><span style="color: rgb(20, 20, 20);">Độc lập</span></p><p><span style="color: rgb(20, 20, 20);">Những người nắm quyền có tính độc lập mạnh mẽ, đó là một đặc điểm tự nhiên của bạn. Nhưng một khi bạn đã tạo dựng được vai trò lãnh đạo trong công việc, trong gia đình, trong lối sống của mình, bạn sẽ dễ dàng để điều đó biến mất</span></p><></><p><span style="color: rgb(20, 20, 20);">Bạn có thể có những nhân viên muốn được thăng chức lên quan hệ đối tác. Bạn có thể tìm thấy một đối tác có ưu thế như bạn và mâu thuẫn trong quan điểm của bạn.</span></p><p><span style="color: rgb(20, 20, 20);">Bạn cần kết giao với những người phù hợp với tính cách độc đoán của bạn. Trong đội ngũ nhân viên, bạn nên tìm kiếm những người phục tùng nhưng trực giác, những người làm việc theo tiêu chuẩn của bạn nhưng phụ thuộc vào bạn và sự lãnh đạo của bạn. Họ sẽ không cố gắng tước bỏ quyền lãnh đạo độc lập của bạn. Ở trong tình yêu và hôn nhân, hãy tìm một người có thể ngồi vào ghế sau trong mối quan hệ. Một người nào đó ổn cùng bạn lên kế hoạch cho mọi hoạt động của gia đình, là điểm tựa ở bên bạn, nhưng đôi khi bạn sẽ không tâm sự quá nhiều những khó khăn với họ để bạn có thể giải quyết vấn đề một mình. Nhưng hãy biết rằng bạn có thể yêu cầu giúp đỡ khi cần và hãy biết xem xét ý kiến ​của người khác. Ích kỷ sẽ không giúp bạn độc lập. Hãy nghỉ ngơi nếu gia đình bạn đề nghị như vậy. Hãy để bạn đời đưa bạn đi hẹn hò, tiếp thêm sức mạnh cho bạn. Thực sự, bạn cần phải tìm sự cân bằng trong việc duy trì sự độc lập và biết bạn cần từ bỏ nó trong những trường hợp nào.</span></p>';
+            $yearIndicator = contentText($text);
         ?>
-        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2000px;bottom: 850px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0" style="white-space: normal;width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
     </div>
@@ -496,7 +523,7 @@
         <div class="pc pce w0 h0 opened">
             <img class="bi x0 y0 w1 h1" alt=""
                 src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+            <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
                 {!! $yearIndicator[$i] !!}
             </div>
             <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -518,10 +545,11 @@
             {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
         </div>
         <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
+            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em style="color: rgb(20, 20, 20);">Số trưởng thành là 2 biểu thị một cuộc sống như một người liên kết và người hòa giải. Bạn sẽ trở nên nổi tiếng là có bản chất tốt bụng và nhạy cảm, và rất vui khi được ở trong đội nhóm, để lại sự chú ý cho những kiểu người hướng ngoại hơn. Số 2 thu hút các tình huống đòi hỏi sự thỏa hiệp và hòa bình. Sở trường đặc biệt của bạn là các tình huống một đối một, trong đó bạn có thể hòa nhập với môi trường cảm xúc của người kia và tìm ra những thỏa hiệp làm hài lòng tất cả mọi người.</em></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Hướng để thành công giai đoạn trưởng thành</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn có thể làm yên bình mọi thứ và làm mọi cuộc xung đột trở nên hòa bình bởi vì bạn thực sự quan tâm đến những gì người khác đang trải qua và muốn giải quyết chúng nếu có thể.</span></p><p><span style="color: rgb(20, 20, 20);">- Những năm ở giai đoạn trưởng thành trở đi, bạn không nên cứng đầu mà hãy nhanh chóng tập cách buông bỏ, kiên nhẫn, nhẹ nhàng và cân bằng được các nguyên tắc trong cuộc đời.</span></p><p><span style="color: rgb(20, 20, 20);">- Hãy tìm cho bạn 1 nhà lãnh đạo mà bạn cảm thấy tin tưởng và muốn cống hiến, và bạn sẽ là một trợ thủ bí ẩn đằng đắc lực đằng sau người đó để đưa cả công ty hoặc tổ chức của bạn đi lên.</span></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Số trưởng thành là 2 biểu thị một cuộc sống như một người liên kết và người hòa giải. Bạn sẽ trở nên nổi tiếng là có bản chất tốt bụng và nhạy cảm, và rất vui khi được ở trong đội nhóm, để lại sự chú ý cho những kiểu người hướng ngoại hơn. Số 2 thu hút các tình huống đòi hỏi sự thỏa hiệp và hòa bình. Sở trường đặc biệt của bạn là các tình huống một đối một, trong đó bạn có thể hòa nhập với môi trường cảm xúc của người kia và tìm ra những thỏa hiệp làm hài lòng tất cả mọi người.</span></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Hướng để thành công giai đoạn trưởng thành</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn có thể làm yên bình mọi thứ và làm mọi cuộc xung đột trở nên hòa bình bởi vì bạn thực sự quan tâm đến những gì người khác đang trải qua và muốn giải quyết chúng nếu </span></p><></><p><span style="color: rgb(20, 20, 20);">có thể.</span></p><p><span style="color: rgb(20, 20, 20);">- Những năm ở giai đoạn trưởng thành trở đi, bạn không nên cứng đầu mà hãy nhanh chóng tập cách buông bỏ, kiên nhẫn, nhẹ nhàng và cân bằng được các nguyên tắc trong cuộc đời.</span></p><p><span style="color: rgb(20, 20, 20);">- Hãy tìm cho bạn 1 nhà lãnh đạo mà bạn cảm thấy tin tưởng và muốn cống hiến, và bạn sẽ là một trợ thủ bí ẩn đằng đắc lực đằng sau người đó để đưa cả công ty hoặc tổ chức của bạn đi lên.</span></p>';
+            $yearIndicator = contentText($text);
         ?>
-        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
 
@@ -540,7 +568,7 @@
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if(isset($yearIndicator[$i]))
             {!! $yearIndicator[$i] !!}
             @endif
@@ -569,17 +597,18 @@
             {{ $data['data']['soulIndicator']['soulIndicator'] }}
         </div>
         <?php
-        $yearIndicator = \App\Http\Controllers\PDFController::text();
-        $page = $page + 1;
-    ?>
+            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);"><span class="ql-cursor">﻿</span>Bạn là con người luôn muốn làm những việc để:</span></p><p><span style="color: rgb(20, 20, 20);">- Được là chính mình khi được cống hiến với những điều thiêng liêng nhất</span></p><p><span style="color: rgb(20, 20, 20);">- Được sống với từng khoảnh khắc trong cuộc đời - Được làm những điều tốt đẹp với gia đình và bạn bè Bạn mong muốn trở thành một nhà nhân đạo, người góp phần làm cho thế giới trở thành một nơi tốt đẹp hơn. Sâu thẳm trong trái tim của bạn, tất cả linh hồn của bạn muốn là sử dụng mọi cơ hội được trao để thúc đẩy hòa bình, thống nhất, hiểu biết, tha thứ và tình yêu phổ quát. Bạn có động lực để phục vụ người khác – cho dù đó là con cái, gia đình, bạn bè hoặc người yêu của bạn ... hay nhân loại, động vật hoặc môi trường. Bạn được thúc đẩy bởi sự thể hiện sáng tạo và theo đuổi công lý để cải thiện cuộc sống của người khác. Mỗi khi bạn thể hiện bản thân một cách sáng tạo hoặc làm điều gì đó phục vụ lợi ích lớn hơn, bạn sẽ đặt mình vào nguồn gốc và thực hiện mong muốn của trái tim mình.</span></p>';
+            $yearIndicator = contentText($text);
+            $page = $page + 1;
+        ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['soulIndicator']['description'] !!}
-            <br>
-            <br>
+        </div>
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
-
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer')
         <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
@@ -614,16 +643,19 @@
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 92px">5</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TÍNH CÁCH</div>
         <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-            {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
-
+            {{ $data['data']['personalIndicator']['personalIndicator'] }}
+        </div>
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
+                $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Biểu hiện bên ngoài của bạn là thích làm việc độc lập và được trao quyền.</span></p><p><span style="color: rgb(20, 20, 20);">Bạn thích có không gian riêng để thực hiện công việc.</span></p><p><span style="color: rgb(20, 20, 20);">Bạn cũng muốn trở thành một nhà lãnh đạo.</span></p>';
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['personalIndicator']['description'] !!}
-            <br>
+        </div>
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
 
@@ -665,17 +697,18 @@
         </div>
 
         <?php
-        $yearIndicator = \App\Http\Controllers\PDFController::text();
-        $page = $page + 1;
-    ?>
+            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Bạn có năng lực là người gọn gàng và giỏi phân tích.</span></p><p><span style="color: rgb(20, 20, 20);">Bạn là nhà quản trị cuộc sống và là nhân viên chăm chỉ.</span></p><p><span style="color: rgb(20, 20, 20);">Người ta xem số “4” là chuẩn mực của lòng trung thành và kiên định. Nếu bạn nghĩ mình đúng thì rất hiếm khi bạn từ bỏ. Để có được uy tín, bạn thường đưa ra bằng chứng để chứng minh rằng tại sao bạn phải làm như vậy. Bạn phải cẩn trọng trong ngôn từ, và tránh lỗ mãng. Bạn thường bị hiểu lầm. Nói năng nhã nhặn hơn là bí quyết giúp bạn có được sự thấu hiểu tốt hơn từ người khác.</span></p>';
+            $yearIndicator = contentText($text);
+            $page = $page + 1;
+        ?>
         <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['dobIndicator']['description'] !!}
-            <br>
-            <br>
+        </div>
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
-
         <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
         @include('footer')
         <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
@@ -714,11 +747,12 @@
         </div>
 
         <?php
-        $yearIndicator = \App\Http\Controllers\PDFController::text();
-        $page = $page + 1;
-    ?>
-        <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
+            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em style="color: rgb(20, 20, 20);">Số thái độ là một thành phần quan trọng của số học. Nó mô tả cách bạn thể hiện mình với phần còn lại của thế giới một cách tự nhiên, đặc biệt là trong những lần gặp gỡ đầu tiên. Mặc dù không phải lúc nào bạn cũng có thể nhận thức được hành động của mình, nhưng con số thái độ của bạn mô tả cách bạn hành động với người khác một cách tự nhiên (có thể hiểu giống như bản năng của bạn). Một khi bạn hiểu về cách bạn cư xử tự nhiên với người khác và trong cuộc sống nói chung, bạn có thể thay đổi nó nếu bạn cảm thấy thích.</em></p><p><br></p><h1><strong style="color: rgb(20, 20, 20);"><em>Thái độ số 9 có nghĩa là gì?</em></strong></h1><p><span style="color: rgb(20, 20, 20);">Những đặc điểm của những người có thái độ số 9 bao gồm:</span></p><p><span style="color: rgb(20, 20, 20);">- Nhân đạo, tốt bụng</span></p><p><span style="color: rgb(20, 20, 20);">- Các nhà lãnh đạo</span></p><p><span style="color: rgb(20, 20, 20);">- Sáng tạo</span></p><p><span style="color: rgb(20, 20, 20);">- Giỏi tâm lý</span></p><p><span style="color: rgb(20, 20, 20);">- Cho đi</span></p><p><span style="color: rgb(20, 20, 20);">Nếu bạn là người có thái độ số 9, thì bạn luôn nhanh chóng giúp đỡ những người xung quanh. Điều quan trọng là bạn phải bảo vệ lợi ích của người khác. Bạn sẽ nhận nhiều trách nhiệm hơn mức cần thiết khi đảm nhận công việc của người khác và rất giỏi trong việc “làm giả cho đến khi bạn làm được”.</span></p><p><span style="color: rgb(20, 20, 20);">Việc giảng dạy đến với bạn một cách dễ dàng và tự nhiên. Với sự quyến rũ của bạn, mọi người sẽ bị thu hút bởi bản chất dịu dàng của bạn. Điều này cũng sẽ hiển thị với mọi người như thể bạn đang phụ trách các tình huống hoặc dự án. Bạn có thiên bẩm về nghệ thuật, có thể là viết lách, diễn xuất, nhiếp ảnh hoặc âm nhạc, và điều này sẽ tiết lộ khía cạnh sáng tạo của bạn. Bạn phản ứng với một việc hoặc một người nào đó với xu hướng có năng khiếu, trực giác nhạy bén và rất thích cho đi, giúp đỡ người khác.</span></p><p><span style="color: rgb(20, 20, 20);">Để có thể thành công và sống một cuộc sống thịnh vượng, bạn cần tập trung sống ở thời điểm hiện tại và học cách buông bỏ những chấp niệm.</span></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Nhân đạo, tốt bụng</span></p><></><p><span style="color: rgb(20, 20, 20);">Là thái độ số 9, bạn sẽ ở trạng thái tốt nhất khi phục vụ mục đích nhân đạo và có cơ hội trở thành một nhà lãnh đạo giàu lòng nhân ái. Bạn không tự cao tự đại và là người từ bi nhất trong số các con số về thái độ. Tại nơi làm việc, bạn là hình ảnh thu nhỏ của việc “Chỉ cho tôi những việc phải làm, và tôi sẽ làm được”. Bạn thường đảm nhận nhiều trách nhiệm hơn khi có cơ hội và có xu hướng đảm nhận ngay cả khi bạn không cần thiết. Điều này sẽ khiến bạn cảm thấy kiệt sức, và quá sức. Điều này có thể gây bất lợi cho sức khỏe của bạn và là điều bạn cần lưu ý.</span></p><p><span style="color: rgb(20, 20, 20);">Sáng tạo, giỏi tâm lý</span></p><p><span style="color: rgb(20, 20, 20);">Với thái độ số 9, bạn có một tài năng bẩm sinh và sự thông minh để sáng tạo và thường xuất sắc trong nghệ thuật. Bạn có thể sử dụng khả năng sáng tạo của mình để thể hiện bản thân nhiều hơn cũng như sử dụng thiên tài sáng tạo của mình để học nghệ thuật cân bằng. Sự sáng tạo có thể là một lối thoát giúp bạn tràn đầy năng lượng và mang đến cho bạn một cách nhìn khác về cách giải quyết vấn đề. Nó cũng có thể giúp bạn thu hút những người có cùng sở thích với bạn để làm cho thế giới trở nên tốt đẹp hơn.</span></p><p><span style="color: rgb(20, 20, 20);">Những người số 9 có thái độ rất rộng lượng và giàu lòng trắc ẩn, thường rất ít suy nghĩ về bản thân. Tuy nhiên, bạn rất giỏi trong việc nhận lấy nỗi đau và trải nghiệm của chính mình, sau đó tạo ra công cụ để dạy người khác cách chữa lành. Bạn luôn giữ lòng trắc ẩn trong mọi việc bạn làm. Bạn có thể có một số nỗi đau cũ vẫn ám ảnh bạn và để hạnh phúc, bạn cần phải vượt qua điều này.</span></p><p><span style="color: rgb(20, 20, 20);">Bạn có thể biến những trải nghiệm đau đớn cũ này thành tích cực và phát triển các công cụ để dạy người khác cách chữa lành nỗi đau của chính họ. Cho đi, nhưng đấu tranh để nhận. Bạn thích cho đi và cho đi nhưng lại cảm thấy rất khó để nhận lại. Bạn cần hiểu rằng nếu chỉ cho đi, điều này cũng có thể dẫn đến sự mất cân bằng và hiểu lầm trong các mối quan hệ, vì một đối tác có thể cảm thấy như thể những món quà và tình cảm của họ không bao giờ được đón nhận. Một trong những thách thức lớn nhất đối với bạn có thái độ số 9 là khả năng tiếp nhận và chấp nhận. Hãy bắt đầu mỗi ngày như thể đó là ngày đầu tiên của bạn, buông bỏ quá khứ và sống với lòng biết ơn. Sau đó, bạn chỉ cần bắt đầu tận hưởng những phần thưởng mà cuộc sống sẽ mang lại cho bạn</span></p>';
+            $yearIndicator = contentText($text);
+            $page = $page + 1;
+        ?>
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
 
@@ -738,7 +772,7 @@
 <div class="pc pce w0 h0 opened">
     <img class="bi x0 y0 w1 h1" alt=""
         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
         {!! $yearIndicator[$i] !!}
     </div>
     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -821,14 +855,16 @@
             {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
 
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
+                $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);"><span class="ql-cursor">﻿</span>Khi đối diện với những tình huống có vấn đề trong cuộc sống, năng lực Tư duy Lý trí của bạn luôn hướng đến sự khách</span></p><p><span style="color: rgb(20, 20, 20);">quan, bác ái và tinh thần cộng đồng. Bạn có tư duy của một nhà lãnh đạo tinh thần, bạn quan tâm tới những vấn đề xã hội,</span></p><p><span style="color: rgb(20, 20, 20);">những vấn đề mang tính "chúng ta" nhiều hơn là cái "Tôi". Bạn chân thành và mong muốn hướng đến những lý tưởng nhân văn cao đẹp, như cải thiện điều kiện sống hoặc giúp đỡ những người yếu thế hơn mình. Chính vì thế, suy nghĩ của bạn luôn hướng thượng và có tầm nhìn xa. Bạn có lòng trắc ẩn và vị tha rất lớn nên rất biết cách đối nhân xử thế với hầu hết mọi người thuộc nhiều tầng lớp khác nhau. Bạn không có nhiều thành kiến khi nhìn nhận các vấn đề trong cuộc sống. Chính vì vậy, nên lý trí của bạn thường không phát huy mạnh mẽ khi giải quyết các tình huống xảy ra. Bạn làm việc gì cũng sẽ đều suy nghĩ tới cảm nhận của mọi người trước, nên cho dù bạn có lập luận vô cùng sắc bén đến đâu, phân tích kỹ càng đến đâu nhưng khi nó ảnh hưởng tới mọi người thì bạn sẽ xử lý theo hướng cảm tính nhiều hơn. Số 9 ở Tư duy lý trí mang theo lý tưởng cao và năng lượng tột cùng có thể chạm đến trái tim của vũ trụ. Chính vì lẽ đó, bạn là trường hợp đặc biệt, hãy cứ cống hiến không vụ lợi cho những mục đích xứng đáng, bạn sẽ nhận lại sự thành công, tôn trọng và ngưỡng vọng từ mọi người.</span></p>';
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['thinkingIndicator']['description'] !!}
-            <br>
-            <br>
+        </div>
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
 
@@ -851,14 +887,16 @@
             {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
 
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
+                $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Chỉ số Tư duy cảm xúc số 2 tiết lộ rằng bạn nhạy cảm và dễ tổn thương. Cảm xúc là thứ luôn thường trực và chi phối dẫn tới việc bạn rất dễ xúc động. Bạn khó có thể che dấu cảm xúc của mình, mọi cảm xúc dù là vui, buồn, yêu, ghét đều bộc lộ một cách rõ ràng và hiện lên qua biểu cảm khuôn mặt bạn. Nếu biết cách quản lý cảm xúc thật tốt bạn sẽ là một nhà ngoại giao cừ khôi và được mọi người nể phục. Tuy nhiên, một mặt khác của số 2 sẽ khiến cho tâm trạng của bạn dễ bất ổn, cảm xúc lên xuống thất thường, dẫn tới sự thiếu tự tin và dễ lo lắng thái quá. Con số 2 ở mặt cảm xúc là một tử huyệt, mà nếu như bạn không làm chủ được cảm xúc của bản thân bạn sẽ gặp khá nhiều rắc rối. Rắc rối lớn nhất là những quyết định dựa trên cảm xúc, không có sự khách quan, không đủ tỉnh táo và lập luận vững chắc. Vì vậy, sau mỗi quyết định bạn rất dễ bị nhấn chìm trong những nỗi sợ không tên hay trạng thái lo âu buồn bã, thậm chí cả những liên đới về quyền lợi, pháp luật... Lời khuyên dành cho bạn nếu như chính bạn cũng cảm thấy sự mất cân bằng của chính mình, hãy học cách gọi tên và đối diện với những cảm xúc phức tạp của bản thân, đừng trốn tránh mà hãy thử vài lần đối mặt, bạn sẽ dần tìm ra công thức chung cho bản thân. Tập điều hướng suy nghĩ theo hướng lạc quan, luôn tự động viên chính mình và kết thân với những người có năng lượng tích cực. Tránh xa khỏi những người luôn tiêu cực, u uất, chán nản, hay than thở, thậm chí cả những bài hát hay bộ phim quá sầu não. Bạn cần học cách kiểm soát những cảm xúc đến với mình, sau đó học cách quản lý chính bản thân mình, bạn sẽ hoàn thiện bản thân theo hướng tích cực hơn rất nhiều.&nbsp;</span></p>';
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
-            <br>
-            <br>
+        </div>
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
 
@@ -881,14 +919,16 @@
             {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
 
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
+                $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Chỉ số Năng lực trực giác số 3 tiết lộ rằng trực giác của bạn sẽ phát huy nhất thông qua các hoạt động sáng tạo, sự tưởng</span></p><p><span style="color: rgb(20, 20, 20);">tượng và năng lượng lạc quan tích cực.</span></p><p><span style="color: rgb(20, 20, 20);">Trên thực tế, trực giác của bạn không quá mạnh và không dễ chi phối đến bạn, tuy nhiên bạn có xu hướng phóng đại những hiểu biết của mình. Trực giác của bạn không tự nhiên mà có, thường là sẽ được tích góp trong một khoảng thời gian khi bạn luôn làm về việc đó. Khi dữ kiện ngày càng nhiều và ăn sâu vào tiềm thức thì đến một lúc nào đó sẽ giúp bạn sáng trí và mách bảo bạn để có những quyết định đúng đắn.</span></p>';
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
-            <br>
-            <br>
+        </div>
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
 
@@ -914,14 +954,16 @@
 
 
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
+                $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Khi giải quyết những tình huống có vấn đề trong cuộc sống, bạn có xu hướng luôn tìm kiếm và làm theo cách thức mới,</span></p><p><span style="color: rgb(20, 20, 20);">bạn không ngại những thử thách trên hành trình của mình. Mong muốn chinh phục sẽ làm bạn hưng phấn hơn và muốn</span></p><p><span style="color: rgb(20, 20, 20);">chiến thắng nhiều hơn nữa. Bạn có nguồn năng lượng dồi dào và dường như bạn rất khó ngồi im một chỗ hay bị giới hạn bằng bốn bức tường. Bạn linh hoạt và tháo vát bởi bạn có cơ thể phản ứng một nhanh nhẹn. Diện mạo của người có Tư duy Hành động 5 thường dễ gây ấn tượng cho người khác. Bạn luôn đề cao tinh thần tự do, thích được trở thành người của cộng đồng công chúng. Chính vì thế những quyết định hay cách xử lý của bạn luôn rất nhanh và có tính liều lĩnh, đôi khi bạn còn chưa kịp nghĩ đến những kết quả sau này. Bên cạnh đó, bởi bạn muốn thử các cách làm khác nhau để chinh phục và khám phá nên đôi khi trong hành động của mình, bạn không muốn nghe sự chỉ dẫn hoặc tránh những lỗi mà người đi trước mắc phải. Thậm chí bạn muốn làm lại để tìm ra lý do vì sao người kia lại bị sai và rồi bạn cũng bị mắc phải lỗi tương tự như những người đi trước. Tất nhiên, mỗi trải nghiệm sẽ cho bạn một bài học mới và giúp bạn ngày một hoàn thiện mình, tuy nhiên bạn nên học cách tiết chế và lắng nghe những lời khuyên từ người đi trước, cẩn trọng hơn những hướng đi của mình, bạn sẽ tiến những bước chắc chắn với những quyết định đúng đắn.</span></p>';
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
             style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
             {!! $data['data']['actionThinkingIndicator']['description'] !!}
-            <br>
-            <br>
+        </div>
+        <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
 
@@ -989,11 +1031,12 @@
             {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
         </div>
         <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
+            $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Bạn có khả năng phục hồi và nhanh chóng lấy lại cân bằng sau nhiều biến cố.</span></p><p><span style="color: rgb(20, 20, 20);">Trải qua quá trình thử thách, bạn có xu hướng lui về để chiêm nghiệm và rút ra bài học cho mình.</span></p><p><span style="color: rgb(20, 20, 20);">Ít ai có thể chạm đến cuộc sống của bạn vì bạn thường không dễ chia sẻ cảm xúc của mình với người khác. Hãy lưu tâm hơn với những gì diễn ra xung quanh và cần rút ngắn khoảng cách với những người thật sự quan tâm đến bạn.</span></p>';
+            $yearIndicator = contentText($text);
             $page = $page + 1;
         ?>
         <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-            style="white-space: normal; width: 2000px; bottom: 750px; text-align: justify;">
+            style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
             {!! $yearIndicator[0] !!}
         </div>
 
@@ -1108,9 +1151,9 @@
                 {{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}
             </div>
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
             <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                  style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
                 {!! $yearIndicator[0] !!}
@@ -1155,13 +1198,13 @@
                 {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
             </div>
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
+            <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+                 style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
                 {!! $yearIndicator[0] !!}
-          </div>
+            </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer')
@@ -1178,7 +1221,7 @@
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
                         @if(isset($yearIndicator[$i]))
                             {!! $yearIndicator[$i] !!}
                         @endif
@@ -1202,12 +1245,13 @@
                 {{ $data['data']['balanceIndicator']['balanceIndicator'] }}
             </div>
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-                {!! $array[0] !!}
+                $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em style="color: rgb(20, 20, 20);">Những người khác nhau phản ứng khác nhau với những thách thức mà họ phải đối mặt trong cuộc sống. Một số người có thói quen rút lui khỏi tình huống khó khăn để suy nghĩ thấu đáo vấn đề; những người khác rút lui khỏi cảm xúc của họ, để thoát khỏi cảm giác khó chịu. Một số người bùng nổ vì cảm xúc, nhưng để cơn bùng nổ trôi qua nhanh chóng, còn người khác nán lại với cảm xúc của họ, suy nghĩ nhiều về cảm xúc đó trong nội tâm. Chỉ số này sẽ hướng dẫn bạn cách tốt nhất để đối phó với các tình huống khó khăn hoặc đe dọa. Bạn cũng biết về cách tốt nhất để sử dụng khả năng của mình để đối mặt với những thách thức khác nhau trong cuộc sống và cách đối phó với những thời điểm khó khăn.</em></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Điểm tích cực của bạn khi đối mặt với vấn đề khó khăn:</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn có xu hướng tự chủ và tự lực trong thời kỳ khủng hoảng cá nhân.</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn muốn tự mình giải quyết một vấn đề mà không nhờ cậy vào ai.</span></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Điểm hạn chế của bạn khi đối mặt với vấn đề khó khăn:</span></p><p><br></p><p><span style="color: rgb(20, 20, 20);">- Bạn thường không thích tìm kiếm sự giúp đỡ của người khác một cách dễ dàng vì bạn có một cái tôi rất lớn. Bạn cũng thường hung hăng và bướng bỉnh.</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn có xu hướng trở thành một người cô độc khi đối mặt với các vấn đề khó khăn. Điều này có thể khiến bạn bị cô lập hơn.</span></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Lời khuyên cho bạn</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn có sự tự tin và khả năng xử lý tình huống một cách hiệu quả. Nhưng bạn cũng nên nhìn nhận quan điểm của người khác. Thái độ này có thể giúp ích cho bạn về lâu dài.</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn nên có sự cân bằng phù hợp giữa lòng dũng cảm và sự sáng tạo. Bạn có thể rút ra sức mạnh từ bản thân nhưng chia sẻ những rắc rối của bạn với bạn bè và gia đình cũng có thể có lợi.</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn nên cởi mở hơn với lời khuyên của người khác. Điều này sẽ mở rộng quan điểm</span></p><></><p><span style="color: rgb(20, 20, 20);"> của bạn về một vấn đề và cung cấp cho bạn thông tin mới để làm cơ sở cho cách tiếp cận của bạn.</span></p><p><span style="color: rgb(20, 20, 20);">Tóm lại bạn nên tận dụng khả năng nhận thức nhạy bén của mình nhưng cũng nên nhờ người khác giúp đỡ nếu cần để từ đó có khả năng phản ứng với tình huống một cách tự tin và nhạy bén hơn. Bạn có đủ can đảm và sức mạnh để giành chiến thắng trong mọi cuộc tranh luận nhưng những lời khuyên của những người khác cũng có thể hữu ích, vì vậy nên tránh sự cố chấp của bạn. Một khi những nhược điểm được khắc phục, bạn có thể đạt được thành công trong mọi bước đi của cuộc đời.</span></p>';
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
+            <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+                 style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
+                {!! $yearIndicator[0] !!}
           </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1225,7 +1269,7 @@
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
                         @if(isset($yearIndicator[$i]))
                             {!! $yearIndicator[$i] !!}
                         @endif
@@ -1249,11 +1293,12 @@
                 {{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}
             </div>
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
+                $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em style="color: rgb(20, 20, 20);"><span class="ql-cursor">﻿</span>Chỉ số này cho bạn biết cần phải làm gì để có thể nhanh chóng đưa các bài học mà cuộc đời đã dạy bạn vào việc hoàn thành sứ mệnh của cuộc đời. Hay nói cách khác, nó là sự kết nối giữa đường đời của bạn và sứ mệnh của bạn. Nếu chỉ số này trùng với năng lực tự nhiên của bạn thì thật là tuyệt vời!</em></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Nếu bạn có con số cầu nối 0 nghĩa là bạn có ít nhất hai con số cốt lõi giống nhau. Đây là một điều may mắn và là cơ hội để bạn tiến bộ trong cuộc sống được thể hiện qua những con số lặp lại. Tuy nhiên, nếu bạn có ba hoặc nhiều hơn các con số cốt lõi giống nhau, bạn có thể không còn duy trì được sự cân bằng. Nếu bạn có ba con số lõi giống nhau trở lên, hãy nghiên cứu con số này và tự hỏi bản thân xem liệu bạn có biểu hiện quá mức các đặc điểm của nó hay không.</span></p>';
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
+            <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+                 style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
                 {!! $yearIndicator[0] !!}
             </div>
 
@@ -1272,7 +1317,7 @@
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
                         @if(isset($yearIndicator[$i]))
                             {!! $yearIndicator[$i] !!}
                         @endif
@@ -1297,12 +1342,13 @@
                 {{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}
             </div>
             <?php
-            $yearIndicator = \App\Http\Controllers\PDFController::text();
-            $page = $page + 1;
-        ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify;">
-                {!! $array[0] !!}
+                $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);"><span class="ql-cursor">﻿</span>Chỉ số kết nối linh hồn và tính cách tiết lộ giải pháp giúp bạn thống nhất con người bên trong và bên ngoài của mình. Hiểu được chỉ số này bạn sẽ có phương pháp để tránh được sự mâu thuẫn và phát triển bản thân ngày một hoàn thiện hơn. Nếu chỉ số Linh hồn và Nhân cách của bạn trùng nhau có nghĩa là năng lượng giữa bên trong và bên ngoài bạn khá hoà hợp, lúc này bạn sẽ không cần tới chỉ số hoà hợp nữa. Ngược lại, nếu hai chỉ số này khác nhau thì năng lượng của bạn sẽ đa dạng, đôi khi xung khắc hay mâu thuẫn với nhau, lúc này bạn sẽ cần tới chỉ số hoà hợp để có giải pháp hoàn thiện bản thân mình.</span></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Con số này chỉ có thể là kết quả của tổ hợp 9 trừ 1. Vấn đề chủ chốt ở đây là bạn cần hiểu được giá trị của đồng tiền. Tiền nên là một công cụ dùng để giao dịch, không hơn không kém.</span></p><p><br></p><p><span style="color: rgb(20, 20, 20);">Đôi khi số 1 lấn át số 9 sẽ khiến bạn bị ám ảnh bởi thành công cá nhân. Tuy nhiên, phần lớn số 9 và số 1 khi đi cùng nhau sẽ giúp bạn có khả năng trở thành một nhà nhân đạo đầy tham vọng và có tiềm năng thành công ở tổ chức mang tầm quốc tế</span></p>';
+                $yearIndicator = contentText($text);
+                $page = $page + 1;
+            ?>
+            <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+                 style="white-space: normal; width: 2000px; top: 0; text-align: justify;">
+                {!! $yearIndicator[0] !!}
           </div>
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1320,7 +1366,7 @@
                 <div class="pc pce w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                          src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
                         @if(isset($yearIndicator[$i]))
                             {!! $yearIndicator[$i] !!}
                         @endif
@@ -1344,11 +1390,12 @@
                 {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
 
                 <?php
-                $yearIndicator = \App\Http\Controllers\PDFController::text();
-                $page = $page + 1;
-            ?>
-            <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                style="white-space: normal; width: 2000px; bottom: 865px; text-align: justify">
+                    $text = '<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em style="color: rgb(20, 20, 20);">Chỉ số này thể hiện các bài học cụ thể mà bạn cần chinh phục trong kiếp này vì đã không được học chúng ở kiếp trước. Mỗi chỉ số nợ nghiệp lại có bài học và gánh nặng riêng. Tất cả các nghiệp này đều có số 1 đứng đầu tức là đều do cái tôi mà ra. Nếu bạn học được cách bỏ đi cái tôi của mình và đức nhẫn nhịn sẽ khắc phục được rất nhiều các nhược điểm và nợ nghiệp cho kiếp sau bạn nhé!</em></p><p><br></p><p><br></p><p><br></p><p><span style="color: rgb(20, 20, 20);">NỢ NGHIỆP SỐ 19</span></p><p><span style="color: rgb(20, 20, 20);">Một người có nợ nghiệp 19/1 sẽ cần học được tính độc lập và cách sử dụng quyền lực hợp lý. Bạn sẽ bị buộc phải đứng lên cho chính mình, và thường bị mọi người bỏ lại để đi một mình trên con đường của mình. Khó khăn sẽ phải đối mặt và vượt qua sẽ thông qua việc nỗ lực một cách cá nhân.</span></p><p><span style="color: rgb(20, 20, 20);">- Một trong những bài học trọng tâm cho những người nợ nghiệp 19 là bạn phải bỏ đi sự ngoan cố chống lại sự giúp đỡ từ người khác. Phần lớn sự độc lập của bạn là do bạn tự áp đặt; bạn chỉ đơn giản là không muốn lắng nghe người khác, hoặc chấp nhận sự giúp đỡ hoặc lời khuyên của người khác.</span></p><p><span style="color: rgb(20, 20, 20);">- Nợ nghiệp 19 có thể trở thành nhà tù tự áp đặt nếu bạn không cởi mở với thực tế rằng mọi người cần phụ thuộc lẫn nhau và yêu thương lẫn nhau.</span></p><p><span style="color: rgb(20, 20, 20);">- Bài học quan trọng nhất cho bạn là: Trong khi bạn tìm cách đứng trên đôi chân của chính mình, bạn vẫn là một con người, có mối liên hệ sâu sắc với những người khác và cần sự hỗ trợ, giúp đỡ và hiểu biết của con người mà tất cả mọi người cần.</span></p><p><span style="color: rgb(20, 20, 20);">- Bạn phải học cách xét đến nhu cầu, cảm nhận ý kiến của người khác, thay vì chỉ làm theo ý mình. - Bằng cách dũng cảm đón nhận sự giúp đỡ của mọi người, thừa nhận những lỗi sai của bản thân, và hiểu được quan điểm của người khác (cho dù họ có đúng hay sai), bạn sẽ vượt qua được bài học này.</span></p>';
+                    $yearIndicator = contentText($text);
+                    $page = $page + 1;
+                ?>
+            <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+                style="white-space: normal; width: 2000px; top: 0; text-align: justify">
                 {!! $yearIndicator[0] !!}
             </div>
 
@@ -1368,7 +1415,7 @@
     <div class="pc pce w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt=""
             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2000px; white-space: normal; text-align: justify;">
             @if (isset($yearIndicator[$i]))
                 {!! $yearIndicator[$i] !!}
             @endif

@@ -23,6 +23,7 @@ class PDFController extends Controller
         ];
 
         $data = $this->getData($params);
+        // dd($data, contentText($data['data']['yearIndicator']['nowYearIndicator']['content']));
         return view('web.welcome', ['data' => $data]);
     }
     public function view(Request $request)
@@ -52,7 +53,7 @@ class PDFController extends Controller
 
     public function newFile (Request $request) {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf/e35b3ea4-183b-46eb-9ba3-7053c58f12ec',
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/e35b3ea4-183b-46eb-9ba3-7053c58f12ec',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4MzUyOTQyLCJleHAiOjE3MTA5NDQ5NDJ9.-4ebzgjDrbEK3c4QhH3S-nEFas9CkKlh6JPUZQz5k3M'
         ];
         $fileName = $this->newPdf($params);

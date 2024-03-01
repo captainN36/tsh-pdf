@@ -88,7 +88,7 @@
         @php
             $array = $data['data']['cycleFortune']['cycleFortune'];
             $filter = array_filter($array, function ($item) {
-                return $item['year'] == 2023;
+                return $item['year'] == date('Y');
             });
             $number = array_values($filter)[0]['indicator'];
         @endphp

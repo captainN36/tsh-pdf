@@ -81,7 +81,7 @@
         @php
             $array = $data['data']['cycleFortune']['cycleFortune'];
             $filter = array_filter($array, function ($item) {
-                return $item['year'] == 2023;
+                return $item['year'] == date('Y');
             });
             $number = array_values($filter)[0]['indicator'];
         @endphp
@@ -101,7 +101,7 @@
                 $index = $item['indicator'];
                 $str = $year . '<span class="_ _19"> </span>';
                 $indicator .= '<span class="indicator indicator-' . $num . '">' . $index . '</span>';
-                if ($year == 2023) {
+                if ($year == date('Y')) {
                     $string = $string . '<span class="ff1 fc6">' . $str . '</span>';
                 } else {
                     $string = $string . $year . '<span class="_ _19"> </span>';

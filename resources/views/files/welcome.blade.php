@@ -1419,7 +1419,24 @@
         </div>
     </div>
 
+    @php
+        function renderTotal($str) {
+            $sum = 0;
+            for ($i = 0; $i < strlen($str); $i++) {
+                $sum += intval($str[$i]);
+            }
 
+            while ($sum > 9) {
+                $tempSum = 0;
+                while ($sum != 0) {
+                    $tempSum += $sum % 10;
+                    $sum = (int)($sum / 10);
+                }
+                $sum = $tempSum;
+            }
+                return $sum;
+            }
+    @endphp
 
     <div id="pf7" class="pf w0 h0" data-page-no="38">
         <div class="pc pc6 w0 h0 opened">
@@ -1428,12 +1445,12 @@
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 90px; bottom: 1440px">16</div>
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">KIM TỰ THÁP SỐ HỌC</div>
 
-            <div class="t m0 x12 h16 y165 ff1 fse fc2 sc0 ls0 ws0">Tháng 03</div>ự
-            <div class="t m0 x3f h14 y166 ff1 fsc fc2 sc0 ls0 ws0">3</div>
-            <div class="t m0 x40 h4 y165 ff1 fs2 fc2 sc0 ls0 ws0">Ngày 10</div>
-            <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0">1</div>
-            <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">2001</div>
-            <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0">3</div>
+            <div class="t m0 x12 h16 y165 ff1 fse fc2 sc0 ls0 ws0">Tháng {{ explode('/', $data['dateOfBirth'])[1] }}</div>
+            <div class="t m0 x3f h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]) ?></div>
+            <div class="t m0 x40 h4 y165 ff1 fs2 fc2 sc0 ls0 ws0">Ngày {{ explode('/', $data['dateOfBirth'])[0] }}</div>
+            <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]) ?></div>
+            <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">{{ explode('/', $data['dateOfBirth'])[2] }}</div>
+            <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]) ?></div>
             <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
             <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][1] }} tuổi</div>
             <div class="t m0 x45 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2022 - 2030)</div>

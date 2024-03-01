@@ -78,8 +78,11 @@
            white-space: break-spaces;
             font-size:45px;
         }
+        p {
+            margin: 0;
+        }
         </style>
-        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 90px; bottom: 1125px; width: 1950px; text-aligin: justify">
+        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="flex-wrap: wrap; left: 90px; bottom: 1125px; width: 1950px; text-aligin: justify">
             {!! $data['data']['cycleFortune']['content'] !!}
         </div>
         @php
@@ -105,7 +108,7 @@
                 $index = $item['indicator'];
                 $str = $year . '<span class="_ _19"> </span>';
                 $indicator .= '<span class="indicator indicator-' . $num . '">' . $index . '</span>';
-                if ($year == 2023) {
+                if ($year == date('Y')) {
                     $string = $string . '<span class="ff1 fc6">' . $str . '</span>';
                 } else {
                     $string = $string . $year . '<span class="_ _19"> </span>';

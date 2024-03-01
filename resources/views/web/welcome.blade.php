@@ -71,8 +71,11 @@
            white-space: break-spaces;
             font-size:45px;
         }
+        p {
+            margin: 0;
+        }
         </style>
-        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 70px; bottom: 925px; width: 1950px">
+        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="flex-wrap: wrap; left: 70px; bottom: 925px; width: 1950px; text-align: justify;">
             {!! $data['data']['cycleFortune']['content'] !!}
         </div>
         @php

@@ -487,7 +487,7 @@ $yearIndicator = contentText($text);
                 // dd($yearIndicator);
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify">
-                <div style="margin-top: 300px">
+                <div style="margin-top: 200px">
                     {!! $yearIndicator[0] !!}
                 </div>
             </div>

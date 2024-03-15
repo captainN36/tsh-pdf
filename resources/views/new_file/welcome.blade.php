@@ -476,7 +476,7 @@ $yearIndicator = contentText($text);
                 {{-- {{ $numberLifePath }} --}}
             </div>
             <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
-                 style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
+                 style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                 {!! $data['data']['lifePathIndicator']['description'] !!}
             </div>
             <?php
@@ -487,7 +487,7 @@ $yearIndicator = contentText($text);
                 // dd($yearIndicator);
             ?>
             <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify">
-                <div style="margin-top: 180px">
+                <div style="margin-top: 300px">
                     {!! $yearIndicator[0] !!}
                 </div>
             </div>

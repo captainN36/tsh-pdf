@@ -475,7 +475,7 @@ $yearIndicator = contentText($text);
             <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{-- {{ $numberLifePath }} --}}
             </div>
-            <script>
+            {{-- <script>
                document.addEventListener('DOMContentLoaded', function() {
                     var lifePathDescription = document.getElementById('lifePathDescription');
                     if (lifePathDescription) {
@@ -505,11 +505,15 @@ $yearIndicator = contentText($text);
                     }
                 });
 
-            </script>
+            </script> --}}
             <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0" id="lifePathDescription"
                  style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                 {!! $data['data']['lifePathIndicator']['description'] !!}
-                <span id="lpd"></span>
+                <div id="lpc" class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
+                    <div>
+                        {!! $yearIndicator[0] !!}
+                    </div>
+                </div>
             </div>
             <?php
                 // $lifePathIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePath_description', $data['data']['lifePathIndicator']['description'], false);
@@ -518,11 +522,7 @@ $yearIndicator = contentText($text);
                 $yearIndicator = contentText($data['data']['lifePathIndicator']['content']);
                 // dd($yearIndicator);
             ?>
-            <div id="lpc" class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
-                <div>
-                    {!! $yearIndicator[0] !!}
-                </div>
-            </div>
+            
 
             <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
             @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

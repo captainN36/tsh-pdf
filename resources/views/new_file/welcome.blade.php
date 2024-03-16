@@ -496,7 +496,11 @@ $yearIndicator = contentText($text);
                     if (lpd) {
                         var distanceToTop = lpd.offsetTop;
                         var lpc = distanceToTop + height
-                        document.getElementById('lpc').style.top = lpc + 'px'
+                        var divCon = document.querySelector('#lpc > div');
+                        if (divCon) {
+                            divCon.style.position = 'relative';
+                            divCon.style.top = lpc + 'px'; // Giá trị top bạn muốn thiết lập
+                        }
                     } else {
                         console.error("Không tìm thấy phần tử với ID 'lifePathDescription'.");
                     }

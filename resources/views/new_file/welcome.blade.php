@@ -477,24 +477,30 @@ $yearIndicator = contentText($text);
             </div>
             <script>
                document.addEventListener('DOMContentLoaded', function() {
-    var lifePathDescription = document.getElementById('lifePathDescription');
-    if (lifePathDescription) {
-        // Get the <p> tag within the lifePathDescription div
-        var paragraph = lifePathDescription.querySelector('p');
-        
-        if (paragraph) {
-            // Get the height of the <p> tag
-            var height = paragraph.offsetHeight;
-            console.log("Height of <p> tag:", height);
-                var lpc = 1050 - height - 20
-                document.getElementById('lpc').style.bottom = lpc + 'px'
-        } else {
-            console.error("No <p> tag found within lifePathDescription div.");
-        }
-    } else {
-        console.error("Element with ID 'lifePathDescription' not found.");
-    }
-});
+                    var lifePathDescription = document.getElementById('lifePathDescription');
+                    if (lifePathDescription) {
+                        // Get the <p> tag within the lifePathDescription div
+                        var paragraph = lifePathDescription.querySelector('p');
+                        
+                        if (paragraph) {
+                            // Get the height of the <p> tag
+                            var height = paragraph.offsetHeight;
+                        } else {
+                            console.error("No <p> tag found within lifePathDescription div.");
+                        }
+                    } else {
+                        console.error("Element with ID 'lifePathDescription' not found.");
+                    }
+
+                    var lpd = document.getElementById('lifePathDescription');
+                    if (lpd) {
+                        var distanceToTop = lpd.offsetTop;
+                        var lpc = distanceToTop + height + 20
+                        document.getElementById('lpc').style.top = lpc + 'px'
+                    } else {
+                        console.error("Không tìm thấy phần tử với ID 'lifePathDescription'.");
+                    }
+                });
 
             </script>
             <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0" id="lifePathDescription"

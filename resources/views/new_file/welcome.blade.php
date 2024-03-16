@@ -473,7 +473,7 @@ $yearIndicator = contentText($text);
             @endphp
             <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ ĐƯỜNG ĐỜI (SỐ CHỦ ĐẠO)</div>
             <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
-                {{-- {{ $numberLifePath }} --}}
+                {{ $numberLifePath }}
             </div>
             {{-- <script>
                document.addEventListener('DOMContentLoaded', function() {

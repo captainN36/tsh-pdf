@@ -498,7 +498,6 @@ $yearIndicator = contentText($text);
                         var lpc = distanceToTop + height
                         var divCon = document.querySelector('#lpc > div');
                         if (divCon) {
-                            divCon.style.position = 'relative';
                             divCon.style.top = lpc + 'px'; // Giá trị top bạn muốn thiết lập
                         }
                     } else {

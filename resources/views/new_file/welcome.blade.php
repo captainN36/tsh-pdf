@@ -475,9 +475,32 @@ $yearIndicator = contentText($text);
             <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                 {{-- {{ $numberLifePath }} --}}
             </div>
-            <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+            <script>
+               document.addEventListener('DOMContentLoaded', function() {
+    var lifePathDescription = document.getElementById('lifePathDescription');
+    if (lifePathDescription) {
+        // Get the <p> tag within the lifePathDescription div
+        var paragraph = lifePathDescription.querySelector('p');
+        
+        if (paragraph) {
+            // Get the height of the <p> tag
+            var height = paragraph.offsetHeight;
+            console.log("Height of <p> tag:", height);
+                var lpc = 1050 - height - 20
+                document.getElementById('lpc').style.bottom = lpc + 'px'
+        } else {
+            console.error("No <p> tag found within lifePathDescription div.");
+        }
+    } else {
+        console.error("Element with ID 'lifePathDescription' not found.");
+    }
+});
+
+            </script>
+            <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0" id="lifePathDescription"
                  style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                 {!! $data['data']['lifePathIndicator']['description'] !!}
+                <span id="lpd"></span>
             </div>
             <?php
                 // $lifePathIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePath_description', $data['data']['lifePathIndicator']['description'], false);
@@ -486,8 +509,8 @@ $yearIndicator = contentText($text);
                 $yearIndicator = contentText($data['data']['lifePathIndicator']['content']);
                 // dd($yearIndicator);
             ?>
-            <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify; margin-top: 200px">
-                <div style="">
+            <div id="lpc" class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px; text-align: justify;">
+                <div>
                     {!! $yearIndicator[0] !!}
                 </div>
             </div>

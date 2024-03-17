@@ -734,22 +734,20 @@
                     style="left: 110px; bottom: 1440px">3</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TRƯỞNG THÀNH</div>
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
-                    {{ $data['data']['maturityIndicator']['maturityIndicator'] }}
+                    {{ $data['data']['missionIndicator']['missionIndicator'] }}
                 </div>
                 <?php
                 // $missionIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator_description', $data['data']['missionIndicator']['description'], false);
                 // $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
-                $text = preg_replace('/<div>/', '', $data['data']['maturityIndicator']['content'], 1);
-                $text = str_replace('</div>', '', $text);
-                $maturityIndicator = contentText($text);
+                $missionIndicator = contentText($data['data']['missionIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
-                    {!! $data['data']['maturityIndicator']['description'] !!}
+                    {!! $data['data']['missionIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
-                        {!! $maturityIndicator[0] !!}
+                        {!! $missionIndicator[0] !!}
                     </div>
                 </div>
             </div>
@@ -761,8 +759,8 @@
             <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
-        @if (count($maturityIndicator) >= 2)
-            @for ($i = 1; $i < count($maturityIndicator); $i++)
+        @if (count($missionIndicator) >= 2)
+            @for ($i = 1; $i < count($missionIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -770,8 +768,8 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            @if (isset($maturityIndicator[$i]))
-                                {!! $maturityIndicator[$i] !!}
+                            @if (isset($missionIndicator[$i]))
+                                {!! $missionIndicator[$i] !!}
                             @endif
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

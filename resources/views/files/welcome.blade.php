@@ -794,14 +794,16 @@
                     {{ $data['data']['soulIndicator']['soulIndicator'] }}</div>
 
                 <?php
-                $soulIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'soulIndicator', $data['data']['soulIndicator']['content']);
+                $soulIndicator = contentText($data['data']['soulIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['soulIndicator']['description'] !!}
                     <br>
-                    <br>
-                    {!! nl2br(e($soulIndicator[1])) !!}
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $soulIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -815,7 +817,7 @@
         </div>
 
         @if (count($soulIndicator) >= 2)
-            @for ($i = 2; $i <= count($soulIndicator); $i++)
+            @for ($i = 1; $i < count($soulIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -823,7 +825,7 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! nl2br(e($soulIndicator[$i])) !!}
+                            {!! $soulIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -846,14 +848,18 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
                 <?php
-                $personalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator_description', $data['data']['personalIndicator']['description']);
-                $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator', $data['data']['personalIndicator']['content']);
+                // $personalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator_description', $data['data']['personalIndicator']['description']);
+                // $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator', $data['data']['personalIndicator']['content']);
+                $personalIndicator = contentText($data['data']['personalIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['personalIndicator']['description'] !!}
                     <br>
-                    {!! nl2br(e($personalIndicator[1])) !!}
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $personalIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -867,7 +873,7 @@
         </div>
 
         @if (count($personalIndicator) >= 2)
-            @for ($i = 2; $i <= count($personalIndicator); $i++)
+            @for ($i = 1; $i < count($personalIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -875,7 +881,7 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! nl2br(e($personalIndicator[$i])) !!}
+                            {!! $personalIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -897,15 +903,18 @@
                     {{ $data['data']['dobIndicator']['dobIndicator'] }}</div>
 
                 <?php
-                $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
-                $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator', $data['data']['dobIndicator']['content']);
+                // $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
+                // $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator', $data['data']['dobIndicator']['content']);
+                $dobIndicator = contentText($data['data']['dobIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['dobIndicator']['description'] !!}
                     <br>
-                    <br>
-                    {!! nl2br(e($dobIndicator[1])) !!}
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $dobIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -919,7 +928,7 @@
         </div>
 
         @if (count($dobIndicator) >= 2)
-            @for ($i = 2; $i <= count($dobIndicator); $i++)
+            @for ($i = 1; $i < count($dobIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -927,7 +936,7 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! nl2br(e($dobIndicator[$i])) !!}
+                            {!! $dobIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -949,56 +958,18 @@
                     {{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}
                 </div>
                 <?php
-                $attitudeIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator_description', $data['data']['attitudeIndicator']['description'], false);
-                $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
-                
-                $inputString = '';
-                
-                for ($i = 1; $i <= count($attitudeIndicator_description); $i++) {
-                    $inputString .= $attitudeIndicator_description[$i];
-                }
-                $inputString .= "\r\r";
-                for ($i = 1; $i <= count($attitudeIndicator); $i++) {
-                    $inputString .= $attitudeIndicator[$i];
-                }
-                $lines = explode("\n", $inputString);
-                
-                $linesPerPartFirst = 25;
-                $linesPerPartRest = 45;
-                foreach ($lines as $key => $line) {
-                    if (strlen($line) < 100) {
-                        $lines[$key] = $line . "\r";
-                    }
-                }
-                $parts = [];
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
-                
-                    $part = array_slice($lines, $i, $linesPerPart);
-                
-                    $part = array_filter($part);
-                
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = $parts[0];
-                $first = str_replace("\r\n", "\r", $first);
-                $first = str_replace("\n", ' ', $first);
-                $array[0] = $first;
-                if (count($parts) > 1) {
-                    for ($i = 1; $i < count($parts); $i++) {
-                        $html = str_replace("\r\n ", "\r", $parts[$i]);
-                        $html = str_replace("\n", ' ', $parts[$i]);
-                        $array[$i] = $html;
-                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                    }
-                }
+                // $attitudeIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator_description', $data['data']['attitudeIndicator']['description'], false);
+                // $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
+                $attitudeIndicator = contentText($data['data']['attitudeIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
-                    {!! nl2br(e($first)) !!}
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                    {!! $data['data']['attitudeIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $attitudeIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1011,8 +982,8 @@
             </div>
         </div>
 
-        @if (count($array) >= 2)
-            @for ($i = 1; $i < count($array); $i++)
+        @if (count($attitudeIndicator) >= 2)
+            @for ($i = 1; $i < count($attitudeIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -1020,7 +991,7 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! nl2br(e($array[$i])) !!}
+                            {!! $attitudeIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -1105,15 +1076,18 @@
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ TƯ DUY LÝ TRÍ</div>
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
-                <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0" style="white-space: normal; width: 2360px">
-                    {!! $data['data']['thinkingIndicator']['description'] !!}
-                </div>
                 <?php
-                $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content']);
+                // $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content']);
+                $thinkingIndicator = conteantText($data['data']['thinkingIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify;">
-                    {!! nl2br(e($thinkingIndicator[1])) !!}
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                    {!! $data['data']['thinkingIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $thinkingIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1125,6 +1099,27 @@
                 </div>
             </div>
         </div>
+
+        @if (count($thinkingIndicator) >= 2)
+            @for ($i = 1; $i < count($thinkingIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfc" class="pf w0 h0" data-page-no="9">
+                    <div class="pc pce w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $thinkingIndicator[$i] !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
 
         <div id="pf7" class="pf w0 h0" data-page-no="30">
             <div class="pc pc6 w0 h0 opened">
@@ -1135,14 +1130,17 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
                 <?php
-                $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content']);
+                // $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content']);
+                $emotionalThinkingIndicator = contentText($data['data']['emotionalThinkingIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1000px; text-align: justify;">
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
                     <br>
-                    <br>
-                    {!! nl2br(e($emotionalThinkingIndicator[1])) !!}
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $emotionalThinkingIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1154,6 +1152,27 @@
                 </div>
             </div>
         </div>
+
+        @if (count($emotionalThinkingIndicator) >= 2)
+            @for ($i = 1; $i < count($emotionalThinkingIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfc" class="pf w0 h0" data-page-no="9">
+                    <div class="pc pce w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $emotionalThinkingIndicator[$i] !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
 
         <div id="pf7" class="pf w0 h0" data-page-no="31">
             <div class="pc pc6 w0 h0 opened">
@@ -1165,14 +1184,17 @@
                     {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
 
                 <?php
-                $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content']);
+                // $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content']);
+                $intuitiveThinkingIndicator = contentText($data['data']['intuitiveThinkingIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1000px; text-align: justify;">
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
                     <br>
-                    <br>
-                    {!! nl2br(e($intuitiveThinkingIndicator[1])) !!}
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $intuitiveThinkingIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1185,6 +1207,26 @@
             </div>
         </div>
 
+        @if (count($intuitiveThinkingIndicator) >= 2)
+            @for ($i = 1; $i < count($intuitiveThinkingIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfc" class="pf w0 h0" data-page-no="9">
+                    <div class="pc pce w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $intuitiveThinkingIndicator[$i] !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
 
 
         <div id="pf7" class="pf w0 h0" data-page-no="32">
@@ -1198,14 +1240,17 @@
 
 
                 <?php
-                $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content']);
+                // $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content']);
+                $c = contentText($data['data']['actionThinkingIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1000px; text-align: justify;">
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['actionThinkingIndicator']['description'] !!}
                     <br>
-                    <br>
-                    {!! nl2br(e($actionThinkingIndicator[1])) !!}
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $actionThinkingIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1218,45 +1263,27 @@
             </div>
         </div>
 
-
-        <?php
-        $natureIndicator1 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator', $data['data']['natureIndicator']['data'][0], false);
-        $natureIndicator2 = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'natureIndicator2', $data['data']['natureIndicator']['data'][1], false);
+        @if (count($actionThinkingIndicator) >= 2)
+            @for ($i = 1; $i < count($actionThinkingIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfc" class="pf w0 h0" data-page-no="9">
+                    <div class="pc pce w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $actionThinkingIndicator[$i] !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
         
-        $natureIndicator1 = preg_replace("/\n/", "\r", $natureIndicator1[1], 1);
-        $natureIndicator2 = preg_replace("/\n/", "\r", $natureIndicator2[1], 1);
-        $natureIndicator[1] = $natureIndicator1;
-        $natureIndicator[2] = $natureIndicator2;
-        $inputString = '';
-        for ($i = 1; $i <= count($natureIndicator); $i++) {
-            $inputString .= $natureIndicator[$i];
-        }
-        $lines = explode("\n", $inputString);
-        
-        $linesPerPartFirst = 20;
-        $linesPerPartRest = 55;
-        
-        $parts = [];
-        
-        for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-            $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
-        
-            $part = array_slice($lines, $i, $linesPerPart);
-        
-            $part = array_filter($part);
-        
-            if (!empty($part)) {
-                $parts[] = implode("\n", $part);
-            }
-        }
-        $array = [];
-        for ($i = 0; $i < count($parts); $i++) {
-            $html = str_replace("\n ", '', $parts[$i]);
-            $html = str_replace("\n\n", "\r", $parts[$i]);
-            $html = str_replace("\n", ' ', $parts[$i]);
-            $array[$i] = $html;
-        }
-        ?>
 
 
         <div id="pf7" class="pf w0 h0" data-page-no="33">
@@ -1311,14 +1338,18 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['subconsciousPowerIndicator']['subconsciousPowerIndicator'] }}</div>
                 <?php
-                $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content']);
+                // $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content']);
+                $subconsciousPowerIndicator = contentText($data['data']['subconsciousPowerIndicator']['content']);
+                
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 950px; text-align: justify;">
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
                     <br>
-                    <br>
-                    {!! nl2br(e($subconsciousPowerIndicator[1])) !!}
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $subconsciousPowerIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1330,6 +1361,27 @@
                 </div>
             </div>
         </div>
+
+        @if (count($subconsciousPowerIndicator) >= 2)
+            @for ($i = 1; $i < count($subconsciousPowerIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfc" class="pf w0 h0" data-page-no="9">
+                    <div class="pc pce w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $subconsciousPowerIndicator[$i] !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
 
 
 
@@ -1679,57 +1731,18 @@
                     {{ $data['data']['balanceIndicator']['balanceIndicator'] }}
                 </div>
                 <?php
-                $balanceIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator_description', $data['data']['balanceIndicator']['description'], false);
-                $balanceIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator', $data['data']['balanceIndicator']['content'], false);
-                $page = $page + 1;
-                
-                $inputString = '';
-                
-                for ($i = 1; $i <= count($balanceIndicator_description); $i++) {
-                    $inputString .= $balanceIndicator_description[$i];
-                }
-                $inputString .= "\r\r";
-                for ($i = 1; $i <= count($balanceIndicator); $i++) {
-                    $inputString .= $balanceIndicator[$i];
-                }
-                $lines = explode("\n", $inputString);
-                
-                $linesPerPartFirst = 25;
-                $linesPerPartRest = 45;
-                foreach ($lines as $key => $line) {
-                    if (strlen($line) < 100) {
-                        $lines[$key] = $line . "\r";
-                    }
-                }
-                $parts = [];
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
-                
-                    $part = array_slice($lines, $i, $linesPerPart);
-                
-                    $part = array_filter($part);
-                
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = $parts[0];
-                $first = str_replace("\r\n", "\r", $first);
-                $first = str_replace("\n", ' ', $first);
-                $array[0] = $first;
-                if (count($parts) > 1) {
-                    for ($i = 1; $i < count($parts); $i++) {
-                        $html = str_replace("\r\n ", "\r", $parts[$i]);
-                        $html = str_replace("\n", ' ', $parts[$i]);
-                        $array[$i] = $html;
-                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                    }
-                }
+                // $balanceIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator_description', $data['data']['balanceIndicator']['description'], false);
+                // $balanceIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'balanceIndicator', $data['data']['balanceIndicator']['content'], false);
+                $balanceIndicator = contentText($data['data']['balanceIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
-                    {!! nl2br(e($array[0])) !!}
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                    {!! $data['data']['balanceIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $balanceIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1742,8 +1755,8 @@
             </div>
         </div>
 
-        @if (count($array) >= 2)
-            @for ($i = 1; $i < count($array); $i++)
+        @if (count($balanceIndicator) >= 2)
+            @for ($i = 1; $i < count($balanceIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -1751,7 +1764,7 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! nl2br(e($array[$i])) !!}
+                            {!! $balanceIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -1773,57 +1786,18 @@
                     {{ $data['data']['linkLifePathAndMission']['linkLifePathAndMission'] }}
                 </div>
                 <?php
-                $linkLifePathAndMission_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission_description', $data['data']['linkLifePathAndMission']['description'], false);
-                $linkLifePathAndMission = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission', $data['data']['linkLifePathAndMission']['content'], false);
-                $page = $page + 1;
-                
-                $inputString = '';
-                
-                for ($i = 1; $i <= count($linkLifePathAndMission_description); $i++) {
-                    $inputString .= $linkLifePathAndMission_description[$i];
-                }
-                $inputString .= "\r\r";
-                for ($i = 1; $i <= count($linkLifePathAndMission); $i++) {
-                    $inputString .= $linkLifePathAndMission[$i];
-                }
-                $lines = explode("\n", $inputString);
-                
-                $linesPerPartFirst = 25;
-                $linesPerPartRest = 45;
-                foreach ($lines as $key => $line) {
-                    if (strlen($line) < 100) {
-                        $lines[$key] = $line . "\r";
-                    }
-                }
-                $parts = [];
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
-                
-                    $part = array_slice($lines, $i, $linesPerPart);
-                
-                    $part = array_filter($part);
-                
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = $parts[0];
-                $first = str_replace("\r\n", "\r", $first);
-                $first = str_replace("\n", ' ', $first);
-                $array[0] = $first;
-                if (count($parts) > 1) {
-                    for ($i = 1; $i < count($parts); $i++) {
-                        $html = str_replace("\r\n ", "\r", $parts[$i]);
-                        $html = str_replace("\n", ' ', $parts[$i]);
-                        $array[$i] = $html;
-                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                    }
-                }
+                // $linkLifePathAndMission_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission_description', $data['data']['linkLifePathAndMission']['description'], false);
+                // $linkLifePathAndMission = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkLifePathAndMission', $data['data']['linkLifePathAndMission']['content'], false);
+                $linkLifePathAndMission = contentText($data['data']['linkLifePathAndMission']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
-                    {!! nl2br(e($array[0])) !!}
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                    {!! $data['data']['linkLifePathAndMission']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $linkLifePathAndMission[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1836,8 +1810,8 @@
             </div>
         </div>
 
-        @if (count($array) >= 2)
-            @for ($i = 1; $i < count($array); $i++)
+        @if (count($linkLifePathAndMission) >= 2)
+            @for ($i = 1; $i < count($linkLifePathAndMission); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -1845,7 +1819,7 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! nl2br(e($array[$i])) !!}
+                            {!! $linkLifePathAndMission[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -1867,57 +1841,18 @@
                     {{ $data['data']['linkSoulAndPersonalIndicator']['linkSoulAndPersonalIndicator'] }}
                 </div>
                 <?php
-                $linkSoulAndPersonalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator_description', $data['data']['linkSoulAndPersonalIndicator']['description'], false);
-                $linkSoulAndPersonalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator', $data['data']['linkSoulAndPersonalIndicator']['content'], false);
-                $page = $page + 1;
+                // $linkSoulAndPersonalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator_description', $data['data']['linkSoulAndPersonalIndicator']['description'], false);
+                $linkSoulAndPersonalIndicator = contentText($data['data']['linkSoulAndPersonalIndicator']['content']);
                 
-                $inputString = '';
-                
-                for ($i = 1; $i <= count($linkSoulAndPersonalIndicator_description); $i++) {
-                    $inputString .= $linkSoulAndPersonalIndicator_description[$i];
-                }
-                $inputString .= "\r\r";
-                for ($i = 1; $i <= count($linkSoulAndPersonalIndicator); $i++) {
-                    $inputString .= $linkSoulAndPersonalIndicator[$i];
-                }
-                $lines = explode("\n", $inputString);
-                
-                $linesPerPartFirst = 25;
-                $linesPerPartRest = 45;
-                foreach ($lines as $key => $line) {
-                    if (strlen($line) < 100) {
-                        $lines[$key] = $line . "\r";
-                    }
-                }
-                $parts = [];
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
-                
-                    $part = array_slice($lines, $i, $linesPerPart);
-                
-                    $part = array_filter($part);
-                
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = $parts[0];
-                $first = str_replace("\r\n", "\r", $first);
-                $first = str_replace("\n", ' ', $first);
-                $array[0] = $first;
-                if (count($parts) > 1) {
-                    for ($i = 1; $i < count($parts); $i++) {
-                        $html = str_replace("\r\n ", "\r", $parts[$i]);
-                        $html = str_replace("\n", ' ', $parts[$i]);
-                        $array[$i] = $html;
-                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                    }
-                }
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
-                    {!! nl2br(e($array[0])) !!}
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                    {!! $data['data']['linkSoulAndPersonalIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $linkSoulAndPersonalIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1930,8 +1865,8 @@
             </div>
         </div>
 
-        @if (count($array) >= 2)
-            @for ($i = 1; $i < count($array); $i++)
+        @if (count($linkSoulAndPersonalIndicator) >= 2)
+            @for ($i = 1; $i < count($linkSoulAndPersonalIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -1939,7 +1874,7 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! nl2br(e($array[$i])) !!}
+                            {!! $linkSoulAndPersonalIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -1962,69 +1897,19 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
                 <?php
-                $karmicIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator_description', $data['data']['karmicIndicator']['description'], false);
+                $karmicIndicator = contentText($data['data']['karmicIndicator']['content']);
                 
-                $karmicIndicator = [];
-                foreach ($data['data']['karmicIndicator']['data'] as $key => $item) {
-                    $karmicIndicator[] = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'karmicIndicator-' . $key, $item, false);
-                }
                 
-                $new_data = [];
-                foreach ($karmicIndicator as $values) {
-                    foreach ($values as $val) {
-                        $new_data[] = $val;
-                    }
-                }
-                $inputString = '';
-                for ($i = 1; $i <= count($karmicIndicator_description); $i++) {
-                    $inputString .= $karmicIndicator_description[$i];
-                }
-                $inputString .= "\r\r";
-                for ($i = 0; $i < count($new_data); $i++) {
-                    $inputString .= $new_data[$i];
-                }
-                $lines = explode("\n", $inputString);
-                
-                $linesPerPartFirst = 25;
-                $linesPerPartRest = 55;
-                foreach ($lines as $key => $line) {
-                    $line = str_replace("\f", '', $line);
-                    if (strlen($line) < 100) {
-                        $lines[$key] = $line . "\r";
-                    }
-                }
-                
-                $parts = [];
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
-                
-                    $part = array_slice($lines, $i, $linesPerPart);
-                
-                    $part = array_filter($part);
-                
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = $parts[0];
-                $first = str_replace("\r\n", "\r", $first);
-                $first = str_replace("\n", ' ', $first);
-                $first = str_replace("\r \r", "\r", $first);
-                for ($i = 1; $i <= count($parts); $i++) {
-                    if (isset($parts[$i])) {
-                        $html = str_replace("\r\n ", "\r", $parts[$i]);
-                        $html = str_replace("\n", ' ', $parts[$i]);
-                
-                        $array[$i] = $html;
-                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                    }
-                }
                 ?>
 
-                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify">
-                    {!! nl2br(e($first)) !!}
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                    {!! $data['data']['karmicIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        {!! $karmicIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -2037,26 +1922,26 @@
             </div>
         </div>
 
-        @for ($i = 1; $i <= count($array); $i++)
-            <?php $page++; ?>
-            <div id="pfc" class="pf w0 h0" data-page-no="9">
-                <div class="pc pce w0 h0 opened">
-                    <img class="bi x0 y0 w1 h1" alt=""
-                        src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
-                        style="width: 2360px; white-space: normal; text-align: justify;">
-                        @if (isset($array[$i]))
-                            {!! nl2br(e($array[$i])) !!}
-                        @endif
+        @if (count($karmicIndicator) >= 2)
+            @for ($i = 1; $i < count($karmicIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfc" class="pf w0 h0" data-page-no="9">
+                    <div class="pc pce w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $karmicIndicator[$i] !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                     </div>
-                    <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                    @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                    <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
                 </div>
-                <div class="pi"
-                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-            </div>
-        @endfor
+            @endfor
+        @endif
 
         <div id="pf7" class="pf w0 h0" data-page-no="51">
             <div class="pc pc6 w0 h0 opened">

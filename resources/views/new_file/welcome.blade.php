@@ -465,7 +465,7 @@ $yearIndicator = contentText($text);
                  src="{{ asset('/' . $path . '/duongdoi.png') }}">
             <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 110px; bottom: 1440px">1</div>
             @php
-                $title = $data['data']['lifePathIndicator']['title'];
+                $title = '<p><span style="color: rgb(32, 33, 36);">1. CHỈ SỐ ĐƯỜNG ĐỜI (SỐ CHỦ ĐẠO) CỦA BẠN LÀ: <span class="text-success">SỐ 10 - THỦ LĨNH</span></span></p>';
                 $arr = explode('<span class="text-success">', $title);
                 $end = end($arr);
                 $final = explode('</span', $end);

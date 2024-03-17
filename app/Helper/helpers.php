@@ -8,11 +8,13 @@ if (!function_exists('contentText')) {
     
         if (substr($content, 0, strlen($start_tag)) === $start_tag &&
             substr($content, -strlen($end_tag)) === $end_tag) {
-            // Xoá các tag "<div>" và "</div>"
             $string = substr($content, strlen($start_tag), -strlen($end_tag));
         }
-    
-        $content = $string;
+        
+        if ($string) {
+            $content = $string;
+        }
+
         $pages =  explode('<></>', $content);
         for ($i = 0; $i < count($pages); $i++) {
             if ($i == 0) {

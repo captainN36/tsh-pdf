@@ -8,11 +8,7 @@ if (!function_exists('contentText')) {
     
         if (substr($content, 0, strlen($start_tag)) === $start_tag &&
             substr($content, -strlen($end_tag)) === $end_tag) {
-            $string = substr($content, strlen($start_tag), -strlen($end_tag));
-        }
-        
-        if ($string) {
-            $content = $string;
+            $content = substr($content, strlen($start_tag), -strlen($end_tag));
         }
 
         $pages =  explode('<></>', $content);

@@ -631,7 +631,7 @@
                 // $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
                 $lifePathIndicator = contentText($data['data']['lifePathIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0" id="lifePathDescription"
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['lifePathIndicator']['description'] !!}
                     <br>
@@ -685,7 +685,7 @@
                 // $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
                 $missionIndicator = contentText($data['data']['missionIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0" id="lifePathDescription"
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['missionIndicator']['description'] !!}
                     <br>
@@ -740,7 +740,7 @@
                 // $maturityIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'maturityIndicator', $data['data']['maturityIndicator']['content'], false);
                 $maturityIndicator = contentText($data['data']['maturityIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0" id="lifePathDescription"
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['maturityIndicator']['description'] !!}
                     <br>

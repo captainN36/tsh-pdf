@@ -1012,7 +1012,7 @@
                     {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
                 <?php
                 // $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content'])
-                $yearIndicator = contentText($data['data']['emotionalThinkingIndicator']['content']);
+                $emotionalThinkingIndicator = contentText($data['data']['emotionalThinkingIndicator']['content']);
                 $page = $page + 1;
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0" id="lifePathDescription"

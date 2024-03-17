@@ -1078,7 +1078,7 @@
                     {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
                 <?php
                 // $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content']);
-                $thinkingIndicator = conteantText($data['data']['thinkingIndicator']['content']);
+                $thinkingIndicator = contentText($data['data']['thinkingIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">

@@ -739,8 +739,8 @@
                 <?php
                 // $missionIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator_description', $data['data']['missionIndicator']['description'], false);
                 // $missionIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'missionIndicator', $data['data']['missionIndicator']['content'], false);
-                $html = preg_replace('/^<div>|<\/div>$/', '', $data['data']['maturityIndicator']['content']);
-                $maturityIndicator = contentText($html);
+                // $html = preg_replace('/^<div>|<\/div>$/', '', $data['data']['maturityIndicator']['content']);
+                $maturityIndicator = contentText($data['data']['maturityIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">

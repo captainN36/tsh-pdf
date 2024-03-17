@@ -65,8 +65,8 @@ class PDFController extends Controller
      */
     public function viewFile (Request $request) {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/e35b3ea4-183b-46eb-9ba3-7053c58f12ec',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4MzUyOTQyLCJleHAiOjE3MTA5NDQ5NDJ9.-4ebzgjDrbEK3c4QhH3S-nEFas9CkKlh6JPUZQz5k3M'
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/e35b3ea4-183b-46eb-9ba3-7053c58f12ec',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4NTIzODc2LCJleHAiOjE3MTExMTU4NzZ9.mviQAn_sSJoWTjX9lXpW5MYd2Jb191MnWRO7uPaecIs'
         ];
         $fileName = $this->pdf($params);
         return redirect(asset('/pdf/' . $fileName));
@@ -117,7 +117,7 @@ class PDFController extends Controller
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('new_file.welcome', ['data' => $data])->render();
+            $htmlStr = view('files.welcome', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";

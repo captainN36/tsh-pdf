@@ -1241,7 +1241,7 @@
 
                 <?php
                 // $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content']);
-                $c = contentText($data['data']['actionThinkingIndicator']['content']);
+                $actionThinkingIndicator = contentText($data['data']['actionThinkingIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">

@@ -761,8 +761,8 @@
             <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
-        @if (count($missionIndicator) >= 2)
-            @for ($i = 1; $i < count($missionIndicator); $i++)
+        @if (count($maturityIndicator) >= 2)
+            @for ($i = 1; $i < count($maturityIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -770,8 +770,8 @@
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
-                            @if (isset($missionIndicator[$i]))
-                                {!! $missionIndicator[$i] !!}
+                            @if (isset($maturityIndicator[$i]))
+                                {!! $maturityIndicator[$i] !!}
                             @endif
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

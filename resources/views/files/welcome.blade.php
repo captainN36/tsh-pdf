@@ -631,7 +631,7 @@
                 // $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
                 $lifePathIndicator = contentText($data['data']['lifePathIndicator']['content']);
                 ?>
-                <div class="t m0 x5 hf yd7 ff4 fs4 fc2 sc0 ls0 ws0"
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['lifePathIndicator']['description'] !!}
                     <br>

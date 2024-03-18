@@ -24,7 +24,7 @@ class PDFController extends Controller
         ];
         $data = $this->getData($params);
         // dd($data);
-        return view('new_file.welcome', ['data' => $data]);
+        return view('web.welcome', ['data' => $data]);
         // if (!file_exists(public_path() . '/html/')) {
         //     mkdir(public_path() . '/html/', 0777, true);
         // }

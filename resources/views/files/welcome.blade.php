@@ -685,7 +685,7 @@
                     <br>
                     <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
-                        {!! str_replace('<strong>', '<strong style="font-weight: bold;">', $missionIndicator[0]) !!}
+                        {!! str_replace('<strong>', '<strong style="font-weight: bold !important;">', $missionIndicator[0]) !!}
                     </div>
                 </div>
             </div>

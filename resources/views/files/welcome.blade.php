@@ -631,7 +631,7 @@
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['lifePathIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $lifePathIndicator[0] !!}
                     </div>
@@ -653,7 +653,7 @@
                     <div class="pc pcb w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $lifePathIndicator[$i] !!}
                         </div>
@@ -791,7 +791,7 @@
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['soulIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $soulIndicator[0] !!}
                     </div>
@@ -814,7 +814,7 @@
                     <div class="pc pce w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $soulIndicator[$i] !!}
                         </div>
@@ -839,15 +839,13 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
                 <?php
-                // $personalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator_description', $data['data']['personalIndicator']['description']);
-                // $personalIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'personalIndicator', $data['data']['personalIndicator']['content']);
                 $personalIndicator = contentText($data['data']['personalIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['personalIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $personalIndicator[0] !!}
                     </div>
@@ -870,7 +868,7 @@
                     <div class="pc pce w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $personalIndicator[$i] !!}
                         </div>
@@ -894,15 +892,13 @@
                     {{ $data['data']['dobIndicator']['dobIndicator'] }}</div>
 
                 <?php
-                // $dobIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator_description', $data['data']['dobIndicator']['description']);
-                // $dobIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'dobIndicator', $data['data']['dobIndicator']['content']);
                 $dobIndicator = contentText($data['data']['dobIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['dobIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $dobIndicator[0] !!}
                     </div>
@@ -925,7 +921,7 @@
                     <div class="pc pce w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $dobIndicator[$i] !!}
                         </div>
@@ -949,15 +945,13 @@
                     {{ $data['data']['attitudeIndicator']['attitudeIndicator'] }}
                 </div>
                 <?php
-                // $attitudeIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator_description', $data['data']['attitudeIndicator']['description'], false);
-                // $attitudeIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'attitudeIndicator', $data['data']['attitudeIndicator']['content'], false);
                 $attitudeIndicator = contentText($data['data']['attitudeIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['attitudeIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $attitudeIndicator[0] !!}
                     </div>
@@ -980,7 +974,7 @@
                     <div class="pc pce w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $attitudeIndicator[$i] !!}
                         </div>
@@ -1068,14 +1062,13 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['thinkingIndicator']['thinkingIndicator'] }}</div>
                 <?php
-                // $thinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'thinkingIndicator', $data['data']['thinkingIndicator']['content']);
                 $thinkingIndicator = contentText($data['data']['thinkingIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['thinkingIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $thinkingIndicator[0] !!}
                     </div>
@@ -1098,7 +1091,7 @@
                     <div class="pc pce w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $thinkingIndicator[$i] !!}
                         </div>
@@ -1121,14 +1114,13 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['emotionalThinkingIndicator']['emotionalThinkingIndicator'] }}</div>
                 <?php
-                // $emotionalThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'emotionalThinkingIndicator', $data['data']['emotionalThinkingIndicator']['content']);
                 $emotionalThinkingIndicator = contentText($data['data']['emotionalThinkingIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $emotionalThinkingIndicator[0] !!}
                     </div>
@@ -1151,7 +1143,7 @@
                     <div class="pc pce w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $emotionalThinkingIndicator[$i] !!}
                         </div>
@@ -1175,14 +1167,13 @@
                     {{ $data['data']['intuitiveThinkingIndicator']['intuitiveThinkingIndicator'] }}</div>
 
                 <?php
-                // $intuitiveThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'intuitiveThinkingIndicator', $data['data']['intuitiveThinkingIndicator']['content']);
                 $intuitiveThinkingIndicator = contentText($data['data']['intuitiveThinkingIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $intuitiveThinkingIndicator[0] !!}
                     </div>
@@ -1205,7 +1196,7 @@
                     <div class="pc pce w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $intuitiveThinkingIndicator[$i] !!}
                         </div>
@@ -1229,14 +1220,13 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['actionThinkingIndicator']['actionThinkingIndicator'] }}</div>
                 <?php
-                // $actionThinkingIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'actionThinkingIndicator', $data['data']['actionThinkingIndicator']['content']);
                 $actionThinkingIndicator = contentText($data['data']['actionThinkingIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['actionThinkingIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff3 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $actionThinkingIndicator[0] !!}
                     </div>
@@ -1259,7 +1249,7 @@
                     <div class="pc pce w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify;">
                             {!! $actionThinkingIndicator[$i] !!}
                         </div>
@@ -1327,7 +1317,6 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['subconsciousPowerIndicator']['subconsciousPowerIndicator'] }}</div>
                 <?php
-                // $subconsciousPowerIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'subconsciousPowerIndicator', $data['data']['subconsciousPowerIndicator']['content']);
                 $subconsciousPowerIndicator = contentText($data['data']['subconsciousPowerIndicator']['content']);
                 
                 ?>

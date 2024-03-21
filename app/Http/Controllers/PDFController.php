@@ -79,9 +79,6 @@ class PDFController extends Controller
             'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/5b99557e-55d5-4dcb-987c-39f998a6f48b',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
         ];
-        $data = $this->getData($params);
-        $lifePathIndicator = contentText($data['data']['lifePathIndicator']['content']);
-        dd($lifePathIndicator);
         $fileName = $this->pdf($params);
         return redirect(asset('/pdf/' . $fileName));
     }

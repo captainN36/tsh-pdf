@@ -23,9 +23,6 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4NTIzODc2LCJleHAiOjE3MTExMTU4NzZ9.mviQAn_sSJoWTjX9lXpW5MYd2Jb191MnWRO7uPaecIs'
         ];
         $data = $this->getData($params);
-        $lifePathIndicator = contentText($data['data']['lifePathIndicator']['content']);
-        dd($lifePathIndicator);
-        dd($data['data']['lifePathIndicator']['content']);
         return view('web.welcome', ['data' => $data]);
         // if (!file_exists(public_path() . '/html/')) {
         //     mkdir(public_path() . '/html/', 0777, true);

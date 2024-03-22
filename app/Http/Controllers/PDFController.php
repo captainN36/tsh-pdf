@@ -19,33 +19,12 @@ class PDFController extends Controller
     public function index()
     {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/e35b3ea4-183b-46eb-9ba3-7053c58f12ec',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4NTIzODc2LCJleHAiOjE3MTExMTU4NzZ9.mviQAn_sSJoWTjX9lXpW5MYd2Jb191MnWRO7uPaecIs'
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/5b99557e-55d5-4dcb-987c-39f998a6f48b',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
         ];
         $data = $this->getData($params);
         return view('web.welcome', ['data' => $data]);
-        // if (!file_exists(public_path() . '/html/')) {
-        //     mkdir(public_path() . '/html/', 0777, true);
-        // }
-        // if (!file_exists(public_path() . '/pdf/')) {
-        //     mkdir(public_path() . '/pdf/', 0777, true);
-        // }
-        // Process::run('chmod -R 777 ' . public_path());
-        // $pathHtml = public_path() . '/html/' . 'test.html';
-        // $pathPDF = public_path() . '/pdf/' . 'test.pdf';
-        // if (!file_exists($pathPDF)) {
-        //     $file = fopen($pathHtml, 'w+');
-        //     $htmlStr = view('test')->render();
-        //     fwrite($file, $htmlStr);
-        //     try {
-        //         $processName = "wkhtmltopdf $pathHtml $pathPDF";
-        //         Process::run($processName);
-        //         Log::info('process', ['process' => $processName]);
-        //     } catch (\Exception $exception) {
-        //         throw $exception;
-        //     }
-        // }
-        // return redirect(asset('/pdf/test.pdf'));
+        
     }
     public function view(Request $request)
     {

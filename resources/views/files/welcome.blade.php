@@ -1611,57 +1611,18 @@
                         {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
                     </div>
                     <?php
-                    $missIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator_description', $data['data']['missIndicator']['description'], false);
-                    $missIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator', $data['data']['missIndicator']['content'], false);
-                    $page = $page + 1;
-                    
-                    $inputString = '';
-                    
-                    for ($i = 1; $i <= count($missIndicator_description); $i++) {
-                        $inputString .= $missIndicator_description[$i];
-                    }
-                    $inputString .= "\r\r";
-                    for ($i = 1; $i <= count($missIndicator); $i++) {
-                        $inputString .= $missIndicator[$i];
-                    }
-                    $lines = explode("\n", $inputString);
-                    
-                    $linesPerPartFirst = 25;
-                    $linesPerPartRest = 45;
-                    foreach ($lines as $key => $line) {
-                        if (strlen($line) < 100) {
-                            $lines[$key] = $line . "\r";
-                        }
-                    }
-                    $parts = [];
-                    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                        $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
-                    
-                        $part = array_slice($lines, $i, $linesPerPart);
-                    
-                        $part = array_filter($part);
-                    
-                        if (!empty($part)) {
-                            $parts[] = implode("\n", $part);
-                        }
-                    }
-                    $array = [];
-                    $first = $parts[0];
-                    $first = str_replace("\r\n", "\r", $first);
-                    $first = str_replace("\n", ' ', $first);
-                    $array[0] = $first;
-                    if (count($parts) > 1) {
-                        for ($i = 1; $i < count($parts); $i++) {
-                            $html = str_replace("\r\n ", "\r", $parts[$i]);
-                            $html = str_replace("\n", ' ', $parts[$i]);
-                            $array[$i] = $html;
-                            $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                        }
-                    }
+                        // $missIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator_description', $data['data']['missIndicator']['description'], false);
+                        // $missIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'missIndicator', $data['data']['missIndicator']['content'], false);
+                        $missIndicator_first = contentText($data['data']['missIndicator']['firstContent']);
                     ?>
-                    <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
-                        {!! nl2br(e($array[0])) !!}
+                    <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                        {!! $data['data']['missIndicator']['description'] !!}
+                        <br>
+                        <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                            style="white-space: normal; width: 2360px; text-align: justify;">
+                            {!! $missIndicator_first[0] !!}
+                        </div>
                     </div>
 
                     <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1674,30 +1635,7 @@
                 </div>
             </div>
 
-            @if (count($array) >= 2)
-                @for ($i = 1; $i < count($array); $i++)
-                    <?php $page++; ?>
-                    <div id="pfc" class="pf w0 h0" data-page-no="9">
-                        <div class="pc pce w0 h0 opened">
-                            <img class="bi x0 y0 w1 h1" alt=""
-                                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                            <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
-                                style="width: 2360px; white-space: normal; text-align: justify;">
-                                {!! nl2br(e($array[$i])) !!}
-                            </div>
-                            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                            @include('footer', [
-                                'name' => $data['fullName'],
-                                'date' => $data['dateOfBirth'],
-                            ])
-                            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-                        </div>
-                        <div class="pi"
-                            data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-                        </div>
-                    </div>
-                @endfor
-            @endif
+
         @endif
         <div id="pf7-8" class="pf w0 h0" data-page-no="22">
             <div class="pc pc6 w0 h0 opened">

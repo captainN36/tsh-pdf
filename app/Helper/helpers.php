@@ -18,7 +18,7 @@ if (!function_exists('contentText')) {
 }
 
 if (!function_exists('textFromArray')) {
-    function textFromArray($array)
+    function textFromArray($array, $next = false)
     {
         $arr = $array;
         for ($i = 0; $i < count($array); $i++) {
@@ -26,7 +26,8 @@ if (!function_exists('textFromArray')) {
         }
         $concatenated_string = implode(" <br>", $arr);
         $data = [];
-        while (strlen($concatenated_string) > 2060) {
+        $strlen = $next ? 2060 * 2 : 2060;
+        while (strlen($concatenated_string) > $strlen) {
             $data[] = $arr[count($arr) - 1];
             array_pop($arr);
             $concatenated_string = implode(" <br>", $arr);

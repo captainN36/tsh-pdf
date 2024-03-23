@@ -1528,6 +1528,10 @@
                     </div>
                     <?php
                         $missIndicator_first = contentText($data['data']['missIndicator']['firstContent']);
+                        if (count($missIndicator_first) < 2) {
+                            $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
+                            $textFromArray = textFromArray($data['data']['missIndicator']['data']);
+                        }
                     ?>
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
@@ -1535,17 +1539,12 @@
                         <br>
                         <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                             style="white-space: normal; width: 2360px; text-align: justify;">
-                            {!! $missIndicator_first[0] !!}
+                            {!! $textFromArray !!}
                             {{-- @for ($i = 1; $i < count($data['data']['missIndicator']['data']); $i++)
                                 @if (isset($data['data']['missIndicator']['data'][$i]))
                                     {!! $data['data']['missIndicator']['data'][$i] !!} <br>
                                 @endif
                             @endfor --}}
-                            {!! $missIndicator_first[0] !!}
-                            {!! $missIndicator_first[0] !!}
-                            {!! $missIndicator_first[0] !!}
-                            {!! $missIndicator_first[0] !!}
-                            {!! $missIndicator_first[0] !!}
                         </div>
                     </div>
 

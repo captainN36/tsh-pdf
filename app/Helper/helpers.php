@@ -12,14 +12,22 @@ if (!function_exists('contentText')) {
         }
 
         $pages =  explode('<></>', $content);
-        // for ($i = 0; $i < count($pages); $i++) {
-        //     if ($i == 0) {
-        //         $string = preg_replace('/<p><br><\/p>/', '', $pages[0], 1);
-        //         $pages[0] = $string;
-        //     }
-        // }
 
         return $pages;
+    }
+}
+
+if (!function_exists('textFromArray')) {
+    function textFromArray($array)
+    {
+        $concatenated_string = implode(" ", $$array);
+
+        while (strlen($concatenated_string) > 3144) {
+            array_pop($array);
+            $concatenated_string = implode(" ", $array);
+        }
+
+        return $concatenated_string;
     }
 }
 

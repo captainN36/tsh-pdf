@@ -1568,7 +1568,7 @@
             @while (!empty($dataContent))
                 <?php
                     $page++; 
-                    $nextText = textFromArray($dataContent, true)[0];
+                    [$nextText, $dataContent] = textFromArray($dataContent, true);
                 ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">

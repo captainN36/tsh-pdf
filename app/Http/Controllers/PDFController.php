@@ -28,6 +28,7 @@ class PDFController extends Controller
         // dd(strlen($data['data']['missIndicator']['firstContent']) * 5);
         
         [$textFromArray, $data] = textFromArray($data['data']['missIndicator']['data']);
+        [$textFromArray, $data] = textFromArray($data, true);
         dd($textFromArray, $data);
         return view('new_file.welcome', ['data' => $data]);
         

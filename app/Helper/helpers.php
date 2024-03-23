@@ -20,24 +20,15 @@ if (!function_exists('contentText')) {
 if (!function_exists('textFromArray')) {
     function textFromArray($array, $next = false)
     {
-        for ($i = 0; $i < count($array); $i++) {
-            $array[$i] = "$i-----" . $array[$i];
-        }
-        $arr = $array;
-        $c = count($array) - 1;
-        for ($i = 0; $i < count($array); $i++) {
-
-            $c++;
-            $arr[] = "$c----------" . $array[$i];
-        }
-        $concatenated_string = implode(" <br>", $arr);
+        $concatenated_string = implode(" <br>", $array);
         $data = [];
-        $num = count($arr);
-        while (strlen($concatenated_string) > 2060) {
+        $num = count($array);
+        $strlen = $next ? 2060 * 2 : 2060;
+        while (strlen($concatenated_string) > $strlen) {
             $num--;
-            $data[] = "$num-------" . $arr[count($arr) - 1];
-            array_pop($arr);
-            $concatenated_string = implode(" <br>", $arr);
+            $data[] = "$num-------" . $array[count($array) - 1];
+            array_pop($array);
+            $concatenated_string = implode(" <br>", $array);
         }
         $data = array_reverse($data);
         return [$concatenated_string, $data];

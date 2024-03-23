@@ -1530,7 +1530,12 @@
                         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
                         if (count($missIndicator) < 2) {
                             $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
-                            [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
+                            $arr = $data['data']['missIndicator']['data'];
+                            for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
+                                $arr[] = $data['data']['missIndicator']['data'][$i];
+                            }
+                            [$textFromArray, $dataContent] = textFromArray($arr);
+                            // [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
                         } else {
                             array_shift($missIndicator[0]);
                             array_shift($data['data']['missIndicator']['data'][0]);

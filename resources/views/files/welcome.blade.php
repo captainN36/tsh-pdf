@@ -1541,6 +1541,8 @@
                                     {!! $data['data']['missIndicator']['data'][$i] !!} <br>
                                 @endif
                             @endfor
+                            {!! $missIndicator_first[0] !!} <br>
+                            {!! $missIndicator_first[0] !!} <br>
                         </div>
                     </div>
 

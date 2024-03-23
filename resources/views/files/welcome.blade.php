@@ -1534,7 +1534,11 @@
                             for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
                                 $arr[] = $data['data']['missIndicator']['data'][$i];
                             }
-                            [$textFromArray, $dataContent] = textFromArray($arr);
+                            $array = $arr;
+                            for ($i=0; $i < count($arr); $i++) { 
+                                $array[] = $arr[$i];
+                            }
+                            [$textFromArray, $dataContent] = textFromArray($array);
                             // [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
                         } else {
                             array_shift($missIndicator[0]);

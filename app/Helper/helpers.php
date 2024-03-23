@@ -20,18 +20,26 @@ if (!function_exists('contentText')) {
 if (!function_exists('textFromArray')) {
     function textFromArray($array, $next = false)
     {
-        $arr = $array;
         for ($i = 0; $i < count($array); $i++) {
-            $arr[] = $array[$i];
+            $array[$i] = "$i-----" . $array[$i];
+        }
+        $arr = $array;
+        $c = count($array) - 1;
+        for ($i = 0; $i < count($array); $i++) {
+
+            $c++;
+            $arr[] = "$c----------" . $array[$i];
         }
         $concatenated_string = implode(" <br>", $arr);
         $data = [];
-        
+        $num = count($arr);
         while (strlen($concatenated_string) > 2060) {
-            $data[] = $arr[count($arr) - 1];
+            $num--;
+            $data[] = "$num-------" . $arr[count($arr) - 1];
             array_pop($arr);
             $concatenated_string = implode(" <br>", $arr);
         }
+        $data = array_reverse($data);
         return [$concatenated_string, $data];
     }
 }

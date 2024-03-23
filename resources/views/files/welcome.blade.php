@@ -1530,7 +1530,7 @@
                         $missIndicator_first = contentText($data['data']['missIndicator']['firstContent']);
                         if (count($missIndicator_first) < 2) {
                             $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
-                            $textFromArray = textFromArray($data['data']['missIndicator']['data']);
+                            [$textFromArray, $data] = textFromArray($data['data']['missIndicator']['data']);
                         }
                     ?>
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"

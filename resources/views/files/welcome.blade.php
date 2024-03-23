@@ -1438,7 +1438,7 @@
         <div id="pf7" class="pf w0 h0" data-page-no="38">
             <div class="pc pc6 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/' . $path . '/kim-tu-thap.png') }}">
+                    src="{{ asset('/9/kim-tu-thap.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 90px; bottom: 1440px">16</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">KIM TỰ THÁP SỐ HỌC</div>
 

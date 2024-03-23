@@ -24,7 +24,7 @@ if (!function_exists('textFromArray')) {
 
         while (strlen($concatenated_string) > 3144) {
             array_pop($array);
-            $concatenated_string = implode(" ", $array);
+            $concatenated_string = implode(" <br>", $array);
         }
 
         return $concatenated_string;

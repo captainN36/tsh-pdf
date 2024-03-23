@@ -22,7 +22,7 @@ if (!function_exists('textFromArray')) {
     {
         $concatenated_string = implode(" <br>", $array);
         $data = [];
-        $strlen = $next ? 2060 * 1.5 : 2060;
+        $strlen = $next ? 3500 : 2060;
         while (strlen($concatenated_string) > $strlen) {
             $data[] = $array[count($array) - 1];
             array_pop($array);

@@ -28,7 +28,7 @@ if (!function_exists('textFromArray')) {
             $concatenated_string = implode(" <br>", $array);
         }
 
-        return [$concatenated_string, ];
+        return [$concatenated_string, $data];
     }
 }
 

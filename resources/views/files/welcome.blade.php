@@ -1536,11 +1536,14 @@
                         <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                             style="white-space: normal; width: 2360px; text-align: justify;">
                             {!! $missIndicator_first[0] !!} <br>
-                            @for ($i = 1; $i < count($data['data']['missIndicator']['data']); $i++)
+                            {{-- @for ($i = 1; $i < count($data['data']['missIndicator']['data']); $i++)
                                 @if (isset($data['data']['missIndicator']['data'][$i]))
                                     {!! $data['data']['missIndicator']['data'][$i] !!} <br>
                                 @endif
-                            @endfor
+                            @endfor --}}
+                            {!! $missIndicator_first[0] !!} <br>
+                            {!! $missIndicator_first[0] !!} <br>
+                            {!! $missIndicator_first[0] !!} <br>
                             {!! $missIndicator_first[0] !!} <br>
                             {!! $missIndicator_first[0] !!} <br>
                         </div>

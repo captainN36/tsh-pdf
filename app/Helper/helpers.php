@@ -26,12 +26,11 @@ if (!function_exists('textFromArray')) {
         }
         $concatenated_string = implode(" <br>", $arr);
         $data = [];
-        while (strlen($concatenated_string) > 3144) {
+        while (strlen($concatenated_string) > 2060) {
             $data[] = $arr[count($arr) - 1];
             array_pop($arr);
             $concatenated_string = implode(" <br>", $arr);
         }
-
         return [$concatenated_string, $data];
     }
 }

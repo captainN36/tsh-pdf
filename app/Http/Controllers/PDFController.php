@@ -25,6 +25,7 @@ class PDFController extends Controller
         $data = $this->getData($params);
         // $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
         // dd($data['data']['missIndicator']['data']);
+        // dd(strlen($data['data']['missIndicator']['firstContent']) * 5);
         
         [$textFromArray, $data] = textFromArray($data['data']['missIndicator']['data']);
         dd($textFromArray, $data);

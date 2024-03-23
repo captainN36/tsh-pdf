@@ -1527,10 +1527,17 @@
                         {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
                     </div>
                     <?php
-                        $missIndicator_first = contentText($data['data']['missIndicator']['firstContent']);
-                        if (count($missIndicator_first) < 2) {
+                        $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
+                        if (count($missIndicator) < 2) {
                             $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
                             [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
+                        } else {
+                            array_shift($missIndicator[0]);
+                            array_shift($data['data']['missIndicator']['data'][0]);
+                            for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
+                                $missIndicator[] = $data['data']['missIndicator']['data'][$i];
+                            }
+                            [$textFromArray, $dataContent] = textFromArray($missIndicator);
                         }
                     ?>
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
@@ -1558,8 +1565,29 @@
                 </div>
             </div>
 
-
+            @while (!empty($dataContent))
+                <?php
+                    $page++; 
+                    [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
+                ?>
+                <div id="pfc" class="pf w0 h0" data-page-no="9">
+                    <div class="pc pce w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $textFromArray !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endwhile
+            
         @endif
+
         <div id="pf7-8" class="pf w0 h0" data-page-no="22">
             <div class="pc pc6 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/duongdoi.png') }}">

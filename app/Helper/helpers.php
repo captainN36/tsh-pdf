@@ -20,7 +20,7 @@ if (!function_exists('contentText')) {
 if (!function_exists('textFromArray')) {
     function textFromArray($array)
     {
-        $concatenated_string = implode(" ", $$array);
+        $concatenated_string = implode(" ", $array);
 
         while (strlen($concatenated_string) > 3144) {
             array_pop($array);

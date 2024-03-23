@@ -23,7 +23,9 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
         ];
         $data = $this->getData($params);
-        dd(strlen('<p><strong><em>Nợ bài học số </em></strong><strong style="color: rgb(0, 138, 0);"><em>7</em></strong></p>' . $data['data']['missIndicator']['firstContent']) * 6);
+        $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
+                            $textFromArray = textFromArray($data['data']['missIndicator']['data']);
+        dd($textFromArray);
         return view('new_file.welcome', ['data' => $data]);
         
     }

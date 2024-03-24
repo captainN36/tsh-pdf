@@ -26,7 +26,8 @@ if (!function_exists('textFromArray')) {
                 unset($array[$i]);
             }
         }
-
+        $array = array_values($array);
+        
         $concatenated_string = implode(" <br>", $array);
         $data = [];
         $strlen = $next ? 3500 : 2060;

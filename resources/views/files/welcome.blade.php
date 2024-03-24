@@ -1530,16 +1530,7 @@
                         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
                         if (count($missIndicator) < 2) {
                             $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
-                            $arr = $data['data']['missIndicator']['data'];
-                            for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
-                                $arr[] = $data['data']['missIndicator']['data'][$i];
-                            }
-                            $array = $arr;
-                            for ($i=0; $i < count($arr); $i++) { 
-                                $array[] = $arr[$i];
-                            }
-                            [$textFromArray, $dataContent] = textFromArray($array);
-                            // [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
+                            [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
                         } else {
                             array_shift($data['data']['missIndicator']['data']);
                             $firstContent = $missIndicator[0];
@@ -1559,11 +1550,6 @@
                         <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                             style="white-space: normal; width: 2360px; text-align: justify;">
                             {!! $textFromArray !!}
-                            {{-- @for ($i = 1; $i < count($data['data']['missIndicator']['data']); $i++)
-                                @if (isset($data['data']['missIndicator']['data'][$i]))
-                                    {!! $data['data']['missIndicator']['data'][$i] !!} <br>
-                                @endif
-                            @endfor --}}
                         </div>
                     </div>
 

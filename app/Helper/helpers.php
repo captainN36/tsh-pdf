@@ -20,6 +20,7 @@ if (!function_exists('contentText')) {
 if (!function_exists('textFromArray')) {
     function textFromArray($array, $next = false)
     {
+        ini_set('memory_limit', '12G');
         $concatenated_string = implode(" <br>", $array);
         $data = [];
         $strlen = $next ? 3500 : 2060;

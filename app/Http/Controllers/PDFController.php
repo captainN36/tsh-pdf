@@ -23,9 +23,9 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
         ];
         $data = $this->getData($params);
-        $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
-                        [$textFromArray, $nextPageContent] = getTextData($missIndicator, $data['data']['missIndicator']);
-                dd($textFromArray, $nextPageContent);        
+        $repeatIndicator = contentText($data['data']['repeatIndicator']['firstContent']);
+                    [$textFromArray, $nextPageContent] = getTextData($repeatIndicator, $data['data']['repeatIndicator']);
+                dd($data['data']['repeatIndicator'], $textFromArray, $nextPageContent);        
         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
         // dd($missIndicator);
         array_shift($data['data']['missIndicator']['data']);

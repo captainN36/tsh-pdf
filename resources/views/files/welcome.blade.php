@@ -1542,11 +1542,14 @@
                             // [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
                         } else {
                             array_shift($data['data']['missIndicator']['data']);
+                            $firstContent = $missIndicator[0];
+                            array_shift($missIndicator);
                             for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
                                 $missIndicator[] = $data['data']['missIndicator']['data'][$i];
                             }
                             [$textFromArray, $dataContent] = textFromArray($missIndicator);
                         }
+                        $textFromArray = count($missIndicator) > 2 ? $firstContent : $textFromArray;
                     ?>
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">

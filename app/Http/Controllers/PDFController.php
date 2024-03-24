@@ -23,20 +23,6 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
         ];
         $data = $this->getData($params);
-        $repeatIndicator = contentText($data['data']['repeatIndicator']['firstContent']);
-                    [$textFromArray, $nextPageContent] = getTextData($repeatIndicator, $data['data']['repeatIndicator']);
-                dd($data['data']['repeatIndicator'], $textFromArray, $nextPageContent);        
-        $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
-        // dd($missIndicator);
-        array_shift($data['data']['missIndicator']['data']);
-        $firstContent = $missIndicator[0];
-        array_shift($missIndicator);
-        for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
-            $missIndicator[] = $data['data']['missIndicator']['data'][$i];
-        }
-        [$textFromArray, $dataContent] = textFromArray($missIndicator);
-        
-        dd($missIndicator, $textFromArray, $dataContent);
         return view('new_file.welcome', ['data' => $data]);
         
     }

@@ -56,9 +56,9 @@ if (!function_exists('getTextData')) {
         }
         $textFromArray = count($array) >= 2 ? $firstContent : $textFromArray;
         $nextPagesContent = count($array) >= 2 ? $array : $nextPagesContent;
+        
+        return [$textFromArray, $nextPagesContent];
     }
-    
-    return [$textFromArray, $nextPagesContent];
 }
 
 

@@ -24,6 +24,9 @@ class PDFController extends Controller
         ];
         $data = $this->getData($params);
         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
+                        [$textFromArray, $nextPageContent] = getTextData($missIndicator, $data['data']['missIndicator']);
+                dd($textFromArray, $nextPageContent);        
+        $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
         // dd($missIndicator);
         array_shift($data['data']['missIndicator']['data']);
         $firstContent = $missIndicator[0];

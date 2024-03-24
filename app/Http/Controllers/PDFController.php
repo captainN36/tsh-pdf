@@ -23,6 +23,8 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
         ];
         $data = $this->getData($params);
+        $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
+        dd($missIndicator);
         // $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
         // dd($data['data']['missIndicator']['data']);
         // dd(strlen($data['data']['missIndicator']['firstContent']) * 5);

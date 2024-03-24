@@ -30,7 +30,9 @@ if (!function_exists('textFromArray')) {
         $concatenated_string = implode(" <br>", $array);
         $data = [];
         $strlen = $next ? 3500 : 2060;
-        while (strlen($concatenated_string) > $strlen) {
+
+        // Kiểm tra nếu mảng trống trước khi nhập vào vòng lặp
+        while (!empty($array) && strlen($concatenated_string) > $strlen) {
             $data[] = $array[count($array) - 1];
             array_pop($array);
             $concatenated_string = implode(" <br>", $array);

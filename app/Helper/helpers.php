@@ -20,14 +20,14 @@ if (!function_exists('contentText')) {
 if (!function_exists('textFromArray')) {
     function textFromArray($array, $next = false)
     {
-        for ($i = 0; $i < count($array); $i++) {
-            if (strpos($array[$i], "<></>") !== false) {
-                array_splice($array, $i, 0, contentText($array[$i]));
-                unset($array[$i]);
-            }
-        }
-        $array = array_values($array);
-        
+        // for ($i = 0; $i < count($array); $i++) {
+        //     if (strpos($array[$i], "<></>") !== false) {
+        //         array_splice($array, $i, 0, contentText($array[$i]));
+        //         unset($array[$i]);
+        //     }
+        // }
+        // $array = array_values($array);
+
         $concatenated_string = implode(" <br>", $array);
         $data = [];
         $strlen = $next ? 3500 : 2060;

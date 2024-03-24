@@ -1528,20 +1528,7 @@
                     </div>
                     <?php
                         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
-                        if (count($missIndicator) < 2) {
-                            $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
-                            [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
-                        } else {
-                            array_shift($data['data']['missIndicator']['data']);
-                            $firstContent = $missIndicator[0];
-                            array_shift($missIndicator);
-                            for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
-                                $missIndicator[] = $data['data']['missIndicator']['data'][$i];
-                            }
-                            [$textFromArray, $dataContent] = textFromArray($missIndicator);
-                        }
-                        $textFromArray = count($missIndicator) > 2 ? $firstContent : $textFromArray;
-                        $dataContent = count($missIndicator) > 2 ? $missIndicator : $dataContent;
+                        [$textFromArray, $nextPageContent] = getTextData($missIndicator, $data['data']['missIndicator']);
                     ?>
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
@@ -1563,10 +1550,10 @@
                 </div>
             </div>
 
-            @while (!empty($dataContent))
+            @while (!empty($nextPageContent))
                 <?php
                     $page++; 
-                    [$nextText, $dataContent] = textFromArray($dataContent, true);
+                    [$nextText, $nextPageContent] = textFromArray($nextPageContent, true);
                 ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">

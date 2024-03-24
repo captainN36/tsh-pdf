@@ -1541,7 +1541,7 @@
                             [$textFromArray, $dataContent] = textFromArray($array);
                             // [$textFromArray, $dataContent] = textFromArray($data['data']['missIndicator']['data']);
                         } else {
-                            array_shift($data['data']['missIndicator']['data'][0]);
+                            array_shift($data['data']['missIndicator']['data']);
                             for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
                                 $missIndicator[] = $data['data']['missIndicator']['data'][$i];
                             }

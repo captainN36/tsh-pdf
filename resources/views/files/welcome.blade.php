@@ -1490,7 +1490,7 @@
                 </div>
                 <?php
                     $repeatIndicator = contentText($data['data']['repeatIndicator']['firstContent']);
-                    if (count($array) < 2) {
+                    if (count($repeatIndicator) < 2) {
                             $data['data']['repeatIndicator']['data'][0] = $data['data']['repeatIndicator']['firstContent'];
                             [$textFromArray, $nextPagesContent] = textFromArray($data['data']['repeatIndicator']['data']);
                         } else {

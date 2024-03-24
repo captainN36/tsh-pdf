@@ -1490,7 +1490,20 @@
                 </div>
                 <?php
                     $repeatIndicator = contentText($data['data']['repeatIndicator']['firstContent']);
-                    [$textFromArray, $nextPageContent] = getTextData($repeatIndicator, $data['data']['repeatIndicator']);
+                    if (count($array) < 2) {
+                            $data['data']['repeatIndicator']['data'][0] = $data['data']['repeatIndicator']['firstContent'];
+                            [$textFromArray, $nextPagesContent] = textFromArray($data['data']['repeatIndicator']['data']);
+                        } else {
+                            array_shift($data['data']['repeatIndicator']['data']);
+                            $firstContent = $repeatIndicator[0];
+                            array_shift($repeatIndicator);
+                            for ($i=0; $i < count($data['data']['repeatIndicator']['data']); $i++) { 
+                                $repeatIndicator[] = $data['data']['repeatIndicator']['data'][$i];
+                            }
+                            [$textFromArray, $nextPagesContent] = textFromArray($repeatIndicator);
+                        }
+                        $textFromArray = count($repeatIndicator) >= 2 ? $firstContent : $textFromArray;
+                        $nextPagesContent = count($repeatIndicator) >= 2 ? $repeatIndicator : $nextPagesContent;
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
@@ -1545,7 +1558,21 @@
                     </div>
                     <?php
                         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
-                        [$textFromArray, $nextPageContent] = getTextData($missIndicator, $data['data']['missIndicator']);
+                        if (count($array) < 2) {
+                            $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
+                            [$textFromArray, $nextPagesContent] = textFromArray($data['data']['missIndicator']['data']);
+                        } else {
+                            array_shift($data['data']['missIndicator']['data']);
+                            $firstContent = $missIndicator[0];
+                            array_shift($missIndicator);
+                            for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
+                                $missIndicator[] = $data['data']['missIndicator']['data'][$i];
+                            }
+                            [$textFromArray, $nextPagesContent] = textFromArray($missIndicator);
+                        }
+                        $textFromArray = count($missIndicator) >= 2 ? $firstContent : $textFromArray;
+                        $nextPagesContent = count($missIndicator) >= 2 ? $missIndicator : $nextPagesContent;
+                        
                     ?>
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">

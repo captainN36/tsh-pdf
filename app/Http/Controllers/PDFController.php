@@ -24,16 +24,16 @@ class PDFController extends Controller
         ];
         $data = $this->getData($params);
         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
-        dd($missIndicator);
-        // $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
-        // dd($data['data']['missIndicator']['data']);
-        // dd(strlen($data['data']['missIndicator']['firstContent']) * 5);
-        $arr = $data['data']['missIndicator']['data'];
+        // dd($missIndicator);
+        array_shift($data['data']['missIndicator']['data']);
+        $firstContent = $missIndicator[0];
+        array_shift($missIndicator);
         for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
-            $arr[] = $data['data']['missIndicator']['data'][$i];
+            $missIndicator[] = $data['data']['missIndicator']['data'][$i];
         }
-        [$textFromArray, $data] = textFromArray($arr);
-        dd($textFromArray, $data);
+        [$textFromArray, $dataContent] = textFromArray($missIndicator);
+        
+        dd($missIndicator, $textFromArray, $dataContent);
         return view('new_file.welcome', ['data' => $data]);
         
     }

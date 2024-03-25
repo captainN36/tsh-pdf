@@ -23,7 +23,7 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
         ];
         $data = $this->getData($params);
-        $nowYearIndicator = contentText($data['data']['yearIndicator']['firstContent']);
+        $nowYearIndicator = contentText($data['data']['yearIndicator']['nextYearIndicator']['content']);
         dd($data['data']['yearIndicator'],$nowYearIndicator);
         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
         if (count($missIndicator) < 2) {

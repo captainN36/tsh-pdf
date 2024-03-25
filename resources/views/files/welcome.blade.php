@@ -210,12 +210,10 @@
         @endif
 
         <?php
-        $nextYearIndicator = contentText($data['data']['yearIndicator']['nextYearIndicator']['content']);
-        
+            $nextYearIndicator = contentText($data['data']['yearIndicator']['nextYearIndicator']['content']);
         ?>
 
-        @if (count($nextYearIndicator) >= 2)
-            @for ($i = 1; $i < count($nextYearIndicator); $i++)
+            @for ($i = 0; $i < count($nextYearIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfd" class="pf w0 h0" data-page-no="18">
                     <div class="pc pcb w0 h0 opened">
@@ -233,15 +231,13 @@
                         data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
                 </div>
             @endfor
-        @endif
 
 
         <?php
         $twoYearsLaterIndicator = contentText($data['data']['yearIndicator']['twoYearsLaterIndicator']['content']);
         ?>
 
-        @if (count($twoYearsLaterIndicator) >= 2)
-            @for ($i = 1; $i < count($twoYearsLaterIndicator); $i++)
+            @for ($i = 0; $i < count($twoYearsLaterIndicator); $i++)
                 <?php $page++; ?>
                 <div id="pfd" class="pf w0 h0" data-page-no="18">
                     <div class="pc pcb w0 h0 opened">
@@ -259,7 +255,6 @@
                         data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
                 </div>
             @endfor
-        @endif
 
 
 

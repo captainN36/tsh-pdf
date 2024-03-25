@@ -23,16 +23,16 @@ if (!function_exists('textFromArray')) {
         for ($i = 0; $i < count($array); $i++) {
             if (strpos($array[$i], "<></>") !== false) {
                 $childcontent = explode("<></>", $array[$i]);
-                // dd($childcontent);
                 array_splice($array, $i, 0, $childcontent);
                 unset($array[$i + count($childcontent)]);
                 $array = array_values($array);
             }
+            dump(strlen($array[$i]));
         }
         
         $concatenated_string = implode(" <br>", $array);
         $data = [];
-        $strlen = $next ? 3500 : 2060;
+        $strlen = $next ? 4350 : 2060;
         while (strlen($concatenated_string) > $strlen) {
             $data[] = $array[count($array) - 1];
             array_pop($array);

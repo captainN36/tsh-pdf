@@ -20,6 +20,16 @@ if (!function_exists('contentText')) {
 if (!function_exists('textFromArray')) {
     function textFromArray($array, $next = false)
     {
+        for ($i = 0; $i < count($array); $i++) {
+            if (strpos($array[$i], "<></>") !== false) {
+                $childcontent = explode("<></>", $array[$i]);
+                // dd($childcontent);
+                array_splice($array, $i, 0, $childcontent);
+                unset($array[$i + count($childcontent)]);
+                $array = array_values($array);
+            }
+        }
+        
         $concatenated_string = implode(" <br>", $array);
         $data = [];
         $strlen = $next ? 3500 : 2060;

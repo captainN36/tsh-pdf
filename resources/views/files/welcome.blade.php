@@ -81,9 +81,6 @@
                 p {
                     margin: 0;
                 }
-                b, strong {
-                    font-weight: bold;
-                }
                 </style>
                 <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="flex-wrap: wrap; left: 90px; bottom: 1125px; width: 1950px; text-aligin: justify">
                     {!! $data['data']['cycleFortune']['content'] !!}

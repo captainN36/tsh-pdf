@@ -38,7 +38,8 @@ class PDFController extends Controller
         }
         $textFromArray = count($missIndicator) >= 2 ? $firstContent : $textFromArray;
         $nextPagesContent = count($missIndicator) >= 2 ? $missIndicator : $nextPagesContent;
-                        
+        $balanceIndicator = contentText($data['data']['balanceIndicator']['content']);    
+        [$nextText, $teo] = textFromArray($nextPagesContent, true);
         dd($textFromArray, $nextPagesContent);
         return view('new_file.welcome', ['data' => $data]);
         

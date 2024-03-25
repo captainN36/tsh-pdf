@@ -1036,10 +1036,10 @@
             </div>
         </div>
 
-        @while (!empty($nextPageContent))
+        @while (!empty($nextPagesContent))
             <?php
                 $page++; 
-                [$nextText, $nextPageContent] = textFromArray($nextPageContent, true);
+                [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
             ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
@@ -1531,10 +1531,10 @@
             </div>
         </div>
 
-        @while (!empty($nextPageContent))
+        @while (!empty($nextPagesContent))
             <?php
                 $page++; 
-                [$nextText, $nextPageContent] = textFromArray($nextPageContent, true);
+                [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
             ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
@@ -1600,10 +1600,10 @@
                 </div>
             </div>
 
-            @while (!empty($nextPageContent))
+            @while (!empty($nextPagesContent))
                 <?php
                     $page++; 
-                    [$nextText, $nextPageContent] = textFromArray($nextPageContent, true);
+                    [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
                 ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -1835,10 +1835,10 @@
             </div>
         </div>
 
-        @while (!empty($nextPageContent))
+        @while (!empty($nextPagesContent))
             <?php
                 $page++; 
-                [$nextText, $nextPageContent] = textFromArray($nextPageContent, true);
+                [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
             ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">

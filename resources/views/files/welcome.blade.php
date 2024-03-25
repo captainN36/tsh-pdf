@@ -1496,7 +1496,7 @@
                 </div>
                 <?php
                     $repeatIndicator = contentText($data['data']['repeatIndicator']['firstContent']);
-                    if (count($array) < 2) {
+                    if (count($repeatIndicator) < 2) {
                             $data['data']['repeatIndicator']['data'][0] = $data['data']['repeatIndicator']['firstContent'];
                             [$textFromArray, $nextPagesContent] = textFromArray($data['data']['repeatIndicator']['data']);
                         } else {
@@ -1564,7 +1564,7 @@
                     </div>
                     <?php
                         $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
-                        if (count($array) < 2) {
+                        if (count($missIndicator) < 2) {
                             $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
                             [$textFromArray, $nextPagesContent] = textFromArray($data['data']['missIndicator']['data']);
                         } else {

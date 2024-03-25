@@ -23,6 +23,23 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
         ];
         $data = $this->getData($params);
+        $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
+        if (count($missIndicator) < 2) {
+            $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
+            [$textFromArray, $nextPagesContent] = textFromArray($data['data']['missIndicator']['data']);
+        } else {
+            array_shift($data['data']['missIndicator']['data']);
+            $firstContent = $missIndicator[0];
+            array_shift($missIndicator);
+            for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
+                $missIndicator[] = $data['data']['missIndicator']['data'][$i];
+            }
+            [$textFromArray, $nextPagesContent] = textFromArray($missIndicator);
+        }
+        $textFromArray = count($missIndicator) >= 2 ? $firstContent : $textFromArray;
+        $nextPagesContent = count($missIndicator) >= 2 ? $missIndicator : $nextPagesContent;
+                        
+        dd($textFromArray, $nextPagesContent);
         return view('new_file.welcome', ['data' => $data]);
         
     }

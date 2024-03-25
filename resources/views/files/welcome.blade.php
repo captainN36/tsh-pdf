@@ -162,8 +162,7 @@
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}</div>
                 <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year + 2 }}</div>
 
-                <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0"
-                    style="left: 630px; bottom: 1190px; width: 2360px !important">
+                <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1190px; width: 2360px !important">
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
                 </div>
                 <?php

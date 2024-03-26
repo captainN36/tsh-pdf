@@ -1372,7 +1372,7 @@
             </div>
         </div>
         <?php
-            $challengeIndicator = contentText($data['data']['challengeIndicator']['content']);
+            $challengeIndicator = contentText($data['data']['challengeIndicator']['content'], true);
         ?>
         @if (count($challengeIndicator) >= 2)
             @for ($i = 0; $i < count($challengeIndicator); $i++)

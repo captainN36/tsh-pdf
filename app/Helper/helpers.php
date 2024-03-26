@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('contentText')) {
-    function contentText($content)
+    function contentText($content, $diff = false)
     {
         $start_tag = "<div>";
         $end_tag = "</div>";
@@ -10,8 +10,12 @@ if (!function_exists('contentText')) {
             substr($content, -strlen($end_tag)) === $end_tag) {
             $content = substr($content, strlen($start_tag), -strlen($end_tag));
         }
-
-        $pages =  explode('<></>', $content);
+        if ($diff) {
+            $pages =  explode('<p><span style="color: rgb(206, 145, 120);">-----</span></p>', $content);
+        } else {
+            $pages =  explode('<></>', $content);
+        }
+        
 
         return $pages;
     }

@@ -513,9 +513,7 @@
                 <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $numberLifePath }}</div>
                 <?php
-                // $lifePathIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePath_description', $data['data']['lifePathIndicator']['description'], false);
-                // $lifePathIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . 'lifePathIndicator', $data['data']['lifePathIndicator']['content'], false);
-                $lifePathIndicator = contentText($data['data']['lifePathIndicator']['content']);
+                    $lifePathIndicator = contentText($data['data']['lifePathIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
@@ -1373,7 +1371,29 @@
                 </div>
             </div>
         </div>
-
+        <?php
+            $challengeIndicator = contentText($data['data']['challengeIndicator']['content']);
+        ?>
+        @if (count($challengeIndicator) >= 2)
+            @for ($i = 0; $i < count($challengeIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfd" class="pf w0 h0" data-page-no="18">
+                    <div class="pc pcb w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $challengeIndicator[$i] !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
 
         <div id="pf7-8" class="pf w0 h0" data-page-no="22">
             <div class="pc pc6 w0 h0 opened">

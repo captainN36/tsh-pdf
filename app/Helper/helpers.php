@@ -14,6 +14,14 @@ if (!function_exists('contentText')) {
             $pages =  explode('<p><span style="color: rgb(206, 145, 120);">-----</span></p>', $content);
         } else {
             $pages =  explode('<></>', $content);
+            for ($i = 0; $i < count($pages); $i++) {
+                if (strpos($pages[$i], "<></>") !== false) {
+                    $childcontent = explode("<></>", $pages[$i]);
+                    array_splice($pages, $i, 0, $childcontent);
+                    unset($pages[$i + count($childcontent)]);
+                    $pages = array_values($pages);
+                }
+            }
         }
         
 

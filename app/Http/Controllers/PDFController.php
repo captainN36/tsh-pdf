@@ -20,12 +20,12 @@ class PDFController extends Controller
     public function index()
     {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/f8f3dfb3-e109-4ff2-a07e-4690e3646d1d',
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
         $data = $this->getData($params);
         $nowYearIndicator = contentText($data['data']['yearIndicator']['nowYearIndicator']['content']);
-        dd($data['data']['monthIndicator'], $nowYearIndicator);
+        dd($data['data']['yearIndicator'], $nowYearIndicator);
         return view('new_file.welcome', ['data' => $data]);
     }
     public function view(Request $request)
@@ -54,7 +54,7 @@ class PDFController extends Controller
 
     public function niewFile (Request $request) {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/f8f3dfb3-e109-4ff2-a07e-4690e3646d1d',
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
         $fileName = $this->pdf($params);

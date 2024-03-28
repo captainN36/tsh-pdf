@@ -20,7 +20,7 @@ class PDFController extends Controller
     public function index()
     {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf/36013745-fc87-46d7-9194-6cb4d8c014d6',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
         $data = $this->getData($params);

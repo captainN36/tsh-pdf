@@ -180,8 +180,7 @@ class PDFController extends Controller
         ])->get($url);
         $data = $callAPI->json();
         $title = $data['data']['data'];
-        dd($title);
-                $count = 1;
+        $count = 1;
         foreach ($title as $key => $item) {
             if (isset($item['title'])) {
                     $data['data']['data'][$key]['page'] =  $count++;

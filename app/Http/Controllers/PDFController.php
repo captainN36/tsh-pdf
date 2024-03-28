@@ -24,7 +24,6 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
         $data = $this->getData($params);
-        dd($data);
         return view('new_file.welcome', ['data' => $data]);
     }
     public function view(Request $request)
@@ -53,8 +52,8 @@ class PDFController extends Controller
 
     public function niewFile (Request $request) {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/5b99557e-55d5-4dcb-987c-39f998a6f48b',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4OTI3NjQ1LCJleHAiOjE3MTE1MTk2NDV9.GE5yMzCpAYUK3ILCdpQ9JlBuSfU4ro-Jolfj8bxXCoI'
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/f8f3dfb3-e109-4ff2-a07e-4690e3646d1d',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
         $fileName = $this->pdf($params);
         return redirect(asset('/pdf/' . $fileName));
@@ -181,6 +180,7 @@ class PDFController extends Controller
         ])->get($url);
         $data = $callAPI->json();
         $title = $data['data']['data'];
+        dd($title);
                 $count = 1;
         foreach ($title as $key => $item) {
             if (isset($item['title'])) {

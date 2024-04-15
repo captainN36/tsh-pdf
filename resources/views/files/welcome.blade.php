@@ -313,7 +313,7 @@
                         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
                             style="width: 2360px !important; white-space: normal; text-align: justify;">
                             @if (isset($nextMonthIndicator[$i]))
-                                {!! nl2br(e($nextMonthIndicator[$i])) !!}
+                                {!! $nextMonthIndicator[$i] !!}
                             @endif
                         </div>
 
@@ -336,7 +336,7 @@
                         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
                             style="width: 2360px !important; white-space: normal; text-align: justify;">
                             @if (isset($twoMonthsLaterIndicator[$i]))
-                                {!! nl2br(e($twoMonthsLaterIndicator[$i])) !!}
+                                {!! $twoMonthsLaterIndicator[$i] !!}
                             @endif
                         </div>
 

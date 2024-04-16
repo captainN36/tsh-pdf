@@ -128,24 +128,21 @@
                 </div>
                 <div class="t m0 x1a h9 yb9 ff4 fs4 fc2 sc0 ls0 ws0">Chu kỳ vận số của bạn</div>
                 <div class="t m0 x5 h12 yba ff3 fs4 fc2 sc0 ls0 ws0">Năm<span class="_ _a"></span> nay<span
-                        class="_ _a"></span> 2023,<span class="_ _a"></span> bạn<span class="_ _9"></span> có<span
-                        class="_ _a"></span> chỉ<span class="_ _a"></span> số<span class="_ _a"></span> năm<span
-                        class="_ _a"></span> (vận<span class="_ _a"></span> niên<span class="_ _a"></span> cá<span
-                        class="_ _9"></span> nhân)<span class="_ _a"></span> là<span class="_ _a"></span> 2<span
-                        class="_ _a"></span> và<span class="_ _a"></span> đang<span class="_ _a"></span> ở<span
-                        class="_ _a"></span> giai<span class="_ _a"></span> đoạn<span class="_ _9"></span> đầu
-                </div>
-                <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0">của<span class="_ _d"></span> chu<span
-                        class="_ _b"></span> kỳ<span class="_ _b"></span> vận<span class="_ _b"></span> số.<span
-                        class="_ _d"></span> Xem<span class="_ _b"></span> thêm<span class="_ _b"></span>
-                    Phần<span class="_ _b"></span> B<span class="_ _d"></span> Mục<span class="_ _b"></span>
-                    7<span class="_ _b"></span> "CHỈ<span class="_ _b"></span> SỐ<span class="_ _d"></span>
-                    CÁC<span class="_ _b"></span> NĂM"<span class="_ _b"></span> để<span class="_ _d"></span>
-                    biết<span class="_ _b"></span> hướng<span class="_ _b"></span> phát</div>
-                <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0" style="bottom: 230px">triển trong năm nay và 2 năm
-                    tới!
-                </div>
-                <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                    class="_ _a"></span> {{date("Y")}},<span class="_ _a"></span> bạn<span class="_ _9"></span> có<span
+                    class="_ _a"></span> chỉ<span class="_ _a"></span> số<span class="_ _a"></span> năm<span
+                    class="_ _a"></span> (vận<span class="_ _a"></span> niên<span class="_ _a"></span> cá<span
+                    class="_ _9"></span> nhân)<span class="_ _a"></span> là<span class="_ _a"></span> 2<span
+                    class="_ _a"></span> và<span class="_ _a"></span> đang<span class="_ _a"></span> ở<span
+                    class="_ _a"></span> giai<span class="_ _a"></span> đoạn<span class="_ _9"></span> đầu</div>
+                    <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0">của<span class="_ _d"></span> chu<span
+                    class="_ _b"></span> kỳ<span class="_ _b"></span> vận<span class="_ _b"></span> số.<span
+                    class="_ _d"></span> Xem<span class="_ _b"></span> thêm<span class="_ _b"></span> Phần<span
+                    class="_ _b"></span> B<span class="_ _d"></span> Mục<span class="_ _b"></span> 7<span
+                    class="_ _b"></span> "CHỈ<span class="_ _b"></span> SỐ<span class="_ _d"></span> CÁC<span
+                    class="_ _b"></span> NĂM"<span class="_ _b"></span> để<span class="_ _d"></span> biết<span
+                    class="_ _b"></span> hướng<span class="_ _b"></span> phát</div>
+            <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0" style="bottom: 230px">triển trong năm nay và 2 năm tới!</div>
+            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                 <div class="t m0 x5 h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">7</div>
             </div>

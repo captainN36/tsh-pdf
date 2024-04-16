@@ -20,4 +20,4 @@ yarn-error.log
 /.idea
 /.vscode
 /public/html-test/
-composer.lock
+/composer.lock

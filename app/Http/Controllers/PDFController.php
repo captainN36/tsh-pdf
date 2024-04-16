@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 // use Barryvdh\DomPDF\Facade\Pdf;
+use App\Jobs\DownloadFile;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -23,7 +24,7 @@ class PDFController extends Controller
             'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/14b290bf-6262-4eee-ac36-49883a30a4e8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMjUzMjUzLCJleHAiOjE3MTU4NDUyNTN9.Yf9RaaLgfDy2AOhDo5triJSzTrnt6Td3tU9GSBCDOFs'
         ];
-        
+
         $data = $this->getData($params ?? $request->all());
         dd($data);
         return view('web.welcome-copy', ['data' => $data]);
@@ -58,6 +59,15 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMjUzMjUzLCJleHAiOjE3MTU4NDUyNTN9.Yf9RaaLgfDy2AOhDo5triJSzTrnt6Td3tU9GSBCDOFs'
         ];
         $fileName = $this->pdfCopy($params);
+        $filePath = public_path() . '/pdf/' . $fileName;
+        $data = [
+            'path' => $filePath,
+            'name' => $fileName,
+        ];
+        if (file_exists($filePath)) {
+
+            DownloadFile::dispatch($data);
+        }
         return redirect(asset('/pdf/' . $fileName));
     }
 

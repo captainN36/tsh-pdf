@@ -163,7 +163,7 @@
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
                 </div>
                 <?php
-                    $nowYearIndicator = contentText($data['data']['yearIndicator']['firstContent']);
+                    $nowYearIndicator = isset($data['data']['yearIndicator']['firstContent']) ? contentText($data['data']['yearIndicator']['firstContent']) : [""];
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">

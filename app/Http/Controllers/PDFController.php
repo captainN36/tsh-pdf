@@ -19,17 +19,17 @@ class PDFController extends Controller
 
     public function index()
     {
-        $params1 = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
-        ];
+        // $params1 = [
+        //     'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
+        //     'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
+        // ];
         $params2 = [
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/756ae1f5-283b-4bde-8688-41ed6f1284d7',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
-        $data1 = $this->getData($params1);
+        // $data1 = $this->getData($params1);
         $data2 = $this->getData($params2);
-        dd($data1, $data2);
+        dd($data2);
         return view('web.welcome-copy', ['data' => $data]);
     }
     public function view(Request $request)
@@ -214,6 +214,7 @@ class PDFController extends Controller
         $data = $callAPI->json();
         $title = $data['data']['data'];
         $count = 1;
+        dd($data);
         foreach ($title as $key => $item) {
             if (isset($item['title'])) {
                     $data['data']['data'][$key]['page'] =  $count++;

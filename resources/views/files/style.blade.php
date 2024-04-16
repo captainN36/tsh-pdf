@@ -2,7 +2,7 @@
 
 
     span.indicator {
-        left: 150px;
+        left: 140px;
         margin-left: 140px;
     }
     span.indicator.indicator-11 {

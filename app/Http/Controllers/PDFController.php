@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 // use Barryvdh\DomPDF\Facade\Pdf;
-use App\Jobs\DownloadFile;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -58,16 +57,8 @@ class PDFController extends Controller
             'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/14b290bf-6262-4eee-ac36-49883a30a4e8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMjUzMjUzLCJleHAiOjE3MTU4NDUyNTN9.Yf9RaaLgfDy2AOhDo5triJSzTrnt6Td3tU9GSBCDOFs'
         ];
-        $data = $this->getData($params ?? $request->all());
-        $name = $data['id'] . '-' . date("H-i-s") . '.pdf';
-        $filePath = public_path() . '/pdf/' . $name;
-        $data['file_name'] = $name;
-        dispatch(new DownloadFile($data));
-
-        if (file_exists($filePath)) {
-            return redirect(asset('/pdf/' . $name));
-        }
-        return response()->json(['msg' => 'Đang render file']);
+        $fileName = $this->pdfCopy($params ?? $request->all());
+        return redirect(asset('/pdf/' . $fileName));
     }
 
     public function download (Request $request) {

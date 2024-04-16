@@ -283,7 +283,7 @@
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['yearIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $nowMonthIndicator[0] !!}
                     </div>

@@ -86,7 +86,7 @@
                     });
                     $number = array_values($filter)[0]['indicator'];
                 @endphp
-                <div class="t m0 hb y276 ff2 fs9 fc2 sc0 ls0 ws0 x16-minus" style="left: -135.253333px !important;">
+                <div class="t m0 hb y276 ff2 fs9 fc2 sc0 ls0 ws0 x16-minus" style="left: -75.253333px !important;">
                     @php
                         $fileName = $number - 1;
                     @endphp
@@ -131,8 +131,7 @@
                     class="_ _b"></span> "CHỈ<span class="_ _b"></span> SỐ<span class="_ _d"></span> CÁC<span
                     class="_ _b"></span> NĂM"<span class="_ _b"></span> để<span class="_ _d"></span> biết<span
                     class="_ _b"></span> hướng<span class="_ _b"></span> phát</div>
-                    <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0" style="bottom: 230px">triển trong năm nay và 2 năm tới!</div>
-                </div>
+                <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0" style="bottom: 230px">triển trong năm nay và 2 năm tới!</div>
                 <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                 <div class="t m0 x5 h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">7</div>
@@ -164,7 +163,7 @@
                     {!! $data['data']['yearIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2000px; text-align: justify;">
                         {!! $nowYearIndicator[0] !!}
                     </div>
                 </div>

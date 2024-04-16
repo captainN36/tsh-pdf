@@ -855,7 +855,6 @@
                 $nextPagesContent = count($passionIndicator) >= 2 ? $passionIndicator : $nextPagesContent;
                 
                 ?>
-                ?>
                 <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                     {!! $data['data']['passionIndicator']['description'] !!}

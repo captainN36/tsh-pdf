@@ -95,11 +95,11 @@
                     $number = array_values($filter)[0]['indicator'];
                 @endphp
                 <div class="t m0 hb y276 ff2 fs9 fc2 sc0 ls0 ws0 x16-minus"
-                    style="left: -100.253333px !important; bottom: 800px">
+                    style="left: -150.253333px !important; bottom: 800px">
                     @php
                         $fileName = $number - 1;
                     @endphp
-                    <img src="{{ asset('9/chuky/8.png') }}" alt="" style="width: 2360px; bottom: 900px; left: 100px">
+                    <img src="{{ asset('9/chuky/8.png') }}" alt="" style="width: 2360px; bottom: 900px;">
                 </div>
 
                 @php

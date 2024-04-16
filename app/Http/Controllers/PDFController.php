@@ -17,14 +17,15 @@ use \stdClass;
 class PDFController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         $params = [
             'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/14b290bf-6262-4eee-ac36-49883a30a4e8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMjUzMjUzLCJleHAiOjE3MTU4NDUyNTN9.Yf9RaaLgfDy2AOhDo5triJSzTrnt6Td3tU9GSBCDOFs'
         ];
         
-        $data = $this->getData($params);
+        $data = $this->getData($params ?? $request->all());
+        dd($data);
         return view('web.welcome-copy', ['data' => $data]);
     }
     public function view(Request $request)

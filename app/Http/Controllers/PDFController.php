@@ -20,11 +20,10 @@ class PDFController extends Controller
     public function index()
     {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/756ae1f5-283b-4bde-8688-41ed6f1284d7',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf/36013745-fc87-46d7-9194-6cb4d8c014d6',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
         $data = $this->getData($params);
-        dd($data);
         return view('web.welcome', ['data' => $data]);
     }
     public function view(Request $request)
@@ -53,8 +52,8 @@ class PDFController extends Controller
 
     public function niewFile (Request $request) {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/756ae1f5-283b-4bde-8688-41ed6f1284d7',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf/36013745-fc87-46d7-9194-6cb4d8c014d6',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
         $fileName = $this->pdfCopy($params);
         return redirect(asset('/pdf/' . $fileName));

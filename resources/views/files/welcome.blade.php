@@ -65,24 +65,26 @@
         </div>
         <div id="pf8" class="pf w0 h0" data-page-no="8">
             <div class="pc pc8 w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/' . $path . '/2.png') }}">
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/2.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">1</div>
                 <div id="header1" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ VẬN SỐ</div>
-        
-                <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1500px; white-space: normal; text-aligin: justify">
+
+                <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0"
+                    style="width: 1500px; white-space: normal; text-aligin: justify">
                     {!! substr($data['data']['cycleFortune']['description'], 0) !!}
                 </div>
                 <style>
-                .t.m0.hf.yaf.ff2.fs9.fc2.sc0.ls0.ws0 p {
-                   white-space: break-spaces;
-                    font-size:45px;
-                }
-                p {
-                    margin: 0;
-                }
+                    .t.m0.hf.yaf.ff2.fs9.fc2.sc0.ls0.ws0 p {
+                        white-space: break-spaces;
+                        font-size: 45px;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
                 </style>
-                <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="flex-wrap: wrap; left: 90px; bottom: 1125px; width: 1950px; text-aligin: justify">
+                <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0"
+                    style="flex-wrap: wrap; left: 90px; bottom: 1125px; width: 1950px; text-aligin: justify">
                     {!! $data['data']['cycleFortune']['content'] !!}
                 </div>
                 @php
@@ -92,13 +94,14 @@
                     });
                     $number = array_values($filter)[0]['indicator'];
                 @endphp
-                <div class="t m0 hb y276 ff2 fs9 fc2 sc0 ls0 ws0 x16-minus" style="left: -100.253333px !important; bottom: 800px">
+                <div class="t m0 hb y276 ff2 fs9 fc2 sc0 ls0 ws0 x16-minus"
+                    style="left: -100.253333px !important; bottom: 800px">
                     @php
                         $fileName = $number - 1;
                     @endphp
                     <img src="{{ asset('9/chuky/8.png') }}" alt="" style="width: 2360px; bottom: 900px">
                 </div>
-        
+
                 @php
                     $string = '';
                     $indicator = '';
@@ -116,7 +119,8 @@
                         $num++;
                     }
                 @endphp
-                <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0" style="display: inline-flex; bottom: 480px; left: -25px">
+                <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0"
+                    style="display: inline-flex; bottom: 480px; left: -25px">
                     {!! $indicator !!}
                 </div>
                 <div class="t m0 h8 yb8 ff3 fs4 fc2 sc0 ls0 ws0">
@@ -129,21 +133,24 @@
                         class="_ _a"></span> (vận<span class="_ _a"></span> niên<span class="_ _a"></span> cá<span
                         class="_ _9"></span> nhân)<span class="_ _a"></span> là<span class="_ _a"></span> 2<span
                         class="_ _a"></span> và<span class="_ _a"></span> đang<span class="_ _a"></span> ở<span
-                        class="_ _a"></span> giai<span class="_ _a"></span> đoạn<span class="_ _9"></span> đầu</div>
+                        class="_ _a"></span> giai<span class="_ _a"></span> đoạn<span class="_ _9"></span> đầu
+                </div>
                 <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0">của<span class="_ _d"></span> chu<span
                         class="_ _b"></span> kỳ<span class="_ _b"></span> vận<span class="_ _b"></span> số.<span
-                        class="_ _d"></span> Xem<span class="_ _b"></span> thêm<span class="_ _b"></span> Phần<span
-                        class="_ _b"></span> B<span class="_ _d"></span> Mục<span class="_ _b"></span> 7<span
-                        class="_ _b"></span> "CHỈ<span class="_ _b"></span> SỐ<span class="_ _d"></span> CÁC<span
-                        class="_ _b"></span> NĂM"<span class="_ _b"></span> để<span class="_ _d"></span> biết<span
-                        class="_ _b"></span> hướng<span class="_ _b"></span> phát</div>
-                <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0" style="bottom: 230px">triển trong năm nay và 2 năm tới!
+                        class="_ _d"></span> Xem<span class="_ _b"></span> thêm<span class="_ _b"></span>
+                    Phần<span class="_ _b"></span> B<span class="_ _d"></span> Mục<span class="_ _b"></span>
+                    7<span class="_ _b"></span> "CHỈ<span class="_ _b"></span> SỐ<span class="_ _d"></span>
+                    CÁC<span class="_ _b"></span> NĂM"<span class="_ _b"></span> để<span class="_ _d"></span>
+                    biết<span class="_ _b"></span> hướng<span class="_ _b"></span> phát</div>
+                <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0" style="bottom: 230px">triển trong năm nay và 2 năm
+                    tới!
                 </div>
                 <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                 <div class="t m0 x5 h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">7</div>
             </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            </div>
         </div>
 
         <div id="pfb" class="pf w0 h0" data-page-no="8">
@@ -152,24 +159,25 @@
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">2</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÁC NĂM</div>
                 <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year }}</div>
-                <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1330px">
+                <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1330px">
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nowYearIndicator'] }}</div>
                 <div class="t m0 x4d h12 y66 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year + 1 }}</div>
-                <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1260px">
+                <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1260px">
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}</div>
                 <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year + 2 }}</div>
 
-                <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1190px; width: 2360px !important">
+                <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0"
+                    style="left: 580px; bottom: 1190px; width: 2360px !important">
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
                 </div>
                 <?php
-                    $nowYearIndicator = contentText($data['data']['yearIndicator']['firstContent']);
+                $nowYearIndicator = contentText($data['data']['yearIndicator']['firstContent']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
                     {!! $data['data']['yearIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $nowYearIndicator[0] !!}
                     </div>
@@ -206,51 +214,51 @@
         @endif
 
         <?php
-            $nextYearIndicator = contentText($data['data']['yearIndicator']['nextYearIndicator']['content']);
+        $nextYearIndicator = contentText($data['data']['yearIndicator']['nextYearIndicator']['content']);
         ?>
 
-            @for ($i = 0; $i < count($nextYearIndicator); $i++)
-                <?php $page++; ?>
-                <div id="pfd" class="pf w0 h0" data-page-no="18">
-                    <div class="pc pcb w0 h0 opened">
-                        <img class="bi x0 y0 w1 h1" alt=""
-                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! $nextYearIndicator[$i] !!}
-                        </div>
-                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+        @for ($i = 0; $i < count($nextYearIndicator); $i++)
+            <?php $page++; ?>
+            <div id="pfd" class="pf w0 h0" data-page-no="18">
+                <div class="pc pcb w0 h0 opened">
+                    <img class="bi x0 y0 w1 h1" alt=""
+                        src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                    <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="width: 2360px; white-space: normal; text-align: justify;">
+                        {!! $nextYearIndicator[$i] !!}
                     </div>
-                    <div class="pi"
-                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                    <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                    @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                    <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                 </div>
-            @endfor
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+            </div>
+        @endfor
 
 
         <?php
         $twoYearsLaterIndicator = contentText($data['data']['yearIndicator']['twoYearsLaterIndicator']['content']);
         ?>
 
-            @for ($i = 0; $i < count($twoYearsLaterIndicator); $i++)
-                <?php $page++; ?>
-                <div id="pfd" class="pf w0 h0" data-page-no="18">
-                    <div class="pc pcb w0 h0 opened">
-                        <img class="bi x0 y0 w1 h1" alt=""
-                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! $twoYearsLaterIndicator[$i] !!}
-                        </div>
-                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+        @for ($i = 0; $i < count($twoYearsLaterIndicator); $i++)
+            <?php $page++; ?>
+            <div id="pfd" class="pf w0 h0" data-page-no="18">
+                <div class="pc pcb w0 h0 opened">
+                    <img class="bi x0 y0 w1 h1" alt=""
+                        src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                    <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="width: 2360px; white-space: normal; text-align: justify;">
+                        {!! $twoYearsLaterIndicator[$i] !!}
                     </div>
-                    <div class="pi"
-                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                    <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                    @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                    <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                 </div>
-            @endfor
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+            </div>
+        @endfor
 
 
 
@@ -260,19 +268,19 @@
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">3</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các tháng</div>
                 <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->format('m/Y') }}</div>
-                <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1330px">
+                <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1330px">
                     {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nowMonthIndicator'] }}
                 </div>
                 <div class="t m0 x4d h12 y66 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(1)->format('m/Y') }}
                 </div>
-                <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1260px">
+                <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1260px">
                     {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nextMonthIndicator'] }}
                 </div>
                 <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(2)->format('m/Y') }}
                 </div>
 
                 <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0"
-                    style="width: 2360px !important; left: 630px; bottom: 1190px">
+                    style="width: 2360px !important; left: 580px; bottom: 1190px">
                     {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['twoMonthsLaterIndicator'] }}
                 </div>
 
@@ -281,9 +289,9 @@
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
-                    {!! $data['data']['yearIndicator']['description'] !!}
+                    {!! $data['data']['monthIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; text-align: justify;">
                         {!! $nowMonthIndicator[0] !!}
                     </div>
@@ -457,7 +465,7 @@
                 <div class="t m0 x39 h7 yd5 ff4 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $numberLifePath }}</div>
                 <?php
-                    $lifePathIndicator = contentText($data['data']['lifePathIndicator']['content']);
+                $lifePathIndicator = contentText($data['data']['lifePathIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
@@ -832,22 +840,22 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ implode(', ', $data['data']['passionIndicator']['passionIndicator']) }}
                 </div>
-                <?php 
+                <?php
                 $passionIndicator = contentText($data['data']['passionIndicator']['firstContent']);
                 if (count($passionIndicator) < 2) {
-                        $data['data']['passionIndicator']['data'][0] = $data['data']['passionIndicator']['firstContent'];
-                        [$textFromArray, $nextPagesContent] = textFromArray($data['data']['passionIndicator']['data']);
-                    } else {
-                        array_shift($data['data']['passionIndicator']['data']);
-                        $firstContent = $passionIndicator[0];
-                        array_shift($passionIndicator);
-                        for ($i=0; $i < count($data['data']['passionIndicator']['data']); $i++) { 
-                            $passionIndicator[] = $data['data']['passionIndicator']['data'][$i];
-                        }
-                        [$textFromArray, $nextPagesContent] = textFromArray($passionIndicator);
+                    $data['data']['passionIndicator']['data'][0] = $data['data']['passionIndicator']['firstContent'];
+                    [$textFromArray, $nextPagesContent] = textFromArray($data['data']['passionIndicator']['data']);
+                } else {
+                    array_shift($data['data']['passionIndicator']['data']);
+                    $firstContent = $passionIndicator[0];
+                    array_shift($passionIndicator);
+                    for ($i = 0; $i < count($data['data']['passionIndicator']['data']); $i++) {
+                        $passionIndicator[] = $data['data']['passionIndicator']['data'][$i];
                     }
-                    $textFromArray = count($passionIndicator) >= 2 ? $firstContent : $textFromArray;
-                    $nextPagesContent = count($passionIndicator) >= 2 ? $passionIndicator : $nextPagesContent;
+                    [$textFromArray, $nextPagesContent] = textFromArray($passionIndicator);
+                }
+                $textFromArray = count($passionIndicator) >= 2 ? $firstContent : $textFromArray;
+                $nextPagesContent = count($passionIndicator) >= 2 ? $passionIndicator : $nextPagesContent;
                 
                 ?>
                 ?>
@@ -870,8 +878,8 @@
 
         @while (!empty($nextPagesContent))
             <?php
-                $page++; 
-                [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
+            $page++;
+            [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
             ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
@@ -885,7 +893,8 @@
                     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                     <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                 </div>
-                <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
             </div>
         @endwhile
 
@@ -1100,7 +1109,7 @@
                 </div>
             @endfor
         @endif
-        
+
 
 
         <div id="pf7" class="pf w0 h0" data-page-no="33">
@@ -1275,32 +1284,59 @@
 
         <div id="pf7" class="pf w0 h0" data-page-no="38">
             <div class="pc pc6 w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/9/kim-tu-thap.png') }}">
-                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 90px; bottom: 1440px">16</div>
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/9/kim-tu-thap.png') }}">
+                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"
+                    style="left: 90px; bottom: 1440px">16</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">KIM TỰ THÁP SỐ HỌC</div>
 
-                <div class="t m0 x12 h16 y165 ff1 fse fc2 sc0 ls0 ws0">Tháng {{ explode('/', $data['dateOfBirth'])[1] }}</div>
-                <div class="t m0 x3f h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]) ?></div>
-                <div class="t m0 x40 h4 y165 ff1 fs2 fc2 sc0 ls0 ws0">Ngày {{ explode('/', $data['dateOfBirth'])[0] }}</div>
-                <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]) ?></div>
-                <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">{{ explode('/', $data['dateOfBirth'])[2] }}</div>
-                <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]) ?></div>
-                <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
-                <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][1] }} tuổi</div>
+                <div class="t m0 x12 h16 y165 ff1 fse fc2 sc0 ls0 ws0">Tháng
+                    {{ explode('/', $data['dateOfBirth'])[1] }}</div>
+                <div class="t m0 x3f h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]); ?></div>
+                <div class="t m0 x40 h4 y165 ff1 fs2 fc2 sc0 ls0 ws0">Ngày
+                    {{ explode('/', $data['dateOfBirth'])[0] }}</div>
+                <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]); ?></div>
+                <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">{{ explode('/', $data['dateOfBirth'])[2] }}
+                </div>
+                <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]); ?></div>
+                <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}
+                </div>
+                <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][1] }}
+                    tuổi</div>
                 <div class="t m0 x45 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2022 - 2030)</div>
-                <div class="t m0 x46 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
-                <div class="t m0 x47 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][1] }} tuổi</div>
+                <div class="t m0 x46 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}
+                </div>
+                <div class="t m0 x47 h16 y168 ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][1] }}
+                    tuổi</div>
                 <div class="t m0 x48 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2030 - 2039)</div>
-                <div class="t m0 x41 h14 y16a ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>
-                <div class="t m0 x49 h16 y16b ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][1] }} t</div>
+                <div class="t m0 x41 h14 y16a ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}
+                </div>
+                <div class="t m0 x49 h16 y16b ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][1] }}
+                    t</div>
                 <div class="t m0 x4a h5 y16c ff2 fs2 fc2 sc0 ls0 ws0">(2039 - 2048)</div>
-                <div class="t m0 x41 h14 y16d ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}</div>
-                <div class="t m0 x4b h16 y16e ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['age'][0] }} tuổi</div>
+                <div class="t m0 x41 h14 y16d ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}
+                </div>
+                <div class="t m0 x4b h16 y16e ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['age'][0] }} tuổi
+                </div>
                 <div class="t m0 x4c h17 y16f ff2 fse fc2 sc0 ls0 ws0">(2048 - 2057)</div>
-                <div class="t m0 x21 h14 y170 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
-                <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}</div>
-                <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
+                <div class="t m0 x21 h14 y170 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span
+                        class="_ _1b">
+                    </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}
+                </div>
+                <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}
+                </div>
+                <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}
+                </div>
 
                 <div class="t m0 x5 hf yd6 ff2 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 450px; text-align: justify">
@@ -1310,13 +1346,14 @@
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer')
                 <?php $page = $page + 1; ?>
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
-                <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
                 </div>
             </div>
         </div>
         <?php
-            $challengeIndicator = contentText($data['data']['challengeIndicator']['content'], true);
+        $challengeIndicator = contentText($data['data']['challengeIndicator']['content'], true);
         ?>
         @if (count($challengeIndicator) >= 2)
             @for ($i = 0; $i < count($challengeIndicator); $i++)
@@ -1349,21 +1386,21 @@
                     {{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}
                 </div>
                 <?php
-                    $repeatIndicator = contentText($data['data']['repeatIndicator']['firstContent']);
-                    if (count($repeatIndicator) < 2) {
-                            $data['data']['repeatIndicator']['data'][0] = $data['data']['repeatIndicator']['firstContent'];
-                            [$textFromArray, $nextPagesContent] = textFromArray($data['data']['repeatIndicator']['data']);
-                        } else {
-                            array_shift($data['data']['repeatIndicator']['data']);
-                            $firstContent = $repeatIndicator[0];
-                            array_shift($repeatIndicator);
-                            for ($i=0; $i < count($data['data']['repeatIndicator']['data']); $i++) { 
-                                $repeatIndicator[] = $data['data']['repeatIndicator']['data'][$i];
-                            }
-                            [$textFromArray, $nextPagesContent] = textFromArray($repeatIndicator);
-                        }
-                        $textFromArray = count($repeatIndicator) >= 2 ? $firstContent : $textFromArray;
-                        $nextPagesContent = count($repeatIndicator) >= 2 ? $repeatIndicator : $nextPagesContent;
+                $repeatIndicator = contentText($data['data']['repeatIndicator']['firstContent']);
+                if (count($repeatIndicator) < 2) {
+                    $data['data']['repeatIndicator']['data'][0] = $data['data']['repeatIndicator']['firstContent'];
+                    [$textFromArray, $nextPagesContent] = textFromArray($data['data']['repeatIndicator']['data']);
+                } else {
+                    array_shift($data['data']['repeatIndicator']['data']);
+                    $firstContent = $repeatIndicator[0];
+                    array_shift($repeatIndicator);
+                    for ($i = 0; $i < count($data['data']['repeatIndicator']['data']); $i++) {
+                        $repeatIndicator[] = $data['data']['repeatIndicator']['data'][$i];
+                    }
+                    [$textFromArray, $nextPagesContent] = textFromArray($repeatIndicator);
+                }
+                $textFromArray = count($repeatIndicator) >= 2 ? $firstContent : $textFromArray;
+                $nextPagesContent = count($repeatIndicator) >= 2 ? $repeatIndicator : $nextPagesContent;
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
@@ -1387,8 +1424,8 @@
 
         @while (!empty($nextPagesContent))
             <?php
-                $page++; 
-                [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
+            $page++;
+            [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
             ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
@@ -1402,7 +1439,8 @@
                     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                     <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                 </div>
-                <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
             </div>
         @endwhile
 
@@ -1417,22 +1455,22 @@
                         {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
                     </div>
                     <?php
-                        $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
-                        if (count($missIndicator) < 2) {
-                            $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
-                            [$textFromArray, $nextPagesContent] = textFromArray($data['data']['missIndicator']['data']);
-                        } else {
-                            array_shift($data['data']['missIndicator']['data']);
-                            $firstContent = $missIndicator[0];
-                            array_shift($missIndicator);
-                            for ($i=0; $i < count($data['data']['missIndicator']['data']); $i++) { 
-                                $missIndicator[] = $data['data']['missIndicator']['data'][$i];
-                            }
-                            [$textFromArray, $nextPagesContent] = textFromArray($missIndicator);
+                    $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
+                    if (count($missIndicator) < 2) {
+                        $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
+                        [$textFromArray, $nextPagesContent] = textFromArray($data['data']['missIndicator']['data']);
+                    } else {
+                        array_shift($data['data']['missIndicator']['data']);
+                        $firstContent = $missIndicator[0];
+                        array_shift($missIndicator);
+                        for ($i = 0; $i < count($data['data']['missIndicator']['data']); $i++) {
+                            $missIndicator[] = $data['data']['missIndicator']['data'][$i];
                         }
-                        $textFromArray = count($missIndicator) >= 2 ? $firstContent : $textFromArray;
-                        $nextPagesContent = count($missIndicator) >= 2 ? $missIndicator : $nextPagesContent;
-                        
+                        [$textFromArray, $nextPagesContent] = textFromArray($missIndicator);
+                    }
+                    $textFromArray = count($missIndicator) >= 2 ? $firstContent : $textFromArray;
+                    $nextPagesContent = count($missIndicator) >= 2 ? $missIndicator : $nextPagesContent;
+                    
                     ?>
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
@@ -1456,8 +1494,8 @@
 
             @while (!empty($nextPagesContent))
                 <?php
-                    $page++; 
-                    [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
+                $page++;
+                [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
                 ?>
                 <div id="pfc" class="pf w0 h0" data-page-no="9">
                     <div class="pc pce w0 h0 opened">
@@ -1471,10 +1509,11 @@
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                         <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                     </div>
-                    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
                 </div>
             @endwhile
-            
+
         @endif
 
         <div id="pf7-8" class="pf w0 h0" data-page-no="22">
@@ -1487,7 +1526,7 @@
                     {{ $data['data']['balanceIndicator']['balanceIndicator'] }}
                 </div>
                 <?php
-                    $balanceIndicator = contentText($data['data']['balanceIndicator']['content']);
+                $balanceIndicator = contentText($data['data']['balanceIndicator']['content']);
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
@@ -1651,19 +1690,19 @@
                 <?php
                 $karmicIndicator = contentText($data['data']['karmicIndicator']['firstContent']);
                 if (count($karmicIndicator) < 2) {
-                        $data['data']['karmicIndicator']['data'][0] = $data['data']['karmicIndicator']['firstContent'];
-                        [$textFromArray, $nextPagesContent] = textFromArray($data['data']['karmicIndicator']['data']);
-                    } else {
-                        array_shift($data['data']['karmicIndicator']['data']);
-                        $firstContent = $karmicIndicator[0];
-                        array_shift($karmicIndicator);
-                        for ($i=0; $i < count($data['data']['karmicIndicator']['data']); $i++) { 
-                            $karmicIndicator[] = $data['data']['karmicIndicator']['data'][$i];
-                        }
-                        [$textFromArray, $nextPagesContent] = textFromArray($karmicIndicator);
+                    $data['data']['karmicIndicator']['data'][0] = $data['data']['karmicIndicator']['firstContent'];
+                    [$textFromArray, $nextPagesContent] = textFromArray($data['data']['karmicIndicator']['data']);
+                } else {
+                    array_shift($data['data']['karmicIndicator']['data']);
+                    $firstContent = $karmicIndicator[0];
+                    array_shift($karmicIndicator);
+                    for ($i = 0; $i < count($data['data']['karmicIndicator']['data']); $i++) {
+                        $karmicIndicator[] = $data['data']['karmicIndicator']['data'][$i];
                     }
-                    $textFromArray = count($karmicIndicator) >= 2 ? $firstContent : $textFromArray;
-                    $nextPagesContent = count($karmicIndicator) >= 2 ? $karmicIndicator : $nextPagesContent;
+                    [$textFromArray, $nextPagesContent] = textFromArray($karmicIndicator);
+                }
+                $textFromArray = count($karmicIndicator) >= 2 ? $firstContent : $textFromArray;
+                $nextPagesContent = count($karmicIndicator) >= 2 ? $karmicIndicator : $nextPagesContent;
                 
                 ?>
 
@@ -1689,8 +1728,8 @@
 
         @while (!empty($nextPagesContent))
             <?php
-                $page++; 
-                [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
+            $page++;
+            [$nextText, $nextPagesContent] = textFromArray($nextPagesContent, true);
             ?>
             <div id="pfc" class="pf w0 h0" data-page-no="9">
                 <div class="pc pce w0 h0 opened">
@@ -1704,7 +1743,8 @@
                     @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                     <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                 </div>
-                <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
             </div>
         @endwhile
 
@@ -1713,7 +1753,8 @@
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/suc-manh.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"
                     style="left: 92px; bottom: 1440px">23</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0 custom-font">BIỂU ĐỒ SỨC MẠNH(rất quan trọng)</div>
+                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0 custom-font">BIỂU ĐỒ SỨC MẠNH(rất quan trọng)
+                </div>
                 @php
                     $strength = new stdClass();
                     foreach ($data['data']['drawStrengthChart'] as $value) {
@@ -1903,7 +1944,8 @@
 
         <div id="pfd" class="pf w0 h0" data-page-no="52">
             <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                <img class="bi x0 y0 w1 h1" alt=""
+                    src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                 @php
                     $strengthTWO = [];
                     $jsonStrength =
@@ -1941,17 +1983,19 @@
                 <?php $page = $page + 1; ?>
                 <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            <div class="pi"
+                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
         <div id="pfd" class="pf w0 h0" data-page-no="52">
             <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                <img class="bi x0 y0 w1 h1" alt=""
+                    src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                 <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; top: 0px; text-align: justify">
                     @foreach ($strengthTWO as $key => $item)
                         @if ($key == 4)
-                        {!! $item !!}
+                            {!! $item !!}
                         @endif
                     @endforeach
                 </div>
@@ -1961,7 +2005,8 @@
                 <?php $page = $page + 1; ?>
                 <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            <div class="pi"
+                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
 
@@ -2181,7 +2226,8 @@
 
         <div id="pfd" class="pf w0 h0" data-page-no="54">
             <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
+                <img class="bi x0 y0 w1 h1" alt=""
+                    src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
 
                 @php
                     $arr = [
@@ -2216,7 +2262,8 @@
                 <?php $page = $page + 1; ?>
                 <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            <div class="pi"
+                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
 

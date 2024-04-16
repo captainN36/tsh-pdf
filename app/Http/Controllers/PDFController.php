@@ -20,8 +20,8 @@ class PDFController extends Controller
     public function index()
     {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf/36013745-fc87-46d7-9194-6cb4d8c014d6',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/756ae1f5-283b-4bde-8688-41ed6f1284d7',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
         ];
         $data = $this->getData($params);
         return view('web.welcome', ['data' => $data]);
@@ -29,8 +29,8 @@ class PDFController extends Controller
     public function view(Request $request)
     {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/e35b3ea4-183b-46eb-9ba3-7053c58f12ec',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4MzUyOTQyLCJleHAiOjE3MTA5NDQ5NDJ9.-4ebzgjDrbEK3c4QhH3S-nEFas9CkKlh6JPUZQz5k3M'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/756ae1f5-283b-4bde-8688-41ed6f1284d7',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
         ];
         $data = $this->getData($request->all());
         return view('web.welcome', ['data' => $data]);
@@ -43,8 +43,8 @@ class PDFController extends Controller
      */
     public function viewFile (Request $request) {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/f8f3dfb3-e109-4ff2-a07e-4690e3646d1d',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/756ae1f5-283b-4bde-8688-41ed6f1284d7',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
         ];
         $fileName = $this->pdf($params);
         return redirect(asset('/pdf/' . $fileName));
@@ -52,18 +52,14 @@ class PDFController extends Controller
 
     public function niewFile (Request $request) {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/756ae1f5-283b-4bde-8688-41ed6f1284d7',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
         ];
-        $fileName = $this->pdf($params);
+        $fileName = $this->pdfCopy($params);
         return redirect(asset('/pdf/' . $fileName));
     }
 
     public function download (Request $request) {
-        // $params = [
-        //     'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/0c82f030-4167-46f5-92d7-4eb50227015e',
-        //     'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzA4MzUyOTQyLCJleHAiOjE3MTA5NDQ5NDJ9.-4ebzgjDrbEK3c4QhH3S-nEFas9CkKlh6JPUZQz5k3M'
-        // ];
         $params = $request->all();
         $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         $fileName = $this->pdf($params);
@@ -79,6 +75,35 @@ class PDFController extends Controller
         } else {
             return response()->json(['error' => 'File not found'], 404);
         }
+    }
+
+    public function pdfCopy($param)
+    {
+        $data = $this->getData($param);
+        $name = $data['id'] . '-' . date("H-i-s") . '.html';
+        $namePDF = $data['id'] . '-' . date("H-i-s") . '.pdf';
+        if (!file_exists(public_path() . '/html/')) {
+            mkdir(public_path() . '/html/', 0777, true);
+        }
+        if (!file_exists(public_path() . '/pdf/')) {
+            mkdir(public_path() . '/pdf/', 0777, true);
+        }
+        Process::run('chmod -R 777 ' . public_path());
+        $pathHtml = public_path() . '/html/' . $name;
+        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
+        if (!file_exists($pathPDF)) {
+            $file = fopen($pathHtml, 'w+');
+            $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
+            fwrite($file, $htmlStr);
+            try {
+                $processName = "wkhtmltopdf $pathHtml $pathPDF";
+                Process::run($processName);
+                Log::info('process', ['process' => $processName]);
+            } catch (\Exception $exception) {
+                throw $exception;
+            }
+        }
+        return $namePDF;
     }
 
     public function pdf($param)

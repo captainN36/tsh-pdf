@@ -61,7 +61,7 @@ class PDFController extends Controller
         $fileName = $this->pdfCopy($params);
         $filePath = public_path() . '/pdf/' . $fileName;
         $data = [
-            'url' => asset('/pdf/' . $fileName),
+            'path' => $filePath,
             'name' => $fileName,
         ];
         if (file_exists($filePath)) {

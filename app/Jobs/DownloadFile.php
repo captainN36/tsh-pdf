@@ -7,7 +7,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Storage;
 
 class DownloadFile implements ShouldQueue
 {
@@ -27,11 +26,11 @@ class DownloadFile implements ShouldQueue
      */
     public function handle()
     {
-        $fileUrl = $this->data['url'];  // The URL of the file to download
-        $fileName = $this->data['name'];  // The name of the file
+        $headers = [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'attachment; filename="' . $this->data['name'] . '"',
+        ];
 
-        // Download and save the file using the Storage facade
-        $fileContents = file_get_contents($fileUrl);
-        Storage::disk('local')->put($fileName, $fileContents);
+        response()->file($this->data['path'], $headers);
     }
 }

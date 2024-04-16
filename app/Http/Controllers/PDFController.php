@@ -24,7 +24,8 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
         ];
         $data = $this->getData($params);
-        dd($data);
+        $nowYearIndicator = contentText($data['data']['yearIndicator']['firstContent']);
+        dd($nowYearIndicator, count($nowYearIndicator));
         return view('web.welcome-copy', ['data' => $data]);
     }
     public function view(Request $request)

@@ -20,8 +20,8 @@ class PDFController extends Controller
     public function index()
     {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/756ae1f5-283b-4bde-8688-41ed6f1284d7',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
         ];
         $data = $this->getData($params);
         dd($data);

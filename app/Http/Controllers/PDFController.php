@@ -25,9 +25,27 @@ class PDFController extends Controller
         ];
 
         $data = $this->getData($params ?? $request->all());
-        dd($data);
         return view('web.welcome-copy', ['data' => $data]);
     }
+
+
+    public function post_live_ws($url, $data)
+    {
+        $post = curl_init();
+        curl_setopt($post, CURLOPT_URL, $url);
+        curl_setopt($post, CURLOPT_POST, 1);
+        curl_setopt($post, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($post, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($post, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0');
+        $result = curl_exec($post);
+        $curl_info = curl_getinfo($post);
+        curl_close($post);
+        $obj_source = new stdClass();
+        $obj_source->content = $result;
+        $obj_source->header = $curl_info["http_code"];
+        return $obj_source;
+    }
+
     public function view(Request $request)
     {
         $params = [
@@ -99,7 +117,6 @@ class PDFController extends Controller
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";
-                dd($processName);
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {

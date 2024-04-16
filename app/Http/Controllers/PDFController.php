@@ -53,8 +53,8 @@ class PDFController extends Controller
 
     public function niewFile (Request $request) {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
+            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/14b290bf-6262-4eee-ac36-49883a30a4e8',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMjUzMjUzLCJleHAiOjE3MTU4NDUyNTN9.Yf9RaaLgfDy2AOhDo5triJSzTrnt6Td3tU9GSBCDOFs'
         ];
         $fileName = $this->pdfCopy($params);
         return redirect(asset('/pdf/' . $fileName));

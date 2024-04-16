@@ -305,55 +305,16 @@
                 </div>
 
                 <?php
-                $monthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'monthIndicator', $data['data']['monthIndicator']['description'], false);
-                $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nowMonthIndicator', $data['data']['monthIndicator']['nowMonthIndicator']['content']);
-                $page = $page + 1;
-                
-                $inputString = '';
-                for ($i = 1; $i <= count($monthIndicator); $i++) {
-                    $inputString .= $monthIndicator[$i];
-                }
-                for ($i = 1; $i <= count($nowMonthIndicator); $i++) {
-                    $inputString .= $nowMonthIndicator[$i];
-                }
-                $lines = explode("\n", $inputString);
-                
-                $linesPerPartFirst = 35;
-                $linesPerPartRest = 55;
-                foreach ($lines as $key => $line) {
-                    if (strlen($line) < 100) {
-                        $lines[$key] = $line . "\r";
-                    }
-                }
-                $parts = [];
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
-                
-                    $part = array_slice($lines, $i, $linesPerPart);
-                
-                    $part = array_filter($part);
-                
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = $parts[0];
-                $first = str_replace("\r\n", "\r", $first);
-                $first = str_replace("\n", ' ', $first);
-                $array[0] = $first;
-                if (count($parts) > 1) {
-                    for ($i = 1; $i < count($parts); $i++) {
-                        $html = str_replace("\r\n ", "\r", $parts[$i]);
-                        $html = str_replace("\n", ' ', $parts[$i]);
-                        $array[$i] = $html;
-                        $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-                    }
-                }
+                $nowMonthIndicator = contentText($data['data']['monthIndicator']['firstContent']);
                 ?>
-                <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0"
-                    style="width: 2000px; white-space: normal; bottom: 880px; text-align: justify;">
-                    {!! nl2br(e($first)) !!}
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
+                    {!! $data['data']['monthIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2000px; text-align: justify;">
+                        {!! $nowMonthIndicator[0] !!}
+                    </div>
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -365,48 +326,11 @@
         </div>
 
         <?php
-        $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'], false);
-        $twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'], false);
-        $inputString = '';
-        for ($i = 1; $i <= count($nextMonthIndicator); $i++) {
-            $inputString .= $nextMonthIndicator[$i];
-        }
-        for ($i = 1; $i <= count($twoMonthsLaterIndicator); $i++) {
-            $inputString .= $twoMonthsLaterIndicator[$i];
-        }
-        $lines = explode("\n", $inputString);
+        $nextMonthIndicator = contentText($data['data']['monthIndicator']['nextMonthIndicator']['content']);
+        $twoMonthsLaterIndicator = contentText($data['data']['monthIndicator']['twoMonthsLaterIndicator']['content']);
         
-        $linesPerPart = 55;
-        foreach ($lines as $key => $line) {
-            if (strlen($line) < 100) {
-                $lines[$key] = $line . "\r";
-            }
-        }
-        $parts = [];
-        for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-            $part = array_slice($lines, $i, $linesPerPart);
-        
-            $part = array_filter($part);
-        
-            if (!empty($part)) {
-                $parts[] = implode("\n", $part);
-            }
-        }
-        $array = [];
-        $first = $parts[0];
-        $first = str_replace("\r\n", "\r", $first);
-        $first = str_replace("\n", ' ', $first);
-        $array[0] = $first;
-        if (count($parts) > 1) {
-            for ($i = 1; $i < count($parts); $i++) {
-                $html = str_replace("\r\n ", "\r", $parts[$i]);
-                $html = str_replace("\n", ' ', $parts[$i]);
-                $array[$i] = $html;
-                $array[$i] = str_replace("\r \r", "\r", $array[$i]);
-            }
-        }
         ?>
-        @for ($i = 0; $i < count($array); $i++)
+        @for ($i = 0; $i < count($nextMonthIndicator); $i++)
             <?php $page++; ?>
             <div id="pfd" class="pf w0 h0" data-page-no="13">
                 <div class="pc pcb w0 h0 opened">
@@ -414,8 +338,30 @@
                         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
                         style="width: 2000px; white-space: normal; text-align: justify;">
-                        @if (isset($array[$i]))
-                            {!! nl2br(e($array[$i])) !!}
+                        @if (isset($nextMonthIndicator[$i]))
+                            {!! $nextMonthIndicator[$i] !!}
+                        @endif
+                    </div>
+
+                    <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                    @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                    <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
+                </div>
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+            </div>
+        @endfor
+
+        @for ($i = 0; $i < count($twoMonthsLaterIndicator); $i++)
+            <?php $page++; ?>
+            <div id="pfd" class="pf w0 h0" data-page-no="13">
+                <div class="pc pcb w0 h0 opened">
+                    <img class="bi x0 y0 w1 h1" alt=""
+                        src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                    <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                        style="width: 2000px; white-space: normal; text-align: justify;">
+                        @if (isset($twoMonthsLaterIndicator[$i]))
+                            {!! $twoMonthsLaterIndicator[$i] !!}
                         @endif
                     </div>
 
@@ -453,47 +399,47 @@
                 <div class="t m0 x5 h8 yc3 ff1 fs4 fc2 sc0 ls0 ws0">1.1. Mạnh mẽ - Độc lập - Tự tin</div>
                 @isset($data['data']['percentIndicator'][0])
                     <div class="t m0 x33 h10 yc4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-1">
-                        {{ $data['data']['percentIndicator'][0][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][0][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yc5 ff1 fs4 fc2 sc0 ls0 ws0">1.2. Lắng nghe - Khéo léo - Nhạy cảm</div>
                 @isset($data['data']['percentIndicator'][1])
                     <div class="t m0 x34 h10 yc6 ff1 fs9 fc0 sc0 ls0 ws0 bannga-2">
-                        {{ $data['data']['percentIndicator'][1][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][1][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yc7 ff1 fs4 fc2 sc0 ls0 ws0">1.3. Sáng tạo - Hoạt bát - Lạc quan</div>
                 @isset($data['data']['percentIndicator'][2])
                     <div class="t m0 x35 h10 yc8 ff1 fs9 fc0 sc0 ls0 ws0 bannga-3">
-                        {{ $data['data']['percentIndicator'][2][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][2][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yc9 ff1 fs4 fc2 sc0 ls0 ws0">1.4. Cẩn thận - Cầu toàn - Thực tế</div>
                 @isset($data['data']['percentIndicator'][3])
                     <div class="t m0 x34 h10 yca ff1 fs9 fc0 sc0 ls0 ws0 bannga-4">
-                        {{ $data['data']['percentIndicator'][3][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][3][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 ycb ff1 fs4 fc2 sc0 ls0 ws0">1.5. Năng động - Linh hoạt - Tò mò</div>
                 @isset($data['data']['percentIndicator'][4])
                     <div class="t m0 x35 h10 ycc ff1 fs9 fc0 sc0 ls0 ws0 bannga-5">
-                        {{ $data['data']['percentIndicator'][4][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][4][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 ycd ff1 fs4 fc2 sc0 ls0 ws0">1.6. Quan tâm - Yêu thương - Kiểm soát</div>
                 @isset($data['data']['percentIndicator'][5])
                     <div class="t m0 x12 h10 yce ff1 fs9 fc0 sc0 ls0 ws0 bannga-6">
-                        {{ $data['data']['percentIndicator'][5][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][5][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 ycf ff1 fs4 fc2 sc0 ls0 ws0">1.7. Thông thái - Khám phá - Truyền đạt</div>
                 @isset($data['data']['percentIndicator'][6])
                     <div class="t m0 x36 h10 yd0 ff1 fs9 fc0 sc0 ls0 ws0 bannga-7">
-                        {{ $data['data']['percentIndicator'][6][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][6][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yd1 ff1 fs4 fc2 sc0 ls0 ws0">1.8. Công bằng - Tập trung - Lý tưởng</div>
                 @isset($data['data']['percentIndicator'][7])
                     <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0 bannga-8">
-                        {{ $data['data']['percentIndicator'][7][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][7][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yd3 ff1 fs4 fc2 sc0 ls0 ws0">1.9. Trách nhiệm - Rộng lượng - Hào phóng</div>
                 @isset($data['data']['percentIndicator'][8])
                     <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-9">
-                        {{ $data['data']['percentIndicator'][8][1] }}%</div>
+                        <span>{{ $data['data']['percentIndicator'][8][1] }}%</span></div>
                 @endisset
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])

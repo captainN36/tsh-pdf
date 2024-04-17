@@ -175,7 +175,7 @@
                     {!! $data['data']['yearIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 40px">
                         {!! $nowYearIndicator[0] !!}
                     </div>
                 </div>
@@ -221,7 +221,7 @@
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="width: 2360px; white-space: normal; text-align: justify;">
+                        style="width: 2360px; white-space: normal; text-align: justify; font-size: 40px">
                         {!! $nextYearIndicator[$i] !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

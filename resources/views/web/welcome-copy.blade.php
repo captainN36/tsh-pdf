@@ -1219,8 +1219,8 @@
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index">15</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ ĐƯỜNG ĐỜI</div>
 
-                <div class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0">3<span class="_ _1b"> </span><span
-                        class="fc9">1<span class="_ _1b"> </span><span class="fca">3</span></span></div>
+                <div class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator']}}<span class="_ _1b"> </span><span
+                        class="fc9">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator']}}<span class="_ _1b"> </span><span class="fca">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator']}}</span></span></div>
                 <div class="t m0 x3d h8 y125 ff1 fs4 fc8 sc0 ls0 ws0">Chu kỳ 1<span class="_ _1c"> </span><span
                         class="fc9">Chu kỳ 2<span class="_ _1d"> </span><span class="fca">Chu kỳ
                             3</span></span>
@@ -1228,8 +1228,8 @@
                 <div class="t m0 x35 h14 y126 ff1 fsc fc8 sc0 ls0 ws0">GIEO HẠT<span class="_ _1e"> </span><span
                         class="fc9">CHÍN<span class="_ _1f"> </span><span class="fca">THU HOẠCH</span></span>
                 </div>
-                <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - 29 tuổi (2030)<span class="_ _20">
-                    </span>30 - 56 tuổi (2031 - 2057)<span class="_ _21"> </span>57 tuổi về sau (2058 trở đi)</div>
+                <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1]}} tuổi (2030)<span class="_ _20">
+                    </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0]}} - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1]}} tuổi (2031 - 2057)<span class="_ _21"> </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0]}} tuổi về sau (2058 trở đi)</div>
 
                 <div class="t m0 x5 hf y6f ff4 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2000px; text-align: justify">

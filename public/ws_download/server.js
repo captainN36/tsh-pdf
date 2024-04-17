@@ -10,7 +10,6 @@ const channelUrls = {};
 wss.on('connection', function connection(ws) {
     console.log('Client connected from php');
 
-    socket.addEventListener('open', function (event) {});
     ws.on('message', function incoming(message) {
         const { url, channelId, file, drive } = JSON.parse(message);
 

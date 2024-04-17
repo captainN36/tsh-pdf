@@ -11,14 +11,15 @@ wss.on('connection', function connection(ws) {
     console.log('Client connected from php');
 
     ws.on('message', function incoming(message) {
-        const { url, channelId, file, drive } = JSON.parse(message);
+        console.log(message.toString());
+        // const { url, channelId, file, drive } = JSON.parse(message);
 
-        if (!channelUrls[channelId]) {
-            channelUrls[channelId] = [];
-        }
-        channelUrls[channelId].push(url);
+        // if (!channelUrls[channelId]) {
+        //     channelUrls[channelId] = [];
+        // }
+        // channelUrls[channelId].push(url);
 
-        processUrl(url, channelId, file, drive);
+        // processUrl(url, channelId, file, drive);
     });
 });
 

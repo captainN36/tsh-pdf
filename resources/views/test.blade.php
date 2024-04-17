@@ -14,6 +14,7 @@
     socket.addEventListener('open', function(event) {
         console.log('Connected to server');
     });
+    socket.send("dkmm")
     </script>
 </body>
 </html>

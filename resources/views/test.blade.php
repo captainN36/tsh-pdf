@@ -9,7 +9,7 @@
 <body>
     <h1>wellcome</h1>
     <script>
-    const socket = new WebSocket('wss://pdf.tracuuthansohoconline.com:8888');
+    const socket = new WebSocket('wss://89.116.27.136:8888');
 
     socket.addEventListener('open', function(event) {
         socket.send('Hello Server!');

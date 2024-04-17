@@ -1232,7 +1232,7 @@
                             0 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0] + $birth,
                             1 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1] + $birth,
                         ],
-                        'third' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][1] + $birth
+                        'third' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0] + $birth
                     ];
                 }
                 ?>

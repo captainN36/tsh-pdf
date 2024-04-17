@@ -28,6 +28,23 @@ class PDFController extends Controller
         return view('web.welcome-copy', ['data' => $data]);
     }
 
+    public static function lifeCircleIndicator($data)
+    {
+        $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator'];
+        $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator'];
+        $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator'];
+        $birth = \DateTime::createFromFormat('d/m/Y', $data['dateOfBirth']);
+        $birth = $birth->format('Y');
+        return [
+            'first' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1] + $birth,
+            'second' => [
+                0 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0] + $birth,
+                1 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1] + $birth,
+            ],
+            'third' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0] + $birth
+        ];
+    }
+
     public function view(Request $request)
     {
         $params = [

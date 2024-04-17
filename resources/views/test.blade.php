@@ -12,9 +12,8 @@
     const socket = new WebSocket('wss://pdf.tracuuthansohoconline.com:8881');
 
     socket.addEventListener('open', function(event) {
-        console.log('Connected to server');
+        socket.send('Hello Server!');
     });
-    socket.send("dkmm")
     </script>
 </body>
 </html>

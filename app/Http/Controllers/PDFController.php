@@ -25,6 +25,7 @@ class PDFController extends Controller
         ];
 
         $data = $this->getData($params ?? $request->all());
+        // dd($data['data']['lifeCircleIndicator']['content']);
         return view('web.welcome-copy', ['data' => $data]);
     }
 

@@ -21,4 +21,3 @@ yarn-error.log
 /.vscode
 /public/html-test/
 /composer.lock
-/public/ws_download

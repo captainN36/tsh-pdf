@@ -28,6 +28,10 @@ class PDFController extends Controller
         return view('web.welcome-copy', ['data' => $data]);
     }
 
+    public function testWs () {
+        return view('test');
+    }
+
 
     public function post_live_ws($url, $data)
     {

@@ -25,7 +25,6 @@ class PDFController extends Controller
         ];
 
         $data = $this->getData($params ?? $request->all());
-        
         return view('web.welcome-copy', ['data' => $data]);
     }
 

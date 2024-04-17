@@ -328,7 +328,7 @@
         <?php
         $nextMonthIndicator = contentText($data['data']['monthIndicator']['nextMonthIndicator']['content']);
         $twoMonthsLaterIndicator = contentText($data['data']['monthIndicator']['twoMonthsLaterIndicator']['content']);
-        
+
         ?>
         @for ($i = 0; $i < count($nextMonthIndicator); $i++)
             <?php $page++; ?>
@@ -866,7 +866,7 @@
                 }
                 $textFromArray = count($passionIndicator) >= 2 ? $firstContent : $textFromArray;
                 $nextPagesContent = count($passionIndicator) >= 2 ? $passionIndicator : $nextPagesContent;
-                
+
                 ?>
                 <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 900px; text-align: justify;">
@@ -1170,7 +1170,7 @@
                     {{ $data['data']['subconsciousPowerIndicator']['subconsciousPowerIndicator'] }}</div>
                 <?php
                 $subconsciousPowerIndicator = contentText($data['data']['subconsciousPowerIndicator']['content']);
-                
+
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
@@ -1218,7 +1218,24 @@
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/ck-duong-doi.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index">15</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ ĐƯỜNG ĐỜI</div>
-
+                <?php
+                function lifeCircleIndicator()
+                {
+                    $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator'];
+                    $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator'];
+                    $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator'];
+                    $birth = \DateTime::createFromFormat('d/m/Y', $data['dateOfBirth']);
+                    $birth = $birth->format('Y');
+                    return [
+                        'first' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1] + $birth,
+                        'second' => [
+                            0 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0] + $birth,
+                            1 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1] + $birth,
+                        ],
+                        'third' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][1] + $birth
+                    ];
+                }
+                ?>
                 <div class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator']}}<span class="_ _1b"> </span><span
                         class="fc9">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator']}}<span class="_ _1b"> </span><span class="fca">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator']}}</span></span></div>
                 <div class="t m0 x3d h8 y125 ff1 fs4 fc8 sc0 ls0 ws0">Chu kỳ 1<span class="_ _1c"> </span><span
@@ -1227,8 +1244,8 @@
                 <div class="t m0 x35 h14 y126 ff1 fsc fc8 sc0 ls0 ws0">GIEO HẠT<span class="_ _1e"> </span><span
                         class="fc9">CHÍN<span class="_ _1f"> </span><span class="fca">THU HOẠCH</span></span>
                 </div>
-                <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1]}} tuổi (2038)<span class="_ _20">
-                    </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0]}} - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1]}} tuổi (2039 - 2065)<span class="_ _21"> </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0]}} tuổi về sau (2066 trở đi)</div>
+                <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1]}} tuổi ({{lifeCircleIndicator()['first']}})<span class="_ _20">
+                    </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0]}} - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1]}} tuổi ({{lifeCircleIndicator()['second'][0]}} - {{lifeCircleIndicator()['second'][1]}})<span class="_ _21"> </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0]}} tuổi về sau ({{lifeCircleIndicator()['third']}} trở đi)</div>
 
                 <div class="t m0 x5 hf y6f ff4 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2000px; text-align: justify">
@@ -1320,7 +1337,7 @@
                 </div>
             </div>
         </div>
-        
+
         <?php
         $challengeIndicator = contentText($data['data']['challengeIndicator']['content'], true);
         ?>
@@ -1435,7 +1452,7 @@
                     }
                     $textFromArray = count($missIndicator) >= 2 ? $firstContent : $textFromArray;
                     $nextPagesContent = count($missIndicator) >= 2 ? $missIndicator : $nextPagesContent;
-                    
+
                     ?>
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
@@ -1595,7 +1612,7 @@
                 <?php
                 // $linkSoulAndPersonalIndicator_description = \App\Http\Controllers\PDFController::renderText($data['id'] . '-' . $data['dateSearch'] . '-' . 'linkSoulAndPersonalIndicator_description', $data['data']['linkSoulAndPersonalIndicator']['description'], false);
                 $linkSoulAndPersonalIndicator = contentText($data['data']['linkSoulAndPersonalIndicator']['content']);
-                
+
                 ?>
                 <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
@@ -1663,9 +1680,9 @@
                     }
                     $textFromArray = count($karmicIndicator) >= 2 ? $firstContent : $textFromArray;
                     $nextPagesContent = count($karmicIndicator) >= 2 ? $karmicIndicator : $nextPagesContent;
-                    
+
                     ?>
-    
+
                     <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
                         {!! $data['data']['karmicIndicator']['description'] !!}

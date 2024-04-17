@@ -1204,7 +1204,24 @@
             @endfor
         @endif
 
-
+        <?php
+        function lifeCircleIndicator($data)
+        {
+            $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator'];
+            $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator'];
+            $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator'];
+            $birth = \DateTime::createFromFormat('d/m/Y', $data['dateOfBirth']);
+            $birth = $birth->format('Y');
+            return [
+                'first' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1] + $birth,
+                'second' => [
+                    0 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0] + $birth,
+                    1 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1] + $birth,
+                ],
+                'third' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0] + $birth
+            ];
+        }
+        ?>
 
         <div id="pf7" class="pf w0 h0" data-page-no="36">
             <div class="pc pc6 w0 h0 opened">
@@ -1213,17 +1230,16 @@
                     style="left: 90px; bottom: 1440px">15</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ ĐƯỜNG ĐỜI</div>
 
-                <div class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0">3<span class="_ _1b"> </span><span
-                        class="fc9">1<span class="_ _1b"> </span><span class="fca">3</span></span></div>
+                <div class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator']}}<span class="_ _1b"> </span><span
+                        class="fc9">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator']}}<span class="_ _1b"> </span><span class="fca">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator']}}</span></span></div>
                 <div class="t m0 x3d h8 y125 ff1 fs4 fc8 sc0 ls0 ws0">Chu kỳ 1<span class="_ _1c"> </span><span
-                        class="fc9">Chu kỳ 2<span class="_ _1d"> </span><span class="fca">Chu kỳ
-                            3</span></span>
+                        class="fc9">Chu kỳ 2<span class="_ _1d"> </span><span class="fca">Chu kỳ 3</span></span>
                 </div>
                 <div class="t m0 x35 h14 y126 ff1 fsc fc8 sc0 ls0 ws0">GIEO HẠT<span class="_ _1e"> </span><span
                         class="fc9">CHÍN<span class="_ _1f"> </span><span class="fca">THU HOẠCH</span></span>
                 </div>
-                <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - 29 tuổi (2030)<span class="_ _20">
-                    </span>30 - 56 tuổi (2031 - 2057)<span class="_ _21"> </span>57 tuổi về sau (2058 trở đi)</div>
+                <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1]}} tuổi ({{lifeCircleIndicator($data)['first']}})<span class="_ _20">
+                    </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0]}} - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1]}} tuổi ({{lifeCircleIndicator($data)['second'][0]}} - {{lifeCircleIndicator($data)['second'][1]}})<span class="_ _21"> </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0]}} tuổi về sau ({{lifeCircleIndicator($data)['third']}} trở đi)</div>
 
                 <div class="t m0 x5 hf y6f ff2 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; text-align: justify">
@@ -1241,22 +1257,30 @@
 
         </div>
 
-        <div id="pfd" class="pf w0 h0" data-page-no="37">
-            <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="width: 2360px; white-space: normal; text-align: justify; font-size: 48px;">
-                    {!! $data['data']['lifeCircleIndicator']['content'] !!}
-                </div>
+        <?php
+         $lifeCircleIndicator = contentText($data['data']['lifeCircleIndicator']['content'], true);
+        ?>
 
-                <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                <?php $page = $page + 1; ?>
-                <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-            </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-            </div>
-        </div>
+        @if (count($lifeCircleIndicator) >= 2)
+            @for ($i = 0; $i < count($lifeCircleIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfd" class="pf w0 h0" data-page-no="18">
+                    <div class="pc pcb w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            {!! $lifeCircleIndicator[$i] !!}
+                        </div>
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
 
         @php
             function renderTotal($str)
@@ -1325,8 +1349,8 @@
                     <div class="pc pcb w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff3 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $challengeIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>

@@ -81,7 +81,6 @@ class PDFController extends Controller
 
     public function download (Request $request) {
         $params = $request->all();
-        $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         $fileName = $this->pdf($params);
 
         $filePath = public_path() . '/pdf/' . $fileName;

@@ -175,7 +175,7 @@
                     {!! $data['data']['yearIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $nowYearIndicator[0] !!}
                     </div>
                 </div>
@@ -197,7 +197,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 hf yf3 ff3 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $nowYearIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -221,7 +221,7 @@
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="width: 2360px; white-space: normal; text-align: justify;">
+                        style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                         {!! $nextYearIndicator[$i] !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -245,7 +245,7 @@
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="width: 2360px; white-space: normal; text-align: justify;">
+                        style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                         {!! $twoYearsLaterIndicator[$i] !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -289,7 +289,7 @@
                     {!! $data['data']['monthIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $nowMonthIndicator[0] !!}
                     </div>
                 </div>
@@ -316,7 +316,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
-                            style="width: 2360px !important; white-space: normal; text-align: justify;">
+                            style="width: 2360px !important; white-space: normal; text-align: justify; font-size: 58px">
                             @if (isset($nextMonthIndicator[$i]))
                                 {!! $nextMonthIndicator[$i] !!}
                             @endif
@@ -339,7 +339,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
-                            style="width: 2360px !important; white-space: normal; text-align: justify;">
+                            style="width: 2360px !important; white-space: normal; text-align: justify; font-size: 58px">
                             @if (isset($twoMonthsLaterIndicator[$i]))
                                 {!! $twoMonthsLaterIndicator[$i] !!}
                             @endif
@@ -381,47 +381,47 @@
                 <div class="t m0 x5 h8 yc3 ff1 fs4 fc2 sc0 ls0 ws0">1.1. Mạnh mẽ - Độc lập - Tự tin</div>
                 @isset($data['data']['percentIndicator'][0])
                     <div class="t m0 x33 h10 yc4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-1">
-                        <span>{{ $data['data']['percentIndicator'][0][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][0][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yc5 ff1 fs4 fc2 sc0 ls0 ws0">1.2. Lắng nghe - Khéo léo - Nhạy cảm</div>
                 @isset($data['data']['percentIndicator'][1])
                     <div class="t m0 x34 h10 yc6 ff1 fs9 fc0 sc0 ls0 ws0 bannga-2">
-                        <span>{{ $data['data']['percentIndicator'][1][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][1][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yc7 ff1 fs4 fc2 sc0 ls0 ws0">1.3. Sáng tạo - Hoạt bát - Lạc quan</div>
                 @isset($data['data']['percentIndicator'][2])
                     <div class="t m0 x35 h10 yc8 ff1 fs9 fc0 sc0 ls0 ws0 bannga-3">
-                        <span>{{ $data['data']['percentIndicator'][2][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][2][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yc9 ff1 fs4 fc2 sc0 ls0 ws0">1.4. Cẩn thận - Cầu toàn - Thực tế</div>
                 @isset($data['data']['percentIndicator'][3])
                     <div class="t m0 x34 h10 yca ff1 fs9 fc0 sc0 ls0 ws0 bannga-4">
-                        <span>{{ $data['data']['percentIndicator'][3][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][3][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 ycb ff1 fs4 fc2 sc0 ls0 ws0">1.5. Năng động - Linh hoạt - Tò mò</div>
                 @isset($data['data']['percentIndicator'][4])
                     <div class="t m0 x35 h10 ycc ff1 fs9 fc0 sc0 ls0 ws0 bannga-5">
-                        <span>{{ $data['data']['percentIndicator'][4][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][4][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 ycd ff1 fs4 fc2 sc0 ls0 ws0">1.6. Quan tâm - Yêu thương - Kiểm soát</div>
                 @isset($data['data']['percentIndicator'][5])
                     <div class="t m0 x12 h10 yce ff1 fs9 fc0 sc0 ls0 ws0 bannga-6">
-                        <span>{{ $data['data']['percentIndicator'][5][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][5][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 ycf ff1 fs4 fc2 sc0 ls0 ws0">1.7. Thông thái - Khám phá - Truyền đạt</div>
                 @isset($data['data']['percentIndicator'][6])
                     <div class="t m0 x36 h10 yd0 ff1 fs9 fc0 sc0 ls0 ws0 bannga-7">
-                        <span>{{ $data['data']['percentIndicator'][6][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][6][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yd1 ff1 fs4 fc2 sc0 ls0 ws0">1.8. Công bằng - Tập trung - Lý tưởng</div>
                 @isset($data['data']['percentIndicator'][7])
                     <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0 bannga-8">
-                        <span>{{ $data['data']['percentIndicator'][7][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][7][1] }}%</span></div>
                 @endisset
                 <div class="t m0 x5 h8 yd3 ff1 fs4 fc2 sc0 ls0 ws0">1.9. Trách nhiệm - Rộng lượng - Hào phóng</div>
                 @isset($data['data']['percentIndicator'][8])
                     <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-9">
-                        <span>{{ $data['data']['percentIndicator'][8][1] }}%</span></div>
+                        <span style="left: -180px">{{ $data['data']['percentIndicator'][8][1] }}%</span></div>
                 @endisset
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -521,7 +521,7 @@
                     {!! $data['data']['missionIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $missionIndicator[0] !!}
                     </div>
                 </div>
@@ -542,7 +542,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             @if (isset($missionIndicator[$i]))
                                 {!! $missionIndicator[$i] !!}
                             @endif
@@ -789,7 +789,7 @@
                     {!! $data['data']['attitudeIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $attitudeIndicator[0] !!}
                     </div>
                 </div>
@@ -812,7 +812,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $attitudeIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff4 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -855,7 +855,6 @@
                 $nextPagesContent = count($passionIndicator) >= 2 ? $passionIndicator : $nextPagesContent;
                 
                 ?>
-                ?>
                 <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; bottom: 1010px; text-align: justify;">
                     {!! $data['data']['passionIndicator']['description'] !!}
@@ -883,7 +882,7 @@
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="width: 2360px; white-space: normal; text-align: justify;">
+                        style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                         {!! $nextText !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -913,7 +912,7 @@
                     {!! $data['data']['thinkingIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $thinkingIndicator[0] !!}
                     </div>
                 </div>
@@ -936,7 +935,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $thinkingIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -965,7 +964,7 @@
                     {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $emotionalThinkingIndicator[0] !!}
                     </div>
                 </div>
@@ -988,7 +987,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $emotionalThinkingIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1018,7 +1017,7 @@
                     {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $intuitiveThinkingIndicator[0] !!}
                     </div>
                 </div>
@@ -1041,7 +1040,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $intuitiveThinkingIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1071,7 +1070,7 @@
                     {!! $data['data']['actionThinkingIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $actionThinkingIndicator[0] !!}
                     </div>
                 </div>
@@ -1094,7 +1093,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $actionThinkingIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1117,18 +1116,10 @@
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">SỐ BẢN CHẤT CỦA BẠN</div>
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ $data['data']['natureIndicator']['natureIndicator'] }}</div>
-
-                <?php
-                $natureIndicator = contentText($data['data']['natureIndicator']['data'][0]);
-                ?>
-                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1060px; text-align: justify; font-size: 54px">
                     {!! $data['data']['natureIndicator']['description'] !!}
-                    <br>
-                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
-                        {!! $natureIndicator[0] !!}
-                    </div>
+                    {!! $data['data']['natureIndicator']['data'][0] !!}
                 </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1140,26 +1131,6 @@
                 </div>
             </div>
         </div>
-        @if (count($natureIndicator) >= 2)
-            @for ($i = 1; $i < count($natureIndicator); $i++)
-                <?php $page++; ?>
-                <div id="pfc" class="pf w0 h0" data-page-no="9">
-                    <div class="pc pce w0 h0 opened">
-                        <img class="bi x0 y0 w1 h1" alt=""
-                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
-                            {!! $natureIndicator[$i] !!}
-                        </div>
-                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-                    </div>
-                    <div class="pi"
-                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-                </div>
-            @endfor
-        @endif
 
         <div id="pfd" class="pf w0 h0" data-page-no="34">
             <div class="pc pcb w0 h0 opened">
@@ -1197,7 +1168,7 @@
                     {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $subconsciousPowerIndicator[0] !!}
                     </div>
                 </div>
@@ -1338,12 +1309,12 @@
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer')
                 <?php $page = $page + 1; ?>
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-                <div class="pi"
-                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
+                <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
                 </div>
             </div>
         </div>
+
         <?php
         $challengeIndicator = contentText($data['data']['challengeIndicator']['content'], true);
         ?>

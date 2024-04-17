@@ -20,8 +20,8 @@ class PDFController extends Controller
     public function index(Request $request)
     {
         $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/14b290bf-6262-4eee-ac36-49883a30a4e8',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMjUzMjUzLCJleHAiOjE3MTU4NDUyNTN9.Yf9RaaLgfDy2AOhDo5triJSzTrnt6Td3tU9GSBCDOFs'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/12aa5d68-6e41-4508-a002-508d8f9825ce',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEyODQ1ODU3LCJleHAiOjE3MTU0Mzc4NTd9.sjPpSLjAWX-llTAqljvXlRQsDSxAoeo3EPQd3CCynPQ'
         ];
 
         $data = $this->getData($params ?? $request->all());
@@ -63,7 +63,7 @@ class PDFController extends Controller
 
     public function download (Request $request) {
         $params = $request->all();
-        $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
+        // $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         $fileName = $this->pdf($params);
 
         $filePath = public_path() . '/pdf/' . $fileName;

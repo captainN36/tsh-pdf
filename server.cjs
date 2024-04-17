@@ -3,7 +3,7 @@ const { spawn } = require('child_process');
 const fs = require('fs');
 
 
-const wss = new WebSocket.Server({ port: 8881 });
+const wss = new WebSocket.Server({ port: 8888 });
 
 const channelUrls = {};
 

@@ -789,7 +789,7 @@
                     {!! $data['data']['attitudeIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $attitudeIndicator[0] !!}
                     </div>
                 </div>
@@ -812,7 +812,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $attitudeIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff4 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -882,7 +882,7 @@
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                     <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="width: 2360px; white-space: normal; text-align: justify;">
+                        style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                         {!! $nextText !!}
                     </div>
                     <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -912,7 +912,7 @@
                     {!! $data['data']['thinkingIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $thinkingIndicator[0] !!}
                     </div>
                 </div>
@@ -935,7 +935,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $thinkingIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -964,7 +964,7 @@
                     {!! $data['data']['emotionalThinkingIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $emotionalThinkingIndicator[0] !!}
                     </div>
                 </div>
@@ -987,7 +987,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $emotionalThinkingIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1017,7 +1017,7 @@
                     {!! $data['data']['intuitiveThinkingIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $intuitiveThinkingIndicator[0] !!}
                     </div>
                 </div>
@@ -1040,7 +1040,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $intuitiveThinkingIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1070,7 +1070,7 @@
                     {!! $data['data']['actionThinkingIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $actionThinkingIndicator[0] !!}
                     </div>
                 </div>
@@ -1093,7 +1093,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify;">
+                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $actionThinkingIndicator[$i] !!}
                         </div>
                         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -1168,7 +1168,7 @@
                     {!! $data['data']['subconsciousPowerIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify;">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
                         {!! $subconsciousPowerIndicator[0] !!}
                     </div>
                 </div>

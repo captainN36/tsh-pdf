@@ -28,9 +28,35 @@ class PDFController extends Controller
         $data = $this->getData($params ?? $request->all());
 
         $url = asset('downfile/index.php');
-        $path = $this->pathFiles($params);
+        $render = $this->render("https://pdf.tracuuthansohoconline.com/render", ['data' => $data]);
+        $path = $this->pathFiles($params ?? $request->all());
         $pdf = $path['path_pdf'];
         $html = $path['path_html'];
+        $param = "html=$html&pdf=$pdf";
+        $res = $this->downfile($url, $param);
+        
+        return view('web.welcome-copy', ['data' => $data]);
+    }
+
+    public function render($url, $data)
+    {
+        $post = curl_init();
+        curl_setopt($post, CURLOPT_URL, $url);
+        curl_setopt($post, CURLOPT_POST, 1);
+        curl_setopt($post, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($post, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($post, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0');
+        $result = curl_exec($post);
+        $curl_info = curl_getinfo($post);
+        curl_close($post);
+        $obj_source = new stdClass();
+        $obj_source->content = $result;
+        $obj_source->header = $curl_info["http_code"];
+        return $obj_source;
+    }
+
+    public function renderViewData() {
+        $data = $_POST['data'];
         if (!file_exists(public_path() . '/html/')) {
             mkdir(public_path() . '/html/', 0777, true);
         }
@@ -38,35 +64,13 @@ class PDFController extends Controller
             mkdir(public_path() . '/pdf/', 0777, true);
         }
         Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $html;
+        $pathHtml = public_path() . '/html/' . $data['id'] . '-' . date("H-i-s") . '.html';
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
             fwrite($file, $htmlStr);
-            $param = "html=$html&pdf=$pdf";
-            $res = $this->downfile($url, $param);
         }
-        
-        dd(asset('/pdf/' . $pdf));
-        return view('web.welcome-copy', ['data' => $data]);
-    }
-
-    public static function lifeCircleIndicator($data)
-    {
-        $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator'];
-        $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator'];
-        $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator'];
-        $birth = \DateTime::createFromFormat('d/m/Y', $data['dateOfBirth']);
-        $birth = $birth->format('Y');
-        return [
-            'first' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1] + $birth,
-            'second' => [
-                0 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0] + $birth,
-                1 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1] + $birth,
-            ],
-            'third' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0] + $birth
-        ];
     }
 
     public function view(Request $request)
@@ -82,9 +86,6 @@ class PDFController extends Controller
 
     public function downfile($url, $data)
     {
-        // $url = "https://pdf.tracuuthansohoconline.com/downfile/index.php";
-        // $data = "html=/var/www/html/tsh-pdf/public/html/627-06-42-10.html&pdf=/var/www/html/tsh-pdf/public/pdf/627-06-42-10.pd";
-        // $command = "wkhtmltopdf /var/www/html/tsh-pdf/public/html/627-06-42-10.html /var/www/html/tsh-pdf/public/pdf/627-06-42-10.pdf";
         $post = curl_init();
         curl_setopt($post, CURLOPT_URL, $url);
         curl_setopt($post, CURLOPT_POST, 1);

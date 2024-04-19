@@ -33,7 +33,7 @@ class PDFController extends Controller
         $html = $path['path_html'];
         $param = "html=$html&pdf=$pdf";
         $res = $this->downfile($url, $param);
-        dd($path, $param);
+        dd($res, $path, $param);
         return view('web.welcome-copy', ['data' => $data]);
     }
 

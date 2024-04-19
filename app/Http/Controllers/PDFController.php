@@ -33,10 +33,6 @@ class PDFController extends Controller
         $html = $name['html'];
         $param = "html=$html&pdf=$pdf";
         $res = $this->downfile($url, $param);
-        dd(asset("/pdf/$pdf"));
-        if (file_exists(public_path() . '/pdf/' . $pdf)) {
-            return redirect(asset("/pdf/$pdf"));
-        }
         return response()->json(['url' => asset("/pdf/$pdf")]);
     }
 
@@ -71,6 +67,12 @@ class PDFController extends Controller
             $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         }
         $data = $this->getData($params);
+        $url = asset('downfile/index.php');
+        $name = $this->renderViewData($data);
+        $pdf = $name['pdf'];
+        $html = $name['html'];
+        $param = "html=$html&pdf=$pdf";
+        $res = $this->downfile($url, $param);
         return view('web.welcome', ['data' => $data]);
     }
 
@@ -91,20 +93,6 @@ class PDFController extends Controller
         return $obj_source;
     }
 
-    /**
-     * @param Request $request
-     * @return Application|\Illuminate\Foundation\Application|RedirectResponse|Redirector
-     * @throws \Exception
-     */
-    public function viewFile (Request $request) {
-        $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/756ae1f5-283b-4bde-8688-41ed6f1284d7',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
-        ];
-        $fileName = $this->pdf($params);
-        return redirect(asset('/pdf/' . $fileName));
-    }
-
     public function niewFile (Request $request) {
         $params = [
             'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/14b290bf-6262-4eee-ac36-49883a30a4e8',
@@ -120,7 +108,11 @@ class PDFController extends Controller
         if ($pos == false) {
             $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         }
-        $fileName = $this->pdf($params);
+
+        $data = $this->getData($params);
+        $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+        
+        $fileName = $namePDF;
 
         $filePath = public_path() . '/pdf/' . $fileName;
         if (file_exists($filePath)) {

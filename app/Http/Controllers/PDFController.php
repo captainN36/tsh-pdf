@@ -29,10 +29,10 @@ class PDFController extends Controller
         $pdf = $path['path_pdf'];
         $html = $path['path_html'];
 
-        dd($pdf, $html);
         //wkhtmltopdf /var/www/html/tsh-pdf/public/html/627-06-17-42.html /var/www/html/tsh-pdf/public/pdf/627-06-17-42.pdf
 
         $cmd = "wkhtmltopdf $html $pdf";
+        dd($cmd);
         return view('web.welcome-copy', ['data' => $data]);
     }
 

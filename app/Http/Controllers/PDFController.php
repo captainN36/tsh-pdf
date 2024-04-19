@@ -27,28 +27,7 @@ class PDFController extends Controller
         ];
         $data = $this->getData($params ?? $request->all());
 
-        $url = asset('downfile/index.php');
-        $path = $this->pathFiles($params);
-        $pdf = $path['path_pdf'];
-        $html = $path['path_html'];
-        if (!file_exists(public_path() . '/html/')) {
-            mkdir(public_path() . '/html/', 0777, true);
-        }
-        if (!file_exists(public_path() . '/pdf/')) {
-            mkdir(public_path() . '/pdf/', 0777, true);
-        }
-        Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $html;
-        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
-        if (!file_exists($pathPDF)) {
-            $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
-            fwrite($file, $htmlStr);
-            $param = "html=$html&pdf=$pdf";
-            $res = $this->downfile($url, $param);
-        }
         
-        dd($res, $path, $param);
         return view('web.welcome-copy', ['data' => $data]);
     }
 
@@ -80,11 +59,34 @@ class PDFController extends Controller
         return view('web.welcome', ['data' => $data]);
     }
 
+    public function executeDown($params) {
+        $data = $this->getData($params);
+        $url = asset('downfile/index.php');
+        $path = $this->pathFiles($params);
+        $pdf = $path['path_pdf'];
+        $html = $path['path_html'];
+        if (!file_exists(public_path() . '/html/')) {
+            mkdir(public_path() . '/html/', 0777, true);
+        }
+        if (!file_exists(public_path() . '/pdf/')) {
+            mkdir(public_path() . '/pdf/', 0777, true);
+        }
+        Process::run('chmod -R 777 ' . public_path());
+        $pathHtml = public_path() . '/html/' . $html;
+        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
+        if (!file_exists($pathPDF)) {
+            $file = fopen($pathHtml, 'w+');
+            $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
+            fwrite($file, $htmlStr);
+            $param = "html=$html&pdf=$pdf";
+            $res = $this->downfile($url, $param);
+        }
+
+        return response()->json(['url' => asset('/pdf/' . $pdf)]);
+    }
+
     public function downfile($url, $data)
     {
-        // $url = "https://pdf.tracuuthansohoconline.com/downfile/index.php";
-        // $data = "html=/var/www/html/tsh-pdf/public/html/627-06-42-10.html&pdf=/var/www/html/tsh-pdf/public/pdf/627-06-42-10.pd";
-        // $command = "wkhtmltopdf /var/www/html/tsh-pdf/public/html/627-06-42-10.html /var/www/html/tsh-pdf/public/pdf/627-06-42-10.pdf";
         $post = curl_init();
         curl_setopt($post, CURLOPT_URL, $url);
         curl_setopt($post, CURLOPT_POST, 1);
@@ -119,6 +121,7 @@ class PDFController extends Controller
             'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/14b290bf-6262-4eee-ac36-49883a30a4e8',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMjUzMjUzLCJleHAiOjE3MTU4NDUyNTN9.Yf9RaaLgfDy2AOhDo5triJSzTrnt6Td3tU9GSBCDOFs'
         ];
+        $this->executeDown($params ?? $request->all());
         $fileName = $this->pdfCopy($params ?? $request->all());
         return redirect(asset('/pdf/' . $fileName));
     }

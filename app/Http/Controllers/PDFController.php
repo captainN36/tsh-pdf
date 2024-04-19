@@ -25,7 +25,14 @@ class PDFController extends Controller
         ];
 
         $data = $this->getData($params ?? $request->all());
-        // dd($data['data']['lifeCircleIndicator']['content']);
+        $path = $this->pathFiles($params);
+        $pdf = $path['path_pdf'];
+        $html = $path['path_html'];
+
+        dd($pdf, $html);
+        //wkhtmltopdf /var/www/html/tsh-pdf/public/html/627-06-17-42.html /var/www/html/tsh-pdf/public/pdf/627-06-17-42.pdf
+
+        $cmd = "wkhtmltopdf $html $pdf";
         return view('web.welcome-copy', ['data' => $data]);
     }
 
@@ -116,6 +123,17 @@ class PDFController extends Controller
         } else {
             return response()->json(['error' => 'File not found'], 404);
         }
+    }
+
+    public function pathFiles ($params) {
+        $data = $this->getData($params);
+        $name = $data['id'] . '-' . date("H-i-s") . '.html';
+        $pathHtml = public_path() . '/html/' . $name;
+        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
+        return [
+            'path_html' => $pathHtml,
+            'path_pdf' => $pathPDF
+        ];
     }
 
     public function pdfCopy($param)

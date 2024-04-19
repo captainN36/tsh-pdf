@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Create a response object
     $response = new stdClass();
-    $response->output = $outputString;
+    $response->output = $command;
     $response->status = $status;
 
     // Log the command output and error for debugging purposes

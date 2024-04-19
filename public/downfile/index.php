@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ];
 
     // Write the log data to a file or output it for debugging
-    file_put_contents(public_path('downfile/file.log'), json_encode($logData, JSON_PRETTY_PRINT), FILE_APPEND);
+    file_put_contents("/var/www/html/tsh-pdf/public/downfile/file.log", json_encode($logData, JSON_PRETTY_PRINT), FILE_APPEND);
     
     // Create a response object
     $response = new stdClass();

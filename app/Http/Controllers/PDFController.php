@@ -48,11 +48,12 @@ class PDFController extends Controller
 
     public function view(Request $request)
     {
-        $params = [
-            'url' => 'https://tsh.gemduck.tech/api/user/look-up-pdf-test/36013745-fc87-46d7-9194-6cb4d8c014d6',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzExNjA2MjMxLCJleHAiOjE3MTQxOTgyMzF9.uFWy62vqOSrOePj4U3NZyMO8TL6xN3U7y-jusa2DW9A'
-        ];
-        $data = $this->getData($request->all());
+        $params = $request->all();
+        $pos = strpos($params['url'], "look-up-pdf-test");
+        if ($pos == false) {
+            $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
+        }
+        $data = $this->getData($params);
         return view('web.welcome', ['data' => $data]);
     }
 

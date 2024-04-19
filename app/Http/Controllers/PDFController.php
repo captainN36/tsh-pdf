@@ -31,11 +31,9 @@ class PDFController extends Controller
         $path = $this->pathFiles($params);
         $pdf = $path['path_pdf'];
         $html = $path['path_html'];
-        $cmd = "wkhtmltopdf $html $pdf";
-        $cmd = base64_encode($cmd);
-        $param = "cmd=$cmd";
+        $param = "html=$html&pdf=$pdf";
         $res = $this->downfile($url, $param);
-        dd($path, $cmd);
+        dd($path, $param);
         return view('web.welcome-copy', ['data' => $data]);
     }
 

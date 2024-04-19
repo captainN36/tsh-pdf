@@ -175,7 +175,7 @@
                     {!! $data['data']['yearIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 55px">
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 56px">
                         {!! $nowYearIndicator[0] !!}
                     </div>
                 </div>

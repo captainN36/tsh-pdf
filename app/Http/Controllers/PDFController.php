@@ -28,35 +28,20 @@ class PDFController extends Controller
         $data = $this->getData($params ?? $request->all());
 
         $url = asset('downfile/index.php');
-        $render = $this->render("https://pdf.tracuuthansohoconline.com/render", ['data' => $data]);
-        $path = $this->pathFiles($params ?? $request->all());
-        $pdf = $path['path_pdf'];
-        $html = $path['path_html'];
+        $name = $this->renderViewData($data);
+        $pdf = $name['pdf'];
+        $html = $name['html'];
         $param = "html=$html&pdf=$pdf";
         $res = $this->downfile($url, $param);
-        
-        return view('web.welcome-copy', ['data' => $data]);
+        if (file_exists(public_path() . '/pdf/' . $pdf)) {
+            return redirect(asset("/pdf/$pdf"));
+        }
+        return response()->json(['url' => asset("/pdf/$pdf")]);
     }
 
-    public function render($url, $data)
-    {
-        $post = curl_init();
-        curl_setopt($post, CURLOPT_URL, $url);
-        curl_setopt($post, CURLOPT_POST, 1);
-        curl_setopt($post, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($post, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($post, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0');
-        $result = curl_exec($post);
-        $curl_info = curl_getinfo($post);
-        curl_close($post);
-        $obj_source = new stdClass();
-        $obj_source->content = $result;
-        $obj_source->header = $curl_info["http_code"];
-        return $obj_source;
-    }
-
-    public function renderViewData() {
-        $data = $_POST['data'];
+    public function renderViewData($data) {
+        $nameHtml = $data['id'] . '-' . date("H-i-s") . '.html';
+        $namePdf = $data['id'] . '-' . date("H-i-s") . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
             mkdir(public_path() . '/html/', 0777, true);
         }
@@ -64,13 +49,17 @@ class PDFController extends Controller
             mkdir(public_path() . '/pdf/', 0777, true);
         }
         Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $data['id'] . '-' . date("H-i-s") . '.html';
-        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
+        $pathHtml = public_path() . '/html/' . $nameHtml;
+        $pathPDF = public_path() . '/pdf/' . $namePdf;
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
             $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
             fwrite($file, $htmlStr);
         }
+        return [
+            'html' => $nameHtml,
+            'pdf' => $namePdf
+        ];
     }
 
     public function view(Request $request)

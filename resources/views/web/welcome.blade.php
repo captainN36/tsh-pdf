@@ -1263,22 +1263,55 @@
 
         </div>
 
-        <div id="pfd" class="pf w0 h0" data-page-no="37">
-            <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="width: 2000px; white-space: normal; text-align: justify">
-                    {!! $data['data']['lifeCircleIndicator']['content'] !!}
-                </div>
+        <?php
+            $challengeIndicator = contentText($data['data']['challengeIndicator']['content'], true);
+        ?>
 
-                <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                <?php $page = $page + 1; ?>
-                <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-            </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-            </div>
-        </div>
+        @if (count($challengeIndicator) >= 2)
+            @for ($i = 0; $i < count($challengeIndicator); $i++)
+                <?php
+                    $content = contentText($challengeIndicator[$i]);
+                ?>
+                @if (count($content) >= 2)
+                    @for ($j = 0; $j < count($content); $j++)
+                    <div id="pfd" class="pf w0 h0" data-page-no="37">
+                        <div class="pc pcb w0 h0 opened">
+                            <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                                style="width: 2000px; white-space: normal; text-align: justify">
+                                {!! $content[$j] !!}
+                            </div>
+            
+                            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                            <?php $page = $page + 1; ?>
+                            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                        </div>
+                        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                        </div>
+                    </div>
+                    @endfor
+                @else
+                <div id="pfd" class="pf w0 h0" data-page-no="37">
+                    <div class="pc pcb w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                            style="width: 2000px; white-space: normal; text-align: justify">
+                            {!! $challengeIndicator[$i] !!}
+                        </div>
+        
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <?php $page = $page + 1; ?>
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                    </div>
+                </div>
+                @endif
+            @endfor
+        @endif
+        
 
         @php
             function renderTotal($str)

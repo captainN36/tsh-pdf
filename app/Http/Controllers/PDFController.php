@@ -31,8 +31,23 @@ class PDFController extends Controller
         $path = $this->pathFiles($params);
         $pdf = $path['path_pdf'];
         $html = $path['path_html'];
-        $param = "html=$html&pdf=$pdf";
-        $res = $this->downfile($url, $param);
+        if (!file_exists(public_path() . '/html/')) {
+            mkdir(public_path() . '/html/', 0777, true);
+        }
+        if (!file_exists(public_path() . '/pdf/')) {
+            mkdir(public_path() . '/pdf/', 0777, true);
+        }
+        Process::run('chmod -R 777 ' . public_path());
+        $pathHtml = public_path() . '/html/' . $html;
+        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
+        if (!file_exists($pathPDF)) {
+            $file = fopen($pathHtml, 'w+');
+            $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
+            fwrite($file, $htmlStr);
+            $param = "html=$html&pdf=$pdf";
+            $res = $this->downfile($url, $param);
+        }
+        
         dd($res, $path, $param);
         return view('web.welcome-copy', ['data' => $data]);
     }
@@ -157,7 +172,6 @@ class PDFController extends Controller
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";
-                dd($processName);
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {

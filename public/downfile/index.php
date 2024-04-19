@@ -11,8 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $htmlFilePath = escapeshellarg($htmlFilePath);
     $pdfFilePath = escapeshellarg($pdfFilePath);
 
+        // Đường dẫn tệp đã được sửa
+    $htmlFilePath = '/var/www/html/tsh-pdf/public/html/' . $htmlFilePath;
+    $pdfFilePath = '/var/www/html/tsh-pdf/public/pdf/' . $pdfFilePath;
+
     // Construct the command
-    $command = "wkhtmltopdf /var/www/html/tsh-pdf/public/html/$htmlFilePath /var/www/html/tsh-pdf/public/pdf/$pdfFilePath";
+    $command = "wkhtmltopdf $htmlFilePath $pdfFilePath";
 
     // Execute the command and capture the output and error output
     $output = [];

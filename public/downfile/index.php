@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pdfFilePath = escapeshellarg($pdfFilePath);
 
     // Construct the command
-    $command = "wkhtmltopdf $htmlFilePath $pdfFilePath";
+    $command = "wkhtmltopdf /var/www/html/tsh-pdf/public/html/$htmlFilePath /var/www/html/tsh-pdf/public/pdf/$pdfFilePath";
 
     // Execute the command and capture the output, errors, and return status
     exec($command, $output, $status);

@@ -27,13 +27,13 @@ class PDFController extends Controller
         ];
         $data = $this->getData($params ?? $request->all());
 
-        $url = asset('downfile/index.php');
-        $path = $this->pathFiles($params);
-        $pdf = $path['path_pdf'];
-        $html = $path['path_html'];
-        $param = "html=$html&pdf=$pdf";
-        $res = $this->downfile($url, $param);
-        dd($path, $param);
+        // $url = asset('downfile/index.php');
+        // $path = $this->pathFiles($params);
+        // $pdf = $path['path_pdf'];
+        // $html = $path['path_html'];
+        // $param = "html=$html&pdf=$pdf";
+        // $res = $this->downfile($url, $param);
+        // dd($path, $param);
         return view('web.welcome-copy', ['data' => $data]);
     }
 
@@ -67,6 +67,8 @@ class PDFController extends Controller
 
     public function downfile($url, $data)
     {
+        $url = "https://pdf.tracuuthansohoconline.com/downfile/index.php";
+        $data = "html=/var/www/html/tsh-pdf/public/html/627-06-42-10.html&pdf=/var/www/html/tsh-pdf/public/pdf/627-06-42-10.pd";
         $post = curl_init();
         curl_setopt($post, CURLOPT_URL, $url);
         curl_setopt($post, CURLOPT_POST, 1);

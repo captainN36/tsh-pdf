@@ -1,5 +1,5 @@
 <?php
-// This file is downfile/index.php
+// downfile/index.php
 
 // Check if the request is a POST request
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -7,30 +7,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $htmlFilePath = isset($_POST['html']) ? $_POST['html'] : '';
     $pdfFilePath = isset($_POST['pdf']) ? $_POST['pdf'] : '';
 
-    // Sanitize the input data to prevent command injection
+    // Sanitize the input data
     $htmlFilePath = escapeshellarg($htmlFilePath);
     $pdfFilePath = escapeshellarg($pdfFilePath);
 
     // Construct the command
     $command = "wkhtmltopdf /var/www/html/tsh-pdf/public/html/$htmlFilePath /var/www/html/tsh-pdf/public/pdf/$pdfFilePath";
 
-    // Execute the command and capture the output, errors, and return status
-    exec($command, $output, $status);
-    
-    // Log the output and errors for debugging purposes
-    $logData = [
-        'command' => $command,
-        'output' => implode("\n", $output),
-        'status' => $status,
-    ];
+    // Execute the command and capture the output and error output
+    $output = [];
+    $status = -1;
 
-    // Write the log data to a file or output it for debugging
-    file_put_contents("/var/www/html/tsh-pdf/public/downfile/file.log", json_encode($logData, JSON_PRETTY_PRINT), FILE_APPEND);
-    
+    // Execute the command
+    exec($command . " 2>&1", $output, $status);
+
+    // Convert output array to a string
+    $outputString = implode("\n", $output);
+
     // Create a response object
     $response = new stdClass();
-    $response->output = implode("\n", $output);
+    $response->output = $outputString;
     $response->status = $status;
+
+    // Log the command output and error for debugging purposes
+    file_put_contents('/var/www/html/tsh-pdf/public/downfile/file.log', json_encode(['command' => $command, 'output' => $outputString, 'status' => $status], JSON_PRETTY_PRINT), FILE_APPEND);
 
     // Set the content type to application/json
     header('Content-Type: application/json');

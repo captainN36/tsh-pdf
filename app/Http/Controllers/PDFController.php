@@ -37,8 +37,8 @@ class PDFController extends Controller
     }
 
     public function renderViewData($data) {
-        $nameHtml = $data['id'] . '-' . date("H-i-s") . '.html';
-        $namePdf = $data['id'] . '-' . date("H-i-s") . '.pdf';
+        $nameHtml = $data['id'] . '-' . $data['dateSearch'] . '.html';
+        $namePdf = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
             mkdir(public_path() . '/html/', 0777, true);
         }

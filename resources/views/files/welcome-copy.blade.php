@@ -2370,11 +2370,11 @@
                         </table>
 
                         <div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 110px">3
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 120px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]) ?>
                             </div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 245px">1
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 255px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]) ?>
                             </div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 375px">3
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 385px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]) ?>
                             </div>
                             <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 495px; left: 200px">
                                 {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}

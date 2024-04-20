@@ -109,10 +109,7 @@ class PDFController extends Controller
             $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         }
 
-        $data = $this->getData($params);
-        $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
-        
-        $fileName = $namePDF;
+        $fileName = $this->pdf($params);
 
         $filePath = public_path() . '/pdf/' . $fileName;
         if (file_exists($filePath)) {

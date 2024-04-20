@@ -163,7 +163,7 @@
                     {!! $data['data']['yearIndicator']['description'] !!}
                     <br>
                     <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2000px; text-align: justify;">
+                        style="white-space: normal; width: 2000px; text-align: justify; font-size: 58px">
                         {!! $nowYearIndicator[0] !!}
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                         <div class="t m0 x5 h12 yf3 ff3 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2000px; white-space: normal; text-align: justify;">
+                            style="width: 2000px; white-space: normal; text-align: justify; font-size: 58px">
                             @if (isset($nowYearIndicator[$i]))
                                 {!! $nowYearIndicator[$i] !!}
                             @endif

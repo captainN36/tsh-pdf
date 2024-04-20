@@ -67,12 +67,12 @@ class PDFController extends Controller
             $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         }
         $data = $this->getData($params);
-        $url = asset('downfile/index.php');
-        $name = $this->renderViewData($data);
-        $pdf = $name['pdf'];
-        $html = $name['html'];
-        $param = "html=$html&pdf=$pdf";
-        $res = $this->downfile($url, $param);
+        // $url = asset('downfile/index.php');
+        // $name = $this->renderViewData($data);
+        // $pdf = $name['pdf'];
+        // $html = $name['html'];
+        // $param = "html=$html&pdf=$pdf";
+        // $res = $this->downfile($url, $param);
         return view('web.welcome', ['data' => $data]);
     }
 

@@ -2416,7 +2416,6 @@
                             </div>
                         </div>
                     </div>
-                    </div>
                     <div class="report-table-col report-table-right">
                         <table class="fc7 sc0 ls0 ws0 index-table">
                             <tr class="index-caption">

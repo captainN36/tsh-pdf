@@ -2054,7 +2054,7 @@
                     }
                 @endphp
                 <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2000px; top: 0px; text-align: justify">
+                    style="white-space: normal; width: 2000px; top: 0px; text-align: justify; font-size: 45px">
                     @foreach ($strengthTWO as $item)
                         {!! $item !!}
                     @endforeach

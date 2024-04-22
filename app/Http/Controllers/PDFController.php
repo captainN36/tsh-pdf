@@ -31,7 +31,7 @@ class PDFController extends Controller
             $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         }
         $data = $this->getData($params ?? $params1);
-        return view('web.welcome-copy', ['data' => $data]);
+        return view('web.welcome', ['data' => $data]);
     }
 
     public function renderViewData($data) {

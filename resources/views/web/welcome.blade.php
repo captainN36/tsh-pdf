@@ -1378,6 +1378,9 @@
                     .x48 {
                         left: 517.5px !important;
                     }
+                    .x40 {
+                        left: 430.5px !important;
+                    }
                 </style>
             @endif
             <div class="pc pc6 w0 h0 opened">

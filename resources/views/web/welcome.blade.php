@@ -1354,6 +1354,30 @@
                     .x43 {
                         left: 720px !important;
                     }
+                    .x4b {
+                        left: 489px !important;
+                    }
+                    .x4c {
+                        left: 487px !important;
+                    }
+                    .x49 {
+                        left: 432px !important;
+                    }
+                    .x4a {
+                        left: 414px !important;
+                    }
+                    .x44 {
+                        left: 323.5px !important;
+                    }
+                    .x45 {
+                        left: 311.5px !important;
+                    }
+                    .x47 {
+                        left: 523px !important;
+                    }
+                    .x48 {
+                        left: 517.5px !important;
+                    }
                 </style>
             @endif
             <div class="pc pc6 w0 h0 opened">

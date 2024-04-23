@@ -1312,43 +1312,43 @@
                         left: 535px !important;
                     }
                     .x21 {
-                        left: 363.475px !important;
+                        left: 430px !important;
                     }
                     .x46 {
-                        left: 544px !important;
+                        left: 645px !important;
                     }
                     .x3f {
-                        left: 181px !important;
+                        left: 210px !important;
                     }
                     .x43 {
-                        left: 720px !important;
+                        left: 855px !important;
                     }
                     .x4b {
-                        left: 570px !important;
+                        left: 575px !important;
                     }
                     .x4c {
-                        left: 487px !important;
+                        left: 575px !important;
                     }
                     .x49 {
                         left: 510px !important;
                     }
                     .x4a {
-                        left: 414px !important;
+                        left: 490px !important;
                     }
                     .x44 {
-                        left: 390px !important;
+                        left: 387px !important;
                     }
                     .x45 {
-                        left: 311.5px !important;
+                        left: 370.5px !important;
                     }
                     .x47 {
                         left: 620px !important;
                     }
                     .x48 {
-                        left: 517.5px !important;
+                        left: 615.5px !important;
                     }
                     .x40 {
-                        left: 480.5px !important;
+                        left: 510px !important;
                     }
                 </style>
             @endif

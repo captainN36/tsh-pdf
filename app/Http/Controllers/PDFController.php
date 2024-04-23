@@ -148,7 +148,7 @@ class PDFController extends Controller
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('files.welcome', ['data' => $data])->render();
+            $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";

@@ -84,7 +84,7 @@
                         left: 430px !important;
                     }
                     .x46 {
-                        left: 630px !important;
+                        left: 615px !important;
                     }
                     .x3f {
                         left: 210px !important;

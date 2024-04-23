@@ -1309,7 +1309,7 @@
                         left: 15px;
                     }
                     .x41 {
-                        left: 540px !important;
+                        left: 535px !important;
                     }
                     .x21 {
                         left: 363.475px !important;
@@ -1324,25 +1324,25 @@
                         left: 720px !important;
                     }
                     .x4b {
-                        left: 489px !important;
+                        left: 540px !important;
                     }
                     .x4c {
                         left: 487px !important;
                     }
                     .x49 {
-                        left: 432px !important;
+                        left: 480px !important;
                     }
                     .x4a {
                         left: 414px !important;
                     }
                     .x44 {
-                        left: 373.5px !important;
+                        left: 420px !important;
                     }
                     .x45 {
                         left: 311.5px !important;
                     }
                     .x47 {
-                        left: 573px !important;
+                        left: 620px !important;
                     }
                     .x48 {
                         left: 517.5px !important;

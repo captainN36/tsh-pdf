@@ -96,7 +96,7 @@
                         left: 575px !important;
                     }
                     .x4c {
-                        left: 560px !important;
+                        left: 575px !important;
                     }
                     .x49 {
                         left: 510px !important;
@@ -114,7 +114,7 @@
                         left: 620px !important;
                     }
                     .x48 {
-                        left: 600.5px !important;
+                        left: 615.5px !important;
                     }
                     .x40 {
                         left: 480.5px !important;

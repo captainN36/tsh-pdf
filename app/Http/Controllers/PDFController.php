@@ -84,21 +84,22 @@ class PDFController extends Controller
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/04c58d70-f571-4b9f-92d9-5e6a40206129',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
         ];
-        $data = $this->getData($params);
+        // $data = $this->getData($params);
 
-        $url = asset('downfile/index.php');
-        $name = $this->renderViewData($data);
-        $pdf = $name['pdf'];
-        $html = $name['html'];
-        $param = "html=$html&pdf=$pdf";
-        $res = $this->downfile($url, $param);
-        sleep(3);
-        $headers = [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'attachment; filename="' . $pdf . '"',
-        ];
+        // // $url = asset('downfile/index.php');
+        // // $name = $this->renderViewData($data);
+        // $pdf = $name['pdf'];
+        // $html = $name['html'];
+        // $param = "html=$html&pdf=$pdf";
+        // $res = $this->downfile($url, $param);
+        // sleep(3);
+        // $headers = [
+        //     'Content-Type' => 'application/pdf',
+        //     'Content-Disposition' => 'attachment; filename="' . $pdf . '"',
+        // ];
+        $name = $this->pdfCopy($params);
 
-        return response()->file(public_path("/pdf/$pdf"), $headers);
+        return redirect(asset('pdf/' . $name));
     }
 
     public function download (Request $request) {

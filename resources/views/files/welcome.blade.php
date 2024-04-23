@@ -1309,7 +1309,7 @@
                         left: 15px;
                     }
                     .x41 {
-                        left: 520px !important;
+                        left: 530px !important;
                     }
                     .x21 {
                         left: 363.475px !important;

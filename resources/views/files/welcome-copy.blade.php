@@ -96,25 +96,25 @@
                         left: 575px !important;
                     }
                     .x4c {
-                        left: 530px !important;
+                        left: 560px !important;
                     }
                     .x49 {
                         left: 510px !important;
                     }
                     .x4a {
-                        left: 460px !important;
+                        left: 490px !important;
                     }
                     .x44 {
                         left: 387px !important;
                     }
                     .x45 {
-                        left: 350.5px !important;
+                        left: 370.5px !important;
                     }
                     .x47 {
                         left: 620px !important;
                     }
                     .x48 {
-                        left: 550.5px !important;
+                        left: 600.5px !important;
                     }
                     .x40 {
                         left: 480.5px !important;

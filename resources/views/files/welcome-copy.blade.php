@@ -81,13 +81,13 @@
                         left: 535px !important;
                     }
                     .x21 {
-                        left: 363.475px !important;
+                        left: 410px !important;
                     }
                     .x46 {
-                        left: 544px !important;
+                        left: 600px !important;
                     }
                     .x3f {
-                        left: 181px !important;
+                        left: 210px !important;
                     }
                     .x43 {
                         left: 720px !important;

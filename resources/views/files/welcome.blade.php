@@ -1309,7 +1309,7 @@
                         left: 15px;
                     }
                     .x41 {
-                        left: 530px !important;
+                        left: 540px !important;
                     }
                     .x21 {
                         left: 363.475px !important;
@@ -1336,19 +1336,19 @@
                         left: 414px !important;
                     }
                     .x44 {
-                        left: 323.5px !important;
+                        left: 373.5px !important;
                     }
                     .x45 {
                         left: 311.5px !important;
                     }
                     .x47 {
-                        left: 523px !important;
+                        left: 573px !important;
                     }
                     .x48 {
                         left: 517.5px !important;
                     }
                     .x40 {
-                        left: 430.5px !important;
+                        left: 480.5px !important;
                     }
                 </style>
             @endif

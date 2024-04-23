@@ -90,7 +90,7 @@
                         left: 210px !important;
                     }
                     .x43 {
-                        left: 840px !important;
+                        left: 855px !important;
                     }
                     .x4b {
                         left: 575px !important;

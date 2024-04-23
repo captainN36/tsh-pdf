@@ -90,7 +90,7 @@
                         left: 210px !important;
                     }
                     .x43 {
-                        left: 720px !important;
+                        left: 800px !important;
                     }
                     .x4b {
                         left: 575px !important;
@@ -117,7 +117,7 @@
                         left: 615.5px !important;
                     }
                     .x40 {
-                        left: 480.5px !important;
+                        left: 510px !important;
                     }
                 </style>
             @endif

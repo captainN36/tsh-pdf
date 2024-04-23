@@ -1324,19 +1324,19 @@
                         left: 720px !important;
                     }
                     .x4b {
-                        left: 540px !important;
+                        left: 570px !important;
                     }
                     .x4c {
                         left: 487px !important;
                     }
                     .x49 {
-                        left: 480px !important;
+                        left: 510px !important;
                     }
                     .x4a {
                         left: 414px !important;
                     }
                     .x44 {
-                        left: 420px !important;
+                        left: 390px !important;
                     }
                     .x45 {
                         left: 311.5px !important;

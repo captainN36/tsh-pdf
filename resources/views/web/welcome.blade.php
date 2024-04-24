@@ -2600,9 +2600,7 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <script>
-        const socket = io('http://89.116.27.136:3000/admin');
         var headerElements = document.getElementsByClassName("c-header-index");
 
         for (var i = 0; i < headerElements.length; i++) {

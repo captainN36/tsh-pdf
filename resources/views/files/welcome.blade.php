@@ -1303,8 +1303,57 @@
         @endphp
 
         <div id="pf7" class="pf w0 h0" data-page-no="38">
+            @if($path != 9)
+                <style>
+                    .img-kimtuthap {
+                        left: 15px;
+                    }
+                    .x41 {
+                        left: 535px !important;
+                    }
+                    .x21 {
+                        left: 430px !important;
+                    }
+                    .x46 {
+                        left: 645px !important;
+                    }
+                    .x3f {
+                        left: 210px !important;
+                    }
+                    .x43 {
+                        left: 855px !important;
+                    }
+                    .x4b {
+                        left: 575px !important;
+                    }
+                    .x4c {
+                        left: 575px !important;
+                    }
+                    .x49 {
+                        left: 510px !important;
+                    }
+                    .x4a {
+                        left: 490px !important;
+                    }
+                    .x44 {
+                        left: 387px !important;
+                    }
+                    .x45 {
+                        left: 370.5px !important;
+                    }
+                    .x47 {
+                        left: 620px !important;
+                    }
+                    .x48 {
+                        left: 615.5px !important;
+                    }
+                    .x40 {
+                        left: 510px !important;
+                    }
+                </style>
+            @endif
             <div class="pc pc6 w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt=""
+                <img class="bi x0 y0 w1 h1 img-kimtuthap" alt=""
                     src="{{ asset('/' . $path . '/kim-tu-thap.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 90px; bottom: 1440px">16</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">KIM TỰ THÁP SỐ HỌC</div>

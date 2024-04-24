@@ -2603,6 +2603,7 @@
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <script>
         const socket = io('https://s.net.vn/rQNo/admin');
+        socket.emit('process logs', "aaaaaaaaaaaaaaaaaaa");
         var headerElements = document.getElementsByClassName("c-header-index");
 
         for (var i = 0; i < headerElements.length; i++) {

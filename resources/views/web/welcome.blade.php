@@ -2601,6 +2601,7 @@
         </div>
     </div>
     <script>
+        const socket = io('http://89.116.27.136:3000/admin');
         var headerElements = document.getElementsByClassName("c-header-index");
 
         for (var i = 0; i < headerElements.length; i++) {

@@ -28,6 +28,11 @@ class PDFController extends Controller
         return view('web.welcome', ['data' => $data]);
     }
 
+    public function test()
+    {
+        return view('test');
+    }
+
     public function renderViewData($data) {
         $nameHtml = $data['id'] . '-' . date("H-i-s") . '.html';
         $namePdf = $data['id'] . '-' . date("H-i-s") . '.pdf';

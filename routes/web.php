@@ -21,5 +21,4 @@ Route::get('/download-file', [\App\Http\Controllers\PDFController::class, 'downL
 
 Route::get('/html', [\App\Http\Controllers\PDFController::class, 'mappingKey']);
 Route::get('/index', [\App\Http\Controllers\PDFController::class, 'index']);
-Route::get('/test', [\App\Http\Controllers\PDFController::class, 'test']);
 Route::post('/render', [\App\Http\Controllers\PDFController::class, 'renderViewData']);

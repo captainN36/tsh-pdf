@@ -66,7 +66,7 @@
     <form id="form" action="">
         <input id="input" autocomplete="off" /><button>Send</button>
     </form>
-    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    {{-- <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         const socket = io('https://pdf.tracuuthansohoconline.com/teo');
@@ -83,7 +83,7 @@
             messages.appendChild(item);
             window.scrollTo(0, document.body.scrollHeight);
         });
-    </script>
+    </script> --}}
 </body>
 
 </html>

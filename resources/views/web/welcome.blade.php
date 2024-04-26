@@ -2601,6 +2601,7 @@
         </div>
     </div>
     <script>
+        console.log(1212121212121212121);
         var headerElements = document.getElementsByClassName("c-header-index");
 
         for (var i = 0; i < headerElements.length; i++) {

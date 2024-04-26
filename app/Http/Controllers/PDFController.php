@@ -30,7 +30,7 @@ class PDFController extends Controller
 
     public function test()
     {
-        $url = "https://pdf.tracuuthansohoconline.com/teo";
+        $url = "https://pdf.tracuuthansohoconline.com/test2";
 
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

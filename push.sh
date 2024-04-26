@@ -1,4 +1,4 @@
-git pull origin new-view;
+git pull origin file-after-update-api;
 git add .;
 git commit -m "commit";
-git push origin HEAD;
+git push origin file-after-update-api;

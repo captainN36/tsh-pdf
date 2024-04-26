@@ -6,7 +6,7 @@
     <meta name="generator" content="pdf2htmlEX" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" type="text/css" href="{{ asset('pdf.css') }}">
-    <title>test</title>
+    <title>Tra cứu thần số học</title>
 </head>
 
 <body>

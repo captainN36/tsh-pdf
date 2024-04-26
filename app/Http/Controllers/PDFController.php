@@ -37,7 +37,7 @@ class PDFController extends Controller
         $result = curl_exec($ch);
         curl_close($ch);
 
-        dd(json_decode($result)['status'], $url);
+        dd(json_decode($result, true), $url);
         return view('test');
     }
 

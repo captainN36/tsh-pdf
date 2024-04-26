@@ -30,14 +30,14 @@ class PDFController extends Controller
 
     public function test()
     {
-        $url = "https://pdf.tracuuthansohoconline.com/test2";
+        $url = route('test2');
 
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($ch);
         curl_close($ch);
 
-        dd(json_decode($result), $url);
+        dd(json_decode($result)['status'], $url);
         return view('test');
     }
 

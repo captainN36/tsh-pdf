@@ -23,5 +23,5 @@ Route::get('/html', [\App\Http\Controllers\PDFController::class, 'mappingKey']);
 Route::get('/index', [\App\Http\Controllers\PDFController::class, 'index']);
 Route::post('/render', [\App\Http\Controllers\PDFController::class, 'renderViewData']);
 Route::get('/test', [\App\Http\Controllers\PDFController::class, 'test']);
-Route::get('/teo', [\App\Http\Controllers\PDFController::class, 'teo']);
+Route::get('/test2', [\App\Http\Controllers\PDFController::class, 'test2']);
 

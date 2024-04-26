@@ -41,7 +41,7 @@ class PDFController extends Controller
         return view('test');
     }
 
-    public function teo () {
+    public function test2 () {
         return json_encode(['status' => true]);
     }
 

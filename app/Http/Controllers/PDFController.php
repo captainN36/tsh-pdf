@@ -28,23 +28,6 @@ class PDFController extends Controller
         return view('web.welcome', ['data' => $data]);
     }
 
-    public function test()
-    {
-        $url = route('test2');
-
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
-        curl_close($ch);
-
-        dd(json_decode($result, true), $url);
-        return view('test');
-    }
-
-    public function test2 () {
-        return json_encode(['status' => true]);
-    }
-
     public function renderViewData($data) {
         $nameHtml = $data['id'] . '-' . date("H-i-s") . '.html';
         $namePdf = $data['id'] . '-' . date("H-i-s") . '.pdf';

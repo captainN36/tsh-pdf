@@ -2,13 +2,7 @@
 
 namespace App\Http\Controllers;
 
-// use Barryvdh\DomPDF\Facade\Pdf;
-
-use FontLib\Table\Type\cmap;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Redirector;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;

@@ -71,91 +71,133 @@
             }
         @endphp
 
-<div id="pf7" class="pf w0 h0" data-page-no="38">
-    @if($path != 9)
-        <style>
-            .img-kimtuthap {
-                left: 15px;
-            }
-            .x41 {
-                left: 535px !important;
-            }
-            .x21 {
-                left: 430px !important;
-            }
-            .x46 {
-                left: 645px !important;
-            }
-            .x3f {
-                left: 210px !important;
-            }
-            .x43 {
-                left: 855px !important;
-            }
-            .x4b {
-                left: 575px !important;
-            }
-            .x4c {
-                left: 575px !important;
-            }
-            .x49 {
-                left: 510px !important;
-            }
-            .x4a {
-                left: 490px !important;
-            }
-            .x44 {
-                left: 387px !important;
-            }
-            .x45 {
-                left: 370.5px !important;
-            }
-            .x47 {
-                left: 620px !important;
-            }
-            .x48 {
-                left: 615.5px !important;
-            }
-            .x40 {
-                left: 510px !important;
-            }
-        </style>
-    @endif
-    <div class="pc pc6 w0 h0 opened">
-        <img class="bi x0 y0 w1 h1 img-kimtuthap" alt=""
-            src="{{ asset('/' . $path . '/kim-tu-thap.png') }}">
-        <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 90px; bottom: 1440px">16</div>
-        <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">KIM TỰ THÁP SỐ HỌC</div>
-        <div class="t m0 x12 h16 y165 ff1 fse fc2 sc0 ls0 ws0">Tháng {{ explode('/', $data['dateOfBirth'])[1] }}</div>
-        <div class="t m0 x3f h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]) ?></div>
-        <div class="t m0 x40 h4 y165 ff1 fs2 fc2 sc0 ls0 ws0">Ngày {{ explode('/', $data['dateOfBirth'])[0] }}</div>
-        <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]) ?></div>
-        <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">{{ explode('/', $data['dateOfBirth'])[2] }}</div>
-        <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]) ?></div>
-        <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
-        <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][1] }} tuổi</div>
-        <div class="t m0 x45 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2022 - 2030)</div>
-        <div class="t m0 x46 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
-        <div class="t m0 x47 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][1] }} tuổi</div>
-        <div class="t m0 x48 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2030 - 2039)</div>
-        <div class="t m0 x41 h14 y16a ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>
-        <div class="t m0 x49 h16 y16b ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][1] }} t</div>
-        <div class="t m0 x4a h5 y16c ff2 fs2 fc2 sc0 ls0 ws0">(2039 - 2048)</div>
-        <div class="t m0 x41 h14 y16d ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}</div>
-        <div class="t m0 x4b h16 y16e ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['age'][0] }} tuổi</div>
-        <div class="t m0 x4c h17 y16f ff2 fse fc2 sc0 ls0 ws0">(2048 - 2057)</div>
-        <div class="t m0 x21 h14 y170 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
-        <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}</div>
-        <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
+        <div id="pf7" class="pf w0 h0" data-page-no="38">
+            @if ($path != 9)
+                <style>
+                    .img-kimtuthap {
+                        left: 15px;
+                    }
 
-        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer')
-        <?php $page = $page + 1; ?>
-        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                    .x41 {
+                        left: 535px !important;
+                    }
+
+                    .x21 {
+                        left: 430px !important;
+                    }
+
+                    .x46 {
+                        left: 645px !important;
+                    }
+
+                    .x3f {
+                        left: 210px !important;
+                    }
+
+                    .x43 {
+                        left: 855px !important;
+                    }
+
+                    .x4b {
+                        left: 575px !important;
+                    }
+
+                    .x4c {
+                        left: 575px !important;
+                    }
+
+                    .x49 {
+                        left: 510px !important;
+                    }
+
+                    .x4a {
+                        left: 490px !important;
+                    }
+
+                    .x44 {
+                        left: 387px !important;
+                    }
+
+                    .x45 {
+                        left: 370.5px !important;
+                    }
+
+                    .x47 {
+                        left: 620px !important;
+                    }
+
+                    .x48 {
+                        left: 615.5px !important;
+                    }
+
+                    .x40 {
+                        left: 510px !important;
+                    }
+                </style>
+            @endif
+            <div class="pc pc6 w0 h0 opened">
+                <img class="bi x0 y0 w1 h1 img-kimtuthap" alt=""
+                    src="{{ asset('/' . $path . '/kim-tu-thap.png') }}">
+                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 90px; bottom: 1440px">
+                    16</div>
+                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">KIM TỰ THÁP SỐ HỌC</div>
+                <div class="t m0 x12 h16 y165 ff1 fse fc2 sc0 ls0 ws0">Tháng {{ explode('/', $data['dateOfBirth'])[1] }}
+                </div>
+                <div class="t m0 x3f h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]); ?></div>
+                <div class="t m0 x40 h4 y165 ff1 fs2 fc2 sc0 ls0 ws0">Ngày {{ explode('/', $data['dateOfBirth'])[0] }}
+                </div>
+                <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]); ?></div>
+                <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">{{ explode('/', $data['dateOfBirth'])[2] }}</div>
+                <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]); ?></div>
+                <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}
+                </div>
+                <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][1] }}
+                    tuổi</div>
+                <div class="t m0 x45 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2022 - 2030)</div>
+                <div class="t m0 x46 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}
+                </div>
+                <div class="t m0 x47 h16 y168 ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][1] }}
+                    tuổi</div>
+                <div class="t m0 x48 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2030 - 2039)</div>
+                <div class="t m0 x41 h14 y16a ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}
+                </div>
+                <div class="t m0 x49 h16 y16b ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][1] }}
+                    t</div>
+                <div class="t m0 x4a h5 y16c ff2 fs2 fc2 sc0 ls0 ws0">(2039 - 2048)</div>
+                <div class="t m0 x41 h14 y16d ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}
+                </div>
+                <div class="t m0 x4b h16 y16e ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['age'][0] }} tuổi
+                </div>
+                <div class="t m0 x4c h17 y16f ff2 fse fc2 sc0 ls0 ws0">(2048 - 2057)</div>
+                <div class="t m0 x21 h14 y170 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span
+                        class="_ _1b">
+                    </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}
+                </div>
+                <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}
+                </div>
+                <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}
+                </div>
+
+                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                @include('footer')
+                <?php $page = $page + 1; ?>
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
         <?php
         $challengeIndicator = contentText($data['data']['challengeIndicator']['content'], true);
@@ -163,7 +205,7 @@
         @if (count($challengeIndicator) >= 2)
             @for ($i = 0; $i < count($challengeIndicator); $i++)
                 <?php
-                    $content = contentText($challengeIndicator[$i]);
+                $content = contentText($challengeIndicator[$i]);
                 ?>
                 @if (count($content) >= 2)
                     @for ($j = 0; $j < count($content); $j++)
@@ -177,29 +219,36 @@
                                     {!! $content[$j] !!}
                                 </div>
                                 <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                                @include('footer', [
+                                    'name' => $data['fullName'],
+                                    'date' => $data['dateOfBirth'],
+                                ])
                                 <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                             </div>
                             <div class="pi"
-                                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                            </div>
                         </div>
                     @endfor
                 @else
-                <div id="pfd" class="pf w0 h0" data-page-no="18">
-                    <div class="pc pcb w0 h0 opened">
-                        <img class="bi x0 y0 w1 h1" alt=""
-                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
-                            {!! $challengeIndicator[$i] !!}
+                    <div id="pfd" class="pf w0 h0" data-page-no="18">
+                        <div class="pc pcb w0 h0 opened">
+                            <img class="bi x0 y0 w1 h1" alt=""
+                                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                            <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                                style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
+                                {!! $challengeIndicator[$i] !!}
+                            </div>
+                            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                            @include('footer', [
+                                'name' => $data['fullName'],
+                                'date' => $data['dateOfBirth'],
+                            ])
+                            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                         </div>
-                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                        <div class="pi"
+                            data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
                     </div>
-                    <div class="pi"
-                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-                </div>
                 @endif
             @endfor
         @endif
@@ -207,8 +256,8 @@
         <div id="pf7-8" class="pf w0 h0" data-page-no="22">
             <div class="pc pc6 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/duongdoi.png') }}">
-                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"
-                    style="left: 92px; bottom: 1440px">17</div>
+                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index" style="left: 92px; bottom: 1440px">
+                    17</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ LẶP</div>
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center" style="width: 2800px !important">
                     {{ implode(', ', $data['data']['repeatIndicator']['repeatIndicator']) }}
@@ -772,8 +821,7 @@
 
         <div id="pfd" class="pf w0 h0" data-page-no="52">
             <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                 @php
                     $strengthTWO = [];
                     $jsonStrength =
@@ -811,14 +859,12 @@
                 <?php $page = $page + 1; ?>
                 <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-            <div class="pi"
-                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
         <div id="pfd" class="pf w0 h0" data-page-no="52">
             <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                 <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2360px; top: 0px; text-align: justify">
                     @foreach ($strengthTWO as $key => $item)
@@ -833,8 +879,7 @@
                 <?php $page = $page + 1; ?>
                 <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-            <div class="pi"
-                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
 
@@ -1054,8 +1099,7 @@
 
         <div id="pfd" class="pf w0 h0" data-page-no="54">
             <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
 
                 @php
                     $arr = [
@@ -1090,8 +1134,7 @@
                 <?php $page = $page + 1; ?>
                 <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-            <div class="pi"
-                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
 
@@ -1235,11 +1278,14 @@
                         </table>
 
                         <div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 135px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]) ?>
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 135px">
+                                <?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]); ?>
                             </div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 265px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]) ?>
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 265px">
+                                <?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]); ?>
                             </div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 395px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]) ?>
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 445px; left: 395px">
+                                <?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]); ?>
                             </div>
                             <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 525px; left: 5px">
                                 {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}
@@ -1266,7 +1312,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="report-table-col report-table-right">
                         <table class="fc7 sc0 ls0 ws0 index-table">
                             <tr class="index-caption">

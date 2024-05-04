@@ -1,9 +1,7 @@
 <div id="pf7" class="pf w0 h0" data-page-no="7">
     <div class="pc pc6 w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/a.png') }}">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/a.png') }}">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/a.png') }}">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/a.png') }}">
         <div class="t m0 x11 hb y91 ff1 fs5 fc0 sc0 ls0 ws0">B</div>
         <div class="t m0 hc y92 ff1 fs6 fc2 sc0 ls0 ws0" style="left: 232px">CHU KỲ VẬN SỐ</div>
         <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
@@ -14,21 +12,22 @@
 </div>
 <div id="pf8" class="pf w0 h0" data-page-no="8">
     <div class="pc pc8 w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/2.png') }}">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/2.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">1</div>
         <div id="header1" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ VẬN SỐ</div>
 
-        <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1500px; white-space: normal; text-aligin: justify">
+        <div class="t m0 x30 hf yab ff2 fs9 fc2 sc0 ls0 ws0"
+            style="width: 1500px; white-space: normal; text-aligin: justify">
             {!! substr($data['data']['cycleFortune']['description'], 0) !!}
         </div>
         <style>
-        .t.m0.hf.yaf.ff2.fs9.fc2.sc0.ls0.ws0 p {
-           white-space: break-spaces;
-            font-size:45px;
-        }
+            .t.m0.hf.yaf.ff2.fs9.fc2.sc0.ls0.ws0 p {
+                white-space: break-spaces;
+                font-size: 45px;
+            }
         </style>
-        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0" style="display: flex; flex-wrap: wrap; left: 70px; bottom: 925px; width: 1950px">
+        <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0"
+            style="display: flex; flex-wrap: wrap; left: 70px; bottom: 925px; width: 1950px">
             {!! $data['data']['cycleFortune']['content'] !!}
         </div>
         @php
@@ -86,8 +85,7 @@
 
 <div id="pfb" class="pf w0 h0" data-page-no="8">
     <div class="pc pc5 w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÁC NĂM</div>
         <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2023</div>
@@ -98,49 +96,52 @@
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}</div>
         <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM 2025</div>
 
-        <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1190px; width: 2360px !important">
+        <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0"
+            style="left: 630px; bottom: 1190px; width: 2360px !important">
             {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
         </div>
 
-        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0"
+            style="width: 2360px !important; white-space: normal; text-align: justify;">
             {!! $data['data']['yearIndicator']['description'] !!}
         </div>
-            <?php
-                $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
-                $inputString = '';
-                for ($i = 1; $i <= count($nowYearIndicator); $i++) {
-                    $inputString .= $nowYearIndicator[$i];
-                }
-                $lines = explode("\n", $inputString);
-
-                $linesPerPartFirst = 20;
-                $linesPerPartRest = 35;
-
-                $parts = [];
-
-                for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-                    $linesPerPart = ($i == 0) ? $linesPerPartFirst : $linesPerPartRest;
-
-                    $part = array_slice($lines, $i, $linesPerPart);
-                    
-                    $part = array_filter($part);
-
-                    if (!empty($part)) {
-                        $parts[] = implode("\n", $part);
-                    }
-                }
-                $array = [];
-                $first = preg_replace("/\n/", "\r", $parts[0], 2);
-                $first = str_replace("\n ", '', $first);
-                $first = str_replace("\n", " ", $first);
-                for ($i = 1; $i < count($parts); $i++) {
-                    $html = str_replace("\n ", '', $parts[$i]);
-                    $html = str_replace("\n\n", "\r", $parts[$i]);
-                    $html = str_replace("\n", " ", $parts[$i]);
-                    $array[$i] = $html;
-                }
-            ?>
-        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
+        <?php
+        $nowYearIndicator = \App\Http\Controllers\PDFController::renderText('nowYearIndicator', $data['data']['yearIndicator']['nowYearIndicator']['content'], false);
+        $inputString = '';
+        for ($i = 1; $i <= count($nowYearIndicator); $i++) {
+            $inputString .= $nowYearIndicator[$i];
+        }
+        $lines = explode("\n", $inputString);
+        
+        $linesPerPartFirst = 20;
+        $linesPerPartRest = 35;
+        
+        $parts = [];
+        
+        for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+            $linesPerPart = $i == 0 ? $linesPerPartFirst : $linesPerPartRest;
+        
+            $part = array_slice($lines, $i, $linesPerPart);
+        
+            $part = array_filter($part);
+        
+            if (!empty($part)) {
+                $parts[] = implode("\n", $part);
+            }
+        }
+        $array = [];
+        $first = preg_replace("/\n/", "\r", $parts[0], 2);
+        $first = str_replace("\n ", '', $first);
+        $first = str_replace("\n", ' ', $first);
+        for ($i = 1; $i < count($parts); $i++) {
+            $html = str_replace("\n ", '', $parts[$i]);
+            $html = str_replace("\n\n", "\r", $parts[$i]);
+            $html = str_replace("\n", ' ', $parts[$i]);
+            $array[$i] = $html;
+        }
+        ?>
+        <div class="t m0 x5 h9 yc7 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="width: 2360px !important; white-space: normal; text-align: justify;">
             {!! nl2br(e($first)) !!}
         </div>
 
@@ -151,137 +152,139 @@
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
 </div>
 
-@for($i = 1; $i <= count($array); $i++)
-<div id="pfd" class="pf w0 h0" data-page-no="13">
-    <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
-            @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
-            @endif
+@for ($i = 1; $i <= count($array); $i++)
+    <div id="pfd" class="pf w0 h0" data-page-no="13">
+        <div class="pc pcb w0 h0 opened">
+            <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                style="width: 2360px; white-space: normal; text-align: justify;">
+                @if (isset($array[$i]))
+                    {!! nl2br(e($array[$i])) !!}
+                @endif
+            </div>
+
+            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
         </div>
-
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+        </div>
     </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
 @endfor
-<?php 
-    $nextYearIndicator = \App\Http\Controllers\PDFController::renderText('nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
-    $inputString = '';
-    for ($i = 1; $i <= count($nextYearIndicator); $i++) {
-        $inputString .= $nextYearIndicator[$i];
+<?php
+$nextYearIndicator = \App\Http\Controllers\PDFController::renderText('nextYearIndicator', $data['data']['yearIndicator']['nextYearIndicator']['content'], false);
+$inputString = '';
+for ($i = 1; $i <= count($nextYearIndicator); $i++) {
+    $inputString .= $nextYearIndicator[$i];
+}
+$lines = explode("\n", $inputString);
+
+$linesPerPart = 45;
+$parts = [];
+
+for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+    $part = array_slice($lines, $i, $linesPerPart);
+
+    $part = array_filter($part);
+
+    if (!empty($part)) {
+        $parts[] = implode("\n", $part);
     }
-    $lines = explode("\n", $inputString);
+}
+$array = [];
+$first = preg_replace("/\n/", "\r", $parts[0], 2);
+$first = str_replace("\n ", '', $first);
+$first = str_replace("\n", ' ', $first);
+$array[0] = $first;
 
-    $linesPerPart = 45;
-    $parts = [];
-
-    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-        $part = array_slice($lines, $i, $linesPerPart);
-        
-        $part = array_filter($part);
-
-        if (!empty($part)) {
-            $parts[] = implode("\n", $part);
-        }
-    }
-    $array = [];
-    $first = preg_replace("/\n/", "\r", $parts[0], 2);
-    $first = str_replace("\n ", '', $first);
-    $first = str_replace("\n", " ", $first);
-    $array[0] = $first;
-
-    for ($i = 1; $i < count($parts); $i++) {
-        $html = str_replace("\n ", '', $parts[$i]);
-        $html = str_replace("\n\n", "\r", $parts[$i]);
-        $html = str_replace("\n", " ", $parts[$i]);
-        $array[$i] = $html;
-    }
+for ($i = 1; $i < count($parts); $i++) {
+    $html = str_replace("\n ", '', $parts[$i]);
+    $html = str_replace("\n\n", "\r", $parts[$i]);
+    $html = str_replace("\n", ' ', $parts[$i]);
+    $array[$i] = $html;
+}
 ?>
 
-@for($i = 0; $i < count($array); $i++)
-<div id="pfd" class="pf w0 h0" data-page-no="13">
-    <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px; white-space: normal; text-align: justify;">
-            @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
-            @endif
-        </div>
+@for ($i = 0; $i < count($array); $i++)
+    <div id="pfd" class="pf w0 h0" data-page-no="13">
+        <div class="pc pcb w0 h0 opened">
+            <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                style="width: 2360px; white-space: normal; text-align: justify;">
+                @if (isset($array[$i]))
+                    {!! nl2br(e($array[$i])) !!}
+                @endif
+            </div>
 
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+        </div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+        </div>
     </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
 @endfor
 
 
-<?php 
-    $twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
-    $inputString = '';
-    for ($i = 1; $i <= count($twoYearsLaterIndicator); $i++) {
-        $inputString .= $twoYearsLaterIndicator[$i];
+<?php
+$twoYearsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoYearsLaterIndicator', $data['data']['yearIndicator']['twoYearsLaterIndicator']['content'], false);
+$inputString = '';
+for ($i = 1; $i <= count($twoYearsLaterIndicator); $i++) {
+    $inputString .= $twoYearsLaterIndicator[$i];
+}
+$lines = explode("\n", $inputString);
+
+$linesPerPart = 43;
+$parts = [];
+
+for ($i = 0; $i < count($lines); $i += $linesPerPart) {
+    $part = array_slice($lines, $i, $linesPerPart);
+
+    $part = array_filter($part);
+
+    if (!empty($part)) {
+        $parts[] = implode("\n", $part);
     }
-    $lines = explode("\n", $inputString);
+}
+$array = [];
+$first = preg_replace("/\n/", "\r", $parts[0], 2);
+$first = str_replace("\n ", '', $first);
+$first = str_replace("\n", ' ', $first);
+$array[0] = $first;
 
-    $linesPerPart = 43;
-    $parts = [];
-
-    for ($i = 0; $i < count($lines); $i += $linesPerPart) {
-        $part = array_slice($lines, $i, $linesPerPart);
-        
-        $part = array_filter($part);
-
-        if (!empty($part)) {
-            $parts[] = implode("\n", $part);
-        }
-    }
-    $array = [];
-    $first = preg_replace("/\n/", "\r", $parts[0], 2);
-    $first = str_replace("\n ", '', $first);
-    $first = str_replace("\n", " ", $first);
-    $array[0] = $first;
-
-    for ($i = 1; $i < count($parts); $i++) {
-        $html = str_replace("\n ", '', $parts[$i]);
-        $html = str_replace("\n\n", "\r", $parts[$i]);
-        $html = str_replace("\n", " ", $parts[$i]);
-        $array[$i] = $html;
-    }
+for ($i = 1; $i < count($parts); $i++) {
+    $html = str_replace("\n ", '', $parts[$i]);
+    $html = str_replace("\n\n", "\r", $parts[$i]);
+    $html = str_replace("\n", ' ', $parts[$i]);
+    $array[$i] = $html;
+}
 ?>
 
-@for($i = 0; $i < count($array); $i++)
-<div id="pfd" class="pf w0 h0" data-page-no="13">
-    <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
-            @if (isset($array[$i]))
-                {!! nl2br(e($array[$i])) !!}
-            @endif
-        </div>
+@for ($i = 0; $i < count($array); $i++)
+    <div id="pfd" class="pf w0 h0" data-page-no="13">
+        <div class="pc pcb w0 h0 opened">
+            <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                style="width: 2360px !important; white-space: normal; text-align: justify;">
+                @if (isset($array[$i]))
+                    {!! nl2br(e($array[$i])) !!}
+                @endif
+            </div>
 
-        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+        </div>
+        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+        </div>
     </div>
-    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-</div>
 @endfor
 
 
 
 <div id="pfd" class="pf w0 h0" data-page-no="12">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các tháng</div>
         <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->format('m/Y') }}</div>
@@ -291,18 +294,21 @@
         <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 630px; bottom: 1260px">
             {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nextMonthIndicator'] }}</div>
         <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(2)->format('m/Y') }}</div>
-        
-        <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="width: 2360px !important; left: 630px; bottom: 1190px">
+
+        <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0"
+            style="width: 2360px !important; left: 630px; bottom: 1190px">
             {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['twoMonthsLaterIndicator'] }}
         </div>
 
-        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
+        <div class="t m0 x5 hf y1ca ff2 fs9 fc2 sc0 ls0 ws0"
+            style="width: 2360px !important; white-space: normal; text-align: justify;">
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
         <?php
-            $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText('nowMonthIndicator', "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>".$data['data']['monthIndicator']['nowMonthIndicator']['content'])
+        $nowMonthIndicator = \App\Http\Controllers\PDFController::renderText('nowMonthIndicator', '<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>' . $data['data']['monthIndicator']['nowMonthIndicator']['content']);
         ?>
-        <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; bottom: 730px; text-align: justify;">
+        <div class="t m0 x5 h9 ff4 fs4 fc2 sc0 ls0 ws0"
+            style="width: 2360px !important; white-space: normal; bottom: 730px; text-align: justify;">
             @if ($nowMonthIndicator)
                 {!! nl2br(e($nowMonthIndicator[1])) !!}
             @endif
@@ -316,56 +322,58 @@
 </div>
 
 <?php
-    $nextMonthIndicator = \App\Http\Controllers\PDFController::renderText('nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content'])
+$nextMonthIndicator = \App\Http\Controllers\PDFController::renderText('nextMonthIndicator', $data['data']['monthIndicator']['nextMonthIndicator']['content']);
 ?>
 @if ($nextMonthIndicator)
-    @for($i = 1; $i <= count($nextMonthIndicator); $i++)
-    <div id="pfd" class="pf w0 h0" data-page-no="13">
-        <div class="pc pcb w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
-                {!! nl2br(e($nextMonthIndicator[$i])) !!}
-            </div>
+    @for ($i = 1; $i <= count($nextMonthIndicator); $i++)
+        <div id="pfd" class="pf w0 h0" data-page-no="13">
+            <div class="pc pcb w0 h0 opened">
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                    style="width: 2360px !important; white-space: normal; text-align: justify;">
+                    {!! nl2br(e($nextMonthIndicator[$i])) !!}
+                </div>
 
-            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+                <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">13</div>
+            </div>
+            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            </div>
         </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-    </div>
     @endfor
 @endif
 <?php
-    $twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content'])
+$twoMonthsLaterIndicator = \App\Http\Controllers\PDFController::renderText('twoMonthsLaterIndicator', $data['data']['monthIndicator']['twoMonthsLaterIndicator']['content']);
 ?>
 @if ($twoMonthsLaterIndicator)
-    @for($i = 1; $i <= count($twoMonthsLaterIndicator); $i++)
-    <div id="pfd" class="pf w0 h0" data-page-no="14">
-        <div class="pc pcb w0 h0 opened">
-            <img class="bi x0 y0 w1 h1" alt=""
-                src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0" style="width: 2360px !important; white-space: normal; text-align: justify;">
-                {!! nl2br(e($twoMonthsLaterIndicator[$i])) !!}
-            </div>
+    @for ($i = 1; $i <= count($twoMonthsLaterIndicator); $i++)
+        <div id="pfd" class="pf w0 h0" data-page-no="14">
+            <div class="pc pcb w0 h0 opened">
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
+                <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                    style="width: 2360px !important; white-space: normal; text-align: justify;">
+                    {!! nl2br(e($twoMonthsLaterIndicator[$i])) !!}
+                </div>
 
-            <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-            @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-            <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">14</div>
+                <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">14</div>
+            </div>
+            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            </div>
         </div>
-        <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-    </div>
     @endfor
 @endif
 
 <div id="pfd" class="pf w0 h0" data-page-no="15">
     <div class="pc pcb w0 h0 opened">
-        <img class="bi x0 y0 w1 h1" alt=""
-            src="{{ asset('/' . $path . '/bannga.png') }}">
+        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/bannga.png') }}">
         <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
         <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 
-        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0" style="width: 1400px; white-space: normal; top: 70px; left: 450px; text-aligin: justify">
+        <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0"
+            style="width: 1400px; white-space: normal; top: 70px; left: 450px; text-aligin: justify">
             {!! $data['data']['monthIndicator']['description'] !!}
         </div>
 

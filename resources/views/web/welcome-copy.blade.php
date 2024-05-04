@@ -118,20 +118,22 @@
                 </div>
                 <div class="t m0 x1a h9 yb9 ff4 fs4 fc2 sc0 ls0 ws0">Chu kỳ vận số của bạn</div>
                 <div class="t m0 x5 h12 yba ff3 fs4 fc2 sc0 ls0 ws0">Năm<span class="_ _a"></span> nay<span
-                    class="_ _a"></span> {{date("Y")}},<span class="_ _a"></span> bạn<span class="_ _9"></span> có<span
-                    class="_ _a"></span> chỉ<span class="_ _a"></span> số<span class="_ _a"></span> năm<span
-                    class="_ _a"></span> (vận<span class="_ _a"></span> niên<span class="_ _a"></span> cá<span
-                    class="_ _9"></span> nhân)<span class="_ _a"></span> là<span class="_ _a"></span> 2<span
-                    class="_ _a"></span> và<span class="_ _a"></span> đang<span class="_ _a"></span> ở<span
-                    class="_ _a"></span> giai<span class="_ _a"></span> đoạn<span class="_ _9"></span> đầu</div>
-                    <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0">của<span class="_ _d"></span> chu<span
-                    class="_ _b"></span> kỳ<span class="_ _b"></span> vận<span class="_ _b"></span> số.<span
-                    class="_ _d"></span> Xem<span class="_ _b"></span> thêm<span class="_ _b"></span> Phần<span
-                    class="_ _b"></span> B<span class="_ _d"></span> Mục<span class="_ _b"></span> 7<span
-                    class="_ _b"></span> "CHỈ<span class="_ _b"></span> SỐ<span class="_ _d"></span> CÁC<span
-                    class="_ _b"></span> NĂM"<span class="_ _b"></span> để<span class="_ _d"></span> biết<span
-                    class="_ _b"></span> hướng<span class="_ _b"></span> phát</div>
-                <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0" style="bottom: 230px">triển trong năm nay và 2 năm tới!</div>
+                        class="_ _a"></span> {{ date('Y') }},<span class="_ _a"></span> bạn<span
+                        class="_ _9"></span> có<span class="_ _a"></span> chỉ<span class="_ _a"></span> số<span
+                        class="_ _a"></span> năm<span class="_ _a"></span> (vận<span class="_ _a"></span>
+                    niên<span class="_ _a"></span> cá<span class="_ _9"></span> nhân)<span class="_ _a"></span>
+                    là<span class="_ _a"></span> 2<span class="_ _a"></span> và<span class="_ _a"></span>
+                    đang<span class="_ _a"></span> ở<span class="_ _a"></span> giai<span class="_ _a"></span>
+                    đoạn<span class="_ _9"></span> đầu</div>
+                <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0">của<span class="_ _d"></span> chu<span
+                        class="_ _b"></span> kỳ<span class="_ _b"></span> vận<span class="_ _b"></span> số.<span
+                        class="_ _d"></span> Xem<span class="_ _b"></span> thêm<span class="_ _b"></span>
+                    Phần<span class="_ _b"></span> B<span class="_ _d"></span> Mục<span class="_ _b"></span>
+                    7<span class="_ _b"></span> "CHỈ<span class="_ _b"></span> SỐ<span class="_ _d"></span>
+                    CÁC<span class="_ _b"></span> NĂM"<span class="_ _b"></span> để<span class="_ _d"></span>
+                    biết<span class="_ _b"></span> hướng<span class="_ _b"></span> phát</div>
+                <div class="t m0 x5 h12 ybb ff3 fs4 fc2 sc0 ls0 ws0" style="bottom: 230px">triển trong năm nay và 2 năm
+                    tới!</div>
                 <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                 <div class="t m0 x5 h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">7</div>
@@ -150,7 +152,8 @@
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nowYearIndicator'] }}</div>
                 <div class="t m0 x4d h12 y66 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year + 1 }}</div>
                 <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 485px; bottom: 1060px">
-                    {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}</div>
+                    {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nextYearIndicator'] }}
+                </div>
                 <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year + 2 }}</div>
                 <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0" style="left: 485px; bottom: 1000px">
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['twoYearsLaterIndicator'] }}
@@ -399,47 +402,56 @@
                 <div class="t m0 x5 h8 yc3 ff1 fs4 fc2 sc0 ls0 ws0">1.1. Mạnh mẽ - Độc lập - Tự tin</div>
                 @isset($data['data']['percentIndicator'][0])
                     <div class="t m0 x33 h10 yc4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-1">
-                        <span>{{ $data['data']['percentIndicator'][0][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][0][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m0 x5 h8 yc5 ff1 fs4 fc2 sc0 ls0 ws0">1.2. Lắng nghe - Khéo léo - Nhạy cảm</div>
                 @isset($data['data']['percentIndicator'][1])
                     <div class="t m0 x34 h10 yc6 ff1 fs9 fc0 sc0 ls0 ws0 bannga-2">
-                        <span>{{ $data['data']['percentIndicator'][1][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][1][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m0 x5 h8 yc7 ff1 fs4 fc2 sc0 ls0 ws0">1.3. Sáng tạo - Hoạt bát - Lạc quan</div>
                 @isset($data['data']['percentIndicator'][2])
                     <div class="t m0 x35 h10 yc8 ff1 fs9 fc0 sc0 ls0 ws0 bannga-3">
-                        <span>{{ $data['data']['percentIndicator'][2][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][2][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m0 x5 h8 yc9 ff1 fs4 fc2 sc0 ls0 ws0">1.4. Cẩn thận - Cầu toàn - Thực tế</div>
                 @isset($data['data']['percentIndicator'][3])
                     <div class="t m0 x34 h10 yca ff1 fs9 fc0 sc0 ls0 ws0 bannga-4">
-                        <span>{{ $data['data']['percentIndicator'][3][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][3][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m0 x5 h8 ycb ff1 fs4 fc2 sc0 ls0 ws0">1.5. Năng động - Linh hoạt - Tò mò</div>
                 @isset($data['data']['percentIndicator'][4])
                     <div class="t m0 x35 h10 ycc ff1 fs9 fc0 sc0 ls0 ws0 bannga-5">
-                        <span>{{ $data['data']['percentIndicator'][4][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][4][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m0 x5 h8 ycd ff1 fs4 fc2 sc0 ls0 ws0">1.6. Quan tâm - Yêu thương - Kiểm soát</div>
                 @isset($data['data']['percentIndicator'][5])
                     <div class="t m0 x12 h10 yce ff1 fs9 fc0 sc0 ls0 ws0 bannga-6">
-                        <span>{{ $data['data']['percentIndicator'][5][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][5][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m0 x5 h8 ycf ff1 fs4 fc2 sc0 ls0 ws0">1.7. Thông thái - Khám phá - Truyền đạt</div>
                 @isset($data['data']['percentIndicator'][6])
                     <div class="t m0 x36 h10 yd0 ff1 fs9 fc0 sc0 ls0 ws0 bannga-7">
-                        <span>{{ $data['data']['percentIndicator'][6][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][6][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m0 x5 h8 yd1 ff1 fs4 fc2 sc0 ls0 ws0">1.8. Công bằng - Tập trung - Lý tưởng</div>
                 @isset($data['data']['percentIndicator'][7])
                     <div class="t m0 x12 h10 yd2 ff1 fs9 fc0 sc0 ls0 ws0 bannga-8">
-                        <span>{{ $data['data']['percentIndicator'][7][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][7][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m0 x5 h8 yd3 ff1 fs4 fc2 sc0 ls0 ws0">1.9. Trách nhiệm - Rộng lượng - Hào phóng</div>
                 @isset($data['data']['percentIndicator'][8])
                     <div class="t m0 x37 h10 yd4 ff1 fs9 fc0 sc0 ls0 ws0 bannga-9">
-                        <span>{{ $data['data']['percentIndicator'][8][1] }}%</span></div>
+                        <span>{{ $data['data']['percentIndicator'][8][1] }}%</span>
+                    </div>
                 @endisset
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
@@ -690,18 +702,18 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                     {{ $data['data']['personalIndicator']['personalIndicator'] }}</div>
 
-                    <?php
-                    $personalIndicator = contentText($data['data']['personalIndicator']['content']);
-                    ?>
-                    <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
-                        {!! $data['data']['personalIndicator']['description'] !!}
-                        <br>
-                        <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="white-space: normal; width: 2000px; text-align: justify;">
-                            {!! $personalIndicator[0] !!}
-                        </div>
+                <?php
+                $personalIndicator = contentText($data['data']['personalIndicator']['content']);
+                ?>
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
+                    {!! $data['data']['personalIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2000px; text-align: justify;">
+                        {!! $personalIndicator[0] !!}
                     </div>
+                </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer')
@@ -1232,20 +1244,33 @@
                             0 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0] + $birth,
                             1 => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1] + $birth,
                         ],
-                        'third' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0] + $birth
+                        'third' => $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0] + $birth,
                     ];
                 }
                 ?>
-                <div class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator']}}<span class="_ _1b"> </span><span
-                        class="fc9">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator']}}<span class="_ _1b"> </span><span class="fca">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator']}}</span></span></div>
+                <div class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0">
+                    {{ $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator'] }}<span
+                        class="_ _1b"> </span><span
+                        class="fc9">{{ $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator'] }}<span
+                            class="_ _1b"> </span><span
+                            class="fca">{{ $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator'] }}</span></span>
+                </div>
                 <div class="t m0 x3d h8 y125 ff1 fs4 fc8 sc0 ls0 ws0">Chu kỳ 1<span class="_ _1c"> </span><span
-                        class="fc9">Chu kỳ 2<span class="_ _1d"> </span><span class="fca">Chu kỳ 3</span></span>
+                        class="fc9">Chu kỳ 2<span class="_ _1d"> </span><span class="fca">Chu kỳ
+                            3</span></span>
                 </div>
                 <div class="t m0 x35 h14 y126 ff1 fsc fc8 sc0 ls0 ws0">GIEO HẠT<span class="_ _1e"> </span><span
                         class="fc9">CHÍN<span class="_ _1f"> </span><span class="fca">THU HOẠCH</span></span>
                 </div>
-                <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1]}} tuổi ({{lifeCircleIndicator($data)['first']}})<span class="_ _20">
-                    </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0]}} - {{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1]}} tuổi ({{lifeCircleIndicator($data)['second'][0]}} - {{lifeCircleIndicator($data)['second'][1]}})<span class="_ _21"> </span>{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0]}} tuổi về sau ({{lifeCircleIndicator($data)['third']}} trở đi)</div>
+                <div class="t m0 x3e h6 y127 ff3 fs2 fc2 sc0 ls0 ws0">Đầu đời -
+                    {{ $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['age'][1] }}
+                    tuổi ({{ lifeCircleIndicator($data)['first'] }})<span class="_ _20">
+                    </span>{{ $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][0] }}
+                    - {{ $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['age'][1] }}
+                    tuổi ({{ lifeCircleIndicator($data)['second'][0] }} -
+                    {{ lifeCircleIndicator($data)['second'][1] }})<span class="_ _21">
+                    </span>{{ $data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['age'][0] }}
+                    tuổi về sau ({{ lifeCircleIndicator($data)['third'] }} trở đi)</div>
 
                 <div class="t m0 x5 hf y6f ff4 fs9 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2000px; text-align: justify">
@@ -1263,7 +1288,7 @@
 
         </div>
         <?php
-         $lifeCircleIndicator = contentText($data['data']['lifeCircleIndicator']['content'], true);
+        $lifeCircleIndicator = contentText($data['data']['lifeCircleIndicator']['content'], true);
         ?>
         @if (count($lifeCircleIndicator) >= 2)
             @for ($i = 0; $i < count($lifeCircleIndicator); $i++)
@@ -1308,42 +1333,69 @@
 
         <div id="pf7" class="pf w0 h0" data-page-no="38">
             <div class="pc pc6 w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt=""
-                    src="{{ asset('/' . $path . '/kim-tu-thap.png') }}">
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/kim-tu-thap.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index">16</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">KIM TỰ THÁP SỐ HỌC</div>
 
-                <div class="t m0 x12 h16 y165 ff1 fse fc2 sc0 ls0 ws0">Tháng {{ explode('/', $data['dateOfBirth'])[1] }}</div>
-                <div class="t m0 x3f h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]) ?></div>
-                <div class="t m0 x40 h4 y165 ff1 fs2 fc2 sc0 ls0 ws0">Ngày {{ explode('/', $data['dateOfBirth'])[0] }}</div>
-                <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]) ?></div>
-                <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">{{ explode('/', $data['dateOfBirth'])[2] }}</div>
-                <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]) ?></div>
-                <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}</div>
-                <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][1] }} tuổi</div>
+                <div class="t m0 x12 h16 y165 ff1 fse fc2 sc0 ls0 ws0">Tháng
+                    {{ explode('/', $data['dateOfBirth'])[1] }}</div>
+                <div class="t m0 x3f h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]); ?></div>
+                <div class="t m0 x40 h4 y165 ff1 fs2 fc2 sc0 ls0 ws0">Ngày
+                    {{ explode('/', $data['dateOfBirth'])[0] }}</div>
+                <div class="t m0 x41 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]); ?></div>
+                <div class="t m0 x42 h16 y165 ff1 fse fc2 sc0 ls0 ws0">{{ explode('/', $data['dateOfBirth'])[2] }}
+                </div>
+                <div class="t m0 x43 h14 y166 ff1 fsc fc2 sc0 ls0 ws0"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]); ?></div>
+                <div class="t m0 x21 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}
+                </div>
+                <div class="t m0 x44 h16 y168 ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['age'][1] }}
+                    tuổi</div>
                 <div class="t m0 x45 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2022 - 2030)</div>
-                <div class="t m0 x46 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}</div>
-                <div class="t m0 x47 h16 y168 ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][1] }} tuổi</div>
+                <div class="t m0 x46 h14 y167 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondPeakIndicator'] }}
+                </div>
+                <div class="t m0 x47 h16 y168 ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['age'][1] }}
+                    tuổi</div>
                 <div class="t m0 x48 h5 y169 ff2 fs2 fc2 sc0 ls0 ws0">(2030 - 2039)</div>
-                <div class="t m0 x41 h14 y16a ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}</div>
-                <div class="t m0 x49 h16 y16b ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][0] .'-'. $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][1] }} t</div>
+                <div class="t m0 x41 h14 y16a ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdPeakIndicator'] }}
+                </div>
+                <div class="t m0 x49 h16 y16b ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][0] . '-' . $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['age'][1] }}
+                    t</div>
                 <div class="t m0 x4a h5 y16c ff2 fs2 fc2 sc0 ls0 ws0">(2039 - 2048)</div>
-                <div class="t m0 x41 h14 y16d ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}</div>
-                <div class="t m0 x4b h16 y16e ff1 fse fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['age'][0] }} tuổi</div>
+                <div class="t m0 x41 h14 y16d ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthPeakIndicator'] }}
+                </div>
+                <div class="t m0 x4b h16 y16e ff1 fse fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['age'][0] }} tuổi
+                </div>
                 <div class="t m0 x4c h17 y16f ff2 fse fc2 sc0 ls0 ws0">(2048 - 2057)</div>
-                <div class="t m0 x21 h14 y170 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span class="_ _1b"> </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}</div>
-                <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}</div>
-                <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">{{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}</div>
+                <div class="t m0 x21 h14 y170 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstChallengeIndicator'] }}<span
+                        class="_ _1b">
+                    </span>{{ $data['data']['challengeIndicator']['challengeIndicator']['secondChallenge']['secondChallengeIndicator'] }}
+                </div>
+                <div class="t m0 x41 h14 y171 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['thirdChallenge']['thirdChallengeIndicator'] }}
+                </div>
+                <div class="t m0 x41 h14 y172 ff1 fsc fc2 sc0 ls0 ws0">
+                    {{ $data['data']['challengeIndicator']['challengeIndicator']['fourthChallenge']['fourthChallengeIndicator'] }}
+                </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer')
                 <?php $page = $page + 1; ?>
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{$page}}</div>
-                <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                <div class="pi"
+                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
                 </div>
             </div>
         </div>
-        
+
         <?php
         $challengeIndicator = contentText($data['data']['challengeIndicator']['content'], true);
         ?>
@@ -1434,15 +1486,15 @@
             </div>
         @endwhile
         @if (isset($data['data']['missIndicator']))
-        <div id="pf7-8" class="pf w0 h0" data-page-no="22">
-            <div class="pc pc6 w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/duongdoi.png') }}">
-                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index">18</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ THIẾU</div>
-                <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
-                    {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
-                </div>
-                <?php
+            <div id="pf7-8" class="pf w0 h0" data-page-no="22">
+                <div class="pc pc6 w0 h0 opened">
+                    <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/duongdoi.png') }}">
+                    <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index">18</div>
+                    <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CÁC CHỈ SỐ THIẾU</div>
+                    <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
+                        {{ implode(', ', $data['data']['missIndicator']['missIndicator']) }}
+                    </div>
+                    <?php
                     $missIndicator = contentText($data['data']['missIndicator']['firstContent']);
                     if (count($missIndicator) < 2) {
                         $data['data']['missIndicator']['data'][0] = $data['data']['missIndicator']['firstContent'];
@@ -1470,14 +1522,14 @@
                         </div>
                     </div>
 
-                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                @include('footer')
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-                <div class="pi"
-                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                    <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                    @include('footer')
+                    <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                    </div>
                 </div>
             </div>
-        </div>
 
             @while (!empty($nextPagesContent))
                 <?php
@@ -1670,34 +1722,34 @@
                 <div class="t m0 h7 yd5 ff1 fs3 fc7 sc0 ls0 ws0 index-center">
                     {{ implode(', ', $data['data']['karmicIndicator']['karmicIndicator']) }}</div>
 
-                    <?php
-                    $karmicIndicator = contentText($data['data']['karmicIndicator']['firstContent']);
-                    if (count($karmicIndicator) < 2) {
-                        $data['data']['karmicIndicator']['data'][0] = $data['data']['karmicIndicator']['firstContent'];
-                        [$textFromArray, $nextPagesContent] = textFromArray($data['data']['karmicIndicator']['data']);
-                    } else {
-                        array_shift($data['data']['karmicIndicator']['data']);
-                        $firstContent = $karmicIndicator[0];
-                        array_shift($karmicIndicator);
-                        for ($i = 0; $i < count($data['data']['karmicIndicator']['data']); $i++) {
-                            $karmicIndicator[] = $data['data']['karmicIndicator']['data'][$i];
-                        }
-                        [$textFromArray, $nextPagesContent] = textFromArray($karmicIndicator);
+                <?php
+                $karmicIndicator = contentText($data['data']['karmicIndicator']['firstContent']);
+                if (count($karmicIndicator) < 2) {
+                    $data['data']['karmicIndicator']['data'][0] = $data['data']['karmicIndicator']['firstContent'];
+                    [$textFromArray, $nextPagesContent] = textFromArray($data['data']['karmicIndicator']['data']);
+                } else {
+                    array_shift($data['data']['karmicIndicator']['data']);
+                    $firstContent = $karmicIndicator[0];
+                    array_shift($karmicIndicator);
+                    for ($i = 0; $i < count($data['data']['karmicIndicator']['data']); $i++) {
+                        $karmicIndicator[] = $data['data']['karmicIndicator']['data'][$i];
                     }
-                    $textFromArray = count($karmicIndicator) >= 2 ? $firstContent : $textFromArray;
-                    $nextPagesContent = count($karmicIndicator) >= 2 ? $karmicIndicator : $nextPagesContent;
-                    
-                    ?>
-    
-                    <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
-                        {!! $data['data']['karmicIndicator']['description'] !!}
-                        <br>
-                        <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="white-space: normal; width: 2000px; text-align: justify;">
-                            {!! $textFromArray !!}
-                        </div>
+                    [$textFromArray, $nextPagesContent] = textFromArray($karmicIndicator);
+                }
+                $textFromArray = count($karmicIndicator) >= 2 ? $firstContent : $textFromArray;
+                $nextPagesContent = count($karmicIndicator) >= 2 ? $karmicIndicator : $nextPagesContent;
+                
+                ?>
+
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
+                    {!! $data['data']['karmicIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2000px; text-align: justify;">
+                        {!! $textFromArray !!}
                     </div>
+                </div>
 
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer')
@@ -1930,7 +1982,8 @@
 
         <div id="pfd" class="pf w0 h0" data-page-no="52">
             <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                <img class="bi x0 y0 w1 h1" alt=""
+                    src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
                 @php
                     $strengthTWO = [];
                     $jsonStrength =
@@ -1966,7 +2019,8 @@
                 <?php $page = $page + 1; ?>
                 <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            <div class="pi"
+                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
 
@@ -2180,7 +2234,8 @@
 
         <div id="pfd" class="pf w0 h0" data-page-no="54">
             <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
+                <img class="bi x0 y0 w1 h1" alt=""
+                    src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
 
                 @php
                     $arr = [
@@ -2215,7 +2270,8 @@
                 <?php $page = $page + 1; ?>
                 <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            <div class="pi"
+                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
             </div>
         </div>
 
@@ -2358,11 +2414,14 @@
                         </table>
 
                         <div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 95px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]) ?>
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 95px">
+                                <?php echo renderTotal(explode('/', $data['dateOfBirth'])[1]); ?>
                             </div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 205px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]) ?>
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 205px">
+                                <?php echo renderTotal(explode('/', $data['dateOfBirth'])[0]); ?>
                             </div>
-                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 315px"><?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]) ?>
+                            <div class="t m0 h14 y166 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 355px; left: 315px">
+                                <?php echo renderTotal(explode('/', $data['dateOfBirth'])[2]); ?>
                             </div>
                             <div class="t m0 h14 y167 ff1 fsc fc2 sc0 ls0 ws0" style="bottom: 400px; left: 170px">
                                 {{ $data['data']['challengeIndicator']['challengeIndicator']['firstChallenge']['firstPeakIndicator'] }}

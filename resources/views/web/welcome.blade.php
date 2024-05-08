@@ -6,7 +6,7 @@
     <meta name="generator" content="pdf2htmlEX" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" type="text/css" href="{{ asset('pdf.css') }}">
-    <title>Tra cứu thần số học</title>
+    <title>test</title>
 </head>
 
 <body>
@@ -2053,7 +2053,7 @@
                         }
                     }
                 @endphp
-                <div class="t m0 x5 hf yd7 ff2 fs9 fc2 sc0 ls0 ws0"
+                <div class="t m0 x5 hf yd7 ff3 fs4 fc2 sc0 ls0 ws0"
                     style="white-space: normal; width: 2000px; top: 0px; text-align: justify; font-size: 45px">
                     @foreach ($strengthTWO as $item)
                         {!! $item !!}
@@ -2275,49 +2275,6 @@
                 </div>
             </div>
         @endif
-
-
-        <div id="pfd" class="pf w0 h0" data-page-no="54">
-            <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-
-                @php
-                    $arr = [
-                        'con số của sự độc lập, quyết đoán (biểu đồ của bạn còn có khả năng tạo được cặp số đẹp 11).',
-                        'con số của sự nhẹ nhàng, hợp tác và cảm xúc (biểu đồ của bạn còn có khả năng tạo được cặp số đẹp 22).',
-                        'con số của trí tuệ sáng tạo, vui vẻ và hoạt ngôn.',
-                        'con số của sự cẩn thận và thực tế, kiên trì và chăm chỉ.',
-                        'con số của tự do, khám phá và thay đổi linh hoạt.',
-                        'con số của trí tuệ cảm xúc và quan tâm người khác.',
-                        'con số của tri thức và khả năng tự học hỏi.',
-                        'con số của khả năng nhạy bén tài chính và quyền lực.',
-                        'con số của lý tưởng, sự cho đi và đức hy sinh.',
-                    ];
-                    $missing = [];
-                    foreach (range(1, 9) as $item) {
-                        if (!empty($summary->{$item})) {
-                            array_push($missing, $arr[$item - 1]);
-                        }
-                    }
-                @endphp
-
-
-                <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="width: 2000px; white-space: normal; text-align: justify">
-                    @foreach ($missing as $item)
-                        {!! $item !!}
-                    @endforeach
-                </div>
-
-                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                <?php $page = $page + 1; ?>
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-            </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-            </div>
-        </div>
-
         @isset($data['isCouple'])
             <div id="pf7" class="pf w0 h0" data-page-no="53">
                 <div class="pc pc6 w0 h0 opened">
@@ -2601,7 +2558,6 @@
         </div>
     </div>
     <script>
-        console.log(1212121212121212121);
         var headerElements = document.getElementsByClassName("c-header-index");
 
         for (var i = 0; i < headerElements.length; i++) {

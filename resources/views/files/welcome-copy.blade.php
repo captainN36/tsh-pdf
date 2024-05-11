@@ -193,10 +193,15 @@
             @for ($i = 1; $i < count($nowYearIndicator); $i++)
                 <?php $page++; ?>
                 <div class="pf w0 h0" data-page-no="18">
+                    <style>
+                        .no-line-break p {
+                            white-space: nowrap;
+                        }
+                    </style>
                     <div class="pc pcb w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                        <div i class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0 no-line-break"
                             style="width: 2360px; white-space: normal; font-size: 58px">
                             {!! $nowYearIndicator[$i] !!}
                         </div>

@@ -192,11 +192,11 @@
         @if (count($nowYearIndicator) >= 2)
             @for ($i = 1; $i < count($nowYearIndicator); $i++)
                 <?php $page++; ?>
-                <div id="pfd" class="pf w0 h0" data-page-no="18">
+                <div class="pf w0 h0" data-page-no="18">
                     <div class="pc pcb w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt=""
                             src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                        <div class="ff4 fs9 fc2 sc0 ls0 ws0"
                             style="width: 2360px; white-space: normal; text-align: justify; font-size: 58px">
                             {!! $nowYearIndicator[$i] !!}
                         </div>

@@ -195,7 +195,7 @@
                 <div class="pf w0 h0" data-page-no="18">
                     <style>
                         .no-line-break p {
-                            white-space: nowrap;
+                            white-space: pre-line;
                         }
                     </style>
                     <div class="pc pcb w0 h0 opened">

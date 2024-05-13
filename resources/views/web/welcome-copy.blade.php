@@ -181,23 +181,23 @@
         @if (count($nowYearIndicator) >= 2)
             @for ($i = 1; $i < count($nowYearIndicator); $i++)
                 <?php $page++; ?>
-                <div id="pfc" class="pf w0 h0" data-page-no="9">
-                    <div class="pc pce w0 h0 opened">
-                        <img class="bi x0 y0 w1 h1" alt=""
-                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                            <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                <div class="pf w0 h0" data-page-no="8">
+                    <div class="pc pcb w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
                             style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
                             <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
                                 style="white-space: normal; width: 2000px; text-align: justify;">
                                 {!! $nowYearIndicator[$i] !!}
                             </div>
                         </div>
-                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+        
+                        <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                         @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
+                        <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0"><?php echo $page; ?></div>
                     </div>
-                    <div class="pi"
-                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                    <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+                    </div>
                 </div>
             @endfor
         @endif

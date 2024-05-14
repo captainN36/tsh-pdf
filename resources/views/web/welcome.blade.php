@@ -2334,7 +2334,7 @@
                 <div class="pc pc6 w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/vochong.png') }}">
                     <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index">25</div>
-                    <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP VỢ CHỒNG</div>
+                    <div id="thvc" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP VỢ CHỒNG</div>
                     <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2000px; top: 200px">
                         @switch($data['data']['coupleIndicator'])
@@ -2397,7 +2397,7 @@
                 <div class="pc pc6 w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/vochong.png') }}">
                     <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"></div>
-                    <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP SỐ ĐIỆN THOẠI</div>
+                    <div id="thsdt" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP SỐ ĐIỆN THOẠI</div>
                     <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2000px; top: 100px; text-align: justify">
                         @foreach ($data['data']['phoneIndicator']['data'] as $item)
@@ -2424,7 +2424,7 @@
             <div class="pc pc6 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/vochong.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index">26</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
+                <div id="report" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
                 <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                     <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2000px">
                 </div>

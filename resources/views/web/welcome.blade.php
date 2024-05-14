@@ -2615,7 +2615,7 @@
         var headerElements = document.getElementsByClassName("c-header-index");
 
         for (var i = 0; i < headerElements.length; i++) {
-            headerElements[i].id = "header-" + (i + 1).toString();
+            headerElements[i].id = "chiso-" + (i + 1).toString();
             headerElements[i].innerText = (i + 1).toString();
         }
     </script>

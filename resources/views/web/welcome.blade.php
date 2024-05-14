@@ -171,7 +171,7 @@
                     style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
                     {!! $data['data']['monthIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2000px; text-align: justify;">
                         {!! $nowMonthIndicator[0] !!}
                     </div>
@@ -196,7 +196,7 @@
                 <div class="pc pcb w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                    <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                         style="width: 2000px; white-space: normal; text-align: justify;">
                         @if (isset($nextMonthIndicator[$i]))
                             {!! $nextMonthIndicator[$i] !!}
@@ -218,7 +218,7 @@
                 <div class="pc pcb w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                    <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                         style="width: 2000px; white-space: normal; text-align: justify;">
                         @if (isset($twoMonthsLaterIndicator[$i]))
                             {!! $twoMonthsLaterIndicator[$i] !!}
@@ -256,7 +256,7 @@
                     style="white-space: normal; width: 2000px; bottom: 900px; text-align: justify;">
                     {!! $data['data']['yearIndicator']['description'] !!}
                     <br>
-                    <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
+                    <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2000px; text-align: justify; font-size: 53px">
                         {!! $nowYearIndicator[0] !!}
                     </div>
@@ -298,7 +298,7 @@
         <div id="pfd" class="pf w0 h0" data-page-no="10">
             <div class="pc pcb w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-                <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                     style="width: 2000px; white-space: normal; text-align: justify; font-size: 55px">
                     {!! $nextYearIndicator[0] !!}
                 </div>
@@ -318,7 +318,7 @@
                 <div class="pc pcb w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-                    <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                    <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                         style="width: 2000px; white-space: normal; text-align: justify; font-size: 55px">
                         @if (isset($nextYearIndicator[$i]))
                             {!! $nextYearIndicator[$i] !!}
@@ -339,7 +339,7 @@
         <div id="pfd" class="pf w0 h0" data-page-no="11">
             <div class="pc pcb w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                     style="width: 2000px; white-space: normal; text-align: justify; font-size: 55px">
                     {!! $twoYearsLaterIndicator[0] !!}
                 </div>
@@ -359,7 +359,7 @@
                 <div class="pc pcb w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt=""
                         src="{{ asset('/' . $path . '/page-trang-phai.png') }}">
-                    <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                    <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                         style="width: 2000px; white-space: normal; text-align: justify; font-size: 55px">
                         @if (isset($twoYearsLaterIndicator[$i]))
                             {!! $twoYearsLaterIndicator[$i] !!}
@@ -1331,7 +1331,7 @@
                     <div id="pfd" class="pf w0 h0" data-page-no="37">
                         <div class="pc pcb w0 h0 opened">
                             <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                            <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                            <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                                 style="width: 2000px; white-space: normal; text-align: justify">
                                 {!! $content[$j] !!}
                             </div>
@@ -1349,7 +1349,7 @@
                 <div id="pfd" class="pf w0 h0" data-page-no="37">
                     <div class="pc pcb w0 h0 opened">
                         <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                        <div class="t m0 x5 hf yf3 ff4 fs4 fc2 sc0 ls0 ws0"
                             style="width: 2000px; white-space: normal; text-align: justify">
                             {!! $challengeIndicator[$i] !!}
                         </div>

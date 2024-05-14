@@ -1138,6 +1138,8 @@
                     <div id="lpc" class="ff4 fs4 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2000px; text-align: justify;">
                         {!! $natureIndicator1[0] !!}
+                        <br>
+                        {!! $natureIndicator1[0] !!}
                     </div>
                 </div>
 
@@ -1174,45 +1176,25 @@
         
         <?php
             $natureIndicator2 = contentText($data['data']['natureIndicator']['data'][1]);
+            $page++;
         ?>
 
-        @if (count($natureIndicator1) >= 2)
-            @for ($i = 0; $i < count($natureIndicator2); $i++)
-                <?php $page++; ?>
-                <div id="pfc" class="pf w0 h0" data-page-no="9">
-                    <div class="pc pce w0 h0 opened">
-                        <img class="bi x0 y0 w1 h1" alt=""
-                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                            style="width: 2000px; white-space: normal; text-align: justify;">
-                            {!! $natureIndicator2[$i] !!}
-                        </div>
-                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-                    </div>
-                    <div class="pi"
-                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+        <div id="pfc" class="pf w0 h0" data-page-no="9">
+            <div class="pc pce w0 h0 opened">
+                <img class="bi x0 y0 w1 h1" alt=""
+                    src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
+                    style="width: 2000px; white-space: normal; text-align: justify;">
+                    {!! $natureIndicator2[0] !!}
+                    {!! $natureIndicator2[1] !!}
                 </div>
-            @endfor
-        @else
-            <?php $page++; ?>
-            <div id="pfc" class="pf w0 h0" data-page-no="9">
-                <div class="pc pce w0 h0 opened">
-                    <img class="bi x0 y0 w1 h1" alt=""
-                        src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                    <div class="t m0 x5 h12 yf3 ff4 fs4 fc2 sc0 ls0 ws0"
-                        style="width: 2000px; white-space: normal; text-align: justify;">
-                        {!! $natureIndicator2[0] !!}
-                    </div>
-                    <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                    @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                    <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-                </div>
-                <div class="pi"
-                    data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
             </div>
-        @endif
+            <div class="pi"
+                data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+        </div>
 
 
         <div id="pf7" class="pf w0 h0" data-page-no="35">

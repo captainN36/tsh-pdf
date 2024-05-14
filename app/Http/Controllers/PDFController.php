@@ -22,6 +22,11 @@ class PDFController extends Controller
         return view('web.welcome', ['data' => $data]);
     }
 
+    public function teo ()
+    {
+        return view('web.teo');
+    }
+
     public function renderViewData($data) {
         $nameHtml = $data['id'] . '-' . date("H-i-s") . '.html';
         $namePdf = $data['id'] . '-' . date("H-i-s") . '.pdf';

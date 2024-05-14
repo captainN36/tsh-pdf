@@ -11,6 +11,7 @@
         var headerElements = document.getElementsByClassName("c-header-index");
 
         for (var i = 0; i < headerElements.length; i++) {
+            headerElements[i].id = "chiso-" + (i + 1).toString();
             headerElements[i].innerText = (i + 1).toString();
         }
     </script>
@@ -150,10 +151,106 @@
             </div>
         </div>
 
+        <div id="pfd" class="pf w0 h0" data-page-no="12">
+            <div class="pc pcb w0 h0 opened">
+                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
+                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">2</div>
+                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các tháng</div>
+                <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->format('m/Y') }}</div>
+                <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1330px">
+                    {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nowMonthIndicator'] }}
+                </div>
+                <div class="t m0 x4d h12 y66 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(1)->format('m/Y') }}
+                </div>
+                <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1260px">
+                    {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nextMonthIndicator'] }}
+                </div>
+                <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(2)->format('m/Y') }}
+                </div>
+
+                <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0"
+                    style="width: 2360px !important; left: 580px; bottom: 1190px">
+                    {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['twoMonthsLaterIndicator'] }}
+                </div>
+
+                <?php
+                $nowMonthIndicator = contentText($data['data']['monthIndicator']['firstContent']);
+                ?>
+                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
+                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
+                    {!! $data['data']['monthIndicator']['description'] !!}
+                    <br>
+                    <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
+                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
+                        {!! $nowMonthIndicator[0] !!}
+                    </div>
+                </div>
+
+                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                <?php $page = $page + 1; ?>
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+            </div>
+            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
+            </div>
+        </div>
+
+        <?php
+        $nextMonthIndicator = contentText($data['data']['monthIndicator']['nextMonthIndicator']['content']);
+        $twoMonthsLaterIndicator = contentText($data['data']['monthIndicator']['twoMonthsLaterIndicator']['content']);
+        
+        ?>
+        @if (!empty($nextMonthIndicator))
+            @for ($i = 0; $i < count($nextMonthIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfd" class="pf w0 h0" data-page-no="13">
+                    <div class="pc pcb w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                            style="width: 2360px !important; white-space: normal; text-align: justify; font-size: 58px">
+                            @if (isset($nextMonthIndicator[$i]))
+                                {!! $nextMonthIndicator[$i] !!}
+                            @endif
+                        </div>
+
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
+        @if (!empty($twoMonthsLaterIndicator))
+            @for ($i = 0; $i < count($twoMonthsLaterIndicator); $i++)
+                <?php $page++; ?>
+                <div id="pfd" class="pf w0 h0" data-page-no="13">
+                    <div class="pc pcb w0 h0 opened">
+                        <img class="bi x0 y0 w1 h1" alt=""
+                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
+                        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
+                            style="width: 2360px !important; white-space: normal; text-align: justify; font-size: 58px">
+                            @if (isset($twoMonthsLaterIndicator[$i]))
+                                {!! $twoMonthsLaterIndicator[$i] !!}
+                            @endif
+                        </div>
+
+                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
+                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
+                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
+                    </div>
+                    <div class="pi"
+                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
+                </div>
+            @endfor
+        @endif
+
         <div id="pfb" class="pf w0 h0" data-page-no="8">
             <div class="pc pc5 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
-                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">2</div>
+                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">3</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÁC NĂM</div>
                 <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year }}</div>
                 <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1330px">
@@ -256,104 +353,6 @@
                     data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
             </div>
         @endfor
-
-
-
-        <div id="pfd" class="pf w0 h0" data-page-no="12">
-            <div class="pc pcb w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
-                <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 110px; bottom: 1440px">3</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các tháng</div>
-                <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->format('m/Y') }}</div>
-                <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1330px">
-                    {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nowMonthIndicator'] }}
-                </div>
-                <div class="t m0 x4d h12 y66 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(1)->format('m/Y') }}
-                </div>
-                <div class="t m0 x4e h14 y1c8 ff1 fsc fc7 sc0 ls0 ws0" style="left: 580px; bottom: 1260px">
-                    {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nextMonthIndicator'] }}
-                </div>
-                <div class="t m0 x4d h12 y68 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->addMonths(2)->format('m/Y') }}
-                </div>
-
-                <div class="t m0 x4e h14 y1c9 ff1 fsc fc7 sc0 ls0 ws0"
-                    style="width: 2360px !important; left: 580px; bottom: 1190px">
-                    {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['twoMonthsLaterIndicator'] }}
-                </div>
-
-                <?php
-                $nowMonthIndicator = contentText($data['data']['monthIndicator']['firstContent']);
-                ?>
-                <div class="t m0 x5 hf yd7 ff2 fs4 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify;">
-                    {!! $data['data']['monthIndicator']['description'] !!}
-                    <br>
-                    <div id="lpc" class="ff4 fs9 fc2 sc0 ls0 ws0"
-                        style="white-space: normal; width: 2360px; text-align: justify; font-size: 58px">
-                        {!! $nowMonthIndicator[0] !!}
-                    </div>
-                </div>
-
-                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                <?php $page = $page + 1; ?>
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-            </div>
-            <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
-            </div>
-        </div>
-
-        <?php
-        $nextMonthIndicator = contentText($data['data']['monthIndicator']['nextMonthIndicator']['content']);
-        $twoMonthsLaterIndicator = contentText($data['data']['monthIndicator']['twoMonthsLaterIndicator']['content']);
-        
-        ?>
-        @if (!empty($nextMonthIndicator))
-            @for ($i = 0; $i < count($nextMonthIndicator); $i++)
-                <?php $page++; ?>
-                <div id="pfd" class="pf w0 h0" data-page-no="13">
-                    <div class="pc pcb w0 h0 opened">
-                        <img class="bi x0 y0 w1 h1" alt=""
-                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
-                            style="width: 2360px !important; white-space: normal; text-align: justify; font-size: 58px">
-                            @if (isset($nextMonthIndicator[$i]))
-                                {!! $nextMonthIndicator[$i] !!}
-                            @endif
-                        </div>
-
-                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-                    </div>
-                    <div class="pi"
-                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-                </div>
-            @endfor
-        @endif
-        @if (!empty($twoMonthsLaterIndicator))
-            @for ($i = 0; $i < count($twoMonthsLaterIndicator); $i++)
-                <?php $page++; ?>
-                <div id="pfd" class="pf w0 h0" data-page-no="13">
-                    <div class="pc pcb w0 h0 opened">
-                        <img class="bi x0 y0 w1 h1" alt=""
-                            src="{{ asset('/' . $path . '/page-trang-trai.png') }}">
-                        <div class="t m0 x5 hf yf3 ff4 fs9 fc2 sc0 ls0 ws0"
-                            style="width: 2360px !important; white-space: normal; text-align: justify; font-size: 58px">
-                            @if (isset($twoMonthsLaterIndicator[$i]))
-                                {!! $twoMonthsLaterIndicator[$i] !!}
-                            @endif
-                        </div>
-
-                        <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
-                        @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
-                        <div class="t m0 x3b h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
-                    </div>
-                    <div class="pi"
-                        data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
-                </div>
-            @endfor
-        @endif
 
         <?php
         $array = [];
@@ -1812,7 +1811,7 @@
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/suc-manh.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"
                     style="left: 92px; bottom: 1440px">23</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0 custom-font">BIỂU ĐỒ SỨC MẠNH(rất quan trọng)
+                <div class="t m0 x14 he y94 ff4 fs8 fc0 sc0 ls0 ws0 custom-font" style="font-weight: bold">BIỂU ĐỒ SỨC MẠNH(rất quan trọng)
                 </div>
                 @php
                     $strength = new stdClass();
@@ -2332,7 +2331,7 @@
                     <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/vochong.png') }}">
                     <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"
                         style="left: 92px; bottom: 1440px">25</div>
-                    <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP VỢ CHỒNG</div>
+                    <div id="thvc" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP VỢ CHỒNG</div>
                     <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; top: 200px">
                         @switch($data['data']['coupleIndicator'])
@@ -2396,7 +2395,7 @@
                     <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/vochong.png') }}">
                     <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"
                         style="left: 92px; bottom: 1440px">25</div>
-                    <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP SỐ ĐIỆN THOẠI</div>
+                    <div id="thsdt" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TƯƠNG HỢP SỐ ĐIỆN THOẠI</div>
                     <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0"
                         style="white-space: normal; width: 2360px; top: 100px; text-align: justify">
                         @foreach ($data['data']['phoneIndicator']['data'] as $item)
@@ -2422,7 +2421,7 @@
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/vochong.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"
                     style="left: 92px; bottom: 1440px">26</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
+                <div id="report" class="t m0 x14 he y94 ff4 fs8 fc0 sc0 ls0 ws0" style="font-weight: bold">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
                 <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
                     <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2340px">
                 </div>

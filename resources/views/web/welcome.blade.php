@@ -147,7 +147,7 @@
             <div class="pc pcb w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">2</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các tháng</div>
+                <div id="csct" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">Chỉ số các tháng</div>
                 <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">Tháng {{ now()->format('m/Y') }}</div>
                 <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 485px; bottom: 1120px">
                     {{ $data['data']['monthIndicator']['nowMonthIndicator']['monthIndicator']['nowMonthIndicator'] }}
@@ -238,7 +238,7 @@
             <div class="pc pcb w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/chi-so-nam.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">3</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÁC NĂM</div>
+                <div id="cscn" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHỈ SỐ CÁC NĂM</div>
                 <div class="t m0 x4d h12 y64 ff3 fs4 fc7 sc0 ls0 ws0">NĂM {{ now()->year }}</div>
                 <div class="t m0 x4e h14 y1c7 ff1 fsc fc7 sc0 ls0 ws0" style="left: 485px; bottom: 1120px">
                     {{ $data['data']['yearIndicator']['nowYearIndicator']['yearIndicator']['nowYearIndicator'] }}</div>
@@ -391,7 +391,7 @@
                 ?>
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $pth . '/bannga.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0" style="left: 92px">4</div>
-                <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
+                <div id="ntctbn" class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">NHÓM TÍNH CÁCH THEO BẢN NGÃ</div>
 
                 <div class="t m0 hf ff2 fs9 fc2 sc0 ls0 ws0"
                     style="width: 1133px; text-align: justify; white-space: normal; top: 70px; left: 400px">
@@ -459,7 +459,7 @@
             <div class="pc pc6 w0 h0 opened">
                 <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/c.png') }}">
                 <div class="t m0 x11 hb y91 ff1 fs5 fc0 sc0 ls0 ws0">C</div>
-                <div class="t m0 hc y92 ff1 fs6 fc2 sc0 ls0 ws0" style="left: 150px">PHÂN TÍCH ĐƯỜNG ĐỜI</div>
+                <div id="ptdd" class="t m0 hc y92 ff1 fs6 fc2 sc0 ls0 ws0" style="left: 150px">PHÂN TÍCH ĐƯỜNG ĐỜI</div>
                 <div class="t m2 xe h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer', ['name' => $data['fullName'], 'date' => $data['dateOfBirth']])
                 <?php $page = $page + 1; ?>

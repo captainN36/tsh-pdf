@@ -2158,9 +2158,14 @@
                                 <td>{{ $name->{8} ?? null }}</td>
                             </tr>
                             <tr>
-                                <td>{{ $name->{1} ?? null }}</td>
-                                <td>{{ $name->{4} ?? null }}</td>
-                                <td>{{ $name->{7} ?? null }}</td>
+                                <td style="border-bottom: solid 0">{{ $name->{1} ?? null }}</td>
+                                <td style="border-bottom: solid 0">{{ $name->{4} ?? null }}</td>
+                                <td style="border-bottom: solid 0">{{ $name->{7} ?? null }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <h4>Biểu đồ họ tên</h4>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -2178,9 +2183,14 @@
                                     <td>{{ $nickname->{8} ?? null }}</td>
                                 </tr>
                                 <tr>
-                                    <td>{{ $nickname->{1} ?? null }}</td>
-                                    <td>{{ $nickname->{4} ?? null }}</td>
-                                    <td>{{ $nickname->{7} ?? null }}</td>
+                                    <td style="border-bottom: solid 0">{{ $nickname->{1} ?? null }}</td>
+                                    <td style="border-bottom: solid 0">{{ $nickname->{4} ?? null }}</td>
+                                    <td style="border-bottom: solid 0">{{ $nickname->{7} ?? null }}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <h4>Biểu đồ nghệ danh</h4>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -2198,9 +2208,14 @@
                                 <td>{{ $summary->{8} ?? null }}</td>
                             </tr>
                             <tr>
-                                <td>{{ $summary->{1} ?? null }}</td>
-                                <td>{{ $summary->{4} ?? null }}</td>
-                                <td>{{ $summary->{7} ?? null }}</td>
+                                <td style="border-bottom: solid 0">{{ $summary->{1} ?? null }}</td>
+                                <td style="border-bottom: solid 0">{{ $summary->{4} ?? null }}</td>
+                                <td style="border-bottom: solid 0">{{ $summary->{7} ?? null }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <h4>Biểu đồ tổng hợp</h4>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -2323,7 +2338,7 @@
 
 
                 <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2360px; bottom: 1050px; text-align: justify">
+                    style="white-space: normal; width: 2360px; bottom: 1030px; text-align: justify">
                     @foreach ($data1 as $item)
                         {!! $item['title'] !!}
                         <p>{!! $item['content'] !!}</p>

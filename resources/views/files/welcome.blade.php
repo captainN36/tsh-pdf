@@ -28,6 +28,7 @@
             $path = explode('/', $path)[0];
             $name = new stdClass();
             $summary = new stdClass();
+            $nickname = new stdClass();
             foreach ($data['data']['drawNameAndSummaryChart']['drawNameChart'] as $value) {
                 $strName = $value[1];
                 $text = '';
@@ -43,6 +44,16 @@
                     $text .= $value[0];
                 }
                 $summary->{$value[0]} = $text;
+            }
+            if (isset($data['data']['drawNameAndSummaryChart']['drawNickNameChart'])) {
+                foreach ($data['data']['drawNameAndSummaryChart']['drawNickNameChart'] as $value) {
+                    $strName = $value[1];
+                    $text = '';
+                    for ($index = 1; $index <= $strName; $index++) {
+                        $text .= $value[0];
+                    }
+                    $nickname->{$value[0]} = $text;
+                }
             }
 
             $page = 8;
@@ -2153,6 +2164,27 @@
                             </tr>
                         </table>
                     </div>
+                    @if (isset($data['data']['drawNameAndSummaryChart']['drawNickNameChart']))
+                        <div class="pdf7-table-col">
+                            <table class="pdf7-table">
+                                <tr>
+                                    <td>{{ $nickname->{3} ?? null }}</td>
+                                    <td>{{ $nickname->{6} ?? null }}</td>
+                                    <td>{{ $nickname->{9} ?? null }}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ $nickname->{2} ?? null }}</td>
+                                    <td>{{ $nickname->{5} ?? null }}</td>
+                                    <td>{{ $nickname->{8} ?? null }}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ $nickname->{1} ?? null }}</td>
+                                    <td>{{ $nickname->{4} ?? null }}</td>
+                                    <td>{{ $nickname->{7} ?? null }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    @endif
                     <div class="pdf7-table-col">
                         <table class="pdf7-table">
                             <tr>

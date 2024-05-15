@@ -8381,7 +8381,7 @@ td {
     position: relative;
     display: flex;
     margin-top: 180px;
-    padding: 0 120px;
+    padding: 0 66px;
 }
 .pdf7-table__container .pdf7-table-col {
     width: 50%;
@@ -8389,6 +8389,10 @@ td {
 .pdf7-table__container .pdf7-table-col:last-child {
     display: flex;
     justify-content: flex-end;
+}
+.pdf7-table__container .pdf7-table-col:first-child {
+    display: flex;
+    justify-content: flex-start;
 }
 .pdf7-table {
     font-size: 22px;
@@ -8398,7 +8402,7 @@ td {
     position: relative;
 }
 .pdf7-table tr td {
-    min-width: 60px;
+    min-width: 50px;
     height: 63px;
     border-bottom: 3px solid rgb(38, 91, 166);
     border-right: 3px solid rgb(38, 91, 166);

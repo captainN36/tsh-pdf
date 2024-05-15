@@ -2141,7 +2141,7 @@
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index">24</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">BIỂU ĐỒ TỔNG HỢP NGÀY SINH, HỌ TÊN VÀ NGHỆ DANH
                 </div>
-                <div class="pdf7-table__container" style="margin-top: 125px">
+                <div class="pdf7-table__container" style="margin-top: 125px; padding: 0 66px;">
                     <div class="pdf7-table-col">
                         <table class="pdf7-table">
                             <tr>

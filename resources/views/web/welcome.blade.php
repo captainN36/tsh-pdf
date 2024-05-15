@@ -1983,7 +1983,7 @@
                         ]);
                     } elseif (empty($strength->{2}) && empty($strength->{5}) && empty($strength->{8})) {
                         array_push($return, [
-                            'title' => '-  1 TRỤC THỂ CHẤT (1-4-7) MÀ BẠN THIẾU',
+                            'title' => '-  1 TRỤC TINH THẦN (2-5-8) MÀ BẠN THIẾU',
                             'content' =>
                                 'Bạn thường nhạy cảm quá mức nên dễ bị tổn thương về mặt tâm lý. Lời khuyên cho bạn là hãy luyện tập để tăng các số 2, 5 hoặc 8 lên. Số 2 bạn có thể tăng bằng cách lắng nghe, cảm nhận suy nghĩ của người khác. Tập thiền hoặc tập yoga. Số 5 bạn đạt được bằng cách để mở rộng kết giao những người bạn mới, du lịch khám phá những điều mới mẻ. Số 8 bạn có thể tăng bằng cách học kinh doanh, học bán hàng, từ đó có khả năng nhạy cảm với lợi ích, tiền bạc.',
                         ]);
@@ -2232,7 +2232,7 @@
                         ]);
                     } elseif (empty($summary->{2}) && empty($summary->{5}) && empty($summary->{8})) {
                         array_push($return, [
-                            'title' => '-  1 TRỤC THỂ CHẤT (1-4-7) MÀ BẠN THIẾU',
+                            'title' => '-  1 TRỤC TINH THẦN (2-5-8) MÀ BẠN THIẾU',
                             'content' =>
                                 'Bạn thường nhạy cảm quá mức nên dễ bị tổn thương về mặt tâm lý. Lời khuyên cho bạn là hãy luyện tập để tăng các số 2, 5 hoặc 8 lên. Số 2 bạn có thể tăng bằng cách lắng nghe, cảm nhận suy nghĩ của người khác. Tập thiền hoặc tập yoga. Số 5 bạn đạt được bằng cách để mở rộng kết giao những người bạn mới, du lịch khám phá những điều mới mẻ. Số 8 bạn có thể tăng bằng cách học kinh doanh, học bán hàng, từ đó có khả năng nhạy cảm với lợi ích, tiền bạc.',
                         ]);

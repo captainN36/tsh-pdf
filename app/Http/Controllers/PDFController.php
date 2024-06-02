@@ -15,8 +15,8 @@ class PDFController extends Controller
     public function index(Request $request)
     {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/04c58d70-f571-4b9f-92d9-5e6a40206129',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/9343c235-a066-4433-9981-f7d0dcaa7ce1',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE1ODc1NjQxLCJleHAiOjE3MTg0Njc2NDF9.HgabqqmVG1PlL0jqXL_OpHwA0ZAqnmKs2vmTSdpeKwY'
         ];
         $data = $this->getData($params);
         return view('web.welcome', ['data' => $data]);

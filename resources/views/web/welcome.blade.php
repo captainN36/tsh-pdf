@@ -2479,7 +2479,7 @@
                 <div class="report-table__container" style="margin-top: 125px">
                     <div class="report-table-col report-table-left">
                         <table class="fc7 sc0 ls0 ws0 report-table">
-                            <caption>BIỂU ĐỒ NGÀY SINH</caption>
+                            <caption>BIỂU ĐỒ HỌ TÊN</caption>
                             <tr>
                                 <td>{{ $name->{3} ?? null }}</td>
                                 <td>{{ $name->{6} ?? null }}</td>

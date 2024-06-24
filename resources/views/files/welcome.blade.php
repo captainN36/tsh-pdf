@@ -2703,7 +2703,7 @@
                 <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0" style="left: 1018px">Numerology Report</div>
                 @include('footer')
                 <?php $page = $page + 1; ?>
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0" style="left: 987px">{{ $page }}</div>
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0" style="left: 967px">{{ $page }}</div>
                 <div class="pi"
                     data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
                 </div>

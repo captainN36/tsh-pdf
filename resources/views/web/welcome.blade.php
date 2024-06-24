@@ -2335,7 +2335,7 @@
 
 
                 <div class="t m0 x5 hf yd7 ff4 fs9 fc2 sc0 ls0 ws0"
-                    style="white-space: normal; width: 2000px; bottom: 845px; text-align: justify">
+                    style="white-space: normal; width: 2000px; bottom: 790px; text-align: justify">
                     @foreach ($data1 as $item)
                         {{ $item['title'] }}
                         <p>{{ $item['content'] }}</p>

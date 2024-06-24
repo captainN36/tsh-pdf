@@ -75,8 +75,8 @@ class PDFController extends Controller
 
     public function niewFile (Request $request) {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/04c58d70-f571-4b9f-92d9-5e6a40206129',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzEzMTY0MzY2LCJleHAiOjE3MTU3NTYzNjZ9.DorUoT7KJncWcGFzb7v278Jr72kT3cAnMD4J8wbUa-c'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/3f64fb53-fda2-492b-a017-94bbb1e668cd',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE2Nzk2OTUxLCJleHAiOjE3MTkzODg5NTF9.Kdzq42ymbitfIyhD32CFMz0PzZM_oNTn6HhPevRN3Wg'
         ];
         $name = $this->pdfCopy($params);
 

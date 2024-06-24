@@ -2523,7 +2523,7 @@
                     style="left: 92px; bottom: 1440px">26</div>
                 <div id="report" class="t m0 x14 he y94 ff4 fs8 fc0 sc0 ls0 ws0" style="font-weight: bold">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
                 <div class="t m0 x5 hf ff2 fs9 fc2 sc0 ls0 ws0" style="left: 0; top: 70px">
-                    <img src="{{ asset('/' . $path . '/report.png') }}" style="width: 914px" alt="" width="2340px">
+                    <img src="{{ asset('/' . $path . '/report.png') }}" alt="" width="2340px">
                 </div>
                 <div class="report-table__container">
                     <div class="report-table-col report-table-left">
@@ -2700,10 +2700,10 @@
                         </table>
                     </div>
                 </div>
-                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0" style="left: 868px">Numerology Report</div>
+                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0">Numerology Report</div>
                 @include('footer')
                 <?php $page = $page + 1; ?>
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0" style="left: 817px">{{ $page }}</div>
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0">{{ $page }}</div>
                 <div class="pi"
                     data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
                 </div>

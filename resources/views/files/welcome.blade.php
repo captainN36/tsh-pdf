@@ -2518,7 +2518,7 @@
 
         <div id="pf7" class="pf w0 h0" data-page-no="54">
             <div class="pc pc6 w0 h0 opened">
-                <img class="bi x0 y0 w1 h1" alt="" style="width: 1114px" src="{{ asset('/' . $path . '/vochong.png') }}">
+                <img class="bi x0 y0 w1 h1" alt="" style="width: 1054px" src="{{ asset('/' . $path . '/vochong.png') }}">
                 <div class="t m0 x13 hd y93 ff1 fs7 fc0 sc0 ls0 ws0 c-header-index"
                     style="left: 92px; bottom: 1440px">26</div>
                 <div id="report" class="t m0 x14 he y94 ff4 fs8 fc0 sc0 ls0 ws0" style="font-weight: bold">TỔNG QUAN DỮ LIỆU BÁO CÁO</div>
@@ -2700,10 +2700,10 @@
                         </table>
                     </div>
                 </div>
-                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0" style="left: 1068px">Numerology Report</div>
+                <div class="t m2 xa h6 y5f ff3 fs2 fc0 sc0 ls0 ws0" style="left: 1018px">Numerology Report</div>
                 @include('footer')
                 <?php $page = $page + 1; ?>
-                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0" style="left: 1017px">{{ $page }}</div>
+                <div class="t m0 x3a h5 y61 ff2 fs2 fc0 sc0 ls0 ws0" style="left: 967px">{{ $page }}</div>
                 <div class="pi"
                     data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}">
                 </div>

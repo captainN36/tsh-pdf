@@ -85,11 +85,6 @@
                     style="width: 1500px; white-space: normal; text-aligin: justify">
                     {!! substr($data['data']['cycleFortune']['description'], 0) !!}
                 </div>
-                <style>
-                    p {
-                        margin: 0;
-                    }
-                </style>
                 <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0"
                     style="flex-wrap: wrap; left: 90px; bottom: 1125px; width: 1950px; text-aligin: justify">
                     {!! $data['data']['cycleFortune']['content'] !!}

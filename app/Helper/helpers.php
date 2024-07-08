@@ -3,6 +3,8 @@
 if (!function_exists('contentText')) {
     function contentText($content, $diff = false)
     {
+        $content = preg_replace('/<p><br><\/p>/', '', $content, 1);
+        $content = preg_replace('/<p>/', '/<p style="margin-top: 5px">/', $content, 1);
         $start_tag = "<div>";
         $end_tag = "</div>";
     

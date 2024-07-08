@@ -2382,7 +2382,7 @@
                 </div>
             </div>
         @endif
-        @isset($data['isCouple'])
+        @if($data['isCouple'])
             <div id="pf7" class="pf w0 h0" data-page-no="53">
                 <div class="pc pc6 w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/vochong.png') }}">
@@ -2443,9 +2443,9 @@
                     </div>
                 </div>
             </div>
-        @endisset
+        @endif
 
-        @isset($data['phones'])
+        @if($data['phones'])
             <div id="pf7" class="pf w0 h0" data-page-no="54">
                 <div class="pc pc6 w0 h0 opened">
                     <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/' . $path . '/vochong.png') }}">
@@ -2467,7 +2467,7 @@
                     </div>
                 </div>
             </div>
-        @endisset
+        @endif
 
 
 

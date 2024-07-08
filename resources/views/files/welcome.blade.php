@@ -23,8 +23,8 @@
         }
 
         p {
-            margin-top: 8px;
-            margin-bottom: 8px;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
     </style>
 </head>

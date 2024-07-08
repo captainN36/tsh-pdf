@@ -93,7 +93,7 @@ class PDFController extends Controller
 
         // $fileName = $this->pdf($params);
         $data = $this->getData($params);
-        $pdf = PDF::loadView('files.welcome', ['data' => $data]);
+        $pdf = PDF::loadView('web.welcome', ['data' => $data]);
         return $pdf->download('laravel_pdf.pdf');
         // $filePath = public_path() . '/pdf/' . $fileName;
         // if (file_exists($filePath)) {

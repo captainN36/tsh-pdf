@@ -48,7 +48,7 @@ if (!function_exists('textFromArray')) {
         while (strlen($concatenated_string) > $strlen) {
             $data[] = $array[count($array) - 1];
             array_pop($array);
-            $concatenated_string = implode(" <br>", $array);
+            $concatenated_string = implode(" ", $array);
         }
         $data = array_reverse($data);
         return [$concatenated_string, $data];

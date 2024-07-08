@@ -15,6 +15,17 @@
             headerElements[i].innerText = (i + 1).toString();
         }
     </script>
+    
+    <style>
+        .t.m0.hf.yaf.ff2.fs9.fc2.sc0.ls0.ws0 p {
+            white-space: break-spaces;
+            font-size: 45px;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -85,16 +96,6 @@
                     style="width: 1500px; white-space: normal; text-aligin: justify">
                     {!! substr($data['data']['cycleFortune']['description'], 0) !!}
                 </div>
-                <style>
-                    .t.m0.hf.yaf.ff2.fs9.fc2.sc0.ls0.ws0 p {
-                        white-space: break-spaces;
-                        font-size: 45px;
-                    }
-
-                    p {
-                        margin-top: 15px;
-                    }
-                </style>
                 <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0"
                     style="flex-wrap: wrap; left: 90px; bottom: 1125px; width: 1950px; text-aligin: justify">
                     {!! $data['data']['cycleFortune']['content'] !!}

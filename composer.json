@@ -6,13 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "barryvdh/laravel-dompdf": "^2.0",
+        "barryvdh/laravel-dompdf": "^2.2",
         "barryvdh/laravel-snappy": "^1.0",
         "convertapi/convertapi-php": "^1.7",
         "guzzlehttp/guzzle": "^7.2",
-        "php-laravel/framework": "@dev",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
+        "php-laravel/framework": "@dev",
         "phpoffice/phpword": "^1.2"
     },
     "require-dev": {

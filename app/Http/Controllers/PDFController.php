@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 use \stdClass;
+use PDF;
 
 class PDFController extends Controller
 {
@@ -90,19 +91,21 @@ class PDFController extends Controller
             $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
         }
 
-        $fileName = $this->pdf($params);
+        // $fileName = $this->pdf($params);
+        $data = $this->getData($params);
+        $pdf = PDF::loadView('files.welcome', ['data' => $data]);
+        return $pdf->download('laravel_pdf.pdf');
+        // $filePath = public_path() . '/pdf/' . $fileName;
+        // if (file_exists($filePath)) {
+        //     $headers = [
+        //         'Content-Type' => 'application/pdf',
+        //         'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
+        //     ];
 
-        $filePath = public_path() . '/pdf/' . $fileName;
-        if (file_exists($filePath)) {
-            $headers = [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
-            ];
-
-            return response()->file($filePath, $headers);
-        } else {
-            return response()->json(['error' => 'File not found'], 404);
-        }
+        //     return response()->file($filePath, $headers);
+        // } else {
+        //     return response()->json(['error' => 'File not found'], 404);
+        // }
     }
 
     public function pathFiles ($params) {

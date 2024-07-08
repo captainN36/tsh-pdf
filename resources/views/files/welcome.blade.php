@@ -23,7 +23,7 @@
         }
 
         p {
-            margin: 30px;
+            margin: 5px;
         }
     </style>
 </head>
@@ -1116,8 +1116,6 @@
                 </div>
             @endfor
         @endif
-
-
 
         <div id="pf7" class="pf w0 h0" data-page-no="33">
             <div class="pc pc6 w0 h0 opened">

@@ -21,6 +21,11 @@
             white-space: break-spaces;
             font-size: 45px;
         }
+
+        p {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 

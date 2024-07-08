@@ -1293,14 +1293,14 @@
                     style="left: 90px; bottom: 1440px">15</div>
                 <div class="t m0 x14 he y94 ff1 fs8 fc0 sc0 ls0 ws0">CHU KỲ ĐƯỜNG ĐỜI</div>
 
-                <table class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0" style="left: 142px; width: 1663px; text-align: center; bottom: 967px">
+                <table class="t m0 x3c h13 y124 ff1 fsb fc8 sc0 ls0 ws0" style="left: 160px; width: 2000px; text-align: center; bottom: 1150px">
                     <tr>
                         <td style="text-align: center">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['firstLifeCircle']['indicator']}}</td>
                         <td style="text-align: center">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['secondLifeCircle']['indicator']}}</td>
                         <td style="text-align: center">{{$data['data']['lifeCircleIndicator']['lifeCircleIndicator']['thirdLifeCircle']['indicator']}}</td>
                     </tr>
                 </table>
-                
+
                 <div class="t m0 x3d h8 y125 ff1 fs4 fc8 sc0 ls0 ws0">Chu kỳ 1<span class="_ _1c"> </span><span
                         class="fc9">Chu kỳ 2<span class="_ _1d"> </span><span class="fca">Chu kỳ 3</span></span>
                 </div>

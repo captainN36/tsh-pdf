@@ -23,7 +23,7 @@
         }
 
         p {
-            margin: 0;
+            margin: 15px;
         }
     </style>
 </head>

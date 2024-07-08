@@ -24,7 +24,7 @@
 
         p {
             margin-top: 5px;
-            margin-bottom: 5px;
+            margin-bottom: 0;
         }
     </style>
 </head>

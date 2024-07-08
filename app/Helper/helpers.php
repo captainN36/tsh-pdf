@@ -3,8 +3,7 @@
 if (!function_exists('contentText')) {
     function contentText($content, $diff = false)
     {
-        $content = str_replace('<p>', '<p style="margin: 15px">', $content);
-        $content = str_replace('<p style="margin: 15px"><br></p>', '<p style="margin: 0"><br></p>', $content);
+        $content = str_replace('<p><br></p>', '<p style="margin: 0"><br></p>', $content);
         $start_tag = "<div>";
         $end_tag = "</div>";
     

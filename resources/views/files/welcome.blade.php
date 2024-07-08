@@ -24,7 +24,6 @@
 
         p {
             margin: 0;
-            font-size: 56px !important;
         }
     </style>
 </head>

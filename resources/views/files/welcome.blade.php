@@ -92,8 +92,8 @@
                     }
 
                     p {
-                        margin-top: 0;
-                        margin-bottom: 0;
+                        margin-top: 15px;
+                        margin-bottom: 15px;
                     }
                 </style>
                 <div class="t m0 hf yaf ff2 fs9 fc2 sc0 ls0 ws0"

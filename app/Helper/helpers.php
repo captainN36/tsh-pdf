@@ -4,6 +4,7 @@ if (!function_exists('contentText')) {
     function contentText($content, $diff = false)
     {
         $content = str_replace('<p><br></p>', '<p style="margin: 0 !important"><br></p>', $content);
+        $content = str_replace('<p style="margin: 0 !important"><br></p><p>', '<p style="margin: 0 !important"><br></p><p style="margin: 15px !important">', $content);
         $start_tag = "<div>";
         $end_tag = "</div>";
     

@@ -49,6 +49,7 @@
                 /* Các thuộc tính khác */
                 font-family: Arial, sans-serif;
                 box-sizing: border-box;
+                background-image: url({{ asset('/5/chi-so-nam.png') }})
             }
 
             p {

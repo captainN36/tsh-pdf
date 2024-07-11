@@ -132,7 +132,7 @@ class PDFController extends Controller
             $htmlStr = view('web.welcome-copy', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
-                $processName = "wkhtmltopdf $pathHtml $pathPDF";
+                $processName = "wkhtmltopdf --margin-top 62px --margin-bottom 62px --margin-left 62px --margin-right 62px $pathHtml $pathPDF";
                 Process::run($processName);
                 Log::info('process', ['process' => $processName]);
             } catch (\Exception $exception) {

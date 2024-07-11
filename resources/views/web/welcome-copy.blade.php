@@ -32,26 +32,27 @@
 
         /* Đảm bảo trang có kích thước đúng khi in */
         @media print {
-            body {
-                margin: 0;
-                padding: 0;
+            html {
+            line-height: 1.5rem;
             }
 
+            /* Đặt kích thước trang theo A4 */
             .pdf-page {
-                /* Đặt kích thước theo kích thước thật của giấy in */
                 width: 210mm;
                 height: 297mm;
-                margin: 0;
-                border: none;
-                page-break-after: always;
+                margin: auto;
+                padding: 0;
+
+                /* Để dễ dàng thấy các phần khác nhau của trang, chúng ta sẽ thêm một border */
+                border: 1px solid #000;
+
+                /* Các thuộc tính khác */
+                font-family: Arial, sans-serif;
+                box-sizing: border-box;
             }
 
             p {
                 margin: 0;
-            }
-
-            html {
-                line-height: 1.5rem;
             }
         }
     </style>
@@ -61,19 +62,19 @@
     <div class="pdf-page">
         <div class=""
             style="
-    padding-left: 62px;
-    padding-right: 62px;
-    padding-bottom: 115px;
-    font-size: 17px;
-    margin-top: 83px;
-">
+                padding-left: 62px;
+                padding-right: 62px;
+                padding-bottom: 115px;
+                font-size: 17px;
+                margin-top: 83px;
+            ">
             <div class="">
                 <div class="mt-[110px] text-[15px] italic"></div>
             </div>
             <div class="mt-6" style="
-    margin-top: 1.5rem;
-    text-align: justify;
-">
+                margin-top: 1.5rem;
+                text-align: justify;
+            ">
                 <p style="
 ">Những con số này cho biết ở mỗi năm bạn nên tập trung định hướng phát triển theo con
                     số nào. Thường thì cuộc đời sẽ tự đẩy bạn đi theo những con số này. Nếu đi lệch, bạn thường sẽ bị

@@ -63,7 +63,8 @@
         style="
                 padding-left: 62px;
                 padding-right: 62px;
-                padding-bottom: 115px;
+                padding-bottom: 62px;
+                padding-bottom: 62px;
                 font-size: 23px;
                 margin-top: 83px;
             ">

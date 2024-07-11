@@ -59,7 +59,6 @@
 </head>
 
 <body>
-    <div class="pdf-page">
         <div class=""
             style="
                 padding-left: 62px;
@@ -112,7 +111,6 @@
                     sống hài hòa với</p>
             </div>
         </div>
-    </div>
 </body>
 
 </html>

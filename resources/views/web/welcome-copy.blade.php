@@ -64,7 +64,7 @@
                 padding-left: 62px;
                 padding-right: 62px;
                 padding-bottom: 115px;
-                font-size: 20px;
+                font-size: 25px;
                 margin-top: 83px;
             ">
             <div class="">

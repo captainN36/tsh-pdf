@@ -19,7 +19,7 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzIwMzY0NDM5LCJleHAiOjE3MjI5NTY0Mzl9.4Y8e1UDUrodPwu0cSv1J2GvCLXBW1G2TKp0HF8F6Hc8'
         ];
         $data = $this->getData($params);
-        return view('web.welcome', ['data' => $data]);
+        return view('web.welcome-copy', ['data' => $data]);
     }
 
     public function renderViewData($data) {
@@ -75,8 +75,8 @@ class PDFController extends Controller
 
     public function niewFile (Request $request) {
         $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/3f64fb53-fda2-492b-a017-94bbb1e668cd',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE2Nzk2OTUxLCJleHAiOjE3MTkzODg5NTF9.Kdzq42ymbitfIyhD32CFMz0PzZM_oNTn6HhPevRN3Wg'
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/9c064613-8010-4281-8c09-aee48cc8f95f',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzIwMzY0NDM5LCJleHAiOjE3MjI5NTY0Mzl9.4Y8e1UDUrodPwu0cSv1J2GvCLXBW1G2TKp0HF8F6Hc8'
         ];
         $name = $this->pdfCopy($params);
 
@@ -129,7 +129,7 @@ class PDFController extends Controller
         $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
         if (!file_exists($pathPDF)) {
             $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
+            $htmlStr = view('web.welcome-copy', ['data' => $data])->render();
             fwrite($file, $htmlStr);
             try {
                 $processName = "wkhtmltopdf $pathHtml $pathPDF";

@@ -62,7 +62,7 @@
 <body>
     <div class=""
         style="
-                font-size: 23px;
+                font-size: 23px; background-image: url({{ asset('/5/chi-so-nam.png') }})
             ">
         <div class="">
             <div class="mt-[110px] text-[15px] italic"></div>

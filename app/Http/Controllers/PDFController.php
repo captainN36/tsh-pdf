@@ -19,7 +19,7 @@ class PDFController extends Controller
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzIwMzY0NDM5LCJleHAiOjE3MjI5NTY0Mzl9.4Y8e1UDUrodPwu0cSv1J2GvCLXBW1G2TKp0HF8F6Hc8'
         ];
         $data = $this->getData($params);
-        return view('web.welcome-copy', ['data' => $data]);
+        return view('web.welcome', ['data' => $data]);
     }
 
     public function renderViewData($data) {

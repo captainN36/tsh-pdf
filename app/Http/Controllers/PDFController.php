@@ -85,10 +85,10 @@ class PDFController extends Controller
 
     public function download (Request $request) {
         $params = $request->all();
-        $pos = strpos($params['url'], "look-up-pdf-test");
-        if ($pos == false) {
-            $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
-        }
+        // $pos = strpos($params['url'], "look-up-pdf-test");
+        // if ($pos == false) {
+        //     $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
+        // }
 
         $fileName = $this->pdf($params);
 

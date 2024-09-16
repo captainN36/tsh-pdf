@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PDFController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
-// Route::post('render', [\App\Http\Controllers\PDFController::class, 'renderPDF']);
-// Route::post('data', [\App\Http\Controllers\PDFController::class, 'getData']);
+Route::post('render', [PDFController::class, 'renderPDF']);
+Route::post('data', [PDFController::class, 'getData']);

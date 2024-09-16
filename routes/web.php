@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PDFController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,18 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/view-file', [\App\Http\Controllers\PDFController::class, 'view']);
-// Route::get('/new-file', [\App\Http\Controllers\PDFController::class, 'niewFile']);
-// Route::get('/a', [\App\Http\Controllers\PDFController::class, 'pdf']);
-// Route::get('/download-file', [\App\Http\Controllers\PDFController::class, 'downLoad']);
+Route::get('/view-file', [PDFController::class, 'view']);
+Route::get('/new-file', [PDFController::class, 'niewFile']);
+Route::get('/a', [PDFController::class, 'pdf']);
+Route::get('/download-file', [PDFController::class, 'downLoad']);
 
-// Route::get('/html', [\App\Http\Controllers\PDFController::class, 'mappingKey']);
-// Route::get('/', [\App\Http\Controllers\PDFController::class, 'index']);
-// Route::post('/render', [\App\Http\Controllers\PDFController::class, 'renderViewData']);
-// Route::get('/test', [\App\Http\Controllers\PDFController::class, 'test']);
-// Route::get('/test2', [\App\Http\Controllers\PDFController::class, 'test2'])->name('test2');
-
-
-Route::get('test', function () {
-    return 'test';
-});
+Route::get('/html', [PDFController::class, 'mappingKey']);
+Route::get('/', [PDFController::class, 'index']);
+Route::post('/render', [PDFController::class, 'renderViewData']);
+Route::get('/test', [PDFController::class, 'test']);
+Route::get('/test2', [PDFController::class, 'test2'])->name('test2');

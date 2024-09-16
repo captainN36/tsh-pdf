@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Process;
-use Illuminate\Support\Facades\Storage;
 
 class PDFController extends Controller
 {
@@ -223,15 +221,15 @@ class PDFController extends Controller
 
     public function renderPDF(Request $request)
     {
-        $data = $this->getData($request->all());
-        $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
-        if (!Storage::exists($name)) {
-            Storage::put($name, view('welcome', ['data' => $data])->render());
-        }
-        $pathPDF = storage_path() . '/app/' . $name;
-        $pathPublic = storage_path() . '/app/public/' . $name . '.pdf';
-        $result = Process::run('wkhtmltopdf ' . $pathPDF . ' ' . $pathPublic);
-        return response()->json(['path' => asset($name)]);
+        // $data = $this->getData($request->all());
+        // $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
+        // if (!Storage::exists($name)) {
+        //     Storage::put($name, view('welcome', ['data' => $data])->render());
+        // }
+        // $pathPDF = storage_path() . '/app/' . $name;
+        // $pathPublic = storage_path() . '/app/public/' . $name . '.pdf';
+        // $result = Process::run('wkhtmltopdf ' . $pathPDF . ' ' . $pathPublic);
+        return response()->json(['path' => asset('')]);
     }
 
     // public function getData($data)

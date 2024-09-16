@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
-use \stdClass;
 
 class PDFController extends Controller
 {
@@ -22,7 +21,8 @@ class PDFController extends Controller
         return view('web.welcome', ['data' => $data]);
     }
 
-    public function renderViewData($data) {
+    public function renderViewData($data)
+    {
         $nameHtml = $data['id'] . '-' . date("H-i-s") . '.html';
         $namePdf = $data['id'] . '-' . date("H-i-s") . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
@@ -67,13 +67,14 @@ class PDFController extends Controller
         $result = curl_exec($post);
         $curl_info = curl_getinfo($post);
         curl_close($post);
-        $obj_source = new stdClass();
-        $obj_source->content = $result;
-        $obj_source->header = $curl_info["http_code"];
-        return $obj_source;
+        return (object) array(
+            'content' => $result,
+            'header' => $curl_info["http_code"]
+        );
     }
 
-    public function niewFile (Request $request) {
+    public function niewFile(Request $request)
+    {
         $params = [
             'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/9c064613-8010-4281-8c09-aee48cc8f95f',
             'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzIwMzY0NDM5LCJleHAiOjE3MjI5NTY0Mzl9.4Y8e1UDUrodPwu0cSv1J2GvCLXBW1G2TKp0HF8F6Hc8'
@@ -83,7 +84,8 @@ class PDFController extends Controller
         return redirect(asset('pdf/' . $name));
     }
 
-    public function download (Request $request) {
+    public function download(Request $request)
+    {
         $params = $request->all();
         $pos = strpos($params['url'], "look-up-pdf-test");
         if ($pos == false) {
@@ -105,7 +107,8 @@ class PDFController extends Controller
         }
     }
 
-    public function pathFiles ($params) {
+    public function pathFiles($params)
+    {
         $data = $this->getData($params);
         return [
             'path_html' => $data['id'] . '-' . date("H-i-s") . '.html',
@@ -246,7 +249,7 @@ class PDFController extends Controller
         $count = 1;
         foreach ($title as $key => $item) {
             if (isset($item['title'])) {
-                    $data['data']['data'][$key]['page'] =  $count++;
+                $data['data']['data'][$key]['page'] =  $count++;
             }
         }
         $data['data']['dateOfBirth'] = Carbon::create($data['data']['dateOfBirth'])->format('d/m/Y');

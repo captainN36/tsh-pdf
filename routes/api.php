@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::post('render', [\App\Http\Controllers\PDFController::class, 'renderPDF']);
-Route::post('data', [\App\Http\Controllers\PDFController::class, 'getData']);
+// Route::post('render', [\App\Http\Controllers\PDFController::class, 'renderPDF']);
+// Route::post('data', [\App\Http\Controllers\PDFController::class, 'getData']);

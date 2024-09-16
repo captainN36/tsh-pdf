@@ -3,226 +3,223 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 
 class PDFController extends Controller
 {
-    public function index(Request $request)
-    {
-        $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/9c064613-8010-4281-8c09-aee48cc8f95f',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzIwMzY0NDM5LCJleHAiOjE3MjI5NTY0Mzl9.4Y8e1UDUrodPwu0cSv1J2GvCLXBW1G2TKp0HF8F6Hc8'
-        ];
-        $data = $this->getData($params);
-        return view('web.welcome', ['data' => $data]);
-    }
+    // public function index(Request $request)
+    // {
+    //     $params = [
+    //         'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/9c064613-8010-4281-8c09-aee48cc8f95f',
+    //         'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzIwMzY0NDM5LCJleHAiOjE3MjI5NTY0Mzl9.4Y8e1UDUrodPwu0cSv1J2GvCLXBW1G2TKp0HF8F6Hc8'
+    //     ];
+    //     $data = $this->getData($params);
+    //     return view('web.welcome', ['data' => $data]);
+    // }
 
-    public function renderViewData($data)
-    {
-        $nameHtml = $data['id'] . '-' . date("H-i-s") . '.html';
-        $namePdf = $data['id'] . '-' . date("H-i-s") . '.pdf';
-        if (!file_exists(public_path() . '/html/')) {
-            mkdir(public_path() . '/html/', 0777, true);
-        }
-        if (!file_exists(public_path() . '/pdf/')) {
-            mkdir(public_path() . '/pdf/', 0777, true);
-        }
-        Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $nameHtml;
-        $pathPDF = public_path() . '/pdf/' . $namePdf;
-        if (!file_exists($pathPDF)) {
-            $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
-            fwrite($file, $htmlStr);
-        }
-        return [
-            'html' => $nameHtml,
-            'pdf' => $namePdf
-        ];
-    }
+    // public function renderViewData($data)
+    // {
+    //     $nameHtml = $data['id'] . '-' . date("H-i-s") . '.html';
+    //     $namePdf = $data['id'] . '-' . date("H-i-s") . '.pdf';
+    //     if (!file_exists(public_path() . '/html/')) {
+    //         mkdir(public_path() . '/html/', 0777, true);
+    //     }
+    //     if (!file_exists(public_path() . '/pdf/')) {
+    //         mkdir(public_path() . '/pdf/', 0777, true);
+    //     }
+    //     Process::run('chmod -R 777 ' . public_path());
+    //     $pathHtml = public_path() . '/html/' . $nameHtml;
+    //     $pathPDF = public_path() . '/pdf/' . $namePdf;
+    //     if (!file_exists($pathPDF)) {
+    //         $file = fopen($pathHtml, 'w+');
+    //         $htmlStr = view('files.welcome-copy', ['data' => $data])->render();
+    //         fwrite($file, $htmlStr);
+    //     }
+    //     return [
+    //         'html' => $nameHtml,
+    //         'pdf' => $namePdf
+    //     ];
+    // }
 
-    public function view(Request $request)
-    {
-        $params = $request->all();
-        $pos = strpos($params['url'], "look-up-pdf-test");
-        if ($pos == false) {
-            $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
-        }
-        $data = $this->getData($params);
-        return view('web.welcome', ['data' => $data]);
-    }
+    // public function view(Request $request)
+    // {
+    //     $params = $request->all();
+    //     $pos = strpos($params['url'], "look-up-pdf-test");
+    //     if ($pos == false) {
+    //         $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
+    //     }
+    //     $data = $this->getData($params);
+    //     return view('web.welcome', ['data' => $data]);
+    // }
 
-    public function downfile($url, $data)
-    {
-        $post = curl_init();
-        curl_setopt($post, CURLOPT_URL, $url);
-        curl_setopt($post, CURLOPT_POST, 1);
-        curl_setopt($post, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($post, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($post, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0');
-        $result = curl_exec($post);
-        $curl_info = curl_getinfo($post);
-        curl_close($post);
-        return (object) array(
-            'content' => $result,
-            'header' => $curl_info["http_code"]
-        );
-    }
+    // public function downfile($url, $data)
+    // {
+    //     $post = curl_init();
+    //     curl_setopt($post, CURLOPT_URL, $url);
+    //     curl_setopt($post, CURLOPT_POST, 1);
+    //     curl_setopt($post, CURLOPT_POSTFIELDS, $data);
+    //     curl_setopt($post, CURLOPT_RETURNTRANSFER, true);
+    //     curl_setopt($post, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0');
+    //     $result = curl_exec($post);
+    //     $curl_info = curl_getinfo($post);
+    //     curl_close($post);
+    //     return (object) array(
+    //         'content' => $result,
+    //         'header' => $curl_info["http_code"]
+    //     );
+    // }
 
-    public function niewFile(Request $request)
-    {
-        $params = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/9c064613-8010-4281-8c09-aee48cc8f95f',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzIwMzY0NDM5LCJleHAiOjE3MjI5NTY0Mzl9.4Y8e1UDUrodPwu0cSv1J2GvCLXBW1G2TKp0HF8F6Hc8'
-        ];
-        $name = $this->pdfCopy($params);
+    // public function niewFile(Request $request)
+    // {
+    //     $params = [
+    //         'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up-pdf-test/9c064613-8010-4281-8c09-aee48cc8f95f',
+    //         'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwNywicm9sZSI6IkFETUlOIiwiaWF0IjoxNzIwMzY0NDM5LCJleHAiOjE3MjI5NTY0Mzl9.4Y8e1UDUrodPwu0cSv1J2GvCLXBW1G2TKp0HF8F6Hc8'
+    //     ];
+    //     $name = $this->pdfCopy($params);
 
-        return redirect(asset('pdf/' . $name));
-    }
+    //     return redirect(asset('pdf/' . $name));
+    // }
 
-    public function download(Request $request)
-    {
-        $params = $request->all();
-        $pos = strpos($params['url'], "look-up-pdf-test");
-        if ($pos == false) {
-            $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
-        }
+    // public function download(Request $request)
+    // {
+    //     $params = $request->all();
+    //     $pos = strpos($params['url'], "look-up-pdf-test");
+    //     if ($pos == false) {
+    //         $params['url'] = str_replace('look-up', 'look-up-pdf-test', $params['url']);
+    //     }
 
-        $fileName = $this->pdf($params);
+    //     $fileName = $this->pdf($params);
 
-        $filePath = public_path() . '/pdf/' . $fileName;
-        if (file_exists($filePath)) {
-            $headers = [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
-            ];
+    //     $filePath = public_path() . '/pdf/' . $fileName;
+    //     if (file_exists($filePath)) {
+    //         $headers = [
+    //             'Content-Type' => 'application/pdf',
+    //             'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
+    //         ];
 
-            return response()->file($filePath, $headers);
-        } else {
-            return response()->json(['error' => 'File not found'], 404);
-        }
-    }
+    //         return response()->file($filePath, $headers);
+    //     } else {
+    //         return response()->json(['error' => 'File not found'], 404);
+    //     }
+    // }
 
-    public function pathFiles($params)
-    {
-        $data = $this->getData($params);
-        return [
-            'path_html' => $data['id'] . '-' . date("H-i-s") . '.html',
-            'path_pdf' => $data['id'] . '-' . date("H-i-s") . '.pdf'
-        ];
-    }
+    // public function pathFiles($params)
+    // {
+    //     $data = $this->getData($params);
+    //     return [
+    //         'path_html' => $data['id'] . '-' . date("H-i-s") . '.html',
+    //         'path_pdf' => $data['id'] . '-' . date("H-i-s") . '.pdf'
+    //     ];
+    // }
 
-    public function pdfCopy($param)
-    {
-        $data = $this->getData($param);
-        $name = $data['id'] . '-' . date("H-i-s") . '.html';
-        $namePDF = $data['id'] . '-' . date("H-i-s") . '.pdf';
-        if (!file_exists(public_path() . '/html/')) {
-            mkdir(public_path() . '/html/', 0777, true);
-        }
-        if (!file_exists(public_path() . '/pdf/')) {
-            mkdir(public_path() . '/pdf/', 0777, true);
-        }
-        Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $name;
-        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
-        if (!file_exists($pathPDF)) {
-            $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('web.welcome-copy', ['data' => $data])->render();
-            fwrite($file, $htmlStr);
-            try {
-                $processName = "wkhtmltopdf --margin-top 62px --margin-bottom 62px --margin-left 62px --margin-right 62px $pathHtml $pathPDF";
-                Process::run($processName);
-                Log::info('process', ['process' => $processName]);
-            } catch (\Exception $exception) {
-                throw $exception;
-            }
-        }
-        return $namePDF;
-    }
+    // public function pdfCopy($param)
+    // {
+    //     $data = $this->getData($param);
+    //     $name = $data['id'] . '-' . date("H-i-s") . '.html';
+    //     $namePDF = $data['id'] . '-' . date("H-i-s") . '.pdf';
+    //     if (!file_exists(public_path() . '/html/')) {
+    //         mkdir(public_path() . '/html/', 0777, true);
+    //     }
+    //     if (!file_exists(public_path() . '/pdf/')) {
+    //         mkdir(public_path() . '/pdf/', 0777, true);
+    //     }
+    //     Process::run('chmod -R 777 ' . public_path());
+    //     $pathHtml = public_path() . '/html/' . $name;
+    //     $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . date("H-i-s") . '.pdf';
+    //     if (!file_exists($pathPDF)) {
+    //         $file = fopen($pathHtml, 'w+');
+    //         $htmlStr = view('web.welcome-copy', ['data' => $data])->render();
+    //         fwrite($file, $htmlStr);
+    //         try {
+    //             $processName = "wkhtmltopdf --margin-top 62px --margin-bottom 62px --margin-left 62px --margin-right 62px $pathHtml $pathPDF";
+    //             Process::run($processName);
+    //             Log::info('process', ['process' => $processName]);
+    //         } catch (\Exception $exception) {
+    //             throw $exception;
+    //         }
+    //     }
+    //     return $namePDF;
+    // }
 
-    public function pdf($param)
-    {
-        $data = $this->getData($param);
-        $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
-        $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
-        if (!file_exists(public_path() . '/html/')) {
-            mkdir(public_path() . '/html/', 0777, true);
-        }
-        if (!file_exists(public_path() . '/pdf/')) {
-            mkdir(public_path() . '/pdf/', 0777, true);
-        }
-        Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html/' . $name;
-        $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
-        if (!file_exists($pathPDF)) {
-            $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('files.welcome', ['data' => $data])->render();
-            fwrite($file, $htmlStr);
-            try {
-                $processName = "wkhtmltopdf $pathHtml $pathPDF";
-                Process::run($processName);
-                Log::info('process', ['process' => $processName]);
-            } catch (\Exception $exception) {
-                throw $exception;
-            }
-        }
-        return $namePDF;
-    }
+    // public function pdf($param)
+    // {
+    //     $data = $this->getData($param);
+    //     $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
+    //     $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+    //     if (!file_exists(public_path() . '/html/')) {
+    //         mkdir(public_path() . '/html/', 0777, true);
+    //     }
+    //     if (!file_exists(public_path() . '/pdf/')) {
+    //         mkdir(public_path() . '/pdf/', 0777, true);
+    //     }
+    //     Process::run('chmod -R 777 ' . public_path());
+    //     $pathHtml = public_path() . '/html/' . $name;
+    //     $pathPDF = public_path() . '/pdf/' . $data['id'] . '-' . $data['dateSearch'] . '.pdf';
+    //     if (!file_exists($pathPDF)) {
+    //         $file = fopen($pathHtml, 'w+');
+    //         $htmlStr = view('files.welcome', ['data' => $data])->render();
+    //         fwrite($file, $htmlStr);
+    //         try {
+    //             $processName = "wkhtmltopdf $pathHtml $pathPDF";
+    //             Process::run($processName);
+    //             Log::info('process', ['process' => $processName]);
+    //         } catch (\Exception $exception) {
+    //             throw $exception;
+    //         }
+    //     }
+    //     return $namePDF;
+    // }
 
-    public static function renderText($name, $html, $replace_br = true)
-    {
-        $namehtml = $name . '.html';
-        $namePDF = $name . '.pdf';
-        if (!file_exists(public_path() . '/html-test/')) {
-            mkdir(public_path() . '/html-test/', 0777, true);
-        }
-        if (!file_exists(public_path() . '/pdf-test/')) {
-            mkdir(public_path() . '/pdf-test/', 0777, true);
-        }
-        Process::run('chmod -R 777 ' . public_path());
-        $pathHtml = public_path() . '/html-test/' . $namehtml;
-        $pathPDF = public_path() . '/pdf-test/' . $name . '.pdf';
-        if (!file_exists($pathPDF)) {
-            $file = fopen($pathHtml, 'w+');
-            $htmlStr = view('render.welcome', ['html' => $html])->render();
-            fwrite($file, $htmlStr);
-            try {
-                $processName = "wkhtmltopdf --margin-bottom 95 $pathHtml $pathPDF";
-                Process::run($processName);
-                Log::info('process', ['process' => $processName]);
-            } catch (\Exception $exception) {
-                throw $exception;
-            }
-        }
-        $pdfFilePath = public_path('/pdf-test/' . $namePDF);
+    // public static function renderText($name, $html, $replace_br = true)
+    // {
+    //     $namehtml = $name . '.html';
+    //     $namePDF = $name . '.pdf';
+    //     if (!file_exists(public_path() . '/html-test/')) {
+    //         mkdir(public_path() . '/html-test/', 0777, true);
+    //     }
+    //     if (!file_exists(public_path() . '/pdf-test/')) {
+    //         mkdir(public_path() . '/pdf-test/', 0777, true);
+    //     }
+    //     Process::run('chmod -R 777 ' . public_path());
+    //     $pathHtml = public_path() . '/html-test/' . $namehtml;
+    //     $pathPDF = public_path() . '/pdf-test/' . $name . '.pdf';
+    //     if (!file_exists($pathPDF)) {
+    //         $file = fopen($pathHtml, 'w+');
+    //         $htmlStr = view('render.welcome', ['html' => $html])->render();
+    //         fwrite($file, $htmlStr);
+    //         try {
+    //             $processName = "wkhtmltopdf --margin-bottom 95 $pathHtml $pathPDF";
+    //             Process::run($processName);
+    //             Log::info('process', ['process' => $processName]);
+    //         } catch (\Exception $exception) {
+    //             throw $exception;
+    //         }
+    //     }
+    //     $pdfFilePath = public_path('/pdf-test/' . $namePDF);
 
-        // Get the total number of pages
-        $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
-        $totalPages = (int) shell_exec($command);
+    //     // Get the total number of pages
+    //     $command = "pdfinfo $pdfFilePath | grep Pages | awk '{print $2}'";
+    //     $totalPages = (int) shell_exec($command);
 
-        // Extract text from each page
-        $pageTexts = [];
-        for ($pageNumber = 1; $pageNumber <= $totalPages; $pageNumber++) {
-            $outputFile = tempnam(sys_get_temp_dir(), 'pdf_page');
-            $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
-            shell_exec($command);
-            $html = file_get_contents($outputFile);
-            if ($replace_br) {
-                $html = preg_replace("/\n/", "\r", $html, 2);
-                $html = str_replace("\n ", '', $html);
-                $html = str_replace("\n\n", "\r", $html);
-                $html = str_replace("\n", " ", $html);
-            }
-            $pageTexts[$pageNumber] = $html;
-            unlink($outputFile);
-        }
-        return $pageTexts;
-    }
+    //     // Extract text from each page
+    //     $pageTexts = [];
+    //     for ($pageNumber = 1; $pageNumber <= $totalPages; $pageNumber++) {
+    //         $outputFile = tempnam(sys_get_temp_dir(), 'pdf_page');
+    //         $command = "pdftotext -f $pageNumber -l $pageNumber $pdfFilePath $outputFile";
+    //         shell_exec($command);
+    //         $html = file_get_contents($outputFile);
+    //         if ($replace_br) {
+    //             $html = preg_replace("/\n/", "\r", $html, 2);
+    //             $html = str_replace("\n ", '', $html);
+    //             $html = str_replace("\n\n", "\r", $html);
+    //             $html = str_replace("\n", " ", $html);
+    //         }
+    //         $pageTexts[$pageNumber] = $html;
+    //         unlink($outputFile);
+    //     }
+    //     return $pageTexts;
+    // }
 
     public function renderPDF(Request $request)
     {
@@ -237,22 +234,22 @@ class PDFController extends Controller
         return response()->json(['path' => asset($name)]);
     }
 
-    public function getData($data)
-    {
-        $token = $data['token'];
-        $url = $data['url'];
-        $callAPI = Http::withHeaders([
-            'Authorization' => "Bearer $token"
-        ])->get($url);
-        $data = $callAPI->json();
-        $title = $data['data']['data'];
-        $count = 1;
-        foreach ($title as $key => $item) {
-            if (isset($item['title'])) {
-                $data['data']['data'][$key]['page'] =  $count++;
-            }
-        }
-        $data['data']['dateOfBirth'] = Carbon::create($data['data']['dateOfBirth'])->format('d/m/Y');
-        return $data['data'];
-    }
+    // public function getData($data)
+    // {
+    //     $token = $data['token'];
+    //     $url = $data['url'];
+    //     $callAPI = Http::withHeaders([
+    //         'Authorization' => "Bearer $token"
+    //     ])->get($url);
+    //     $data = $callAPI->json();
+    //     $title = $data['data']['data'];
+    //     $count = 1;
+    //     foreach ($title as $key => $item) {
+    //         if (isset($item['title'])) {
+    //             $data['data']['data'][$key]['page'] =  $count++;
+    //         }
+    //     }
+    //     $data['data']['dateOfBirth'] = Carbon::create($data['data']['dateOfBirth'])->format('d/m/Y');
+    //     return $data['data'];
+    // }
 }

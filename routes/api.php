@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::post('render', [PDFController::class, 'renderPDF']);
+Route::post('render', [PDFController::class, 'renderPDF']);
 // Route::post('data', [PDFController::class, 'getData']);
